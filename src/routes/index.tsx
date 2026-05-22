@@ -116,6 +116,8 @@ const toolkit: ToolkitGroup[] = [
     subtitle: "Where data lives and how it moves.",
     items: [
       { name: "Snowflake", primary: true },
+      { name: "Databricks", primary: true },
+      { name: "Redshift", primary: true },
       { name: "dbt", primary: true },
       { name: "BigQuery" },
       { name: "Amazon S3" },

@@ -106,7 +106,7 @@ const toolkit: ToolkitGroup[] = [
     label: "Languages & Querying",
     subtitle: "What I write in.",
     items: [
-      { name: "SQL", primary: true, children: ["PostgreSQL", "T-SQL", "MySQL", "SQLite", "ELT", "ETL"] },
+      { name: "SQL", primary: true, children: ["PostgreSQL", "MySQL", "ELT", "ETL"] },
       { name: "Python", primary: true, children: ["pandas", "NumPy", "matplotlib"] },
       { name: "R" },
     ],

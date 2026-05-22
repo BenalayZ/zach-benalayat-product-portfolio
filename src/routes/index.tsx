@@ -343,43 +343,37 @@ function Index() {
 
 
       {/* CTA */}
-      <section className="bg-primary py-20 text-primary-foreground md:py-24">
+      <section className="bg-primary py-24 text-primary-foreground md:py-32">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-            Here&apos;s your chance.
+          <h2 className="mb-6 font-sans text-5xl font-extrabold tracking-tighter md:text-7xl">
+            Ready to ship?
           </h2>
-          <p className="mx-auto mb-8 max-w-lg text-primary-foreground/80">
+          <p className="mx-auto mb-12 max-w-xl text-lg font-medium text-primary-foreground/80">
             Open to full-time PM/Analyst roles, fractional engagements, and defined-scope
-            contract work. Let&apos;s build something great.
+            contract work. Let&apos;s build something significant.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-4">
             <a
               href="mailto:zacharia.benalayat@gmail.com"
-              className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 text-sm font-medium text-primary transition-all hover:bg-primary-foreground/90"
+              className="inline-flex items-center gap-2 bg-background px-10 py-5 text-sm font-bold uppercase tracking-[0.2em] text-foreground transition-transform hover:scale-105"
             >
               Send an email <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="/Zach_J_Benalayat.pdf"
-              download
-              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary-foreground/10"
-            >
-              <Download className="h-4 w-4" /> Download resume
             </a>
             <a
               href="https://www.linkedin.com/in/zach-benalayat/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary-foreground/10"
+              className="inline-flex items-center gap-2 border-2 border-primary-foreground px-10 py-5 text-sm font-bold uppercase tracking-[0.2em] text-primary-foreground transition-all hover:bg-primary-foreground hover:text-primary"
             >
-              <Linkedin className="h-4 w-4" /> Connect on LinkedIn
+              <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-primary-foreground/80 transition-all hover:text-primary-foreground"
+            <a
+              href="/Zach_J_Benalayat.pdf"
+              download
+              className="inline-flex items-center gap-2 px-6 py-5 text-sm font-bold uppercase tracking-[0.2em] text-primary-foreground/80 transition-colors hover:text-primary-foreground"
             >
-              View contact options
-            </Link>
+              <Download className="h-4 w-4" /> Resume
+            </a>
           </div>
         </div>
       </section>

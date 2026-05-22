@@ -18,8 +18,8 @@ export const Route = createFileRoute("/")({
         content:
           "Case studies in product management and data analysis across B2B SaaS, IoT, and digital scholarship.",
       },
-      { property: "og:image", content: "/og-image.jpg" },
-      { name: "twitter:image", content: "/og-image.jpg" },
+      { property: "og:image", content: "https://zachbenalayat.com/og-image.jpg" },
+      { name: "twitter:image", content: "https://zachbenalayat.com/og-image.jpg" },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),

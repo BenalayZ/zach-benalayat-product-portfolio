@@ -38,7 +38,7 @@ export const Route = createFileRoute("/work/$slug")({
     const p = loaderData?.project;
     if (!p) return { meta: [{ title: "Case study — Zach Benalayat" }] };
     const title = `${p.title} — Zach Benalayat`;
-    const description = p.headline ?? p.summary;
+    const description = p.summary;
     return {
       meta: [
         { title },
@@ -145,9 +145,9 @@ function CaseStudy() {
         <div className="space-y-12">
           {sections.map((section) => (
             <section key={section.label}>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
+              <h2 className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
                 {section.label}
-              </p>
+              </h2>
               <p className="text-lg leading-relaxed text-foreground">
                 {section.value}
               </p>

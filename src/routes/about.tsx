@@ -131,19 +131,19 @@ const steps = [
 const toolGroups = [
   {
     label: "Product Analytics",
-    tools: ["A/B Testing", "KPI Design", "Funnel Analysis", "Cohort Analysis", "Backlog Analysis", "Continuous Improvement"],
+    tools: ["A/B Testing", "KPI Design", "Funnel Analysis", "Cohort Analysis", "Linear Regression", "Backlog Analysis", "Continuous Improvement"],
   },
   {
     label: "Data & Programming",
-    tools: ["SQL", "Python", "R", "Git", "ETL Pipelines", "Identity Resolution"],
+    tools: ["SQL", "Python", "R", "Git", "ETL & ELT", "Data Warehousing", "Amazon S3", "BigQuery", "Identity Resolution"],
   },
   {
     label: "BI & Warehousing",
-    tools: ["Power BI", "Looker", "Tableau", "Snowflake", "Data Modeling"],
+    tools: ["Power BI", "Looker", "Tableau", "Snowflake", "Google Analytics", "Data Modeling"],
   },
   {
     label: "Workflow & Delivery",
-    tools: ["Jira", "Confluence", "Kanban", "ServiceNow", "Agile (Certified)", "PRDs & User Stories"],
+    tools: ["Jira", "Confluence", "SharePoint", "Kanban", "ServiceNow", "Agile (Certified)", "Scrum Master", "Backlog Grooming", "PRDs & User Stories"],
   },
 ];
 

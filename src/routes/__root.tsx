@@ -72,19 +72,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Zach Benalayat — Product Manager" },
+      { name: "description", content: "Product portfolio of Zach Benalayat, featuring Seamless API, Inseego Connect, and more." },
+      { name: "author", content: "Zach Benalayat" },
+      { property: "og:title", content: "Zach Benalayat — Product Manager" },
+      { property: "og:description", content: "Product portfolio of Zach Benalayat, featuring Seamless API, Inseego Connect, and more." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@zachbenalayat" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap",
       },
     ],
   }),
@@ -108,12 +121,61 @@ function RootShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+function Header() {
+  return (
+    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <Link to="/" className="font-mono text-lg font-semibold tracking-tight text-foreground">
+          Zach Benalayat
+        </Link>
+        <nav className="flex items-center gap-6 text-sm font-medium">
+          <Link to="/" className="text-muted-foreground transition-colors hover:text-foreground" activeProps={{ className: "text-foreground" }}>
+            Work
+          </Link>
+          <Link to="/about" className="text-muted-foreground transition-colors hover:text-foreground" activeProps={{ className: "text-foreground" }}>
+            About
+          </Link>
+          <Link to="/contact" className="text-muted-foreground transition-colors hover:text-foreground" activeProps={{ className: "text-foreground" }}>
+            Contact
+          </Link>
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="border-t border-border bg-background">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8">
+        <p className="text-sm text-muted-foreground">
+          &copy; {new Date().getFullYear()} Zach Benalayat
+        </p>
+        <div className="flex gap-4 text-sm text-muted-foreground">
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
+            LinkedIn
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </QueryClientProvider>
   );
 }

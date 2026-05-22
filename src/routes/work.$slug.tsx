@@ -86,7 +86,7 @@ function CaseStudy() {
           {project.summary}
         </p>
         <div className="mt-6 flex flex-wrap gap-1.5">
-          {project.tags.map((tag) => (
+          {project.tags.map((tag: string) => (
             <span
               key={tag}
               className="rounded-full border border-border px-2.5 py-0.5 text-xs font-medium text-muted-foreground"

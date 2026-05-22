@@ -96,42 +96,53 @@ function Index() {
 
   return (
     <div>
-      {/* Hero */}
-      <section className="border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs">
+      {/* Hero — centered with orbital rings */}
+      <section className="relative overflow-hidden">
+        {/* Background orbital graphics */}
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <div className="absolute aspect-square w-[140vw] rounded-full border border-primary/10 animate-orbit-slow lg:w-[100vw]" />
+          <div className="absolute aspect-square w-[110vw] rounded-full border border-foreground/5 animate-orbit-mid lg:w-[70vw]" />
+          <div className="absolute aspect-square w-[80vw] rounded-full border border-primary/20 animate-orbit-fast lg:w-[45vw]" />
+          <div className="absolute h-96 w-96 rounded-full bg-primary/15 blur-[120px]" />
+          <div className="absolute h-64 w-64 rotate-45 border border-primary/30 animate-pulse" />
+          <div className="select-none font-sans text-[20vw] font-extrabold tracking-tighter text-foreground opacity-[0.025] lg:text-[15vw]">
+            ZACH BENALAYAT
+          </div>
+        </div>
+
+        <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 py-24 text-center md:py-32">
+          {/* Availability badge */}
+          <div className="mb-10 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
-            <span className="font-semibold uppercase tracking-widest text-muted-foreground">
-              Available
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+              Available — Full-time, fractional &amp; contract
             </span>
-            <span className="font-medium text-primary">Full-time, fractional &amp; contract</span>
           </div>
 
-          <h1 className="text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl">
-            Hello! I&apos;m Zach Benalayat, a Product Analyst and Manager who
-            finds the <span className="text-primary">signal in the noise</span>.
+          <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tighter text-foreground md:text-7xl">
+            I&apos;m <span className="text-primary">Zach</span>. I find the
+            signal in the noise.
           </h1>
 
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Equal parts analyst and PM — I turn raw data into product strategy,
-            then ship B2B SaaS, IoT, and AI platforms end-to-end across the
-            full PDLC.
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-2xl">
+            Equal parts analyst and PM — turning raw data into product strategy
+            to ship B2B SaaS, IoT, and AI platforms across the full PDLC.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
             <a
               href="#work"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
+              className="group inline-flex items-center gap-2 bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground transition-all hover:scale-105 active:scale-95"
             >
-              See my work <ArrowRight className="h-4 w-4" />
+              Explore work <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="/Zach_J_Benalayat.pdf"
               download
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-medium text-foreground transition-all hover:bg-accent"
+              className="inline-flex items-center gap-2 border border-foreground/20 bg-foreground/5 px-8 py-4 text-sm font-bold uppercase tracking-widest text-foreground backdrop-blur-sm transition-all hover:border-primary hover:text-primary"
             >
               <Download className="h-4 w-4" /> Download resume
             </a>
@@ -139,37 +150,30 @@ function Index() {
               href="https://www.linkedin.com/in/zach-benalayat/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-medium text-foreground transition-all hover:bg-accent"
+              className="inline-flex items-center gap-2 px-4 py-4 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
-              <Linkedin className="h-4 w-4" /> Connect on LinkedIn
+              <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium text-muted-foreground transition-all hover:text-foreground"
+              className="inline-flex items-center gap-2 px-4 py-4 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               Get in touch
             </Link>
           </div>
 
           {/* Outcome metrics */}
-          <dl className="mt-14 grid grid-cols-1 gap-6 border-t border-border pt-10 sm:grid-cols-3 sm:gap-4">
+          <dl className="mt-20 grid w-full max-w-3xl grid-cols-1 gap-10 border-t border-border pt-12 md:grid-cols-3">
             {[
-              { value: "$750k ARR", label: "Seamless API, year one" },
-              { value: "$1M+ ARR", label: "Inseego Connect uplift" },
-              { value: "20% lower", label: "AWS spend on Data Engine 4.0" },
-            ].map((m, i) => (
-              <div
-                key={m.value}
-                className={
-                  i > 0
-                    ? "sm:border-l sm:border-border sm:pl-6"
-                    : undefined
-                }
-              >
-                <dt className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+              { value: "$750k", label: "Seamless API ARR" },
+              { value: "$1M+", label: "Inseego Connect uplift" },
+              { value: "20%", label: "AWS savings on Data Engine 4.0" },
+            ].map((m) => (
+              <div key={m.label} className="group">
+                <dt className="text-4xl font-extrabold tracking-tighter text-primary transition-transform group-hover:scale-110 md:text-5xl">
                   {m.value}
                 </dt>
-                <dd className="mt-1 text-sm text-muted-foreground">
+                <dd className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
                   {m.label}
                 </dd>
               </div>
@@ -179,62 +183,52 @@ function Index() {
       </section>
 
 
+
       {/* By the numbers */}
-      <section className="border-b border-border bg-muted/30">
-        <div className="mx-auto max-w-5xl px-6 py-14 md:py-16">
-          <p className="mb-8 text-xs font-semibold uppercase tracking-widest text-primary">
-            By the numbers
-          </p>
-          <dl className="grid grid-cols-2 gap-8 md:grid-cols-4">
+      <section className="border-y border-border">
+        <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-10">
             {byTheNumbers.map((stat) => (
-              <div key={stat.label}>
-                <dt className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+              <div key={stat.label} className="flex items-baseline gap-4">
+                <span className="font-sans text-5xl font-light tracking-tighter text-primary">
                   {stat.value}
-                </dt>
-                <dd className="mt-2 text-sm leading-snug text-muted-foreground">
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
                   {stat.label}
-                </dd>
+                </span>
               </div>
             ))}
-          </dl>
+          </div>
         </div>
       </section>
 
-
-
-
-
-
-      {/* Positioning / Bio */}
-      <section className="border-b border-border bg-muted/30">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
-          <div className="grid gap-12 md:grid-cols-[1fr_2fr] md:gap-16">
+      {/* Positioning */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+          <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
             <div>
-              <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">
-                What I&apos;m looking for
+              <p className="mb-6 inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary underline decoration-2 underline-offset-8">
+                Mission Control
               </p>
-              <h2 className="text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">
+              <h2 className="font-sans text-4xl font-extrabold leading-[1.1] tracking-tighter text-foreground md:text-5xl">
                 A role where analytics and product management share the wheel.
               </h2>
             </div>
-            <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+            <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
               <p>
                 I operate at the intersection of data analysis and product management —
-                digging into raw datasets, building the funnels and dashboards, and
-                using what I find to shape PRDs, roadmaps, and launch strategy.
+                digging into raw datasets, building the funnels and dashboards, and using
+                what I find to shape PRDs, roadmaps, and launch strategy.
               </p>
               <p>
-                That dual lens has shipped real outcomes: $750k ARR in year one on
-                Seamless API, $1M+ ARR uplift on Inseego Connect, and 20% AWS savings
-                on Data Engine 4.0 — each one driven by analytics work that pointed
-                product decisions in the right direction.
+                That dual lens has shipped real outcomes: $750k ARR in year one on Seamless
+                API, $1M+ ARR uplift on Inseego Connect, and 20% AWS savings on Data
+                Engine 4.0 — each one driven by analytics work that pointed product
+                decisions in the right direction.
               </p>
               <p>
-                I thrive in teams that treat strategy as a continuous, evidence-led
-                process and that value tight communication between product, data,
-                engineering, and GTM. Startups and scale-ups, ideation through
-                growth — with the receipts to prove each step moved the business
-                forward.
+                I thrive in teams that treat strategy as a continuous, evidence-led process
+                and value tight communication between product, data, engineering, and GTM.
               </p>
             </div>
           </div>
@@ -243,13 +237,13 @@ function Index() {
 
       {/* Featured Projects */}
       <section id="work" className="border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
-          <div className="mb-12 flex items-end justify-between gap-6">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+          <div className="mb-16 flex items-end justify-between gap-6">
             <div>
-              <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
-                Selected Work
+              <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                Selected Work // 01
               </p>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
                 Featured Projects
               </h2>
             </div>
@@ -269,23 +263,28 @@ function Index() {
         </div>
       </section>
 
-      {/* Top Skills */}
-      <section className="border-b border-border bg-muted/30">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
-          <div className="mb-12">
-            <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+      {/* Top Skills — grid with hairline dividers */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+          <div className="mb-16">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">
               How I work
             </p>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
               Top Skills
             </h2>
           </div>
 
-          <div className="grid gap-10 md:grid-cols-2 md:gap-12">
-            {skills.map((skill) => (
-              <div key={skill.title}>
-                <h3 className="mb-3 text-xl font-bold text-foreground">{skill.title}</h3>
-                <p className="text-base leading-relaxed text-muted-foreground">
+          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
+            {skills.map((skill, i) => (
+              <div key={skill.title} className="bg-background p-8">
+                <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                  0{i + 1}
+                </p>
+                <h3 className="mb-4 font-sans text-xl font-bold text-foreground">
+                  {skill.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
                   {skill.body}
                 </p>
               </div>
@@ -296,19 +295,25 @@ function Index() {
 
       {/* FAQ */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
-          <div className="mb-12">
-            <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+          <div className="mb-16">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">
               FAQ
             </p>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
               Common questions
             </h2>
           </div>
           <dl className="divide-y divide-border border-y border-border">
-            {faqs.map((f) => (
-              <div key={f.q} className="grid gap-3 py-6 md:grid-cols-[1fr_2fr] md:gap-12">
-                <dt className="text-lg font-semibold text-foreground">{f.q}</dt>
+            {faqs.map((f, i) => (
+              <div
+                key={f.q}
+                className="grid gap-4 py-8 md:grid-cols-[auto_1fr_2fr] md:gap-8"
+              >
+                <span className="hidden font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary md:block">
+                  Q_{String(i + 1).padStart(2, "0")}
+                </span>
+                <dt className="font-sans text-lg font-bold text-foreground">{f.q}</dt>
                 <dd className="text-base leading-relaxed text-muted-foreground">{f.a}</dd>
               </div>
             ))}
@@ -316,16 +321,14 @@ function Index() {
         </div>
       </section>
 
-
-
       {/* More Work */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
-          <div className="mb-12">
-            <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
-              More case studies
+        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+          <div className="mb-16">
+            <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
+              Selected Work // 02
             </p>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
               The rest of the portfolio
             </h2>
           </div>
@@ -338,44 +341,39 @@ function Index() {
         </div>
       </section>
 
+
       {/* CTA */}
-      <section className="bg-primary py-20 text-primary-foreground md:py-24">
+      <section className="bg-primary py-24 text-primary-foreground md:py-32">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-            Here&apos;s your chance.
+          <h2 className="mb-6 font-sans text-5xl font-extrabold tracking-tighter md:text-7xl">
+            Ready to ship?
           </h2>
-          <p className="mx-auto mb-8 max-w-lg text-primary-foreground/80">
+          <p className="mx-auto mb-12 max-w-xl text-lg font-medium text-primary-foreground/80">
             Open to full-time PM/Analyst roles, fractional engagements, and defined-scope
-            contract work. Let&apos;s build something great.
+            contract work. Let&apos;s build something significant.
           </p>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-4">
             <a
               href="mailto:zacharia.benalayat@gmail.com"
-              className="inline-flex items-center gap-2 rounded-full bg-primary-foreground px-6 py-3 text-sm font-medium text-primary transition-all hover:bg-primary-foreground/90"
+              className="inline-flex items-center gap-2 bg-background px-10 py-5 text-sm font-bold uppercase tracking-[0.2em] text-foreground transition-transform hover:scale-105"
             >
               Send an email <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="/Zach_J_Benalayat.pdf"
-              download
-              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary-foreground/10"
-            >
-              <Download className="h-4 w-4" /> Download resume
             </a>
             <a
               href="https://www.linkedin.com/in/zach-benalayat/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary-foreground/10"
+              className="inline-flex items-center gap-2 border-2 border-primary-foreground px-10 py-5 text-sm font-bold uppercase tracking-[0.2em] text-primary-foreground transition-all hover:bg-primary-foreground hover:text-primary"
             >
-              <Linkedin className="h-4 w-4" /> Connect on LinkedIn
+              <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-primary-foreground/80 transition-all hover:text-primary-foreground"
+            <a
+              href="/Zach_J_Benalayat.pdf"
+              download
+              className="inline-flex items-center gap-2 px-6 py-5 text-sm font-bold uppercase tracking-[0.2em] text-primary-foreground/80 transition-colors hover:text-primary-foreground"
             >
-              View contact options
-            </Link>
+              <Download className="h-4 w-4" /> Resume
+            </a>
           </div>
         </div>
       </section>

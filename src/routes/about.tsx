@@ -130,20 +130,68 @@ const steps = [
 
 const toolGroups = [
   {
-    label: "Product Analytics",
-    tools: ["A/B Testing", "KPI Design", "Funnel Analysis", "Cohort Analysis", "Linear Regression", "Cost Modeling", "Backlog Analysis", "Continuous Improvement"],
+    label: "Languages & Querying",
+    subtitle: "What I write in.",
+    items: [
+      { name: "SQL", primary: true },
+      { name: "Python", primary: true, children: ["pandas", "NumPy", "matplotlib"] },
+      { name: "R" },
+    ],
   },
   {
-    label: "Data & Programming",
-    tools: ["SQL", "Python", "pandas", "numPy", "matplotlib", "R", "dbt", "CTE", "Git", "GitHub", "ETL & ELT", "Data Warehousing", "Database Design", "Data Mining", "Amazon S3", "BigQuery", "Identity Resolution"],
+    label: "Data Platforms",
+    subtitle: "Where data lives and how it moves.",
+    items: [
+      { name: "Snowflake", primary: true },
+      { name: "dbt", primary: true },
+      { name: "BigQuery" },
+      { name: "Amazon S3" },
+      { name: "ETL & ELT" },
+      { name: "Data Warehousing" },
+      { name: "Database Design" },
+      { name: "Data Mining" },
+    ],
   },
   {
-    label: "BI & Warehousing",
-    tools: ["Power BI", "Looker", "Tableau", "Snowflake", "Google Analytics", "Excel", "Sheets", "Data Modeling"],
+    label: "BI & Reporting",
+    subtitle: "How findings get seen and acted on.",
+    items: [
+      { name: "Power BI", primary: true },
+      { name: "Looker", primary: true },
+      { name: "Tableau" },
+      { name: "Google Analytics" },
+      { name: "Excel / Sheets" },
+    ],
   },
   {
-    label: "Workflow & Delivery",
-    tools: ["Jira", "Confluence", "SharePoint", "Kanban", "ServiceNow", "Agile (Certified)", "Scrum Master", "Backlog Grooming", "Unit Testing", "Time to Value", "PRDs & User Stories"],
+    label: "Product & Delivery",
+    subtitle: "How work gets shipped.",
+    items: [
+      { name: "Jira", primary: true },
+      { name: "Agile", primary: true },
+      { name: "Scrum" },
+      { name: "Kanban" },
+      { name: "Confluence" },
+      { name: "GitHub" },
+      { name: "SharePoint" },
+      { name: "ServiceNow" },
+      { name: "N8N" },
+      { name: "Claude" },
+    ],
+  },
+  {
+    label: "Methods & Frameworks",
+    subtitle: "The analyses behind the decisions.",
+    items: [
+      { name: "A/B Testing", primary: true },
+      { name: "Funnel Analysis", primary: true },
+      { name: "Cohort Analysis", primary: true },
+      { name: "Linear Regression" },
+      { name: "Cost Modeling" },
+      { name: "Identity Resolution" },
+      { name: "Unit Testing" },
+      { name: "Time to Value" },
+    ],
   },
 ];
 

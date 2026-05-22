@@ -92,20 +92,68 @@ const skills = [
 
 const toolkit = [
   {
-    label: "Data & SQL",
-    tools: ["SQL", "Python", "pandas", "numPy", "matplotlib", "R", "dbt", "CTE", "Snowflake", "BigQuery", "Amazon S3", "Data Warehousing", "Database Design", "Data Mining", "ETL & ELT", "Git", "GitHub"],
+    label: "Languages & Querying",
+    subtitle: "What I write in.",
+    items: [
+      { name: "SQL", primary: true },
+      { name: "Python", primary: true, children: ["pandas", "NumPy", "matplotlib"] },
+      { name: "R" },
+    ],
   },
   {
-    label: "BI & Dashboards",
-    tools: ["Power BI", "Looker", "Tableau", "Google Analytics", "Excel", "Sheets", "KPI Design"],
+    label: "Data Platforms",
+    subtitle: "Where data lives and how it moves.",
+    items: [
+      { name: "Snowflake", primary: true },
+      { name: "dbt", primary: true },
+      { name: "BigQuery" },
+      { name: "Amazon S3" },
+      { name: "ETL & ELT" },
+      { name: "Data Warehousing" },
+      { name: "Database Design" },
+      { name: "Data Mining" },
+    ],
   },
   {
-    label: "Product & Workflow",
-    tools: ["Jira", "Confluence", "SharePoint", "ServiceNow", "N8N", "Claude", "Agile (Certified)", "Scrum Master", "Kanban", "Backlog Grooming", "Unit Testing", "Time to Value"],
+    label: "BI & Reporting",
+    subtitle: "How findings get seen and acted on.",
+    items: [
+      { name: "Power BI", primary: true },
+      { name: "Looker", primary: true },
+      { name: "Tableau" },
+      { name: "Google Analytics" },
+      { name: "Excel / Sheets" },
+    ],
   },
   {
-    label: "Methods",
-    tools: ["A/B Testing", "Funnel Analysis", "Cohort Analysis", "Linear Regression", "Cost Modeling", "Identity Resolution"],
+    label: "Product & Delivery",
+    subtitle: "How work gets shipped.",
+    items: [
+      { name: "Jira", primary: true },
+      { name: "Agile", primary: true },
+      { name: "Scrum" },
+      { name: "Kanban" },
+      { name: "Confluence" },
+      { name: "GitHub" },
+      { name: "SharePoint" },
+      { name: "ServiceNow" },
+      { name: "N8N" },
+      { name: "Claude" },
+    ],
+  },
+  {
+    label: "Methods & Frameworks",
+    subtitle: "The analyses behind the decisions.",
+    items: [
+      { name: "A/B Testing", primary: true },
+      { name: "Funnel Analysis", primary: true },
+      { name: "Cohort Analysis", primary: true },
+      { name: "Linear Regression" },
+      { name: "Cost Modeling" },
+      { name: "Identity Resolution" },
+      { name: "Unit Testing" },
+      { name: "Time to Value" },
+    ],
   },
 ];
 
@@ -259,19 +307,40 @@ function Index() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
-            {toolkit.map((group, i) => (
-              <div key={group.label} className="bg-background p-8">
-                <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                  0{i + 1} — {group.label}
-                </p>
-                <ul className="space-y-2 text-sm text-foreground">
-                  {group.tools.map((t) => (
-                    <li key={t} className="font-medium">{t}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-5">
+            {toolkit.map((group, i) => {
+              const primaries = group.items.filter((it) => it.primary);
+              const supporting = group.items.filter((it) => !it.primary);
+              return (
+                <div key={group.label} className="flex flex-col bg-background p-8">
+                  <p className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                    0{i + 1} — {group.label}
+                  </p>
+                  <p className="mb-6 text-xs leading-relaxed text-muted-foreground">
+                    {group.subtitle}
+                  </p>
+                  <ul className="space-y-3">
+                    {primaries.map((it) => (
+                      <li key={it.name}>
+                        <p className="font-sans text-base font-bold text-foreground">{it.name}</p>
+                        {it.children && (
+                          <p className="mt-1 font-mono text-[11px] tracking-wide text-muted-foreground">
+                            {it.children.join(" · ")}
+                          </p>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                  {supporting.length > 0 && (
+                    <ul className="mt-6 space-y-1.5 border-t border-border pt-5 text-sm text-muted-foreground">
+                      {supporting.map((it) => (
+                        <li key={it.name}>{it.name}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

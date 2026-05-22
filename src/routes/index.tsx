@@ -66,10 +66,8 @@ function Index() {
           </div>
 
           <h1 className="text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl">
-            Hello! I&apos;m Zach Benalayat, a Product Manager who treats
-            products like <span className="text-primary">dig sites</span> —
-            excavating signal from messy data until the next decision is
-            obvious.
+            Hello! I&apos;m Zach Benalayat, a Product Analyst and Manager who
+            treats data like <span className="text-primary">dig sites</span>.
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">

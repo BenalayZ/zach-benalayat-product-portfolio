@@ -92,6 +92,14 @@ const skills = [
 
 const toolkit = [
   {
+    label: "Certifications",
+    subtitle: "Formal credentials.",
+    items: [
+      { name: "Agile / Scrum Certified", primary: true, children: ["Atlassian"] },
+      { name: "Data Management", primary: true, children: ["UT Austin"] },
+    ],
+  },
+  {
     label: "Languages & Querying",
     subtitle: "What I write in.",
     items: [
@@ -108,10 +116,6 @@ const toolkit = [
       { name: "dbt", primary: true },
       { name: "BigQuery" },
       { name: "Amazon S3" },
-      { name: "ETL & ELT" },
-      { name: "Data Warehousing" },
-      { name: "Database Design" },
-      { name: "Data Mining" },
     ],
   },
   {
@@ -130,9 +134,6 @@ const toolkit = [
     subtitle: "How work gets shipped.",
     items: [
       { name: "Jira", primary: true },
-      { name: "Agile", primary: true },
-      { name: "Scrum" },
-      { name: "Kanban" },
       { name: "Confluence" },
       { name: "GitHub" },
       { name: "SharePoint" },
@@ -141,21 +142,26 @@ const toolkit = [
       { name: "Claude" },
     ],
   },
-  {
-    label: "Methods & Frameworks",
-    subtitle: "The analyses behind the decisions.",
-    items: [
-      { name: "A/B Testing", primary: true },
-      { name: "Funnel Analysis", primary: true },
-      { name: "Cohort Analysis", primary: true },
-      { name: "Linear Regression" },
-      { name: "Cost Modeling" },
-      { name: "Identity Resolution" },
-      { name: "Unit Testing" },
-      { name: "Time to Value" },
-    ],
-  },
 ];
+
+const frameworks = [
+  "Agile",
+  "Scrum",
+  "Kanban",
+  "A/B Testing",
+  "Funnel Analysis",
+  "Cohort Analysis",
+  "Linear Regression",
+  "Cost Modeling",
+  "Identity Resolution",
+  "ETL & ELT",
+  "Data Warehousing",
+  "Database Design",
+  "Data Mining",
+  "Unit Testing",
+  "Time to Value",
+];
+
 
 function Index() {
   const featured = projects.filter((p) => p.featured);

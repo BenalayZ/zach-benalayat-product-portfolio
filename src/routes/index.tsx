@@ -106,7 +106,7 @@ const toolkit: ToolkitGroup[] = [
     label: "Languages & Querying",
     subtitle: "What I write in.",
     items: [
-      { name: "SQL", primary: true, children: ["PostgreSQL", "T-SQL", "MySQL", "SQLite"] },
+      { name: "SQL", primary: true, children: ["PostgreSQL", "T-SQL", "MySQL", "SQLite", "ELT", "ETL"] },
       { name: "Python", primary: true, children: ["pandas", "NumPy", "matplotlib"] },
       { name: "R" },
     ],
@@ -143,6 +143,7 @@ const toolkit: ToolkitGroup[] = [
       { name: "Confluence", primary: true },
       { name: "GitHub", primary: true },
       { name: "Notion", primary: true },
+      { name: "Kanban", primary: true },
       { name: "SharePoint" },
       { name: "ServiceNow" },
       { name: "N8N" },
@@ -152,9 +153,6 @@ const toolkit: ToolkitGroup[] = [
 ];
 
 const frameworks = [
-  "Agile",
-  "Scrum",
-  "Kanban",
   "A/B Testing",
   "Funnel Analysis",
   "Cohort Analysis",

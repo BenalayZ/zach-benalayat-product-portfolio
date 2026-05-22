@@ -30,7 +30,7 @@ export const projects: Project[] = [
     headline: "$750k ARR in year one",
     summary: "$750k ARR in year one and integrations with every major AI platform.",
     image: seamlessApi,
-    tags: ["B2B SaaS", "Agentic AI", "Full PDLC", "GTM"],
+    tags: ["B2B SaaS", "Agentic AI", "SQL", "Power BI", "Full PDLC", "GTM"],
     problem:
       "Create a browserless solution to allow custom integrations of Seamless Contact & Company data into customer data pipelines.",
     role: "Product Manager & Analytics",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     headline: "20% lower AWS spend, deduped data",
     summary: "Rebuilt the Seamless AI Data Engine — better coverage, deduped data, 20% AWS savings.",
     image: dataEngine,
-    tags: ["ETL", "Data Architecture", "A/B Testing", "Statistical Analysis"],
+    tags: ["ETL", "Snowflake", "Python", "Data Architecture", "A/B Testing", "Statistical Analysis"],
     problem: "Improve the overall data quality and health of the Seamless AI Data Engine.",
     role: "Product Owner & Analytics Lead",
     strategy:
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     headline: "$1M+ ARR uplift via GTM re-targeting",
     summary: "Re-targeted GTM toward IoT-heavy state contracts — $1M+ ARR uplift.",
     image: inseegoConnect,
-    tags: ["B2B", "IoT", "Funnel Analysis", "Market Research"],
+    tags: ["B2B", "IoT", "SQL", "Python", "Power BI", "Funnel Analysis", "Market Research"],
     problem: "Inseego IoT products were underperforming within Inseego Connect partner channels.",
     role: "Product Owner & Analyst",
     strategy:

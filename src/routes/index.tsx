@@ -71,8 +71,9 @@ function Index() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Shipping B2B SaaS, IoT, and AI-platform products end-to-end — from
-            PRD through post-launch analysis.
+            Equal parts analyst and PM — I turn raw data into product strategy,
+            then ship B2B SaaS, IoT, and AI platforms end-to-end across the
+            full PDLC.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">

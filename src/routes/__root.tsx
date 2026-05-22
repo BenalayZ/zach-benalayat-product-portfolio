@@ -72,10 +72,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Zach Benalayat — Product Manager" },
+      { title: "Zach Benalayat — Product Manager & Data Analyst" },
       { name: "description", content: "Product portfolio of Zach Benalayat, featuring Seamless API, Inseego Connect, and more." },
       { name: "author", content: "Zach Benalayat" },
-      { property: "og:title", content: "Zach Benalayat — Product Manager" },
+      { property: "og:title", content: "Zach Benalayat — Product Manager & Data Analyst" },
       { property: "og:description", content: "Product portfolio of Zach Benalayat, featuring Seamless API, Inseego Connect, and more." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -1,0 +1,15 @@
+# Zach Benalayat
+
+> Portfolio of Zach Benalayat — Product Manager and Data Analyst working across B2B SaaS, IoT, and digital scholarship.
+
+## Pages
+
+- [Home](/): Featured case studies, skills, and an overview of Zach's product work.
+- [About](/about): Background, approach, and a toolkit of product, data, engineering, and research methods.
+- [Contact](/contact): Ways to get in touch.
+
+## Case Studies
+
+- [Seamless API](/work/seamless-api): B2B SaaS API product strategy and rollout.
+- [Inseego Connect](/work/inseego-connect): IoT device management platform.
+- [Data Engine 4.0](/work/data-engine-4): Data infrastructure for product analytics.

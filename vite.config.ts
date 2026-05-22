@@ -8,7 +8,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 // If you switch to a user site (username.github.io) or a custom domain,
 // set base to "/" instead.
 export default defineConfig({
-  base: "/Zacharia-Benalayat-Portfolio/",
+  base: "/zach-benalayat-product-portfolio/",
   plugins: [
     TanStackRouterVite({
       target: "react",

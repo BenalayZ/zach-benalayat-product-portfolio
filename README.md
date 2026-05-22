@@ -2,7 +2,7 @@
 
 Personal portfolio site for Zach Benalayat, Product Manager & Data Analyst.
 
-- **Live site:** https://benalayz.github.io/Zacharia-Benalayat-Portfolio/
+- **Live site:** https://benalayz.github.io/zach-benalayat-product-portfolio/
 
 ---
 
@@ -91,11 +91,11 @@ bun run format
 ## Deployment (GitHub Pages)
 
 The site is configured for a **project site** at
-`https://benalayz.github.io/Zacharia-Benalayat-Portfolio/`.
+`https://benalayz.github.io/zach-benalayat-product-portfolio/`.
 
 ### One-time setup
 
-1. Push the repo to GitHub: `benalayz/Zacharia-Benalayat-Portfolio`.
+1. Push the repo to GitHub: `benalayz/zach-benalayat-product-portfolio`.
 2. In repo Settings → Pages, set **Source = Deploy from a branch** and
    **Branch = `gh-pages` / root**.
 
@@ -110,11 +110,11 @@ This builds the site and pushes `dist/` to the `gh-pages` branch via the
 
 ### How it works
 
-- `vite.config.ts` sets `base: "/Zacharia-Benalayat-Portfolio/"` so all
+- `vite.config.ts` sets `base: "/zach-benalayat-product-portfolio/"` so all
   asset URLs are prefixed correctly.
 - `src/router.tsx` reads `import.meta.env.BASE_URL` and passes it as the
   router's `basepath`, so `<Link to="/about">` resolves to
-  `/Zacharia-Benalayat-Portfolio/about`.
+  `/zach-benalayat-product-portfolio/about`.
 - `public/404.html` is a copy of `index.html` — GitHub Pages serves it for
   any unknown path, the SPA boots, and TanStack Router renders the correct
   route. This is what makes deep links and page refreshes work.

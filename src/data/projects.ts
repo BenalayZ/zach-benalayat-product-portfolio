@@ -10,6 +10,7 @@ export type Project = {
   slug: string;
   title: string;
   date: string;
+  headline?: string;
   summary: string;
   image: string;
   tags: string[];
@@ -26,6 +27,7 @@ export const projects: Project[] = [
     slug: "seamless-api",
     title: "Seamless API",
     date: "May 2025",
+    headline: "$750k ARR in year one",
     summary: "$750k ARR in year one and integrations with every major AI platform.",
     image: seamlessApi,
     tags: ["B2B SaaS", "Agentic AI", "Full PDLC", "GTM"],
@@ -44,6 +46,7 @@ export const projects: Project[] = [
     slug: "data-engine-4",
     title: "Data Engine 4.0",
     date: "Dec 2024",
+    headline: "20% lower AWS spend, deduped data",
     summary: "Rebuilt the Seamless AI Data Engine — better coverage, deduped data, 20% AWS savings.",
     image: dataEngine,
     tags: ["ETL", "Data Architecture", "A/B Testing", "Statistical Analysis"],
@@ -61,6 +64,7 @@ export const projects: Project[] = [
     slug: "seamless-mcp",
     title: "Seamless MCP",
     date: "2025",
+    headline: "Launched on GPT + Claude in one quarter",
     summary: "Launched API 2.0 alongside MCP on the GPT and Claude stores in a single quarter.",
     image: seamlessMcp,
     tags: ["Agentic AI", "MCP", "PRD", "Cross-functional"],
@@ -76,6 +80,7 @@ export const projects: Project[] = [
     slug: "seamless-fast-data",
     title: "Seamless Fast Data",
     date: "2025",
+    headline: "15x faster execution, 30% less compute",
     summary: "Cut data lag from twice-monthly to every two hours, 15x faster execution.",
     image: seamlessFastData,
     tags: ["Real-Time", "Event Streaming", "Data Pipelines"],
@@ -92,6 +97,7 @@ export const projects: Project[] = [
     slug: "inseego-connect",
     title: "Inseego Connect",
     date: "Mar 2022",
+    headline: "$1M+ ARR uplift via GTM re-targeting",
     summary: "Re-targeted GTM toward IoT-heavy state contracts — $1M+ ARR uplift.",
     image: inseegoConnect,
     tags: ["B2B", "IoT", "Funnel Analysis", "Market Research"],
@@ -109,6 +115,7 @@ export const projects: Project[] = [
     slug: "latin-hyper-texts",
     title: "Latin Hyper-Texts",
     date: "Apr 2022",
+    headline: "Cited in dozens of musicology journals",
     summary: "A student-managed platform for annotating digitized Latin manuscripts.",
     image: latinHyperTexts,
     tags: ["Digital Scholarship", "Full PDLC", "UX Design", "Survey Metrics"],
@@ -126,6 +133,7 @@ export const projects: Project[] = [
     slug: "the-arc",
     title: "The Arc Southern Maryland",
     date: "2020",
+    headline: "−1 FTE, 46% faster course turnaround",
     summary: "CaseWorthy rollout cut billing headcount by 1 FTE and course turnaround by 46%.",
     image: theArc,
     tags: ["Non-Profit", "Implementation", "ETL", "UX Design"],

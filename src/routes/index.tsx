@@ -247,6 +247,35 @@ function Index() {
         </div>
       </section>
 
+      {/* Toolkit */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+          <div className="mb-16">
+            <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
+              Toolkit // 01
+            </p>
+            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
+              The stack I actually use
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
+            {toolkit.map((group, i) => (
+              <div key={group.label} className="bg-background p-8">
+                <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                  0{i + 1} — {group.label}
+                </p>
+                <ul className="space-y-2 text-sm text-foreground">
+                  {group.tools.map((t) => (
+                    <li key={t} className="font-medium">{t}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Featured Projects */}
       <section id="work" className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">

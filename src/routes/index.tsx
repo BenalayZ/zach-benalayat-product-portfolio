@@ -123,8 +123,8 @@ const toolkit = [
     subtitle: "How findings get seen and acted on.",
     items: [
       { name: "Power BI", primary: true },
-      { name: "Looker", primary: true },
-      { name: "Tableau" },
+      { name: "Tableau", primary: true },
+      { name: "Looker" },
       { name: "Google Analytics" },
       { name: "Excel / Sheets" },
     ],
@@ -134,8 +134,9 @@ const toolkit = [
     subtitle: "How work gets shipped.",
     items: [
       { name: "Jira", primary: true },
-      { name: "Confluence" },
-      { name: "GitHub" },
+      { name: "Confluence", primary: true },
+      { name: "GitHub", primary: true },
+      { name: "Notion", primary: true },
       { name: "SharePoint" },
       { name: "ServiceNow" },
       { name: "N8N" },

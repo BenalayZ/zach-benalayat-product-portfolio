@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Zach Benalayat is a product manager and GTM specialist with a forensic approach to data — experience at Seamless, Inseego, and CaseWorthy.",
+          "Zach Benalayat is a product manager and data analyst — experience at Seamless, Inseego, and CaseWorthy.",
       },
       { property: "og:title", content: "About — Zach Benalayat" },
       {
@@ -118,14 +118,14 @@ function AboutPage() {
           Zach Benalayat
         </h1>
         <p className="mt-3 text-lg text-muted-foreground">
-          Product Manager · GTM Specialist · Data Forensics
+          Product Manager · Data Analyst
         </p>
       </div>
 
       <div className="space-y-6 text-base leading-relaxed text-foreground">
         <p>
-          Hello — I&apos;m Zach. I&apos;m an experienced product manager and GTM specialist
-          who takes a forensic approach to data analytics. I&apos;m a firm believer that
+          Hello — I&apos;m Zach. I&apos;m an experienced product manager and data analyst
+          who takes a rigorous approach to data analytics. I&apos;m a firm believer that
           messy or incomplete data isn&apos;t a blocker to great insights, it&apos;s a
           puzzle that needs solving.
         </p>

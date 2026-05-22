@@ -8,7 +8,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with Zach Benalayat for product leadership, GTM, and analytics opportunities.",
+          "Get in touch with Zach Benalayat for product management and data analysis opportunities.",
       },
       { property: "og:title", content: "Contact — Zach Benalayat" },
       {

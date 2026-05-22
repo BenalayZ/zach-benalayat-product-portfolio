@@ -6,17 +6,17 @@ import { ProjectCard } from "@/components/ProjectCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Zach Benalayat — Product Manager & GTM Specialist" },
+      { title: "Zach Benalayat — Product Manager & Data Analyst" },
       {
         name: "description",
         content:
-          "Product portfolio of Zach Benalayat — Seamless API, Data Engine 4.0, Inseego Connect, and more. A forensic approach to data and product strategy.",
+          "Product portfolio of Zach Benalayat — Seamless API, Data Engine 4.0, Inseego Connect, and more. A data-driven approach to product strategy.",
       },
       { property: "og:title", content: "Zach Benalayat — Product Portfolio" },
       {
         property: "og:description",
         content:
-          "Case studies in product management, GTM, and data analytics across B2B SaaS, IoT, and digital scholarship.",
+          "Case studies in product management and data analysis across B2B SaaS, IoT, and digital scholarship.",
       },
     ],
   }),
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/")({
 
 const skills = [
   {
-    title: "Data Forensics",
+    title: "Data Analysis",
     body: "Messy or incomplete data isn't a blocker — it's a puzzle. I dig into raw datasets to surface the patterns and reconciliation gaps everyone else overlooked, then turn them into product decisions.",
   },
   {
@@ -33,7 +33,7 @@ const skills = [
     body: "I own the product development lifecycle end-to-end: discovery, PRDs, success metrics, launch, post-launch analysis, and the next iteration. Strategy doesn't stop at MVP — that's where it starts.",
   },
   {
-    title: "Cross-Functional GTM",
+    title: "Cross-Functional Leadership",
     body: "I translate product capability into pipeline. Working closely with sales, marketing, and engineering, I ship launches that hit revenue targets — $750k ARR in year one on Seamless API, $1M+ ARR uplift on Inseego Connect.",
   },
   {
@@ -65,9 +65,9 @@ function Index() {
           <h1 className="text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl">
             Hello! I&apos;m Zach Benalayat, a{" "}
             <span className="text-primary">
-              Product Manager &amp; GTM Specialist
+              Product Manager &amp; Data Analyst
             </span>{" "}
-            with a forensic approach to data.
+            with a data-driven approach to product.
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">

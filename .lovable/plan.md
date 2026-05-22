@@ -1,24 +1,25 @@
-## Goal
-Make `Zach_J_Benalayat.pdf` available as a one-click download from the site.
+## Update website text: Product Management & Data Analysis
 
-## Steps
+Replace "GTM Specialist" and "Data Forensics" framing with "Data Analyst" to align with stated specialties and focus areas.
 
-1. **Add the file**
-   - Copy `user-uploads://Zach_J_Benalayat.pdf` → `public/Zach_J_Benalayat.pdf` so it's served at `/Zach_J_Benalayat.pdf` (no bundler import needed, real PDF download).
+### Changes
 
-2. **Add a reusable "Download Resume" link**
-   - Use a plain `<a href="/Zach_J_Benalayat.pdf" download>` with a `Download` lucide icon.
-   - Styled to match existing pill buttons.
+**Homepage (`src/routes/index.tsx`)**
+- Page title: "Product Manager & GTM Specialist" → "Product Manager & Data Analyst"
+- Meta description: "forensic approach" → "data-driven approach"
+- OG description: remove "GTM," from the list
+- Hero headline: "Product Manager & GTM Specialist" → "Product Manager & Data Analyst"
+- Hero subline: "forensic approach to data" → "data-driven approach to product"
+- Skills section: "Data Forensics" → "Data Analysis", "Cross-Functional GTM" → "Cross-Functional Leadership"
 
-3. **Place CTAs**
-   - **Hero (`src/routes/index.tsx`)**: Replace the current "Get in touch" secondary button with **Download Resume** (primary feels better since amyoughton's hero also leads with resume). Keep "See my work" as the green primary; make Download Resume the outlined secondary alongside it. Add a third "Get in touch" link if room allows, or move it down.
-   - **Header nav (`src/routes/__root.tsx`)**: Add a small "Resume ↓" link in the nav, right of Contact, matching the reference site's persistent download CTA.
-   - **Final CTA section**: Add a third button "Download resume" next to Send email / View contact options.
-   - **About page**: Add a Download Resume button below the intro paragraphs.
+**Root layout (`src/routes/__root.tsx`)**
+- Page title: "Product Manager" → "Product Manager & Data Analyst"
+- OG title: same update
 
-4. **No SEO/meta changes** — direct PDF link, no routing.
+**About page (`src/routes/about.tsx`)**
+- Meta description: "GTM specialist with a forensic approach" → "data analyst"
+- Tagline: "Product Manager · GTM Specialist · Data Forensics" → "Product Manager · Data Analyst"
+- Bio opening: "product manager and GTM specialist who takes a forensic approach" → "product manager and data analyst who takes a rigorous approach"
 
-## Out of scope
-- No resume preview/viewer in-page (just download).
-- No analytics tracking on the download click.
-- Filename stays `Zach_J_Benalayat.pdf`.
+**Contact page (`src/routes/contact.tsx`)**
+- Meta description: "product leadership, GTM, and analytics" → "product management and data analysis"

@@ -339,27 +339,40 @@ function AboutPage() {
         </p>
         <h2 className="text-2xl font-bold text-foreground">Tools &amp; Methods</h2>
       </div>
-      <div className="grid gap-6 md:grid-cols-2">
-        {toolGroups.map((group) => (
-          <div
-            key={group.label}
-            className="rounded-2xl border border-border bg-card p-6"
-          >
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
-              {group.label}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {group.tools.map((tool) => (
-                <span
-                  key={tool}
-                  className="rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-foreground"
-                >
-                  {tool}
-                </span>
-              ))}
+      <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+        {toolGroups.map((group, i) => {
+          const primaries = group.items.filter((it) => it.primary);
+          const supporting = group.items.filter((it) => !it.primary);
+          return (
+            <div key={group.label} className="flex flex-col bg-background p-6">
+              <p className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                0{i + 1} — {group.label}
+              </p>
+              <p className="mb-5 text-xs leading-relaxed text-muted-foreground">
+                {group.subtitle}
+              </p>
+              <ul className="space-y-3">
+                {primaries.map((it) => (
+                  <li key={it.name}>
+                    <p className="font-sans text-base font-bold text-foreground">{it.name}</p>
+                    {"children" in it && it.children && (
+                      <p className="mt-1 font-mono text-[11px] tracking-wide text-muted-foreground">
+                        {it.children.join(" · ")}
+                      </p>
+                    )}
+                  </li>
+                ))}
+              </ul>
+              {supporting.length > 0 && (
+                <ul className="mt-5 space-y-1.5 border-t border-border pt-4 text-sm text-muted-foreground">
+                  {supporting.map((it) => (
+                    <li key={it.name}>{it.name}</li>
+                  ))}
+                </ul>
+              )}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );

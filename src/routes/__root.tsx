@@ -79,6 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Zach Benalayat — Product Manager & Data Analyst" },
       { property: "og:description", content: "Product portfolio of Zach Benalayat, featuring Seamless API, Inseego Connect, and more." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Zach Benalayat" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@zachbenalayat" },
     ],

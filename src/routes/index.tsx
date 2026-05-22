@@ -190,21 +190,54 @@ function Index() {
       {/* Trust strip */}
       <section className="border-b border-border bg-background">
         <div className="mx-auto max-w-5xl px-6 py-10">
-          <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
             Experience across
           </p>
-          <ul className="flex flex-wrap items-center gap-x-8 gap-y-3">
-            {trustLogos.map((name) => (
-              <li
-                key={name}
-                className="text-base font-semibold tracking-tight text-muted-foreground/80 md:text-lg"
-              >
-                {name}
+          <ul className="flex flex-wrap items-center gap-x-10 gap-y-6">
+            {trustLogos.map((logo) => (
+              <li key={logo.domain} className="flex h-8 items-center">
+                <img
+                  src={`https://logo.clearbit.com/${logo.domain}`}
+                  alt={`${logo.name} logo`}
+                  loading="lazy"
+                  className="h-8 w-auto opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0"
+                  onError={(e) => {
+                    const img = e.currentTarget;
+                    const fallback = document.createElement("span");
+                    fallback.textContent = logo.name;
+                    fallback.className =
+                      "text-base font-semibold tracking-tight text-muted-foreground/80";
+                    img.replaceWith(fallback);
+                  }}
+                />
               </li>
             ))}
           </ul>
         </div>
       </section>
+
+      {/* By the numbers */}
+      <section className="border-b border-border bg-muted/30">
+        <div className="mx-auto max-w-5xl px-6 py-14 md:py-16">
+          <p className="mb-8 text-xs font-semibold uppercase tracking-widest text-primary">
+            By the numbers
+          </p>
+          <dl className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            {byTheNumbers.map((stat) => (
+              <div key={stat.label}>
+                <dt className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+                  {stat.value}
+                </dt>
+                <dd className="mt-2 text-sm leading-snug text-muted-foreground">
+                  {stat.label}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+
 
 
 

@@ -226,9 +226,16 @@ function Index() {
             >
               Send an email <ArrowRight className="h-4 w-4" />
             </a>
+            <a
+              href="/Zach_J_Benalayat.pdf"
+              download
+              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary-foreground/10"
+            >
+              <Download className="h-4 w-4" /> Download resume
+            </a>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary-foreground/10"
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium text-primary-foreground/80 transition-all hover:text-primary-foreground"
             >
               View contact options
             </Link>

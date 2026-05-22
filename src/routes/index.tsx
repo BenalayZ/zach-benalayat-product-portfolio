@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 const skills = [
   {
     title: "Data Analysis",
-    body: "Messy or incomplete data isn't a blocker — it's a puzzle. I dig into raw datasets to surface the patterns and reconciliation gaps everyone else overlooked, then turn them into product decisions.",
+    body: "Messy or incomplete data isn't a blocker — it's a puzzle. I work through raw datasets to surface the patterns and reconciliation gaps everyone else overlooked, then turn them into product decisions.",
   },
   {
     title: "Full PDLC Ownership",
@@ -67,13 +67,12 @@ function Index() {
 
           <h1 className="text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl">
             Hello! I&apos;m Zach Benalayat, a Product Analyst and Manager who
-            treats data like <span className="text-primary">dig sites</span>.
+            finds the <span className="text-primary">signal in the noise</span>.
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Trained in archaeology and forensics. Shipping B2B SaaS, IoT, and
-            AI-platform products end-to-end — from PRD through post-launch
-            analysis.
+            Shipping B2B SaaS, IoT, and AI-platform products end-to-end — from
+            PRD through post-launch analysis.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">

@@ -64,7 +64,7 @@ const education = [
   {
     period: "2013 — 2017",
     school: "Dickinson College",
-    focus: "Archaeology · Forensics · Anthropology",
+    focus: "Data Science · Forensics · Anthropology",
   },
 ];
 

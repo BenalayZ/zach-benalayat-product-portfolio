@@ -90,7 +90,10 @@ const skills = [
   },
 ];
 
-const toolkit = [
+type ToolkitItem = { name: string; primary?: boolean; children?: string[] };
+type ToolkitGroup = { label: string; subtitle: string; items: ToolkitItem[] };
+
+const toolkit: ToolkitGroup[] = [
   {
     label: "Certifications",
     subtitle: "Formal credentials.",
@@ -103,7 +106,7 @@ const toolkit = [
     label: "Languages & Querying",
     subtitle: "What I write in.",
     items: [
-      { name: "SQL", primary: true },
+      { name: "SQL", primary: true, children: ["PostgreSQL", "T-SQL", "MySQL", "SQLite"] },
       { name: "Python", primary: true, children: ["pandas", "NumPy", "matplotlib"] },
       { name: "R" },
     ],

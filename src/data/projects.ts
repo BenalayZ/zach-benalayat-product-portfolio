@@ -128,6 +128,7 @@ export const projects: Project[] = [
       "Qualtrics surveys after every training session shaped UX. Competitive analysis informed hosting and database tooling choices.",
     outcome:
       "Launched with a student-managed database and Digital Mappa annotation tool. Cited in dozens of musicology journals.",
+    featured: true,
   },
   {
     slug: "the-arc",

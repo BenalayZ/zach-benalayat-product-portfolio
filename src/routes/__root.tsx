@@ -10,6 +10,7 @@ import {
 import { Linkedin } from "lucide-react";
 
 import appCss from "../styles.css?url";
+import logo from "@/assets/logo.png";
 
 function NotFoundComponent() {
   return (

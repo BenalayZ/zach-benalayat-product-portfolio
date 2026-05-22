@@ -129,6 +129,7 @@ const toolkit: ToolkitGroup[] = [
     items: [
       { name: "Power BI", primary: true },
       { name: "Tableau", primary: true },
+      { name: "Amplitude", primary: true },
       { name: "Looker" },
       { name: "Google Analytics" },
       { name: "Excel / Sheets" },

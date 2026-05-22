@@ -6,25 +6,72 @@ import { ProjectCard } from "@/components/ProjectCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Zach Benalayat — Product Manager & Data Analyst" },
+      { title: "Zach Benalayat — Product Analyst & Manager" },
       {
         name: "description",
         content:
-          "Product portfolio of Zach Benalayat — Seamless API, Data Engine 4.0, Inseego Connect, and more. A data-driven approach to product strategy.",
+          "Product Analyst and Manager shipping B2B SaaS, IoT, and AI platforms end-to-end. Open to full-time, fractional, and contract engagements.",
       },
-      { property: "og:title", content: "Zach Benalayat — Product Portfolio" },
+      { property: "og:title", content: "Zach Benalayat — Product Analyst & Manager" },
       {
         property: "og:description",
         content:
-          "Case studies in product management and data analysis across B2B SaaS, IoT, and digital scholarship.",
+          "Case studies across B2B SaaS, IoT, and AI platforms — and analytics-driven product strategy. Available for full-time, fractional, and contract work.",
       },
       { property: "og:image", content: "https://zachbenalayat.com/og-image.jpg" },
       { name: "twitter:image", content: "https://zachbenalayat.com/og-image.jpg" },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
+    ],
   }),
   component: Index,
 });
+
+const faqs = [
+  {
+    q: "What kinds of engagements are you open to?",
+    a: "Full-time Product Manager or Product Analyst roles, plus fractional and contract work — analytics audits, PRD authoring, launch support, and end-to-end PDLC ownership for shorter-scope projects.",
+  },
+  {
+    q: "What types of products have you shipped?",
+    a: "B2B SaaS, IoT and telecom hardware, AI platforms (including MCP integrations on the GPT and Claude stores), data infrastructure, and non-profit case-management systems. Recent flagship work includes Seamless API ($750k ARR year one) and Inseego Connect ($1M+ ARR uplift).",
+  },
+  {
+    q: "Do you lead analytics or product strategy?",
+    a: "Both — that's the point. I build the funnels, dashboards, and statistical analyses myself, then use those findings to drive PRDs, roadmaps, and GTM strategy. SQL, Python, PowerBI, A/B testing on the analytics side; PRDs, roadmapping, and stakeholder scrums on the product side.",
+  },
+  {
+    q: "What does your typical process look like from idea to launch?",
+    a: "Identify objectives, research and competitive analysis, develop strategy, write the PRD and success metrics, ship with engineering, then run post-launch analysis to drive the next iteration. MVP is the starting point, not the finish line.",
+  },
+  {
+    q: "How do I get in touch?",
+    a: "Email zacharia.benalayat@gmail.com or message on LinkedIn at linkedin.com/in/zach-benalayat. Resume is downloadable from any page on the site.",
+  },
+];
+
+const trustLogos = [
+  "Seamless.AI",
+  "Inseego",
+  "T-Mobile",
+  "CaseWorthy",
+  "The Arc",
+  "UT Austin",
+  "Dickinson College",
+];
 
 const skills = [
   {
@@ -60,9 +107,9 @@ function Index() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
             <span className="font-semibold uppercase tracking-widest text-muted-foreground">
-              Status
+              Available
             </span>
-            <span className="font-medium text-primary">Open to new roles</span>
+            <span className="font-medium text-primary">Full-time, fractional &amp; contract</span>
           </div>
 
           <h1 className="text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl">
@@ -132,6 +179,27 @@ function Index() {
           </dl>
         </div>
       </section>
+
+      {/* Trust strip */}
+      <section className="border-b border-border bg-background">
+        <div className="mx-auto max-w-5xl px-6 py-10">
+          <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            Experience across
+          </p>
+          <ul className="flex flex-wrap items-center gap-x-8 gap-y-3">
+            {trustLogos.map((name) => (
+              <li
+                key={name}
+                className="text-base font-semibold tracking-tight text-muted-foreground/80 md:text-lg"
+              >
+                {name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+
 
 
       {/* Positioning / Bio */}

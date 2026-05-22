@@ -16,7 +16,10 @@ export const Route = createFileRoute("/contact")({
         content:
           "Email or connect on LinkedIn for collaborations, advisory roles, and product leadership opportunities.",
       },
+      { property: "og:image", content: "/og-image.jpg" },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
+    links: [{ rel: "canonical", href: "/contact" }],
   }),
   component: ContactPage,
 });

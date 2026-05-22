@@ -17,7 +17,10 @@ export const Route = createFileRoute("/about")({
         content:
           "Experience, education, product strategy principles, and process — from Seamless API to non-profit implementations.",
       },
+      { property: "og:image", content: "/og-image.jpg" },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
   component: AboutPage,
 });

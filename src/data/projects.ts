@@ -1,6 +1,6 @@
 import seamlessApi from "@/assets/projects/seamless-api.jpg";
 import dataEngine from "@/assets/projects/data-engine.jpg";
-import seamlessMcp from "@/assets/projects/seamless-mcp-chatgpt.jpg";
+import seamlessMcp from "@/assets/projects/seamless-mcp.jpg";
 import seamlessFastData from "@/assets/projects/seamless-fast-data.jpg";
 import inseegoConnect from "@/assets/projects/inseego-connect.jpg";
 import latinHyperTexts from "@/assets/projects/latin-hyper-texts.jpg";

@@ -10,7 +10,7 @@ import {
 import { Linkedin } from "lucide-react";
 
 import appCss from "../styles.css?url";
-import logo from "@/assets/logo.png";
+
 
 function NotFoundComponent() {
   return (
@@ -165,9 +165,8 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="flex items-center gap-3 text-foreground" aria-label="Zach Benalayat — home">
-          <img src={logo} alt="Zach Benalayat" className="h-6 w-auto" />
-          <span className="hidden text-sm font-semibold tracking-tight md:inline">Zach Benalayat</span>
+        <Link to="/" className="text-sm font-semibold tracking-tight text-foreground" aria-label="Zach Benalayat — home">
+          Zach Benalayat
         </Link>
         <nav className="flex items-center gap-2 text-sm font-medium md:gap-6">
           <Link to="/" className="text-muted-foreground transition-colors hover:text-foreground" activeProps={{ className: "text-foreground" }}>

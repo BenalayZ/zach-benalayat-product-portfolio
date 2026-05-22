@@ -348,8 +348,25 @@ function Index() {
               );
             })}
           </div>
+
+          <div className="mt-16 border-t border-border pt-12">
+            <p className="mb-6 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+              Frameworks & Methods // 02
+            </p>
+            <ul className="flex flex-wrap gap-2">
+              {frameworks.map((f) => (
+                <li
+                  key={f}
+                  className="border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                >
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
+
 
       {/* Featured Projects */}
       <section id="work" className="border-b border-border">

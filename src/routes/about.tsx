@@ -17,7 +17,10 @@ export const Route = createFileRoute("/about")({
         content:
           "Experience, education, product strategy principles, and process — from Seamless API to non-profit implementations.",
       },
+      { property: "og:image", content: "/og-image.jpg" },
+      { name: "twitter:image", content: "/og-image.jpg" },
     ],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
   component: AboutPage,
 });
@@ -107,6 +110,25 @@ const steps = [
   "Continuous improvement",
   "Analyzing outcomes",
   "Focusing on the future",
+];
+
+const toolGroups = [
+  {
+    label: "Product",
+    tools: ["PRDs & Specs", "Roadmapping", "Jira", "Linear", "Figma", "Notion"],
+  },
+  {
+    label: "Data & Analytics",
+    tools: ["SQL", "Python", "PowerBI", "A/B Testing", "Statistical Analysis", "Funnel Analysis"],
+  },
+  {
+    label: "Engineering & Architecture",
+    tools: ["REST APIs", "MCP", "ETL Pipelines", "Event Streaming", "AWS", "Data Modeling"],
+  },
+  {
+    label: "Research & Discovery",
+    tools: ["User Interviews", "Qualtrics Surveys", "Competitive Analysis", "Stakeholder Scrums"],
+  },
 ];
 
 function AboutPage() {
@@ -232,6 +254,37 @@ function AboutPage() {
           </li>
         ))}
       </ol>
+
+      <hr className="my-12 border-border" />
+
+      <div className="mb-8">
+        <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+          Toolkit
+        </p>
+        <h2 className="text-2xl font-bold text-foreground">Tools &amp; Methods</h2>
+      </div>
+      <div className="grid gap-6 md:grid-cols-2">
+        {toolGroups.map((group) => (
+          <div
+            key={group.label}
+            className="rounded-2xl border border-border bg-card p-6"
+          >
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
+              {group.label}
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {group.tools.map((tool) => (
+                <span
+                  key={tool}
+                  className="rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-foreground"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -90,7 +90,10 @@ const skills = [
   },
 ];
 
-const toolkit = [
+type ToolkitItem = { name: string; primary?: boolean; children?: string[] };
+type ToolkitGroup = { label: string; subtitle: string; items: ToolkitItem[] };
+
+const toolkit: ToolkitGroup[] = [
   {
     label: "Certifications",
     subtitle: "Formal credentials.",

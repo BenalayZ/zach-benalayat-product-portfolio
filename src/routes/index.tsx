@@ -63,15 +63,6 @@ const faqs = [
   },
 ];
 
-const trustLogos = [
-  { name: "Seamless.AI", domain: "seamless.ai" },
-  { name: "Inseego", domain: "inseego.com" },
-  { name: "T-Mobile", domain: "t-mobile.com" },
-  { name: "CaseWorthy", domain: "caseworthy.com" },
-  { name: "The Arc", domain: "thearcsomd.org" },
-  { name: "UT Austin", domain: "utexas.edu" },
-  { name: "Dickinson College", domain: "dickinson.edu" },
-];
 
 const byTheNumbers = [
   { value: "6+", label: "Years shipping product" },
@@ -187,34 +178,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Trust strip */}
-      <section className="border-b border-border bg-background">
-        <div className="mx-auto max-w-5xl px-6 py-10">
-          <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-            Experience across
-          </p>
-          <ul className="flex flex-wrap items-center gap-x-10 gap-y-6">
-            {trustLogos.map((logo) => (
-              <li key={logo.domain} className="flex h-8 items-center">
-                <img
-                  src={`https://logo.clearbit.com/${logo.domain}`}
-                  alt={`${logo.name} logo`}
-                  loading="lazy"
-                  className="h-8 w-auto opacity-60 grayscale transition-all hover:opacity-100 hover:grayscale-0"
-                  onError={(e) => {
-                    const img = e.currentTarget;
-                    const fallback = document.createElement("span");
-                    fallback.textContent = logo.name;
-                    fallback.className =
-                      "text-base font-semibold tracking-tight text-muted-foreground/80";
-                    img.replaceWith(fallback);
-                  }}
-                />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
 
       {/* By the numbers */}
       <section className="border-b border-border bg-muted/30">

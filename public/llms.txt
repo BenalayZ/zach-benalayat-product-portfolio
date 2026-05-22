@@ -10,6 +10,10 @@
 
 ## Case Studies
 
-- [Seamless API](/work/seamless-api): B2B SaaS API product strategy and rollout.
-- [Inseego Connect](/work/inseego-connect): IoT device management platform.
+- [Seamless API](/work/seamless-api): API product strategy and rollout.
 - [Data Engine 4.0](/work/data-engine-4): Data infrastructure for product analytics.
+- [Seamless MCP](/work/seamless-mcp): Model Context Protocol integration.
+- [Seamless Fast Data](/work/seamless-fast-data): Real-time data delivery.
+- [Inseego Connect](/work/inseego-connect): IoT device management platform.
+- [Latin Hyper-Texts](/work/latin-hyper-texts): Digital scholarship project.
+- [The Arc](/work/the-arc): Product case study.

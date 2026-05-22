@@ -2,6 +2,32 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { projects } from "@/data/projects";
 
+const dateMap: Record<string, string> = {
+  "May 2025": "2025-05",
+  "Dec 2024": "2024-12",
+  "2025": "2025",
+  "Mar 2022": "2022-03",
+  "Apr 2022": "2022-04",
+  "2020": "2020",
+};
+
+function makeArticleSchema(project: (typeof projects)[number]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: project.title,
+    description: project.headline ?? project.summary,
+    image: project.image,
+    author: {
+      "@type": "Person",
+      name: "Zach Benalayat",
+      url: "https://www.linkedin.com/in/zach-benalayat/",
+    },
+    datePublished: dateMap[project.date],
+    url: `https://zachbenalayat.com/work/${project.slug}`,
+  };
+}
+
 export const Route = createFileRoute("/work/$slug")({
   loader: ({ params }) => {
     const project = projects.find((p) => p.slug === params.slug);
@@ -26,6 +52,12 @@ export const Route = createFileRoute("/work/$slug")({
         { name: "twitter:image", content: p.image },
       ],
       links: [{ rel: "canonical", href: `/work/${p.slug}` }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(makeArticleSchema(p)),
+        },
+      ],
     };
   },
   notFoundComponent: () => (

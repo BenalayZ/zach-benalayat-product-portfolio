@@ -109,6 +109,25 @@ const steps = [
   "Focusing on the future",
 ];
 
+const toolGroups = [
+  {
+    label: "Product",
+    tools: ["PRDs & Specs", "Roadmapping", "Jira", "Linear", "Figma", "Notion"],
+  },
+  {
+    label: "Data & Analytics",
+    tools: ["SQL", "Python", "PowerBI", "A/B Testing", "Statistical Analysis", "Funnel Analysis"],
+  },
+  {
+    label: "Engineering & Architecture",
+    tools: ["REST APIs", "MCP", "ETL Pipelines", "Event Streaming", "AWS", "Data Modeling"],
+  },
+  {
+    label: "Research & Discovery",
+    tools: ["User Interviews", "Qualtrics Surveys", "Competitive Analysis", "Stakeholder Scrums"],
+  },
+];
+
 function AboutPage() {
   return (
     <div className="mx-auto max-w-4xl px-6 py-16 md:py-24">

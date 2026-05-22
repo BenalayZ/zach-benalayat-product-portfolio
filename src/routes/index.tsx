@@ -71,8 +71,9 @@ function Index() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Shipping B2B SaaS, IoT, and AI-platform products end-to-end — from
-            PRD through post-launch analysis.
+            Equal parts analyst and PM — I turn raw data into product strategy,
+            then ship B2B SaaS, IoT, and AI platforms end-to-end across the
+            full PDLC.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">
@@ -142,27 +143,27 @@ function Index() {
                 What I&apos;m looking for
               </p>
               <h2 className="text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">
-                A role where the data actually drives the decision.
+                A role where analytics and product management share the wheel.
               </h2>
             </div>
             <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
               <p>
-                I&apos;m not chasing a title — I&apos;m chasing impact. Over the last
-                several years I&apos;ve owned the full product development lifecycle on
-                products that ship measurable revenue: $750k ARR in year one on Seamless
-                API, $1M+ ARR uplift on Inseego Connect, 20% AWS savings on Data Engine
-                4.0.
+                I operate at the intersection of data analysis and product management —
+                digging into raw datasets, building the funnels and dashboards, and
+                using what I find to shape PRDs, roadmaps, and launch strategy.
               </p>
               <p>
-                I resonate deeply with teams that treat strategy as a continuous process,
-                not a one-time deck. I thrive in environments that value out-of-the-box
-                thinking, qualitative + quantitative rigor, and tight communication
-                between product, engineering, and GTM.
+                That dual lens has shipped real outcomes: $750k ARR in year one on
+                Seamless API, $1M+ ARR uplift on Inseego Connect, and 20% AWS savings
+                on Data Engine 4.0 — each one driven by analytics work that pointed
+                product decisions in the right direction.
               </p>
               <p>
-                I bring extensive experience working with startups and scale-ups —
-                guiding products from ideation through growth, with the receipts to prove
-                each step moved the business forward.
+                I thrive in teams that treat strategy as a continuous, evidence-led
+                process and that value tight communication between product, data,
+                engineering, and GTM. Startups and scale-ups, ideation through
+                growth — with the receipts to prove each step moved the business
+                forward.
               </p>
             </div>
           </div>

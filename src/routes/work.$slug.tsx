@@ -38,7 +38,7 @@ export const Route = createFileRoute("/work/$slug")({
     const p = loaderData?.project;
     if (!p) return { meta: [{ title: "Case study — Zach Benalayat" }] };
     const title = `${p.title} — Zach Benalayat`;
-    const description = p.headline ?? p.summary;
+    const description = p.summary;
     return {
       meta: [
         { title },

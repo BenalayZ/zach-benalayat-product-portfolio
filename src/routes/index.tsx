@@ -63,17 +63,16 @@ function Index() {
           </div>
 
           <h1 className="text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl">
-            Hello! I&apos;m Zach Benalayat, a{" "}
-            <span className="text-primary">
-              Product Manager &amp; Data Analyst
-            </span>{" "}
-            with a data-driven approach to product.
+            Hello! I&apos;m Zach Benalayat, a Product Manager who treats
+            products like <span className="text-primary">dig sites</span> —
+            excavating signal from messy data until the next decision is
+            obvious.
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-            I work end-to-end — from success metrics and KPIs through post-launch analysis
-            and continuous improvement. Products shipped across B2B sales, SaaS,
-            e-commerce, telecom, and non-profit.
+            Trained in archaeology and forensics. Shipping B2B SaaS, IoT, and
+            AI-platform products end-to-end — from PRD through post-launch
+            analysis.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">
@@ -97,8 +96,34 @@ function Index() {
               Get in touch
             </Link>
           </div>
+
+          {/* Outcome metrics */}
+          <dl className="mt-14 grid grid-cols-1 gap-6 border-t border-border pt-10 sm:grid-cols-3 sm:gap-4">
+            {[
+              { value: "$750k ARR", label: "Seamless API, year one" },
+              { value: "$1M+ ARR", label: "Inseego Connect uplift" },
+              { value: "20% lower", label: "AWS spend on Data Engine 4.0" },
+            ].map((m, i) => (
+              <div
+                key={m.value}
+                className={
+                  i > 0
+                    ? "sm:border-l sm:border-border sm:pl-6"
+                    : undefined
+                }
+              >
+                <dt className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+                  {m.value}
+                </dt>
+                <dd className="mt-1 text-sm text-muted-foreground">
+                  {m.label}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
+
 
       {/* Positioning / Bio */}
       <section className="border-b border-border bg-muted/30">

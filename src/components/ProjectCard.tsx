@@ -30,6 +30,11 @@ export function ProjectCard({ project }: { project: Project }) {
               {project.date}
             </span>
           </div>
+          {project.headline && (
+            <p className="mb-2 text-sm font-semibold text-primary">
+              {project.headline}
+            </p>
+          )}
           <p className="text-sm leading-relaxed text-muted-foreground">
             {project.summary}
           </p>

@@ -10,6 +10,7 @@ export type Project = {
   slug: string;
   title: string;
   date: string;
+  headline?: string;
   summary: string;
   image: string;
   tags: string[];

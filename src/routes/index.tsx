@@ -185,61 +185,50 @@ function Index() {
 
 
       {/* By the numbers */}
-      <section className="border-b border-border bg-muted/30">
-        <div className="mx-auto max-w-5xl px-6 py-14 md:py-16">
-          <p className="mb-8 text-xs font-semibold uppercase tracking-widest text-primary">
-            By the numbers
-          </p>
-          <dl className="grid grid-cols-2 gap-8 md:grid-cols-4">
+      <section className="border-y border-border">
+        <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-10">
             {byTheNumbers.map((stat) => (
-              <div key={stat.label}>
-                <dt className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
+              <div key={stat.label} className="flex items-baseline gap-4">
+                <span className="font-sans text-5xl font-light tracking-tighter text-primary">
                   {stat.value}
-                </dt>
-                <dd className="mt-2 text-sm leading-snug text-muted-foreground">
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
                   {stat.label}
-                </dd>
+                </span>
               </div>
             ))}
-          </dl>
+          </div>
         </div>
       </section>
 
-
-
-
-
-
-      {/* Positioning / Bio */}
-      <section className="border-b border-border bg-muted/30">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
-          <div className="grid gap-12 md:grid-cols-[1fr_2fr] md:gap-16">
+      {/* Positioning */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+          <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
             <div>
-              <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary">
-                What I&apos;m looking for
+              <p className="mb-6 inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary underline decoration-2 underline-offset-8">
+                Mission Control
               </p>
-              <h2 className="text-3xl font-bold leading-tight tracking-tight text-foreground md:text-4xl">
+              <h2 className="font-sans text-4xl font-extrabold leading-[1.1] tracking-tighter text-foreground md:text-5xl">
                 A role where analytics and product management share the wheel.
               </h2>
             </div>
-            <div className="space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
+            <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
               <p>
                 I operate at the intersection of data analysis and product management —
-                digging into raw datasets, building the funnels and dashboards, and
-                using what I find to shape PRDs, roadmaps, and launch strategy.
+                digging into raw datasets, building the funnels and dashboards, and using
+                what I find to shape PRDs, roadmaps, and launch strategy.
               </p>
               <p>
-                That dual lens has shipped real outcomes: $750k ARR in year one on
-                Seamless API, $1M+ ARR uplift on Inseego Connect, and 20% AWS savings
-                on Data Engine 4.0 — each one driven by analytics work that pointed
-                product decisions in the right direction.
+                That dual lens has shipped real outcomes: $750k ARR in year one on Seamless
+                API, $1M+ ARR uplift on Inseego Connect, and 20% AWS savings on Data
+                Engine 4.0 — each one driven by analytics work that pointed product
+                decisions in the right direction.
               </p>
               <p>
-                I thrive in teams that treat strategy as a continuous, evidence-led
-                process and that value tight communication between product, data,
-                engineering, and GTM. Startups and scale-ups, ideation through
-                growth — with the receipts to prove each step moved the business
-                forward.
+                I thrive in teams that treat strategy as a continuous, evidence-led process
+                and value tight communication between product, data, engineering, and GTM.
               </p>
             </div>
           </div>
@@ -248,13 +237,13 @@ function Index() {
 
       {/* Featured Projects */}
       <section id="work" className="border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
-          <div className="mb-12 flex items-end justify-between gap-6">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+          <div className="mb-16 flex items-end justify-between gap-6">
             <div>
-              <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
-                Selected Work
+              <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                Selected Work // 01
               </p>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
                 Featured Projects
               </h2>
             </div>
@@ -274,23 +263,28 @@ function Index() {
         </div>
       </section>
 
-      {/* Top Skills */}
-      <section className="border-b border-border bg-muted/30">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
-          <div className="mb-12">
-            <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+      {/* Top Skills — grid with hairline dividers */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+          <div className="mb-16">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">
               How I work
             </p>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
               Top Skills
             </h2>
           </div>
 
-          <div className="grid gap-10 md:grid-cols-2 md:gap-12">
-            {skills.map((skill) => (
-              <div key={skill.title}>
-                <h3 className="mb-3 text-xl font-bold text-foreground">{skill.title}</h3>
-                <p className="text-base leading-relaxed text-muted-foreground">
+          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
+            {skills.map((skill, i) => (
+              <div key={skill.title} className="bg-background p-8">
+                <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                  0{i + 1}
+                </p>
+                <h3 className="mb-4 font-sans text-xl font-bold text-foreground">
+                  {skill.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
                   {skill.body}
                 </p>
               </div>
@@ -301,19 +295,25 @@ function Index() {
 
       {/* FAQ */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
-          <div className="mb-12">
-            <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+          <div className="mb-16">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">
               FAQ
             </p>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
               Common questions
             </h2>
           </div>
           <dl className="divide-y divide-border border-y border-border">
-            {faqs.map((f) => (
-              <div key={f.q} className="grid gap-3 py-6 md:grid-cols-[1fr_2fr] md:gap-12">
-                <dt className="text-lg font-semibold text-foreground">{f.q}</dt>
+            {faqs.map((f, i) => (
+              <div
+                key={f.q}
+                className="grid gap-4 py-8 md:grid-cols-[auto_1fr_2fr] md:gap-8"
+              >
+                <span className="hidden font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary md:block">
+                  Q_{String(i + 1).padStart(2, "0")}
+                </span>
+                <dt className="font-sans text-lg font-bold text-foreground">{f.q}</dt>
                 <dd className="text-base leading-relaxed text-muted-foreground">{f.a}</dd>
               </div>
             ))}
@@ -321,16 +321,14 @@ function Index() {
         </div>
       </section>
 
-
-
       {/* More Work */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
-          <div className="mb-12">
-            <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
-              More case studies
+        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+          <div className="mb-16">
+            <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
+              Selected Work // 02
             </p>
-            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
               The rest of the portfolio
             </h2>
           </div>
@@ -342,6 +340,7 @@ function Index() {
           </div>
         </div>
       </section>
+
 
       {/* CTA */}
       <section className="bg-primary py-20 text-primary-foreground md:py-24">

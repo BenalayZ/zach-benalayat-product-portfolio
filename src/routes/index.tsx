@@ -64,13 +64,20 @@ const faqs = [
 ];
 
 const trustLogos = [
-  "Seamless.AI",
-  "Inseego",
-  "T-Mobile",
-  "CaseWorthy",
-  "The Arc",
-  "UT Austin",
-  "Dickinson College",
+  { name: "Seamless.AI", domain: "seamless.ai" },
+  { name: "Inseego", domain: "inseego.com" },
+  { name: "T-Mobile", domain: "t-mobile.com" },
+  { name: "CaseWorthy", domain: "caseworthy.com" },
+  { name: "The Arc", domain: "thearcsomd.org" },
+  { name: "UT Austin", domain: "utexas.edu" },
+  { name: "Dickinson College", domain: "dickinson.edu" },
+];
+
+const byTheNumbers = [
+  { value: "6+", label: "Years shipping product" },
+  { value: "7", label: "Launches owned end-to-end" },
+  { value: "$2M+", label: "ARR influenced" },
+  { value: "5", label: "Industries served" },
 ];
 
 const skills = [

@@ -63,15 +63,6 @@ const faqs = [
   },
 ];
 
-const trustLogos = [
-  { name: "Seamless.AI", domain: "seamless.ai" },
-  { name: "Inseego", domain: "inseego.com" },
-  { name: "T-Mobile", domain: "t-mobile.com" },
-  { name: "CaseWorthy", domain: "caseworthy.com" },
-  { name: "The Arc", domain: "thearcsomd.org" },
-  { name: "UT Austin", domain: "utexas.edu" },
-  { name: "Dickinson College", domain: "dickinson.edu" },
-];
 
 const byTheNumbers = [
   { value: "6+", label: "Years shipping product" },

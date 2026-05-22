@@ -73,8 +73,30 @@ const personSchema = {
   "@type": "Person",
   name: "Zach Benalayat",
   jobTitle: "Product Manager & Data Analyst",
+  description:
+    "Product Analyst and Manager shipping B2B SaaS, IoT, and AI platforms end-to-end. Open to full-time, fractional, and contract engagements.",
   url: "https://zachbenalayat.com",
+  email: "mailto:zacharia.benalayat@gmail.com",
   sameAs: ["https://www.linkedin.com/in/zach-benalayat/"],
+  worksFor: { "@type": "Organization", name: "Seamless.AI" },
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "Dickinson College" },
+    { "@type": "CollegeOrUniversity", name: "The University of Texas at Austin" },
+  ],
+  knowsAbout: [
+    "Product Management",
+    "Data Analysis",
+    "Product Strategy",
+    "B2B SaaS",
+    "IoT",
+    "AI Platforms",
+    "Agentic AI",
+    "ETL & Data Pipelines",
+    "A/B Testing",
+    "Funnel Analysis",
+    "SQL",
+    "Python",
+  ],
 };
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({

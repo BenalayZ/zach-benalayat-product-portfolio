@@ -2,25 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Mail, Linkedin, ArrowUpRight, FileDown } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — Zach Benalayat" },
-      {
-        name: "description",
-        content:
-          "Get in touch with Zach Benalayat — open to full-time Product Manager/Analyst roles, fractional engagements, and defined-scope contract work.",
-      },
-      { property: "og:title", content: "Contact — Zach Benalayat" },
-      {
-        property: "og:description",
-        content:
-          "Email or LinkedIn — available for full-time, fractional, and contract product and analytics engagements.",
-      },
-      { property: "og:image", content: "https://zachbenalayat.com/og-image.jpg" },
-      { name: "twitter:image", content: "https://zachbenalayat.com/og-image.jpg" },
-    ],
-    links: [{ rel: "canonical", href: "/contact" }],
-  }),
   component: ContactPage,
 });
 
@@ -42,7 +23,7 @@ function ContactPage() {
       icon: FileDown,
       label: "Resume",
       value: "Zach_J_Benalayat.pdf",
-      href: "/Zach_J_Benalayat.pdf",
+      href: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/Zach_J_Benalayat.pdf`,
       download: true,
     },
   ];

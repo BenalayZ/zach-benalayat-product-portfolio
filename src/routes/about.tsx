@@ -3,25 +3,6 @@ import { Download } from "lucide-react";
 
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — Zach Benalayat" },
-      {
-        name: "description",
-        content:
-          "Zach Benalayat — Product & Business Analytics PM. SQL, Python, Power BI, Looker, Snowflake. Analytics frameworks and KPI design across B2B SaaS, IoT, and AI platforms.",
-      },
-      { property: "og:title", content: "About — Zach Benalayat" },
-      {
-        property: "og:description",
-        content:
-          "Experience, education, and the analytics stack — SQL, Python, Power BI / Looker / Tableau on Snowflake — used to ship product across B2B SaaS, IoT, and AI.",
-      },
-      { property: "og:image", content: "https://zachbenalayat.com/og-image.jpg" },
-      { name: "twitter:image", content: "https://zachbenalayat.com/og-image.jpg" },
-    ],
-    links: [{ rel: "canonical", href: "/about" }],
-  }),
   component: AboutPage,
 });
 
@@ -243,7 +224,7 @@ function AboutPage() {
         </blockquote>
         <div className="pt-2">
           <a
-            href="/Zach_J_Benalayat.pdf"
+            href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/Zach_J_Benalayat.pdf`}
             download
             className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
           >

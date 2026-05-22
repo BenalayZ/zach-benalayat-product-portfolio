@@ -4,13 +4,12 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
-  HeadContent,
-  Scripts,
 } from "@tanstack/react-router";
 import { Linkedin } from "lucide-react";
 
-import appCss from "../styles.css?url";
-
+// Resolve absolute paths under the GitHub Pages subpath (e.g. PDFs in /public)
+const withBase = (p: string) =>
+  `${import.meta.env.BASE_URL.replace(/\/$/, "")}/${p.replace(/^\//, "")}`;
 
 function NotFoundComponent() {
   return (
@@ -58,7 +57,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             Try again
           </button>
           <a
-            href="/"
+            href={withBase("/")}
             className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
           >
             Go home
@@ -69,97 +68,11 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Zach Benalayat",
-  jobTitle: "Product Manager & Data Analyst",
-  description:
-    "Product Analyst and Manager shipping B2B SaaS, IoT, and AI platforms end-to-end. Open to full-time, fractional, and contract engagements.",
-  url: "https://zachbenalayat.com",
-  email: "mailto:zacharia.benalayat@gmail.com",
-  sameAs: ["https://www.linkedin.com/in/zach-benalayat/"],
-  worksFor: { "@type": "Organization", name: "Seamless.AI" },
-  alumniOf: [
-    { "@type": "CollegeOrUniversity", name: "Dickinson College" },
-    { "@type": "CollegeOrUniversity", name: "The University of Texas at Austin" },
-  ],
-  knowsAbout: [
-    "Product Management",
-    "Data Analysis",
-    "Product Strategy",
-    "B2B SaaS",
-    "IoT",
-    "AI Platforms",
-    "Agentic AI",
-    "ETL & Data Pipelines",
-    "A/B Testing",
-    "Funnel Analysis",
-    "SQL",
-    "Python",
-  ],
-};
-
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Zach Benalayat — Product Manager & Data Analyst" },
-      { name: "description", content: "Product portfolio of Zach Benalayat, featuring Seamless API, Inseego Connect, and more." },
-      { name: "author", content: "Zach Benalayat" },
-      { property: "og:title", content: "Zach Benalayat — Product Manager & Data Analyst" },
-      { property: "og:description", content: "Product portfolio of Zach Benalayat, featuring Seamless API, Inseego Connect, and more." },
-      { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Zach Benalayat" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@zachbenalayat" },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-      {
-        rel: "preconnect",
-        href: "https://fonts.googleapis.com",
-      },
-      {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap",
-      },
-    ],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify(personSchema),
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function Header() {
   return (
@@ -188,7 +101,7 @@ function Header() {
             <Linkedin className="h-4 w-4" />
           </a>
           <a
-            href="/Zach_J_Benalayat.pdf"
+            href={withBase("/Zach_J_Benalayat.pdf")}
             download
             className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground transition-all hover:bg-primary/90 md:px-4 md:text-sm"
           >

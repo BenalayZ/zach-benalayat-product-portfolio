@@ -110,7 +110,7 @@ function AboutPage() {
             {skill}
           </span>
         ))}
-      </a>
+      </div>
     </div>
   );
 }

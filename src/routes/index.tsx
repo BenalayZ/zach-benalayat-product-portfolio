@@ -83,11 +83,18 @@ function Index() {
             >
               See my work <ArrowRight className="h-4 w-4" />
             </a>
-            <Link
-              to="/contact"
+            <a
+              href="/Zach_J_Benalayat.pdf"
+              download
               className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-medium text-foreground transition-all hover:bg-accent"
             >
-              <Download className="h-4 w-4" /> Get in touch
+              <Download className="h-4 w-4" /> Download resume
+            </a>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium text-muted-foreground transition-all hover:text-foreground"
+            >
+              Get in touch
             </Link>
           </div>
         </div>

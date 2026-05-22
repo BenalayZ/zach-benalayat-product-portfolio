@@ -127,6 +127,36 @@ function CaseStudy() {
             </span>
           ))}
         </div>
+
+        {/* Outcomes box */}
+        <dl className="mt-10 grid grid-cols-1 gap-4 rounded-2xl border border-border bg-card p-6 sm:grid-cols-3">
+          <div>
+            <dt className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              Role
+            </dt>
+            <dd className="mt-1.5 text-sm font-semibold text-card-foreground">
+              {project.role}
+            </dd>
+          </div>
+          <div className="sm:border-l sm:border-border sm:pl-6">
+            <dt className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              Shipped
+            </dt>
+            <dd className="mt-1.5 text-sm font-semibold text-card-foreground">
+              {project.date}
+            </dd>
+          </div>
+          {project.headline && (
+            <div className="sm:border-l sm:border-border sm:pl-6">
+              <dt className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                Outcome
+              </dt>
+              <dd className="mt-1.5 text-sm font-semibold text-primary">
+                {project.headline}
+              </dd>
+            </div>
+          )}
+        </dl>
       </header>
 
       <div className="border-y border-border bg-muted/30">

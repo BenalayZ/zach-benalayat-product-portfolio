@@ -96,42 +96,53 @@ function Index() {
 
   return (
     <div>
-      {/* Hero */}
-      <section className="border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1.5 text-xs">
+      {/* Hero — centered with orbital rings */}
+      <section className="relative overflow-hidden">
+        {/* Background orbital graphics */}
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <div className="absolute aspect-square w-[140vw] rounded-full border border-primary/10 animate-orbit-slow lg:w-[100vw]" />
+          <div className="absolute aspect-square w-[110vw] rounded-full border border-foreground/5 animate-orbit-mid lg:w-[70vw]" />
+          <div className="absolute aspect-square w-[80vw] rounded-full border border-primary/20 animate-orbit-fast lg:w-[45vw]" />
+          <div className="absolute h-96 w-96 rounded-full bg-primary/15 blur-[120px]" />
+          <div className="absolute h-64 w-64 rotate-45 border border-primary/30 animate-pulse" />
+          <div className="select-none font-sans text-[20vw] font-extrabold tracking-tighter text-foreground opacity-[0.025] lg:text-[15vw]">
+            ZACH BENALAYAT
+          </div>
+        </div>
+
+        <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 py-24 text-center md:py-32">
+          {/* Availability badge */}
+          <div className="mb-10 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
-            <span className="font-semibold uppercase tracking-widest text-muted-foreground">
-              Available
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+              Available — Full-time, fractional &amp; contract
             </span>
-            <span className="font-medium text-primary">Full-time, fractional &amp; contract</span>
           </div>
 
-          <h1 className="text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl">
-            Hello! I&apos;m Zach Benalayat, a Product Analyst and Manager who
-            finds the <span className="text-primary">signal in the noise</span>.
+          <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tighter text-foreground md:text-7xl">
+            I&apos;m <span className="text-primary">Zach</span>. I find the
+            signal in the noise.
           </h1>
 
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
-            Equal parts analyst and PM — I turn raw data into product strategy,
-            then ship B2B SaaS, IoT, and AI platforms end-to-end across the
-            full PDLC.
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-2xl">
+            Equal parts analyst and PM — turning raw data into product strategy
+            to ship B2B SaaS, IoT, and AI platforms across the full PDLC.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
             <a
               href="#work"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
+              className="group inline-flex items-center gap-2 bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground transition-all hover:scale-105 active:scale-95"
             >
-              See my work <ArrowRight className="h-4 w-4" />
+              Explore work <ArrowRight className="h-4 w-4" />
             </a>
             <a
               href="/Zach_J_Benalayat.pdf"
               download
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-medium text-foreground transition-all hover:bg-accent"
+              className="inline-flex items-center gap-2 border border-foreground/20 bg-foreground/5 px-8 py-4 text-sm font-bold uppercase tracking-widest text-foreground backdrop-blur-sm transition-all hover:border-primary hover:text-primary"
             >
               <Download className="h-4 w-4" /> Download resume
             </a>
@@ -139,37 +150,30 @@ function Index() {
               href="https://www.linkedin.com/in/zach-benalayat/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-medium text-foreground transition-all hover:bg-accent"
+              className="inline-flex items-center gap-2 px-4 py-4 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
-              <Linkedin className="h-4 w-4" /> Connect on LinkedIn
+              <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-medium text-muted-foreground transition-all hover:text-foreground"
+              className="inline-flex items-center gap-2 px-4 py-4 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               Get in touch
             </Link>
           </div>
 
           {/* Outcome metrics */}
-          <dl className="mt-14 grid grid-cols-1 gap-6 border-t border-border pt-10 sm:grid-cols-3 sm:gap-4">
+          <dl className="mt-20 grid w-full max-w-3xl grid-cols-1 gap-10 border-t border-border pt-12 md:grid-cols-3">
             {[
-              { value: "$750k ARR", label: "Seamless API, year one" },
-              { value: "$1M+ ARR", label: "Inseego Connect uplift" },
-              { value: "20% lower", label: "AWS spend on Data Engine 4.0" },
-            ].map((m, i) => (
-              <div
-                key={m.value}
-                className={
-                  i > 0
-                    ? "sm:border-l sm:border-border sm:pl-6"
-                    : undefined
-                }
-              >
-                <dt className="text-3xl font-bold tracking-tight text-primary md:text-4xl">
+              { value: "$750k", label: "Seamless API ARR" },
+              { value: "$1M+", label: "Inseego Connect uplift" },
+              { value: "20%", label: "AWS savings on Data Engine 4.0" },
+            ].map((m) => (
+              <div key={m.label} className="group">
+                <dt className="text-4xl font-extrabold tracking-tighter text-primary transition-transform group-hover:scale-110 md:text-5xl">
                   {m.value}
                 </dt>
-                <dd className="mt-1 text-sm text-muted-foreground">
+                <dd className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
                   {m.label}
                 </dd>
               </div>
@@ -177,6 +181,7 @@ function Index() {
           </dl>
         </div>
       </section>
+
 
 
       {/* By the numbers */}

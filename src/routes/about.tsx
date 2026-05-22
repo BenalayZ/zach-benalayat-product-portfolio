@@ -9,13 +9,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Zach Benalayat is a product manager and data analyst — experience at Seamless, Inseego, and CaseWorthy.",
+          "Zach Benalayat is a Product Analyst and Manager — equal parts analytics and product strategy, with experience at Seamless, Inseego, and CaseWorthy. Available for full-time, fractional, and contract work.",
       },
       { property: "og:title", content: "About — Zach Benalayat" },
       {
         property: "og:description",
         content:
-          "Experience, education, product strategy principles, and process — from Seamless API to non-profit implementations.",
+          "Experience, education, product strategy principles, and process — equal parts data analyst and product manager across B2B SaaS, IoT, and AI platforms.",
       },
       { property: "og:image", content: "https://zachbenalayat.com/og-image.jpg" },
       { name: "twitter:image", content: "https://zachbenalayat.com/og-image.jpg" },
@@ -140,26 +140,38 @@ function AboutPage() {
           Zach Benalayat
         </h1>
         <p className="mt-3 text-lg text-muted-foreground">
-          Product Manager · Data Analyst
+          Product Analyst &amp; Manager
         </p>
       </div>
 
       <div className="space-y-6 text-base leading-relaxed text-foreground">
         <p>
-          Hello — I&apos;m Zach. I&apos;m an experienced product manager and data analyst
-          who takes a rigorous approach to data analytics. I&apos;m a firm believer that
-          messy or incomplete data isn&apos;t a blocker to great insights, it&apos;s a
-          puzzle that needs solving.
+          Hello — I&apos;m Zach. I work at the intersection of data analysis and product
+          management: equal parts analyst and PM, building the funnels and dashboards
+          myself, then using what I find to shape PRDs, roadmaps, and launch strategy.
         </p>
         <p>
           I specialize in working end-to-end — from developing success metrics and KPIs, to
           analyzing qualitative post-launch data and implementing improvements during the
-          product lifecycle.
+          product lifecycle. Messy or incomplete data isn&apos;t a blocker to great
+          insights, it&apos;s a puzzle that needs solving.
         </p>
         <p>
-          I&apos;ve launched and improved products across B2B Sales, SaaS, E-Commerce,
-          Telecommunications, and Non-Profit businesses.
+          I&apos;ve launched and improved products across B2B SaaS, IoT/Telecom, AI
+          platforms, E-Commerce, and Non-Profit organizations.
         </p>
+        <div className="flex flex-wrap gap-2 pt-1">
+          {["B2B SaaS", "IoT / Telecom", "AI Platforms", "E-Commerce", "Non-Profit"].map(
+            (industry) => (
+              <span
+                key={industry}
+                className="rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground"
+              >
+                {industry}
+              </span>
+            ),
+          )}
+        </div>
         <blockquote className="border-l-2 border-primary pl-4 text-lg italic text-foreground">
           &ldquo;Success is a <strong>process</strong>, not an end goal.{" "}
           <strong>Continuous Improvement</strong> is my mantra, and data is meaningless

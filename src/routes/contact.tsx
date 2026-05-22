@@ -8,13 +8,13 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with Zach Benalayat for product management and data analysis opportunities.",
+          "Get in touch with Zach Benalayat — open to full-time Product Manager/Analyst roles, fractional engagements, and defined-scope contract work.",
       },
       { property: "og:title", content: "Contact — Zach Benalayat" },
       {
         property: "og:description",
         content:
-          "Email or connect on LinkedIn for collaborations, advisory roles, and product leadership opportunities.",
+          "Email or LinkedIn — available for full-time, fractional, and contract product and analytics engagements.",
       },
       { property: "og:image", content: "https://zachbenalayat.com/og-image.jpg" },
       { name: "twitter:image", content: "https://zachbenalayat.com/og-image.jpg" },
@@ -57,7 +57,8 @@ function ContactPage() {
           Let&apos;s connect
         </h1>
         <p className="mx-auto mt-4 max-w-md text-lg text-muted-foreground">
-          Open to collaborations, advisory roles, and product leadership opportunities.
+          Open to full-time PM/Analyst roles, fractional engagements, and defined-scope
+          contract work.
         </p>
       </div>
 

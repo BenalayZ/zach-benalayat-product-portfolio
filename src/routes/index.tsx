@@ -291,6 +291,30 @@ function Index() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
+          <div className="mb-12">
+            <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+              FAQ
+            </p>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+              Common questions
+            </h2>
+          </div>
+          <dl className="divide-y divide-border border-y border-border">
+            {faqs.map((f) => (
+              <div key={f.q} className="grid gap-3 py-6 md:grid-cols-[1fr_2fr] md:gap-12">
+                <dt className="text-lg font-semibold text-foreground">{f.q}</dt>
+                <dd className="text-base leading-relaxed text-muted-foreground">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+
+
       {/* More Work */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
@@ -318,8 +342,8 @@ function Index() {
             Here&apos;s your chance.
           </h2>
           <p className="mx-auto mb-8 max-w-lg text-primary-foreground/80">
-            Open to collaborations, advisory roles, and product leadership opportunities.
-            Let&apos;s build something great.
+            Open to full-time PM/Analyst roles, fractional engagements, and defined-scope
+            contract work. Let&apos;s build something great.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a

@@ -1,116 +1,226 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Zach Benalayat" },
-      { name: "description", content: "Learn more about Zach Benalayat, his background in product management, and the products he has shipped." },
+      {
+        name: "description",
+        content:
+          "Zach Benalayat is a product manager and GTM specialist with a forensic approach to data — experience at Seamless, Inseego, and CaseWorthy.",
+      },
       { property: "og:title", content: "About — Zach Benalayat" },
-      { property: "og:description", content: "Learn more about Zach Benalayat, his background in product management, and the products he has shipped." },
+      {
+        property: "og:description",
+        content:
+          "Experience, education, product strategy principles, and process — from Seamless API to non-profit implementations.",
+      },
     ],
   }),
   component: AboutPage,
 });
 
+const experience = [
+  {
+    period: "2024 — 2026",
+    company: "Seamless",
+    role: "Product Manager",
+    points: [
+      "Owned Seamless Find & API PDLC end-to-end.",
+      "Drove product strategy for data integration initiatives.",
+    ],
+  },
+  {
+    period: "2022 — 2024",
+    company: "Inseego",
+    role: "Business Analyst",
+    points: [
+      "Identified opportunities within T-Mobile partnerships.",
+      "Generated insights that drove product adoption inside Inseego Connect.",
+    ],
+  },
+  {
+    period: "2019 — 2022",
+    company: "CaseWorthy Inc.",
+    role: "Systems Analyst",
+    points: [
+      "Built custom CaseWorthy implementations for non-profit customers.",
+      "Drafted technical and functional specs for custom database architecture.",
+    ],
+  },
+];
+
+const education = [
+  {
+    period: "2017 — 2019",
+    school: "University of Texas at Austin",
+    focus: "Information Science · Database Administration · Data Analysis",
+  },
+  {
+    period: "2013 — 2017",
+    school: "Dickinson College",
+    focus: "Archaeology · Forensics · Anthropology",
+  },
+];
+
+const northStars = [
+  {
+    title: "Agile Leadership",
+    quote:
+      "Product strategy must be built on scalability and rapid response. Agile product teams can preempt market shifts and emerge as leaders.",
+  },
+  {
+    title: "Stakeholder Communication",
+    quote:
+      "A bundle of arrows does not break. Ensuring every key department is locked in on product strategy is key to success.",
+  },
+  {
+    title: "Continuous Improvement",
+    quote:
+      "Success and failure are both learning opportunities. I never rest on laurels — MVP is a starting point, not an end goal.",
+  },
+  {
+    title: "80/20 Mindset",
+    quote:
+      "The little things really do matter. What might seem like a small amount of work has a significant impact on user behavior.",
+  },
+  {
+    title: "Technical Skill",
+    quote:
+      "In the modern era, everyone needs to understand the how, not just the what, of product functionality. Understanding is key to growth.",
+  },
+  {
+    title: "Data Storytelling",
+    quote:
+      "The story of your product is always in the data. A skilled product manager knows how to leverage it, not just find it.",
+  },
+];
+
+const steps = [
+  "Identifying objectives",
+  "Research and preparation",
+  "Developing strategies",
+  "Plans of action",
+  "Measuring progress",
+  "Continuous improvement",
+  "Analyzing outcomes",
+  "Focusing on the future",
+];
+
 function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+    <div className="mx-auto max-w-4xl px-6 py-16 md:py-24">
       <div className="mb-12">
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">About</p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
           Zach Benalayat
         </h1>
-        <p className="mt-3 text-lg text-muted-foreground">Product Manager &middot; Builder &middot; Strategist</p>
+        <p className="mt-3 text-lg text-muted-foreground">
+          Product Manager · GTM Specialist · Data Forensics
+        </p>
       </div>
 
-      <div className="space-y-8 text-base leading-relaxed text-foreground">
+      <div className="space-y-6 text-base leading-relaxed text-foreground">
         <p>
-          I am a product manager with a passion for turning complex technical systems into
-          intuitive, human-centered products. My work spans API platforms, IoT connectivity,
-          and enterprise SaaS — always with a focus on developer experience and measurable
-          business impact.
+          Hello — I&apos;m Zach. I&apos;m an experienced product manager and GTM specialist
+          who takes a forensic approach to data analytics. I&apos;m a firm believer that
+          messy or incomplete data isn&apos;t a blocker to great insights, it&apos;s a
+          puzzle that needs solving.
         </p>
-
         <p>
-          Most recently, I led product for{" "}
-          <strong className="text-primary">Seamless API</strong>, a unified developer
-          experience that reduced integration time from weeks to hours, and{" "}
-          <strong className="text-primary">Inseego Connect</strong>, an IoT device management
-          platform scaling to 500K+ connected devices.
+          I specialize in working end-to-end — from developing success metrics and KPIs, to
+          analyzing qualitative post-launch data and implementing improvements during the
+          product lifecycle.
         </p>
-
         <p>
-          Before that, I spent years shipping products across analytics, data infrastructure,
-          and consumer-facing tools. I believe great product work sits at the intersection of
-          user empathy, technical depth, and business acumen.
+          I&apos;ve launched and improved products across B2B Sales, SaaS, E-Commerce,
+          Telecommunications, and Non-Profit businesses.
         </p>
+        <blockquote className="border-l-2 border-primary pl-4 text-lg italic text-foreground">
+          &ldquo;Success is a <strong>process</strong>, not an end goal.{" "}
+          <strong>Continuous Improvement</strong> is my mantra, and data is meaningless
+          without clear communication.&rdquo;
+        </blockquote>
       </div>
 
       <hr className="my-12 border-border" />
 
       <h2 className="mb-8 text-2xl font-bold text-foreground">Experience</h2>
       <div className="space-y-10">
-        {[
-          {
-            company: "Seamless API",
-            role: "Senior Product Manager",
-            period: "2022 — Present",
-            description:
-              "Led end-to-end product strategy for a developer-facing API platform. Defined the roadmap, built the KPI framework, and shipped v1 to production with 40+ enterprise customers.",
-          },
-          {
-            company: "Inseego",
-            role: "Product Manager",
-            period: "2019 — 2022",
-            description:
-              "Drove the product vision for Inseego Connect, scaling the platform from 10K to 500K+ devices. Owned the enterprise roadmap, pricing, and go-to-market strategy.",
-          },
-          {
-            company: "Earlier",
-            role: "Product & Analytics Roles",
-            period: "2015 — 2019",
-            description:
-              "Built analytics dashboards, data pipelines, and consumer-facing features across startups and mid-stage companies.",
-          },
-        ].map((job) => (
-          <div key={job.company} className="group">
-            <div className="mb-1 flex items-baseline justify-between">
+        {experience.map((job) => (
+          <div key={job.company}>
+            <div className="mb-1 flex items-baseline justify-between gap-4">
               <h3 className="text-lg font-bold text-card-foreground">{job.company}</h3>
-              <span className="text-sm text-muted-foreground">{job.period}</span>
+              <span className="shrink-0 text-sm text-muted-foreground">{job.period}</span>
             </div>
-            <p className="mb-2 text-sm font-medium text-primary">{job.role}</p>
-            <p className="text-sm leading-relaxed text-muted-foreground">{job.description}</p>
+            <p className="mb-3 text-sm font-medium text-primary">{job.role}</p>
+            <ul className="space-y-1.5 text-sm leading-relaxed text-muted-foreground">
+              {job.points.map((p) => (
+                <li key={p} className="flex gap-2">
+                  <span className="mt-2 inline-block h-1 w-1 shrink-0 rounded-full bg-primary" />
+                  <span>{p}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
 
       <hr className="my-12 border-border" />
 
-      <h2 className="mb-8 text-2xl font-bold text-foreground">Skills</h2>
-      <div className="flex flex-wrap gap-2">
-        {[
-          "Product Strategy",
-          "API Design",
-          "Developer Experience",
-          "IoT Platforms",
-          "Data Analytics",
-          "User Research",
-          "Go-to-Market",
-          "Agile / Scrum",
-          "A/B Testing",
-          "Stakeholder Management",
-          "Technical Writing",
-          "Growth Metrics",
-        ].map((skill) => (
-          <span
-            key={skill}
-            className="rounded-full border border-border bg-secondary px-3.5 py-1.5 text-sm font-medium text-secondary-foreground"
-          >
-            {skill}
-          </span>
+      <h2 className="mb-8 text-2xl font-bold text-foreground">Education</h2>
+      <div className="space-y-6">
+        {education.map((ed) => (
+          <div key={ed.school}>
+            <div className="mb-1 flex items-baseline justify-between gap-4">
+              <h3 className="text-lg font-bold text-card-foreground">{ed.school}</h3>
+              <span className="shrink-0 text-sm text-muted-foreground">{ed.period}</span>
+            </div>
+            <p className="text-sm text-muted-foreground">{ed.focus}</p>
+          </div>
         ))}
       </div>
+
+      <hr className="my-12 border-border" />
+
+      <div className="mb-8">
+        <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+          Principles
+        </p>
+        <h2 className="text-2xl font-bold text-foreground">Product Strategy North Stars</h2>
+      </div>
+      <div className="grid gap-4 md:grid-cols-2">
+        {northStars.map((ns) => (
+          <div
+            key={ns.title}
+            className="rounded-2xl border border-border bg-card p-6 transition-all hover:border-primary/30 hover:shadow-md"
+          >
+            <h3 className="mb-3 text-base font-bold text-card-foreground">{ns.title}</h3>
+            <p className="text-sm italic leading-relaxed text-muted-foreground">
+              &ldquo;{ns.quote}&rdquo;
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <hr className="my-12 border-border" />
+
+      <div className="mb-8">
+        <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+          Process
+        </p>
+        <h2 className="text-2xl font-bold text-foreground">How I Achieve Success</h2>
+      </div>
+      <ol className="relative space-y-6 border-l border-border pl-6">
+        {steps.map((step, i) => (
+          <li key={step} className="relative">
+            <span className="absolute -left-[34px] flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">
+              {i + 1}
+            </span>
+            <p className="text-base font-medium text-foreground">{step}</p>
+          </li>
+        ))}
+      </ol>
     </div>
   );
 }

@@ -152,11 +152,11 @@ function Footer() {
           &copy; {new Date().getFullYear()} Zach Benalayat
         </p>
         <div className="flex gap-4 text-sm text-muted-foreground">
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
+          <a href="https://www.linkedin.com/in/zach-benalayat" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
             LinkedIn
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
-            GitHub
+          <a href="mailto:zacharia.benalayat@gmail.com" className="transition-colors hover:text-foreground">
+            Email
           </a>
         </div>
       </div>

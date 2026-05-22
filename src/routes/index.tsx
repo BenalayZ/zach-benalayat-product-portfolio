@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, Linkedin } from "lucide-react";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 
@@ -88,6 +88,14 @@ function Index() {
               className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-medium text-foreground transition-all hover:bg-accent"
             >
               <Download className="h-4 w-4" /> Download resume
+            </a>
+            <a
+              href="https://www.linkedin.com/in/zach-benalayat/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-5 py-3 text-sm font-medium text-foreground transition-all hover:bg-accent"
+            >
+              <Linkedin className="h-4 w-4" /> Connect on LinkedIn
             </a>
             <Link
               to="/contact"
@@ -257,6 +265,14 @@ function Index() {
               className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary-foreground/10"
             >
               <Download className="h-4 w-4" /> Download resume
+            </a>
+            <a
+              href="https://www.linkedin.com/in/zach-benalayat/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 px-6 py-3 text-sm font-medium text-primary-foreground transition-all hover:bg-primary-foreground/10"
+            >
+              <Linkedin className="h-4 w-4" /> Connect on LinkedIn
             </a>
             <Link
               to="/contact"

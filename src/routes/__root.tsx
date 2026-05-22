@@ -7,6 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { Linkedin } from "lucide-react";
 
 import appCss from "../styles.css?url";
 
@@ -139,9 +140,18 @@ function Header() {
             Contact
           </Link>
           <a
+            href="https://www.linkedin.com/in/zach-benalayat/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+            className="ml-1 inline-flex h-8 w-8 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+          >
+            <Linkedin className="h-4 w-4" />
+          </a>
+          <a
             href="/Zach_J_Benalayat.pdf"
             download
-            className="ml-1 inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground transition-all hover:bg-primary/90 md:px-4 md:text-sm"
+            className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground transition-all hover:bg-primary/90 md:px-4 md:text-sm"
           >
             Resume
           </a>

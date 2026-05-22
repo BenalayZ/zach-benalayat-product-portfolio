@@ -1,13 +1,21 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Linkedin, Github, ArrowUpRight } from "lucide-react";
+import { Mail, Linkedin, ArrowUpRight } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Zach Benalayat" },
-      { name: "description", content: "Get in touch with Zach Benalayat for collaborations, advisory roles, and product leadership opportunities." },
+      {
+        name: "description",
+        content:
+          "Get in touch with Zach Benalayat for product leadership, GTM, and analytics opportunities.",
+      },
       { property: "og:title", content: "Contact — Zach Benalayat" },
-      { property: "og:description", content: "Get in touch with Zach Benalayat for collaborations, advisory roles, and product leadership opportunities." },
+      {
+        property: "og:description",
+        content:
+          "Email or connect on LinkedIn for collaborations, advisory roles, and product leadership opportunities.",
+      },
     ],
   }),
   component: ContactPage,
@@ -18,27 +26,23 @@ function ContactPage() {
     {
       icon: Mail,
       label: "Email",
-      value: "zach@example.com",
-      href: "mailto:zach@example.com",
+      value: "zacharia.benalayat@gmail.com",
+      href: "mailto:zacharia.benalayat@gmail.com",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/zachbenalayat",
-      href: "https://www.linkedin.com",
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      value: "github.com/zachbenalayat",
-      href: "https://github.com",
+      value: "linkedin.com/in/zach-benalayat",
+      href: "https://www.linkedin.com/in/zach-benalayat",
     },
   ];
 
   return (
     <div className="mx-auto max-w-2xl px-6 py-16 md:py-24">
       <div className="mb-12 text-center">
-        <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">Contact</p>
+        <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+          Contact
+        </p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
           Let&apos;s connect
         </h1>
@@ -59,28 +63,13 @@ function ContactPage() {
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
               <channel.icon className="h-5 w-5" />
             </div>
-            <div className="min-w-1 flex-1">
+            <div className="min-w-0 flex-1">
               <p className="text-sm font-medium text-muted-foreground">{channel.label}</p>
               <p className="font-medium text-card-foreground">{channel.value}</p>
             </div>
-            <ArrowUpRight className="h-5 w-5 shrink-1 text-muted-foreground" />
+            <ArrowUpRight className="h-5 w-5 shrink-0 text-muted-foreground" />
           </a>
         ))}
-      </div>
-
-      <div className="mt-12 rounded-2xl border border-border bg-muted/50 p-8 text-center">
-        <h2 className="mb-2 text-lg font-bold text-foreground">Prefer a call?</h2>
-        <p className="mb-4 text-sm text-muted-foreground">
-          I&apos;m happy to jump on a quick 15-minute call to discuss opportunities.
-        </p>
-        <a
-          href="https://calendly.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
-        >
-          Book a time <ArrowUpRight className="h-4 w-4" />
-        </a>
       </div>
     </div>
   );

@@ -4,39 +4,6 @@ import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Zach Benalayat — Product & Business Analytics PM" },
-      {
-        name: "description",
-        content:
-          "Product & Business Analytics PM — SQL, Python, Power BI, Looker, Snowflake. Analytics frameworks, KPIs, and PRDs that ship across B2B SaaS, IoT, and AI.",
-      },
-      { property: "og:title", content: "Zach Benalayat — Product & Business Analytics PM" },
-      {
-        property: "og:description",
-        content:
-          "SQL + Python + Power BI / Looker / Snowflake. Analytics frameworks and KPI design driving PRDs, roadmaps, and GTM across B2B SaaS, IoT, and AI platforms.",
-      },
-      { property: "og:image", content: "https://zachbenalayat.com/og-image.jpg" },
-      { name: "twitter:image", content: "https://zachbenalayat.com/og-image.jpg" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: faqs.map((f) => ({
-            "@type": "Question",
-            name: f.q,
-            acceptedAnswer: { "@type": "Answer", text: f.a },
-          })),
-        }),
-      },
-    ],
-  }),
   component: Index,
 });
 
@@ -217,7 +184,7 @@ function Index() {
               Explore work <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="/Zach_J_Benalayat.pdf"
+              href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/Zach_J_Benalayat.pdf`}
               download
               className="inline-flex items-center gap-2 border border-foreground/20 bg-foreground/5 px-8 py-4 text-sm font-bold uppercase tracking-widest text-foreground backdrop-blur-sm transition-all hover:border-primary hover:text-primary"
             >

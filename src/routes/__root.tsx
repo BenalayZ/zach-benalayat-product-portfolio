@@ -68,6 +68,15 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Zach Benalayat",
+  jobTitle: "Product Manager & Data Analyst",
+  url: "https://zachbenalayat.com",
+  sameAs: ["https://www.linkedin.com/in/zach-benalayat/"],
+};
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -100,6 +109,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(personSchema),
       },
     ],
   }),

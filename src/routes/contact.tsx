@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Linkedin, ArrowUpRight } from "lucide-react";
+import { Mail, Linkedin, ArrowUpRight, FileDown } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -35,6 +35,13 @@ function ContactPage() {
       value: "linkedin.com/in/zach-benalayat",
       href: "https://www.linkedin.com/in/zach-benalayat",
     },
+    {
+      icon: FileDown,
+      label: "Resume",
+      value: "Zach_J_Benalayat.pdf",
+      href: "/Zach_J_Benalayat.pdf",
+      download: true,
+    },
   ];
 
   return (
@@ -58,6 +65,7 @@ function ContactPage() {
             href={channel.href}
             target={channel.href.startsWith("http") ? "_blank" : undefined}
             rel={channel.href.startsWith("http") ? "noopener noreferrer" : undefined}
+            download={(channel as { download?: boolean }).download ? "" : undefined}
             className="flex items-center gap-4 rounded-2xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-md"
           >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">

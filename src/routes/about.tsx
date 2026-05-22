@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Download } from "lucide-react";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -141,6 +143,15 @@ function AboutPage() {
           <strong>Continuous Improvement</strong> is my mantra, and data is meaningless
           without clear communication.&rdquo;
         </blockquote>
+        <div className="pt-2">
+          <a
+            href="/Zach_J_Benalayat.pdf"
+            download
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90"
+          >
+            <Download className="h-4 w-4" /> Download resume
+          </a>
+        </div>
       </div>
 
       <hr className="my-12 border-border" />

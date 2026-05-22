@@ -128,7 +128,7 @@ function Header() {
         <Link to="/" className="text-lg font-semibold tracking-tight text-foreground">
           Zach Benalayat
         </Link>
-        <nav className="flex items-center gap-6 text-sm font-medium">
+        <nav className="flex items-center gap-2 text-sm font-medium md:gap-6">
           <Link to="/" className="text-muted-foreground transition-colors hover:text-foreground" activeProps={{ className: "text-foreground" }}>
             Work
           </Link>
@@ -138,6 +138,13 @@ function Header() {
           <Link to="/contact" className="text-muted-foreground transition-colors hover:text-foreground" activeProps={{ className: "text-foreground" }}>
             Contact
           </Link>
+          <a
+            href="/Zach_J_Benalayat.pdf"
+            download
+            className="ml-1 inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground transition-all hover:bg-primary/90 md:px-4 md:text-sm"
+          >
+            Resume
+          </a>
         </nav>
       </div>
     </header>

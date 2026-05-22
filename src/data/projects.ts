@@ -4,7 +4,7 @@ import seamlessMcp from "@/assets/projects/seamless-mcp-chatgpt.jpg";
 import seamlessFastData from "@/assets/projects/seamless-fast-data.jpg";
 import inseegoConnect from "@/assets/projects/inseego-connect.jpg";
 import latinHyperTexts from "@/assets/projects/latin-hyper-texts.jpg";
-import theArc from "@/assets/projects/the-arc.jpg";
+import theArc from "@/assets/projects/the-arc.png";
 
 export type Project = {
   slug: string;

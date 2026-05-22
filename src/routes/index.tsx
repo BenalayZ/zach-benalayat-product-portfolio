@@ -93,19 +93,19 @@ const skills = [
 const toolkit = [
   {
     label: "Data & SQL",
-    tools: ["SQL", "Python", "R", "Snowflake", "BigQuery", "Amazon S3", "Data Warehousing", "ETL & ELT", "Git"],
+    tools: ["SQL", "Python", "pandas", "numPy", "matplotlib", "R", "dbt", "CTE", "Snowflake", "BigQuery", "Amazon S3", "Data Warehousing", "Database Design", "Data Mining", "ETL & ELT", "Git", "GitHub"],
   },
   {
     label: "BI & Dashboards",
-    tools: ["Power BI", "Looker", "Tableau", "Google Analytics", "KPI Design"],
+    tools: ["Power BI", "Looker", "Tableau", "Google Analytics", "Excel", "Sheets", "KPI Design"],
   },
   {
     label: "Product & Workflow",
-    tools: ["Jira", "Confluence", "SharePoint", "ServiceNow", "N8N", "Claude", "Agile (Certified)", "Scrum Master", "Backlog Grooming"],
+    tools: ["Jira", "Confluence", "SharePoint", "ServiceNow", "N8N", "Claude", "Agile (Certified)", "Scrum Master", "Kanban", "Backlog Grooming", "Unit Testing", "Time to Value"],
   },
   {
     label: "Methods",
-    tools: ["A/B Testing", "Funnel Analysis", "Cohort Analysis", "Linear Regression", "Identity Resolution"],
+    tools: ["A/B Testing", "Funnel Analysis", "Cohort Analysis", "Linear Regression", "Cost Modeling", "Identity Resolution"],
   },
 ];
 

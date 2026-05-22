@@ -35,6 +35,13 @@ function ContactPage() {
       value: "linkedin.com/in/zach-benalayat",
       href: "https://www.linkedin.com/in/zach-benalayat",
     },
+    {
+      icon: FileDown,
+      label: "Resume",
+      value: "Zach_J_Benalayat.pdf",
+      href: "/Zach_J_Benalayat.pdf",
+      download: true,
+    },
   ];
 
   return (

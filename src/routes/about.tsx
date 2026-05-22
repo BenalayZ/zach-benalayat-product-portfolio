@@ -251,6 +251,37 @@ function AboutPage() {
           </li>
         ))}
       </ol>
+
+      <hr className="my-12 border-border" />
+
+      <div className="mb-8">
+        <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+          Toolkit
+        </p>
+        <h2 className="text-2xl font-bold text-foreground">Tools &amp; Methods</h2>
+      </div>
+      <div className="grid gap-6 md:grid-cols-2">
+        {toolGroups.map((group) => (
+          <div
+            key={group.label}
+            className="rounded-2xl border border-border bg-card p-6"
+          >
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-primary">
+              {group.label}
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {group.tools.map((tool) => (
+                <span
+                  key={tool}
+                  className="rounded-full border border-border bg-background px-3 py-1 text-xs font-medium text-foreground"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -145,9 +145,9 @@ function CaseStudy() {
         <div className="space-y-12">
           {sections.map((section) => (
             <section key={section.label}>
-              <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
+              <h2 className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
                 {section.label}
-              </p>
+              </h2>
               <p className="text-lg leading-relaxed text-foreground">
                 {section.value}
               </p>

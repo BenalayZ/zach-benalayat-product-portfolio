@@ -1,37 +1,36 @@
-Restructure the toolkit on both the homepage and About page with cleaner categories, visual hierarchy (primary vs. supporting), nested Python libraries, and a unified visual treatment.
+Apply the "Gold accent prestige" direction across the site by re-tokening the existing design system. Structure stays the same — only colors change.
 
-### Final categories (used on both pages)
+### New palette (Emerald Prestige, dark-first)
 
-| Category | Subtitle | Primary | Supporting |
-|---|---|---|---|
-| Languages & Querying | What I write in. | SQL, Python *(pandas · NumPy · matplotlib)* | R |
-| Data Platforms | Where data lives and how it moves. | Snowflake, dbt | BigQuery, Amazon S3, ETL & ELT, Data Warehousing, Database Design, Data Mining |
-| BI & Reporting | How findings get seen and acted on. | Power BI, Looker | Tableau, Google Analytics, Excel / Sheets |
-| Product & Delivery | How work gets shipped. | Jira, Agile | Scrum, Kanban, Confluence, GitHub, SharePoint, ServiceNow, N8N, Claude |
-| Methods & Frameworks | The analyses behind the decisions. | A/B Testing, Funnel Analysis, Cohort Analysis | Linear Regression, Cost Modeling, Identity Resolution, Unit Testing, Time to Value |
+- `--background` → deep emerald `#064e3b`
+- `--foreground` → cream `#f5f0e0`
+- `--primary` → gold `#c9a84c` (CTAs, accents, eyebrow labels, highlight on name in hero)
+- `--primary-foreground` → deep emerald `#064e3b` (text on gold buttons)
+- `--secondary` / orbital rings / ghost monogram → mid emerald `#0d7a5f`
+- `--muted` / borders → cream at 10–20% over emerald
+- `--card` → slightly lighter emerald (`#0a5e47`-ish) for hairline grid cells
 
-### Dropped per your direction
-- KPI Design, CTE, Git
-- The entire "Ways of Working" category (Scrum Master, Backlog Grooming, PRDs & User Stories, Continuous Improvement) — Agile / Scrum / Kanban moved into Product & Delivery instead
+### Where it changes
 
-### Implementation
+Just `src/styles.css` — both `:root` and `.dark` blocks (site is dark-first; both already mirror each other). The whole site reads from semantic tokens, so re-tokening propagates to:
+- Hero headline accent (name highlight becomes gold)
+- "Explore work" button (gold on emerald)
+- Toolkit grid eyebrows, primary tool names
+- FAQ, project cards, CTA section
+- About page
 
-1. **Replace the data structures** in `src/routes/index.tsx` (`toolkit`) and `src/routes/about.tsx` (`toolGroups`) with a single shared shape:
-   ```ts
-   { label, subtitle, items: [{ name, primary?, children? }] }
-   ```
-   pandas / NumPy / matplotlib live as `children` of Python.
+### What stays untouched
 
-2. **Unify the visual treatment** — apply the homepage's hairline bordered grid (5-up on lg) to the About page too, replacing the rounded card + pill chips. Matches the Noir & Emerald hairline aesthetic.
+- All component JSX, layouts, spacing, typography (Sora + Manrope already correct)
+- Orbital ring animation, ghost monogram structure
+- Section structure, routes, content
 
-3. **Visual hierarchy inside each card**:
-   - Category label (mono eyebrow, primary color) + one-line subtitle (muted)
-   - Primary items: larger, bold, foreground color
-   - Children (Python libs): inline beneath parent, smaller, muted, mono-dot separators
-   - Supporting items: smaller, muted, listed below primaries with a hairline divider between the two tiers
+### Memory update
 
-4. **Files touched**:
-   - `src/routes/index.tsx` — update `toolkit` array + Toolkit section JSX
-   - `src/routes/about.tsx` — update `toolGroups` array + Toolkit section JSX (swap to grid style)
+Replace the "Noir & Emerald" Core memory line with the new Emerald Prestige palette so future work stays consistent. Update `mem://design/color-tokens` with the new oklch values.
 
-No new routes, no new components extracted (kept inline for now; can refactor later if reused).
+### Files touched
+
+- `src/styles.css` — token values only
+- `mem://index.md` — Core line
+- `mem://design/color-tokens` — full palette doc

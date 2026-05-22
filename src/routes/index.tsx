@@ -123,7 +123,7 @@ function Index() {
           </div>
 
           <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tighter text-foreground md:text-7xl">
-            I&apos;m <span className="text-primary">Zach</span>. I find the
+            I&apos;m <span className="text-primary">Zach Benalayat</span>. I find the
             signal in the noise.
           </h1>
 

@@ -6,17 +6,17 @@ import { ProjectCard } from "@/components/ProjectCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Zach Benalayat — Product Analyst & Manager" },
+      { title: "Zach Benalayat — Product & Business Analytics PM" },
       {
         name: "description",
         content:
-          "Product Analyst and Manager shipping B2B SaaS, IoT, and AI platforms end-to-end. Open to full-time, fractional, and contract engagements.",
+          "Product & Business Analytics PM — SQL, Python, Power BI, Looker, Snowflake. Analytics frameworks, KPIs, and PRDs that ship across B2B SaaS, IoT, and AI.",
       },
-      { property: "og:title", content: "Zach Benalayat — Product Analyst & Manager" },
+      { property: "og:title", content: "Zach Benalayat — Product & Business Analytics PM" },
       {
         property: "og:description",
         content:
-          "Case studies across B2B SaaS, IoT, and AI platforms — and analytics-driven product strategy. Available for full-time, fractional, and contract work.",
+          "SQL + Python + Power BI / Looker / Snowflake. Analytics frameworks and KPI design driving PRDs, roadmaps, and GTM across B2B SaaS, IoT, and AI platforms.",
       },
       { property: "og:image", content: "https://zachbenalayat.com/og-image.jpg" },
       { name: "twitter:image", content: "https://zachbenalayat.com/og-image.jpg" },
@@ -43,19 +43,19 @@ export const Route = createFileRoute("/")({
 const faqs = [
   {
     q: "What kinds of engagements are you open to?",
-    a: "Full-time Product Manager or Product Analyst roles, plus fractional and contract work — analytics audits, PRD authoring, launch support, and end-to-end PDLC ownership for shorter-scope projects.",
+    a: "Full-time Product Manager or Product Analyst roles, plus fractional and contract work — analytics audits, KPI/instrumentation design, PRD authoring, launch support, and end-to-end PDLC ownership for shorter-scope projects.",
   },
   {
     q: "What types of products have you shipped?",
-    a: "B2B SaaS, IoT and telecom hardware, AI platforms (including MCP integrations on the GPT and Claude stores), data infrastructure, and non-profit case-management systems. Recent flagship work includes Seamless API ($750k ARR year one) and Inseego Connect ($1M+ ARR uplift).",
+    a: "B2B SaaS, IoT and telecom hardware, AI platforms (including MCP integrations on the GPT and Claude stores), data infrastructure, and non-profit case-management systems. Recent flagship work includes Seamless API ($750k ARR year one) and Inseego Connect ($1M+ ARR uplift driven by Power BI funnel analysis).",
   },
   {
     q: "Do you lead analytics or product strategy?",
-    a: "Both — that's the point. I build the funnels, dashboards, and statistical analyses myself, then use those findings to drive PRDs, roadmaps, and GTM strategy. SQL, Python, PowerBI, A/B testing on the analytics side; PRDs, roadmapping, and stakeholder scrums on the product side.",
+    a: "Both — that's the point. I write the SQL, build the funnels and dashboards in Power BI / Looker / Tableau against Snowflake, and run the A/B tests myself, then translate findings into PRDs, OKRs, and roadmap bets. Python for heavier transforms and modeling.",
   },
   {
     q: "What does your typical process look like from idea to launch?",
-    a: "Identify objectives, research and competitive analysis, develop strategy, write the PRD and success metrics, ship with engineering, then run post-launch analysis to drive the next iteration. MVP is the starting point, not the finish line.",
+    a: "Identify objectives, research and competitive analysis, design the analytics framework and KPIs, write the PRD, ship with engineering, then run post-launch funnel and cohort analysis to drive the next iteration. MVP is the starting point, not the finish line.",
   },
   {
     q: "How do I get in touch?",
@@ -65,28 +65,47 @@ const faqs = [
 
 
 const byTheNumbers = [
-  { value: "6+", label: "Years shipping product" },
+  { value: "25%", label: "Search time reduced via funnel analysis" },
+  { value: "$2M+", label: "ARR influenced by analytics work" },
+  { value: "200K+", label: "Records modeled & maintained" },
   { value: "7", label: "Launches owned end-to-end" },
-  { value: "$2M+", label: "ARR influenced" },
-  { value: "5", label: "Industries served" },
 ];
 
 const skills = [
   {
-    title: "Data Analysis",
-    body: "Messy or incomplete data isn't a blocker — it's a puzzle. I work through raw datasets to surface the patterns and reconciliation gaps everyone else overlooked, then turn them into product decisions.",
+    title: "Product Analytics",
+    body: "Behavioral funnel and cohort analysis in SQL and Python — A/B testing, KPI design, activation and retention frameworks. The 25% search-time reduction on Seamless came out of this work.",
   },
   {
-    title: "Full PDLC Ownership",
-    body: "I own the product development lifecycle end-to-end: discovery, PRDs, success metrics, launch, post-launch analysis, and the next iteration. Strategy doesn't stop at MVP — that's where it starts.",
+    title: "Data & SQL Modeling",
+    body: "SQL stored procedures, ETL pipelines, Snowflake, identity resolution. Modeled 200K+ records at Butler School of Music; +10% contact coverage and +25% data quality on Seamless.",
   },
   {
-    title: "Cross-Functional Leadership",
-    body: "I translate product capability into pipeline. Working closely with sales, marketing, and engineering, I ship launches that hit revenue targets — $750k ARR in year one on Seamless API, $1M+ ARR uplift on Inseego Connect.",
+    title: "BI & Dashboarding",
+    body: "Executive Power BI, Looker, and Tableau dashboards that drive GTM decisions. A single Power BI funnel surfaced the $1M+ ARR microtargeting shift at Inseego.",
   },
   {
-    title: "Data Storytelling",
-    body: "The story of any product lives in the data. I build dashboards, funnel analyses, and narratives that get stakeholders aligned and unlock the next round of investment — not just reports that sit on a wiki.",
+    title: "Analytics → Product Strategy",
+    body: "Translates findings into PRDs, OKRs, and roadmap bets. Analytics framework design first, then engineering scope — so KPIs are built into the product, not bolted on.",
+  },
+];
+
+const toolkit = [
+  {
+    label: "Data & SQL",
+    tools: ["SQL", "Python", "R", "Snowflake", "ETL Pipelines", "Git"],
+  },
+  {
+    label: "BI & Dashboards",
+    tools: ["Power BI", "Looker", "Tableau", "KPI Design"],
+  },
+  {
+    label: "Product & Workflow",
+    tools: ["Jira", "Confluence", "ServiceNow", "N8N", "Claude", "Agile (Certified)"],
+  },
+  {
+    label: "Methods",
+    tools: ["A/B Testing", "Funnel Analysis", "Identity Resolution", "Cohort Analysis"],
   },
 ];
 
@@ -128,8 +147,7 @@ function Index() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-2xl">
-            Equal parts analyst and PM — turning raw data into product strategy
-            to ship B2B SaaS, IoT, and AI platforms across the full PDLC.
+            Product &amp; Business Analytics PM — SQL, Python, Power BI, Looker, Snowflake. I design the analytics frameworks, define the KPIs, and use what I find to drive PRDs and roadmaps across B2B SaaS, IoT, and AI.
           </p>
 
           <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
@@ -216,21 +234,44 @@ function Index() {
             </div>
             <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
               <p>
-                I operate at the intersection of data analysis and product management —
-                digging into raw datasets, building the funnels and dashboards, and using
-                what I find to shape PRDs, roadmaps, and launch strategy.
+                I partner with product and engineering to design the analytics framework first — KPI tree, instrumentation, dashboards in Power BI / Looker / Tableau on Snowflake — then use what surfaces to shape PRDs, roadmaps, and launch strategy.
               </p>
               <p>
-                That dual lens has shipped real outcomes: $750k ARR in year one on Seamless
-                API, $1M+ ARR uplift on Inseego Connect, and 20% AWS savings on Data
-                Engine 4.0 — each one driven by analytics work that pointed product
-                decisions in the right direction.
+                That analytics-first lens has shipped real outcomes: $750k ARR in year one on Seamless API, $1M+ ARR uplift on Inseego Connect (out of a single Power BI funnel), and 20% AWS savings on Data Engine 4.0 — each one driven by SQL, Python, and dashboard work that pointed product decisions in the right direction.
               </p>
               <p>
-                I thrive in teams that treat strategy as a continuous, evidence-led process
-                and value tight communication between product, data, engineering, and GTM.
+                I thrive in teams that treat strategy as a continuous, evidence-led process and value tight communication between product, data, engineering, and GTM.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Toolkit */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+          <div className="mb-16">
+            <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
+              Toolkit // 01
+            </p>
+            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
+              The stack I actually use
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
+            {toolkit.map((group, i) => (
+              <div key={group.label} className="bg-background p-8">
+                <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                  0{i + 1} — {group.label}
+                </p>
+                <ul className="space-y-2 text-sm text-foreground">
+                  {group.tools.map((t) => (
+                    <li key={t} className="font-medium">{t}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>

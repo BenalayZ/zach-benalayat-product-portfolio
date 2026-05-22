@@ -9,13 +9,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Zach Benalayat is a Product Analyst and Manager — equal parts analytics and product strategy, with experience at Seamless, Inseego, and CaseWorthy. Available for full-time, fractional, and contract work.",
+          "Zach Benalayat — Product & Business Analytics PM. SQL, Python, Power BI, Looker, Snowflake. Analytics frameworks and KPI design across B2B SaaS, IoT, and AI platforms.",
       },
       { property: "og:title", content: "About — Zach Benalayat" },
       {
         property: "og:description",
         content:
-          "Experience, education, product strategy principles, and process — equal parts data analyst and product manager across B2B SaaS, IoT, and AI platforms.",
+          "Experience, education, and the analytics stack — SQL, Python, Power BI / Looker / Tableau on Snowflake — used to ship product across B2B SaaS, IoT, and AI.",
       },
       { property: "og:image", content: "https://zachbenalayat.com/og-image.jpg" },
       { name: "twitter:image", content: "https://zachbenalayat.com/og-image.jpg" },
@@ -29,28 +29,44 @@ const experience = [
   {
     period: "2024 — 2026",
     company: "Seamless",
-    role: "Product Manager",
+    role: "Product Manager II — Data Operations & Tech Projects",
     points: [
-      "Owned Seamless Find & API PDLC end-to-end.",
-      "Drove product strategy for data integration initiatives.",
+      "Defined product OKRs and analytics frameworks measuring API adoption, engagement, and conversion across customer touchpoints.",
+      "Behavioral funnel analysis across search, discovery, and purchase — surfaced UX changes that reduced search time by 25%.",
+      "Designed internal Power BI / Looker dashboards for exec leadership, Sales, and RevOps to monitor product performance and customer behavior.",
+      "Spearheaded identity resolution overhaul — +10% contact coverage and +25% data quality in 3 months.",
+      "Owned end-to-end launch of the B2B Public API ($750k ARR) and automated analytics workflows with Claude + N8N (−15% idea-to-design cycle time).",
     ],
   },
   {
     period: "2022 — 2024",
     company: "Inseego",
-    role: "Business Analyst",
+    role: "Business Systems Analyst — Sales Analytics",
     points: [
-      "Identified opportunities within T-Mobile partnerships.",
-      "Generated insights that drove product adoption inside Inseego Connect.",
+      "SQL + Python analysis of customer, sales, and federal contracting datasets — surfaced microtargeting opportunities worth $1M+ in enterprise contracts.",
+      "Built Power BI analytics frameworks tracking adoption, engagement, and bundling performance on US Navy contracts.",
+      "Ran market and competitive data analysis to support product positioning and carrier partnerships.",
+      "Translated business + data insights into technical product requirements (DCMA 14-Point compliant).",
     ],
   },
   {
     period: "2019 — 2022",
-    company: "CaseWorthy Inc.",
+    company: "CaseWorthy",
     role: "Systems Analyst",
     points: [
-      "Built custom CaseWorthy implementations for non-profit customers.",
-      "Drafted technical and functional specs for custom database architecture.",
+      "Built SQL stored procedures, database tables, and ETL pipelines supporting analytics and reporting workflows for nonprofit and government clients.",
+      "Developed scalable software configurations that accelerated implementation timelines.",
+      "Partnered with customer success teams to define functional and analytics requirements.",
+    ],
+  },
+  {
+    period: "2018 — 2023",
+    company: "Latin Hyper-Texts, Butler School of Music",
+    role: "Data Architect",
+    points: [
+      "Designed and implemented the relational database architecture supporting 200K+ digitized manuscripts and large-scale research datasets.",
+      "Structured metadata frameworks enabling efficient data retrieval, analysis, and digital archiving.",
+      "Analyzed Qualtrics training and user data to improve docs and onboarding — reduced required training sessions by 33%.",
     ],
   },
 ];
@@ -114,20 +130,20 @@ const steps = [
 
 const toolGroups = [
   {
-    label: "Product",
-    tools: ["PRDs & Specs", "Roadmapping", "Jira", "Linear", "Figma", "Notion"],
+    label: "Product Analytics",
+    tools: ["A/B Testing", "KPI Design", "Funnel Analysis", "Cohort Analysis", "Backlog Analysis", "Continuous Improvement"],
   },
   {
-    label: "Data & Analytics",
-    tools: ["SQL", "Python", "PowerBI", "A/B Testing", "Statistical Analysis", "Funnel Analysis"],
+    label: "Data & Programming",
+    tools: ["SQL", "Python", "R", "Git", "ETL Pipelines", "Identity Resolution"],
   },
   {
-    label: "Engineering & Architecture",
-    tools: ["REST APIs", "MCP", "ETL Pipelines", "Event Streaming", "AWS", "Data Modeling"],
+    label: "BI & Warehousing",
+    tools: ["Power BI", "Looker", "Tableau", "Snowflake", "Data Modeling"],
   },
   {
-    label: "Research & Discovery",
-    tools: ["User Interviews", "Qualtrics Surveys", "Competitive Analysis", "Stakeholder Scrums"],
+    label: "Workflow & Delivery",
+    tools: ["Jira", "Confluence", "Kanban", "ServiceNow", "Agile (Certified)", "PRDs & User Stories"],
   },
 ];
 
@@ -140,21 +156,21 @@ function AboutPage() {
           Zach Benalayat
         </h1>
         <p className="mt-3 text-lg text-muted-foreground">
-          Product Analyst &amp; Manager
+          Product &amp; Business Analytics PM · SQL · Python · Power BI
         </p>
       </div>
 
       <div className="space-y-6 text-base leading-relaxed text-foreground">
         <p>
-          Hello — I&apos;m Zach. I work at the intersection of data analysis and product
-          management: equal parts analyst and PM, building the funnels and dashboards
-          myself, then using what I find to shape PRDs, roadmaps, and launch strategy.
+          Hello — I&apos;m Zach. I partner with product and engineering teams to design
+          analytics frameworks, define the KPIs, and analyze product usage data to guide
+          strategic decisions.
         </p>
         <p>
-          I specialize in working end-to-end — from developing success metrics and KPIs, to
-          analyzing qualitative post-launch data and implementing improvements during the
-          product lifecycle. Messy or incomplete data isn&apos;t a blocker to great
-          insights, it&apos;s a puzzle that needs solving.
+          Day to day that means writing the SQL, building the funnels and dashboards in
+          Power BI / Looker / Tableau against Snowflake, and running the A/B tests myself —
+          then translating findings into PRDs, OKRs, and the next roadmap bet. Python for
+          heavier transforms and modeling.
         </p>
         <p>
           I&apos;ve launched and improved products across B2B SaaS, IoT/Telecom, AI

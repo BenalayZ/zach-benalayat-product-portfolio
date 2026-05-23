@@ -394,6 +394,20 @@ function Index() {
               ))}
             </ul>
           </div>
+
+          {/* ATS-searchable keyword row — recruiters Ctrl-F here */}
+          <div className="mt-12 border-t border-border pt-8">
+            <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+              Keywords // ATS-searchable
+            </p>
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Product Manager, Senior Product Manager, Product Analyst, Product Analytics, Data Analyst, Business Analyst,
+              SQL, Python, R, pandas, NumPy, Snowflake, Databricks, Redshift, BigQuery, dbt, ETL, ELT, Data Warehousing,
+              Power BI, Tableau, Looker, Amplitude, Google Analytics, A/B Testing, Funnel Analysis, Cohort Analysis,
+              KPI Design, OKRs, PRD, Roadmap, Agile, Scrum, Kanban, Jira, Confluence, GitHub, B2B SaaS, IoT, Telecom,
+              Agentic AI, MCP, GTM Strategy, Identity Resolution, Cost Modeling, Time to Value.
+            </p>
+
         </div>
       </section>
 

@@ -27,14 +27,14 @@ export const Route = createFileRoute("/about")({
 const experience = [
   {
     period: "2024 — 2026",
-    company: "Seamless",
+    company: "Seamless.AI",
     role: "Product Manager II — Data Operations & Tech Projects",
     points: [
       "Defined product OKRs and analytics frameworks measuring API adoption, engagement, and conversion across customer touchpoints.",
       "Behavioral funnel analysis across search, discovery, and purchase — surfaced UX changes that reduced search time by 25%.",
       "Designed internal Power BI / Looker dashboards for exec leadership, Sales, and RevOps to monitor product performance and customer behavior.",
-      "Spearheaded identity resolution overhaul — +10% contact coverage and +25% data quality in 3 months.",
-      "Owned the 0→1 launch of the customer-facing B2B Public API to $1M ARR — SMB and mid-market first, enterprise expansion underway. Automated analytics workflows with Claude + N8N, cutting idea-to-design cycle time by 15%.",
+      "Spearheaded identity resolution overhaul — +10% contact coverage vs LinkedIn company-contact baseline, +25% confidence in email and phone records, delivered in 3 months.",
+      "Owned the 0→1 launch of the customer-facing B2B Public API to $1M booked ARR in year one — SMB and mid-market first, enterprise expansion underway. Automated analytics workflows with Claude + N8N, cutting idea-to-design cycle time by 15%.",
     ],
   },
   {
@@ -42,7 +42,7 @@ const experience = [
     company: "Inseego",
     role: "Business Systems Analyst — Sales Analytics",
     points: [
-      "SQL + Python analysis of customer, sales, and federal contracting datasets — surfaced microtargeting opportunities worth $1M+ in enterprise contracts.",
+      "SQL + Python analysis of customer, sales, and federal contracting datasets — recommended a microtargeting shift that sales leadership adopted, driving $1M+ in enterprise contract uplift in the first re-targeting cycle.",
       "Built Power BI analytics frameworks tracking adoption, engagement, and bundling performance on US Navy contracts.",
       "Ran market and competitive data analysis to support product positioning and carrier partnerships.",
       "Translated business + data insights into technical product requirements (DCMA 14-Point compliant).",

@@ -16,13 +16,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Product & Data Analyst. 6+ yrs across B2B SaaS, IoT, and AI. SQL, Python, Power BI and Snowflake. I find where the value lives, then ship the monetization decision that comes out of it.",
+          "Product & Data Analyst. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI on Snowflake. I dig into the data, find what's actually driving revenue, and ship the call that comes out of it.",
       },
       { property: "og:title", content: "Zach Benalayat — Product & Data Analyst" },
       {
         property: "og:description",
         content:
-          "SQL, Python, Power BI and Snowflake. I find where the value lives, then ship the monetization decision that comes out of it.",
+          "SQL, Python, Power BI on Snowflake. I find what's driving revenue and ship the call that comes out of it.",
       },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
@@ -35,11 +35,11 @@ export const Route = createFileRoute("/")({
 const faqs = [
   {
     q: "What kinds of engagements are you open to?",
-    a: "Full-time Senior Analyst, Staff Analyst, BI Lead, or analytics-led PM — plus contract and scoped consulting (analytics audits, KPI design, BI builds, PRDs, 0→1 launches).",
+    a: "Full-time Senior Analyst, Staff Analyst, BI Lead, or analytics-led PM. Open to contract too — analytics audits, KPI design, BI builds, PRDs, 0→1 launches.",
   },
   {
     q: "What types of products have you shipped?",
-    a: "B2B SaaS, IoT/telecom, AI platforms (MCP on the GPT and Claude stores), data infra, and non-profit case management.",
+    a: "B2B SaaS, IoT and telecom, AI platforms (MCP shipped on the GPT and Claude stores), data infrastructure, and nonprofit case management.",
   },
   {
     q: "Do you lead analytics or product strategy?",
@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     q: "What does your typical process look like from idea to launch?",
-    a: "Objectives → research → KPI framework → PRD → ship → post-launch funnel and cohort analysis. MVP is the starting line.",
+    a: "Objectives, then research, then the KPI framework, then the PRD, then ship, then watch the funnels and cohorts. The launch is the start of the work, not the end.",
   },
   {
     q: "How do I get in touch?",
@@ -59,19 +59,19 @@ const faqs = [
 const skills = [
   {
     title: "BI & Executive Dashboarding",
-    body: "Power BI, Looker, Tableau and Snowflake — with the modeling and ETL underneath.",
+    body: "Power BI, Looker, Tableau on Snowflake — and the semantic modeling and ETL that make them trustworthy.",
   },
   {
     title: "Product Analytics & Experimentation",
-    body: "A/B tests, funnel and cohort analysis, KPI design in SQL and Python.",
+    body: "A/B tests, funnels, and cohorts in SQL and Python. I design the KPI before I touch the dashboard.",
   },
   {
     title: "Data & SQL Engineering",
-    body: "Stored procedures, ETL pipelines, Snowflake, identity resolution.",
+    body: "Stored procedures, ETL pipelines, identity resolution. The plumbing nobody notices until it breaks.",
   },
   {
     title: "Analytics-Led Product Delivery",
-    body: "PRDs, OKRs, and roadmap bets that come out of the analysis — not the other way around.",
+    body: "PRDs, OKRs, and roadmap bets that come from the analysis — not the other way around.",
   },
 ];
 
@@ -79,7 +79,7 @@ const engagementModels = [
   {
     label: "Full-Time",
     title: "Senior Analyst · Staff Analyst · BI Lead · Analytics-Led PM",
-    body: "Embedded ownership of analytics, BI, or analytics-first product. Remote-first, open to hybrid.",
+    body: "Embedded ownership of analytics, BI, or an analytics-led product team. Remote-first, open to hybrid.",
   },
   {
     label: "Contract",
@@ -237,7 +237,7 @@ function Index() {
 
           {/* Eyebrow: stat-anchored */}
           <p className="mb-5 font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
-            6+ yrs · B2B SaaS · IoT · AI
+            6+ years · B2B SaaS · IoT · AI
           </p>
 
           {/* Role-anchored H1 */}
@@ -247,7 +247,7 @@ function Index() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
-            SQL · Python · Power BI and Snowflake. I find where the value lives, then ship the monetization decision that comes out of it.
+            SQL, Python, Power BI on Snowflake. I dig into the data, find what&apos;s actually driving revenue, and ship the call that comes out of it.
           </p>
 
 
@@ -407,7 +407,7 @@ function Index() {
             </div>
             <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
               <p>
-                I lead with the analysis. KPI tree, instrumentation, dashboards in Power BI, Looker, Tableau and Snowflake — then the PRD, roadmap, and launch fall out of what the data says.
+                Most product calls I&apos;ve shipped started as a dashboard or a SQL query, not a meeting. I build the KPI tree and the instrumentation first; the PRD, the roadmap, and the launch follow what the data shows.
               </p>
             </div>
           </div>
@@ -550,7 +550,7 @@ function Index() {
               Three ways to work together
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Full-time is the priority — contract and consulting fill the gap when the seat isn&apos;t open yet.
+              Full-time is the priority. Contract and consulting are how I help while the right seat opens up.
             </p>
           </div>
 
@@ -626,8 +626,8 @@ function Index() {
             Ready to ship?
           </h2>
           <p className="mx-auto mb-12 max-w-xl text-lg font-medium text-primary-foreground/80">
-            Open to full-time Senior PM, Staff Analyst, or Senior BI roles — plus contract and
-            consulting engagements. Let&apos;s build something significant.
+            Open to full-time Senior PM, Staff Analyst, or Senior BI roles, plus contract and
+            consulting work. If you&apos;ve got a problem worth solving, send it over.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

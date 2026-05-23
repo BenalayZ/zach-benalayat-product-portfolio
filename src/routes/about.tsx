@@ -34,7 +34,7 @@ const experience = [
       "Behavioral funnel analysis across search, discovery, and purchase — surfaced UX changes that reduced search time by 25%.",
       "Designed internal Power BI / Looker dashboards for exec leadership, Sales, and RevOps to monitor product performance and customer behavior.",
       "Spearheaded identity resolution overhaul — +10% contact coverage and +25% data quality in 3 months.",
-      "Owned 0→1 launch of the customer-facing B2B Public API to $1M ARR (SMB + mid-market, enterprise expansion underway) and automated analytics workflows with Claude + N8N (−15% idea-to-design cycle time).",
+      "Owned the 0→1 launch of the customer-facing B2B Public API to $1M ARR — SMB and mid-market first, enterprise expansion underway. Automated analytics workflows with Claude + N8N, cutting idea-to-design cycle time by 15%.",
     ],
   },
   {

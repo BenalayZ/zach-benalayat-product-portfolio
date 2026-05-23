@@ -157,23 +157,86 @@ function Index() {
 
   return (
     <div>
-      {/* Hero — centered with orbital rings */}
-      <section className="relative overflow-hidden">
-        {/* Background orbital graphics */}
+      {/* Hero — orbital data precision */}
+      <section className="relative min-h-[92vh] overflow-hidden">
+        {/* Background — orbital rings + ghost monogram + data-node graph */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div className="absolute aspect-square w-[140vw] rounded-full border border-primary/10 animate-orbit-slow lg:w-[100vw]" />
-          <div className="absolute aspect-square w-[110vw] rounded-full border border-foreground/5 animate-orbit-mid lg:w-[70vw]" />
-          <div className="absolute aspect-square w-[80vw] rounded-full border border-primary/20 animate-orbit-fast lg:w-[45vw]" />
-          <div className="absolute h-96 w-96 rounded-full bg-primary/15 blur-[120px]" />
-          <div className="absolute h-64 w-64 rotate-45 border border-primary/30 animate-pulse" />
-          <div className="select-none font-sans text-[20vw] font-extrabold tracking-tighter text-foreground opacity-[0.025] lg:text-[15vw]">
-            ZACH BENALAYAT
+          {/* Ghost monogram — large, low-opacity, behind everything */}
+          <div
+            aria-hidden
+            className="absolute select-none font-sans text-[28vw] font-extrabold uppercase leading-none tracking-tighter text-secondary opacity-[0.07] lg:text-[22vw]"
+          >
+            BENALAYAT
           </div>
+
+          {/* Orbital rings — 3 weights, one dashed */}
+          <div className="absolute aspect-square w-[55vw] rounded-full border border-secondary/40 lg:w-[34vw]" />
+          <div className="absolute aspect-square w-[80vw] rounded-full border border-dashed border-secondary/30 lg:w-[52vw]" />
+          <div className="absolute aspect-square w-[115vw] rounded-full border border-secondary/15 lg:w-[72vw]" />
+
+          {/* Soft radial glow */}
+          <div className="absolute h-[32rem] w-[32rem] rounded-full bg-primary/10 blur-[140px]" />
+
+          {/* Orbiting data points on the rings */}
+          <div className="absolute aspect-square w-[80vw] animate-orbit-slow lg:w-[52vw]">
+            <span className="absolute top-1/2 -left-1 h-2 w-2 -translate-y-1/2 rounded-full bg-primary shadow-[0_0_12px_rgba(201,168,76,0.7)]" />
+            <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-1.5 w-1.5 rounded-full bg-foreground/50" />
+            <span className="absolute bottom-0 left-1/3 h-1 w-1 rounded-full bg-secondary" />
+          </div>
+          <div className="absolute aspect-square w-[55vw] animate-orbit-fast lg:w-[34vw]">
+            <span className="absolute top-1/4 -right-1 h-1.5 w-1.5 rounded-full bg-primary/70" />
+            <span className="absolute bottom-1/4 -left-1 h-1 w-1 rounded-full bg-foreground/40" />
+          </div>
+
+          {/* Abstract geometric data-node connectors behind the headline */}
+          <svg
+            aria-hidden
+            className="absolute h-[22rem] w-[44rem] max-w-[95vw] opacity-[0.22]"
+            viewBox="0 0 800 400"
+            fill="none"
+          >
+            <defs>
+              <linearGradient id="dataLine" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="oklch(0.74 0.13 85)" stopOpacity="0" />
+                <stop offset="50%" stopColor="oklch(0.74 0.13 85)" stopOpacity="1" />
+                <stop offset="100%" stopColor="oklch(0.74 0.13 85)" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+            <g stroke="url(#dataLine)" strokeWidth="0.75">
+              <line x1="80" y1="120" x2="280" y2="60" />
+              <line x1="280" y1="60" x2="520" y2="180" />
+              <line x1="520" y1="180" x2="720" y2="90" />
+              <line x1="80" y1="120" x2="220" y2="280" />
+              <line x1="220" y1="280" x2="460" y2="320" />
+              <line x1="460" y1="320" x2="660" y2="260" />
+              <line x1="280" y1="60" x2="220" y2="280" />
+              <line x1="520" y1="180" x2="460" y2="320" />
+              <line x1="720" y1="90" x2="660" y2="260" />
+            </g>
+            <g fill="oklch(0.74 0.13 85)">
+              <circle cx="80" cy="120" r="3" />
+              <circle cx="280" cy="60" r="4" />
+              <circle cx="520" cy="180" r="3.5" />
+              <circle cx="720" cy="90" r="3" />
+              <circle cx="220" cy="280" r="3" />
+              <circle cx="460" cy="320" r="4" />
+              <circle cx="660" cy="260" r="3" />
+            </g>
+            <g stroke="oklch(0.50 0.10 162)" strokeWidth="0.5" opacity="0.6">
+              <line x1="0" y1="200" x2="800" y2="200" strokeDasharray="2 6" />
+              <line x1="400" y1="0" x2="400" y2="400" strokeDasharray="2 6" />
+            </g>
+          </svg>
         </div>
 
         <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 py-20 text-center md:py-28">
+          {/* Name micro-label */}
+          <p className="mb-4 font-sans text-xs font-extrabold uppercase tracking-[0.35em] text-foreground/80">
+            Zach Benalayat
+          </p>
+
           {/* Availability badge */}
-          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5">
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-background/60 px-4 py-1.5 backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
@@ -211,14 +274,14 @@ function Index() {
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a
                 href="#work"
-                className="group inline-flex items-center gap-2 bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95"
+                className="group inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-[1.03] hover:shadow-[0_0_28px_rgba(201,168,76,0.45)] active:scale-95"
               >
                 See the work <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/Zach_J_Benalayat.pdf`}
                 download
-                className="inline-flex items-center gap-2 border border-foreground/20 bg-foreground/5 px-6 py-4 text-sm font-bold uppercase tracking-widest text-foreground backdrop-blur-sm transition-all hover:border-primary hover:text-primary"
+                className="inline-flex items-center gap-2 rounded-md border border-primary/30 bg-foreground/5 px-6 py-4 text-sm font-bold uppercase tracking-widest text-foreground backdrop-blur-sm transition-all hover:border-primary hover:text-primary"
               >
                 <Download className="h-4 w-4" /> Download resume
               </a>
@@ -286,6 +349,16 @@ function Index() {
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Bottom scroll indicator */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute bottom-6 left-1/2 hidden -translate-x-1/2 opacity-40 md:block"
+        >
+          <div className="relative h-12 w-0.5 overflow-hidden bg-foreground/20">
+            <div className="absolute left-0 top-0 h-1/2 w-full animate-scroll-cue bg-primary" />
           </div>
         </div>
       </section>

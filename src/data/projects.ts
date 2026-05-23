@@ -27,19 +27,19 @@ export const projects: Project[] = [
     slug: "seamless-api",
     title: "Seamless API",
     date: "May 2025",
-    headline: "$750k ARR in year one",
-    summary: "$750k ARR in year one and integrations with every major AI platform.",
+    headline: "0→1 launch to $1M ARR — enterprise upside ahead",
+    summary: "Built and scaled a customer-facing API from zero to $1M ARR across SMB and mid-market, with enterprise expansion underway.",
     image: seamlessApi,
-    tags: ["B2B SaaS", "Agentic AI", "SQL", "Power BI", "Full PDLC", "GTM"],
+    tags: ["0→1", "B2B SaaS", "Customer-Facing", "Agentic AI", "SQL", "Power BI", "Full PDLC", "GTM"],
     problem:
-      "Create a browserless solution to allow custom integrations of Seamless Contact & Company data into customer data pipelines.",
-    role: "Product Manager & Analytics",
+      "Stand up a net-new, customer-facing API that lets users integrate Seamless Contact & Company data directly into their pipelines — no browser, no manual workflows.",
+    role: "Product Manager & Analytics — 0→1 owner",
     strategy:
-      "Keep it simple. Users want to replicate the entire Seamless experience async and browserless — focus on delivering exactly that.",
+      "Ship a focused MVP that mirrors the core Seamless experience async and browserless, then scale coverage, reliability, and segment fit toward enterprise.",
     insights:
       "User interviews guided framing. Competitive analysis informed technical docs and architecture. Internal developer interviews surfaced reconciliation gaps, and stakeholder scrums highlighted marketing and sales blind spots.",
     outcome:
-      "$750k in ARR within the first year from SMB and mid-market alone, with enterprise upsell underway. Integrated with every major AI platform.",
+      "Took the product from inception to $1M ARR in year one — primarily SMB and mid-market, where enterprise represents the larger remaining wedge. Integrated with every major AI platform and set up as the scaling lane for the next ARR tier.",
     featured: true,
   },
   {
@@ -67,7 +67,7 @@ export const projects: Project[] = [
     headline: "Launched on GPT + Claude in one quarter",
     summary: "Launched API 2.0 alongside MCP on the GPT and Claude stores in a single quarter.",
     image: seamlessMcp,
-    tags: ["Agentic AI", "MCP", "PRD", "Cross-functional"],
+    tags: ["Customer-Facing", "Agentic AI", "MCP", "PRD", "Cross-functional"],
     problem: "Integrate existing and future Seamless API functionality with modern AI platforms.",
     role: "Product Manager & Analytics",
     strategy: "Don't reinvent the wheel — focus on the shortest path to delivering core functionality.",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     headline: "$1M+ ARR uplift via GTM re-targeting",
     summary: "Re-targeted GTM toward IoT-heavy state contracts — $1M+ ARR uplift.",
     image: inseegoConnect,
-    tags: ["B2B", "IoT", "SQL", "Python", "Power BI", "Funnel Analysis", "Market Research"],
+    tags: ["Customer-Facing", "B2B", "IoT", "SQL", "Python", "Power BI", "Funnel Analysis", "Market Research"],
     problem: "Inseego IoT products were underperforming within Inseego Connect partner channels.",
     role: "Product Owner & Analyst",
     strategy:
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     headline: "Cited in dozens of musicology journals",
     summary: "A student-managed platform for annotating digitized Latin manuscripts.",
     image: latinHyperTexts,
-    tags: ["Digital Scholarship", "Full PDLC", "UX Design", "Survey Metrics"],
+    tags: ["Customer-Facing", "Digital Scholarship", "Full PDLC", "UX Design", "Survey Metrics"],
     problem:
       "Create a platform for students to research, annotate, and collaborate on archives of digitized Latin manuscripts.",
     role: "Product Owner & Lead Developer",
@@ -137,7 +137,7 @@ export const projects: Project[] = [
     headline: "−1 FTE, 46% faster course turnaround",
     summary: "CaseWorthy rollout cut billing headcount by 1 FTE and course turnaround by 46%.",
     image: theArc,
-    tags: ["Non-Profit", "Implementation", "ETL", "UX Design"],
+    tags: ["Customer-Facing", "Non-Profit", "Implementation", "ETL", "UX Design"],
     problem:
       "Build a custom CaseWorthy implementation to give The Arc a centralized operational hub and learning management system.",
     role: "Integration Specialist & Owner",

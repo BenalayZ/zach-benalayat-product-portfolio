@@ -2,6 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Download, Linkedin, MapPin } from "lucide-react";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
+import seamlessLogo from "@/assets/logos/seamless.jpg";
+import inseegoLogo from "@/assets/logos/inseego.jpg";
+import caseworthyLogo from "@/assets/logos/caseworthy.jpg";
+import arcLogo from "@/assets/logos/arc.jpg";
+import butlerLogo from "@/assets/logos/butler.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -15,7 +20,7 @@ const faqs = [
   },
   {
     q: "What types of products have you shipped?",
-    a: "B2B SaaS, IoT and telecom hardware, AI platforms (including MCP integrations on the GPT and Claude stores), data infrastructure, and non-profit case-management systems. Recent flagship work includes Seamless API ($750k ARR year one) and Inseego Connect ($1M+ ARR uplift driven by Power BI funnel analysis).",
+    a: "B2B SaaS, IoT and telecom hardware, AI platforms (including MCP integrations on the GPT and Claude stores), data infrastructure, and non-profit case-management systems. Recent flagship work includes a 0→1 customer-facing Seamless API ($1M ARR year one across SMB and mid-market, enterprise underway) and Inseego Connect ($1M+ ARR uplift driven by Power BI funnel analysis).",
   },
   {
     q: "Do you lead analytics or product strategy?",
@@ -235,7 +240,7 @@ function Index() {
           {/* Outcome metrics */}
           <dl className="mt-20 grid w-full max-w-3xl grid-cols-1 gap-10 border-t border-border pt-12 md:grid-cols-3">
             {[
-              { value: "$750k", label: "Seamless API ARR" },
+              { value: "$1M", label: "Seamless API ARR (0→1)" },
               { value: "$1M+", label: "Inseego Connect uplift" },
               { value: "20%", label: "AWS savings on Data Engine 4.0" },
             ].map((m) => (
@@ -259,19 +264,21 @@ function Index() {
           <p className="mb-6 text-center font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-muted-foreground md:text-left">
             Where I&apos;ve shipped product
           </p>
-          <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 md:justify-between md:gap-x-6">
+          <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 md:justify-between md:gap-x-6">
             {[
-              "Seamless.AI",
-              "Inseego",
-              "CaseWorthy",
-              "The Arc",
-              "Butler School of Music",
-            ].map((name) => (
-              <li
-                key={name}
-                className="font-sans text-base font-extrabold tracking-tight text-foreground/70 transition-colors hover:text-primary md:text-lg"
-              >
-                {name}
+              { name: "Seamless.AI", src: seamlessLogo },
+              { name: "Inseego", src: inseegoLogo },
+              { name: "CaseWorthy", src: caseworthyLogo },
+              { name: "The Arc Southern Maryland", src: arcLogo },
+              { name: "Butler School of Music", src: butlerLogo },
+            ].map(({ name, src }) => (
+              <li key={name} className="flex items-center">
+                <img
+                  src={src}
+                  alt={`${name} logo`}
+                  loading="lazy"
+                  className="h-10 w-auto max-w-[140px] object-contain opacity-80 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 md:h-12"
+                />
               </li>
             ))}
           </ul>
@@ -313,7 +320,7 @@ function Index() {
                 I partner with product and engineering to design the analytics framework first — KPI tree, instrumentation, dashboards in Power BI / Looker / Tableau on Snowflake — then use what surfaces to shape PRDs, roadmaps, and launch strategy.
               </p>
               <p>
-                That analytics-first lens has shipped real outcomes: $750k ARR in year one on Seamless API, $1M+ ARR uplift on Inseego Connect (out of a single Power BI funnel), and 20% AWS savings on Data Engine 4.0 — each one driven by SQL, Python, and dashboard work that pointed product decisions in the right direction.
+                That analytics-first lens has shipped real outcomes: a 0→1 customer-facing Seamless API to $1M ARR in year one (SMB and mid-market, with enterprise still ahead), $1M+ ARR uplift on Inseego Connect (out of a single Power BI funnel), and 20% AWS savings on Data Engine 4.0 — each one driven by SQL, Python, and dashboard work that pointed product decisions in the right direction.
               </p>
               <p>
                 I thrive in teams that treat strategy as a continuous, evidence-led process and value tight communication between product, data, engineering, and GTM.

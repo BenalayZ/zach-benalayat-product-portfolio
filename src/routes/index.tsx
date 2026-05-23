@@ -1,11 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Download, Linkedin } from "lucide-react";
+import { ArrowRight, Calendar, Download, Linkedin, MapPin } from "lucide-react";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
+
+// TODO Zach: replace with your real Calendly (or Cal.com) link.
+const CALENDLY_URL = "https://calendly.com/zach-benalayat/intro";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
+
 
 const faqs = [
   {
@@ -172,38 +176,68 @@ function Index() {
             signal in the noise.
           </h1>
 
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-2xl">
-            Product &amp; Business Analytics PM — SQL, Python, Power BI, Looker, Snowflake. I design the analytics frameworks, define the KPIs, and use what I find to drive PRDs and roadmaps across B2B SaaS, IoT, and AI.
+          {/* Functional subhead — what role, what level, what stack */}
+          <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
+            Product Manager &amp; Product Analyst · 6+ yrs across B2B SaaS, IoT, and AI · SQL, Python, Power BI, Snowflake.
           </p>
 
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="#work"
-              className="group inline-flex items-center gap-2 bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground transition-all hover:scale-105 active:scale-95"
-            >
-              Explore work <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/Zach_J_Benalayat.pdf`}
-              download
-              className="inline-flex items-center gap-2 border border-foreground/20 bg-foreground/5 px-8 py-4 text-sm font-bold uppercase tracking-widest text-foreground backdrop-blur-sm transition-all hover:border-primary hover:text-primary"
-            >
-              <Download className="h-4 w-4" /> Download resume
-            </a>
-            <a
-              href="https://www.linkedin.com/in/zach-benalayat/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-4 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
-              <Linkedin className="h-4 w-4" /> LinkedIn
-            </a>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 px-4 py-4 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
-              Get in touch
-            </Link>
+          {/* Fit snapshot — the 3 facts a recruiter needs in 5 seconds */}
+          {/* TODO Zach: confirm location + work authorization line below. */}
+          <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium text-muted-foreground md:text-sm">
+            <li className="inline-flex items-center gap-1.5">
+              <MapPin className="h-3.5 w-3.5 text-primary" />
+              United States · Remote-first, open to hybrid
+            </li>
+            <li className="hidden h-1 w-1 rounded-full bg-border md:block" />
+            <li>US work authorized — no sponsorship needed</li>
+            <li className="hidden h-1 w-1 rounded-full bg-border md:block" />
+            <li>Targeting Senior PM &amp; Product Analytics Lead roles</li>
+          </ul>
+
+          <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            I design the analytics frameworks, define the KPIs, and use what I find to drive PRDs and roadmaps end-to-end.
+          </p>
+
+          {/* CTAs — one primary, the rest demoted */}
+          <div className="mt-10 flex flex-col items-center gap-4">
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95"
+              >
+                <Calendar className="h-4 w-4" /> Book a 20-min intro <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href="#work"
+                className="inline-flex items-center gap-2 border border-foreground/20 bg-foreground/5 px-6 py-4 text-sm font-bold uppercase tracking-widest text-foreground backdrop-blur-sm transition-all hover:border-primary hover:text-primary"
+              >
+                Explore work
+              </a>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-muted-foreground">
+              <a
+                href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/Zach_J_Benalayat.pdf`}
+                download
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-primary"
+              >
+                <Download className="h-3.5 w-3.5" /> Download resume (PDF)
+              </a>
+              <span className="hidden h-1 w-1 rounded-full bg-border md:inline-block" />
+              <a
+                href="https://www.linkedin.com/in/zach-benalayat/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 transition-colors hover:text-primary"
+              >
+                <Linkedin className="h-3.5 w-3.5" /> LinkedIn
+              </a>
+              <span className="hidden h-1 w-1 rounded-full bg-border md:inline-block" />
+              <Link to="/contact" className="transition-colors hover:text-primary">
+                Or email me
+              </Link>
+            </div>
           </div>
 
           {/* Outcome metrics */}
@@ -225,6 +259,7 @@ function Index() {
           </dl>
         </div>
       </section>
+
 
 
 

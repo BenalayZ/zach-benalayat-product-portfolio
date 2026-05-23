@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
 const faqs = [
   {
     q: "What kinds of engagements are you open to?",
-    a: "Full-time Senior PM, Staff Analyst, or Senior BI — plus contract and scoped consulting (analytics audits, KPI design, BI builds, PRDs, 0→1 launches).",
+    a: "Full-time Senior Analyst, Staff Analyst, BI Lead, or analytics-led PM — plus contract and scoped consulting (analytics audits, KPI design, BI builds, PRDs, 0→1 launches).",
   },
   {
     q: "What types of products have you shipped?",

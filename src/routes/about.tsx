@@ -206,10 +206,6 @@ function AboutPage() {
           Product &amp; Business Analytics PM · SQL · Python · Power BI
         </p>
       </div>
-        <p className="mt-3 text-lg text-muted-foreground">
-          Product &amp; Business Analytics PM · SQL · Python · Power BI
-        </p>
-      </div>
 
       <div className="space-y-6 text-base leading-relaxed text-foreground">
         <p>

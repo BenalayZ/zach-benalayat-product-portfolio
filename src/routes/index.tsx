@@ -261,9 +261,32 @@ function Index() {
       </section>
 
 
+      {/* Where I've shipped — wordmark band */}
+      <section aria-label="Companies and organizations where I've shipped product" className="border-y border-border bg-foreground/[0.02]">
+        <div className="mx-auto max-w-6xl px-6 py-10 md:py-12">
+          <p className="mb-6 text-center font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-muted-foreground md:text-left">
+            Where I&apos;ve shipped product
+          </p>
+          <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 md:justify-between md:gap-x-6">
+            {[
+              "Seamless.AI",
+              "Inseego",
+              "CaseWorthy",
+              "The Arc",
+              "Butler School of Music",
+            ].map((name) => (
+              <li
+                key={name}
+                className="font-sans text-base font-extrabold tracking-tight text-foreground/70 transition-colors hover:text-primary md:text-lg"
+              >
+                {name}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
 
-      {/* By the numbers */}
       <section className="border-y border-border">
         <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
           <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-10">

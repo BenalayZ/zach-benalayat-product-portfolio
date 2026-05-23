@@ -237,7 +237,7 @@ function Index() {
 
           {/* Eyebrow: stat-anchored */}
           <p className="mb-5 font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
-            6+ yrs · B2B SaaS · IoT · AI
+            6+ years · B2B SaaS · IoT · AI
           </p>
 
           {/* Role-anchored H1 */}
@@ -247,7 +247,7 @@ function Index() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
-            SQL · Python · Power BI and Snowflake. I find where the value lives, then ship the monetization decision that comes out of it.
+            SQL, Python, Power BI on Snowflake. I dig into the data, find what&apos;s actually driving revenue, and ship the call that comes out of it.
           </p>
 
 

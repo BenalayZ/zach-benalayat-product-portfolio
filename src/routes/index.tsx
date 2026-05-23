@@ -179,25 +179,26 @@ function Index() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-              Available — Full-Time, Contract &amp; Consulting
+              Available — Full-Time or Contract
             </span>
           </div>
 
-          {/* Eyebrow: demoted tagline */}
+          {/* Eyebrow: stat-anchored */}
           <p className="mb-5 font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
-            I find the signal in the noise
+            6+ yrs · B2B SaaS · IoT · AI
           </p>
 
           {/* Role-anchored H1 */}
           <h1 className="max-w-4xl font-sans text-4xl font-extrabold leading-[1.05] tracking-tighter text-foreground md:text-6xl lg:text-7xl">
-            <span className="text-primary">Senior Product Manager</span>,{" "}
+            <span className="text-primary">Senior PM</span>,{" "}
             <span className="text-primary">Staff Analyst</span>, and{" "}
-            <span className="text-primary">Senior BI</span> roles — run by one operator.
+            <span className="text-primary">Senior BI</span> — one operator.
           </h1>
 
           <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
-            6+ yrs shipping analytics-first product across B2B SaaS, IoT, and AI.
+            Analytics-first product across B2B SaaS, IoT, and AI.
           </p>
+
 
           <ul className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium text-muted-foreground md:text-sm">
             <li className="inline-flex items-center gap-1.5">

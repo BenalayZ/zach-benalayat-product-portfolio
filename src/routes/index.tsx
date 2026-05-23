@@ -10,13 +10,32 @@ import butlerLogo from "@/assets/logos/butler.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Zach Benalayat — Senior PM · Staff Analyst · Senior BI" },
+      {
+        name: "description",
+        content:
+          "Product Manager & Data Analyst. 6+ yrs across B2B SaaS, IoT, and AI. SQL, Python, Power BI, Snowflake. Open to full-time, contract, and consulting engagements.",
+      },
+      { property: "og:title", content: "Zach Benalayat — Senior PM · Staff Analyst · Senior BI" },
+      {
+        property: "og:description",
+        content:
+          "I design the analytics frameworks, define the KPIs, and use what I find to drive PRDs and roadmaps end-to-end.",
+      },
+      { property: "og:url", content: "/" },
+      { property: "og:type", content: "website" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
 });
 
 
 const faqs = [
   {
     q: "What kinds of engagements are you open to?",
-    a: "Full-time Product Manager or Data Analyst roles, plus fractional and contract work — analytics audits, KPI/instrumentation design, PRD authoring, launch support, and end-to-end PDLC ownership for shorter-scope projects.",
+    a: "Full-time Senior PM, Staff Analyst, or Senior Data Analyst / BI roles, plus contract and consulting work — analytics audits, KPI and instrumentation design, BI and dashboard builds, PRD authoring, 0→1 launch leadership, and end-to-end PDLC ownership for defined-scope engagements.",
   },
   {
     q: "What types of products have you shipped?",

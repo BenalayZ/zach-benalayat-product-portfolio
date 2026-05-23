@@ -35,11 +35,11 @@ export const Route = createFileRoute("/")({
 const faqs = [
   {
     q: "What kinds of engagements are you open to?",
-    a: "Full-time Senior Analyst, Staff Analyst, BI Lead, or analytics-led PM — plus contract and scoped consulting (analytics audits, KPI design, BI builds, PRDs, 0→1 launches).",
+    a: "Full-time Senior Analyst, Staff Analyst, BI Lead, or analytics-led PM. Open to contract too — analytics audits, KPI design, BI builds, PRDs, 0→1 launches.",
   },
   {
     q: "What types of products have you shipped?",
-    a: "B2B SaaS, IoT/telecom, AI platforms (MCP on the GPT and Claude stores), data infra, and non-profit case management.",
+    a: "B2B SaaS, IoT and telecom, AI platforms (MCP shipped on the GPT and Claude stores), data infrastructure, and nonprofit case management.",
   },
   {
     q: "Do you lead analytics or product strategy?",
@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     q: "What does your typical process look like from idea to launch?",
-    a: "Objectives → research → KPI framework → PRD → ship → post-launch funnel and cohort analysis. MVP is the starting line.",
+    a: "Objectives, then research, then the KPI framework, then the PRD, then ship, then watch the funnels and cohorts. The launch is the start of the work, not the end.",
   },
   {
     q: "How do I get in touch?",

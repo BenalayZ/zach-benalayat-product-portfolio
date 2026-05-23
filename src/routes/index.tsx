@@ -59,19 +59,19 @@ const faqs = [
 const skills = [
   {
     title: "BI & Executive Dashboarding",
-    body: "Power BI, Looker, Tableau and Snowflake — with the modeling and ETL underneath.",
+    body: "Power BI, Looker, Tableau on Snowflake — and the semantic modeling and ETL that make them trustworthy.",
   },
   {
     title: "Product Analytics & Experimentation",
-    body: "A/B tests, funnel and cohort analysis, KPI design in SQL and Python.",
+    body: "A/B tests, funnels, and cohorts in SQL and Python. I design the KPI before I touch the dashboard.",
   },
   {
     title: "Data & SQL Engineering",
-    body: "Stored procedures, ETL pipelines, Snowflake, identity resolution.",
+    body: "Stored procedures, ETL pipelines, identity resolution. The plumbing nobody notices until it breaks.",
   },
   {
     title: "Analytics-Led Product Delivery",
-    body: "PRDs, OKRs, and roadmap bets that come out of the analysis — not the other way around.",
+    body: "PRDs, OKRs, and roadmap bets that come from the analysis — not the other way around.",
   },
 ];
 

@@ -200,8 +200,12 @@ function AboutPage() {
       <div className="mb-12">
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">About</p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-          Zach Benalayat
+          About Zach Benalayat — Product Manager &amp; Data Analyst
         </h1>
+        <p className="mt-3 text-lg text-muted-foreground">
+          Product &amp; Business Analytics PM · SQL · Python · Power BI
+        </p>
+      </div>
         <p className="mt-3 text-lg text-muted-foreground">
           Product &amp; Business Analytics PM · SQL · Python · Power BI
         </p>

@@ -151,6 +151,7 @@ const toolkit: ToolkitGroup[] = [
 ];
 
 
+function Index() {
   const featured = projects.filter((p) => p.featured);
   const more = projects.filter((p) => !p.featured);
 

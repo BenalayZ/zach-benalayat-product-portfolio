@@ -131,7 +131,7 @@ function CaseStudy() {
             <img
               src={project.image}
               alt={project.title}
-              className="aspect-[16/9] w-full object-cover"
+              className="aspect-[16/9] w-full object-cover bg-slate-100"
             />
           </div>
         </div>

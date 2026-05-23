@@ -151,11 +151,11 @@ const toolkit: ToolkitGroup[] = [
     label: "AI & Agentic Tooling",
     items: [
       { name: "Claude Code", primary: true },
-      { name: "Claude Cowork", primary: true },
       { name: "OpenAI Agents", primary: true },
       { name: "GitHub Copilot", primary: true },
-      { name: "Cursor", primary: true },
       { name: "Lovable" },
+      { name: "Claude Cowork", primary: true },
+      { name: "Cursor", primary: true },
     ],
   },
 ];

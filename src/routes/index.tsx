@@ -126,7 +126,7 @@ const toolkit: ToolkitGroup[] = [
   {
     label: "BI & Reporting",
     items: [
-      { name: "Power BI", primary: true, children: ["Microsoft Fabric"] },
+      { name: "Power BI", primary: true, children: ["Microsoft Fabric", "DAX", "Semantic Modeling", "RLS"] },
       { name: "Tableau", primary: true },
       { name: "Amplitude", primary: true },
       { name: "Looker" },

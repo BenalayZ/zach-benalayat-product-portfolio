@@ -107,14 +107,11 @@ const northStars = [
 ];
 
 const steps = [
-  "Identifying objectives",
-  "Research and preparation",
-  "Developing strategies",
-  "Plans of action",
-  "Measuring progress",
-  "Continuous improvement",
-  "Analyzing outcomes",
-  "Focusing on the future",
+  "Pin down what we're actually trying to move.",
+  "Get the data, get the context, talk to whoever's closest to the problem.",
+  "Frame the KPI tree and instrument it.",
+  "Ship the smallest thing that proves or kills the bet.",
+  "Measure honestly. Roll forward or roll back.",
 ];
 
 const toolGroups = [

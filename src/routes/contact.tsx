@@ -9,7 +9,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with Zach Benalayat. Open to full-time Senior PM, Staff Analyst, or Senior BI roles, plus contract and consulting engagements.",
+          "Get in touch with Zach Benalayat. Open to full-time Senior PM or Senior BI roles, plus contract and consulting engagements.",
       },
       { property: "og:title", content: "Contact — Zach Benalayat" },
       {

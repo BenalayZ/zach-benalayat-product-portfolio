@@ -2,11 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Download, Linkedin, MapPin } from "lucide-react";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
-import seamlessLogo from "@/assets/logos/seamless.jpg";
-import inseegoLogo from "@/assets/logos/inseego.jpg";
-import caseworthyLogo from "@/assets/logos/caseworthy.jpg";
-import arcLogo from "@/assets/logos/arc.jpg";
-import butlerLogo from "@/assets/logos/butler.jpg";
+import seamlessLogo from "@/assets/logos/seamless.png";
+import inseegoLogo from "@/assets/logos/inseego.png";
+import caseworthyLogo from "@/assets/logos/caseworthy.png";
+import arcLogo from "@/assets/logos/arc.png";
+import butlerLogo from "@/assets/logos/butler.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -310,7 +310,7 @@ function Index() {
                   src={src}
                   alt={`${name} logo`}
                   loading="lazy"
-                  className="h-10 w-auto max-w-[140px] object-contain transition-transform duration-300 hover:scale-105 md:h-12"
+                  className="h-14 w-auto max-w-[180px] object-contain transition-transform duration-300 hover:scale-105 md:h-16"
                 />
               </li>
             ))}

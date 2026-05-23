@@ -1,10 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Calendar, Download, Linkedin, MapPin } from "lucide-react";
+import { ArrowRight, Download, Linkedin, MapPin } from "lucide-react";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
-
-// TODO Zach: replace with your real Calendly (or Cal.com) link.
-const CALENDLY_URL = "https://calendly.com/zach-benalayat/intro";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -181,39 +178,34 @@ function Index() {
             Product Manager &amp; Product Analyst · 6+ yrs across B2B SaaS, IoT, and AI · SQL, Python, Power BI, Snowflake.
           </p>
 
-          {/* Fit snapshot — the 3 facts a recruiter needs in 5 seconds */}
-          {/* TODO Zach: confirm location + work authorization line below. */}
+          {/* Fit snapshot — the facts a recruiter needs in 5 seconds */}
           <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium text-muted-foreground md:text-sm">
             <li className="inline-flex items-center gap-1.5">
               <MapPin className="h-3.5 w-3.5 text-primary" />
-              United States · Remote-first, open to hybrid
+              Austin, Texas · Remote-first, open to hybrid
             </li>
             <li className="hidden h-1 w-1 rounded-full bg-border md:block" />
-            <li>US work authorized — no sponsorship needed</li>
-            <li className="hidden h-1 w-1 rounded-full bg-border md:block" />
-            <li>Targeting Senior PM &amp; Product Analytics Lead roles</li>
+            <li>Targeting Senior Product Manager and Analyst roles</li>
           </ul>
 
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
             I design the analytics frameworks, define the KPIs, and use what I find to drive PRDs and roadmaps end-to-end.
           </p>
 
-          {/* CTAs — one primary, the rest demoted */}
+          {/* CTAs */}
           <div className="mt-10 flex flex-col items-center gap-4">
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a
-                href={CALENDLY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#work"
                 className="group inline-flex items-center gap-2 bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95"
               >
-                <Calendar className="h-4 w-4" /> Book a 20-min intro <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                Explore work <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a
-                href="#work"
+                href="mailto:zacharia.benalayat@gmail.com"
                 className="inline-flex items-center gap-2 border border-foreground/20 bg-foreground/5 px-6 py-4 text-sm font-bold uppercase tracking-widest text-foreground backdrop-blur-sm transition-all hover:border-primary hover:text-primary"
               >
-                Explore work
+                Send an email
               </a>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-muted-foreground">

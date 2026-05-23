@@ -34,7 +34,7 @@ export const projects: Project[] = [
     headline: "Killed a planned UI investment and reframed the monetization bet from 'more Free signups' to 'CRM-connect the Basic base'",
     summary: "First analysis shipped at Seamless.AI. Segmented ~590K searches by license tier and CRM-connection status to find where monetizable value actually accrued — and where it didn't.",
     image: productAnalysis,
-    tags: ["Product Analytics", "Monetization", "Segmentation", "Funnel Analysis", "SQL", "Negative Result", "Roadmap Judgment"],
+    tags: ["Product Analytics", "Monetization", "SQL", "Roadmap Judgment"],
     problem:
       "Onboarding deliverable at Seamless.AI. Leadership assumed Free-tier acquisition was the growth lever. Stress-test that assumption against actual search and CRM-connection behavior across ~590K searches — and decide where the next monetization investment should land.",
     role: "Product Analyst — independent contributor",
@@ -43,9 +43,9 @@ export const projects: Project[] = [
     insights:
       "Free generated the largest raw volume (~159K searches) but zero monetizable signal by definition. Basic was the real conversion battleground — searches split nearly 50/50 connected vs not (~111K / ~102K), meaning half the Basic base was paying without ever wiring up the revenue-driving integration. Premium was overwhelmingly connected (~65K / ~22K), proving the upgrade path monetizes once users get there. A parallel filter-usage analysis killed a planned advanced-filter UI bet outright — filter usage was uniform across tiers, no Premium 'power user' pattern existed to justify the build.",
     outcome:
-      "Killed the planned advanced-filter UI investment and redirected the roadmap slot to a CRM-connect funnel for Basic users — the single highest-leverage monetization lever the data exposed. Reframed the growth thesis from 'more Free signups' to 'CRM-connect the Basic base.' Became the baseline segmentation the product org referenced through the following planning cycle.",
+      "Killed the planned advanced-filter UI bet and redirected the slot to a CRM-connect funnel for Basic users. Reframed growth from 'more Free signups' to 'CRM-connect the Basic base' — the baseline segmentation the product org referenced through the next planning cycle.",
     featured: true,
-    signals: ["Staff Analyst", "Senior BI"],
+    signals: ["Senior BI"],
   },
   {
     slug: "seamless-api",

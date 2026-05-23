@@ -77,35 +77,35 @@ function CaseStudy() {
           ))}
         </div>
 
-        {/* Outcomes box */}
-        <dl className="mt-10 grid grid-cols-1 gap-4 rounded-2xl border border-border bg-card p-6 sm:grid-cols-3">
-          <div>
-            <dt className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-              Role
+        {/* STAR summary — Problem · Role · Outcome at a glance for skim-readers */}
+        <dl className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-3">
+          <div className="bg-card p-5">
+            <dt className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+              Problem
             </dt>
-            <dd className="mt-1.5 text-sm font-semibold text-card-foreground">
+            <dd className="mt-2 text-sm leading-snug text-card-foreground">
+              {project.problem}
+            </dd>
+          </div>
+          <div className="bg-card p-5">
+            <dt className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+              My Role
+            </dt>
+            <dd className="mt-2 text-sm font-semibold leading-snug text-card-foreground">
               {project.role}
             </dd>
+            <dd className="mt-1 text-xs text-muted-foreground">Shipped {project.date}</dd>
           </div>
-          <div className="sm:border-l sm:border-border sm:pl-6">
-            <dt className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-              Shipped
+          <div className="bg-card p-5">
+            <dt className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+              Outcome
             </dt>
-            <dd className="mt-1.5 text-sm font-semibold text-card-foreground">
-              {project.date}
+            <dd className="mt-2 text-sm font-semibold leading-snug text-primary">
+              {project.headline ?? project.outcome}
             </dd>
           </div>
-          {project.headline && (
-            <div className="sm:border-l sm:border-border sm:pl-6">
-              <dt className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                Outcome
-              </dt>
-              <dd className="mt-1.5 text-sm font-semibold text-primary">
-                {project.headline}
-              </dd>
-            </div>
-          )}
         </dl>
+
       </header>
 
       <div className="border-y border-border bg-muted/30">

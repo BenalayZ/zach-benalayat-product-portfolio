@@ -18,19 +18,25 @@ export function ProjectCard({ project }: { project: Project }) {
         />
       </div>
       <div className="p-6">
-        <div className="mb-3 flex items-start justify-between gap-3">
-          <h3 className="text-xl font-bold tracking-tight text-card-foreground">
-            {project.title}
-          </h3>
-          <span className="shrink-0 pt-1 text-xs font-medium uppercase tracking-widest text-muted-foreground">
-            {project.date}
-          </span>
-        </div>
+        {/* Lead with the outcome — the only number a recruiter cares about */}
         {project.headline && (
-          <p className="mb-2 text-sm font-semibold text-primary">
+          <p className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+            Outcome
+          </p>
+        )}
+        {project.headline && (
+          <p className="mb-4 text-xl font-extrabold tracking-tighter text-primary md:text-2xl">
             {project.headline}
           </p>
         )}
+        <div className="mb-3 flex items-start justify-between gap-3">
+          <h3 className="text-base font-bold tracking-tight text-card-foreground">
+            {project.title}
+          </h3>
+          <span className="shrink-0 pt-1 text-[10px] font-medium uppercase tracking-widest text-muted-foreground">
+            {project.date}
+          </span>
+        </div>
         <p className="text-sm leading-relaxed text-muted-foreground">
           {project.summary}
         </p>
@@ -50,6 +56,7 @@ export function ProjectCard({ project }: { project: Project }) {
           </span>
         </div>
       </div>
+
     </Link>
   );
 }

@@ -54,7 +54,7 @@ export const projects: Project[] = [
     headline: "0→1 monetization launch — $1M booked ARR in year one, forecast model still drives the next-tier sales plan",
     summary: "Built and scaled a customer-facing API from zero to $1M ARR. Every scope call was anchored to one revenue metric: async credit consumption. Year-two MoM run-rate forecast informs enterprise expansion planning.",
     image: seamlessApi,
-    tags: ["0→1", "Monetization", "B2B SaaS", "Customer-Facing", "Forecasting", "Agentic AI", "SQL", "Power BI", "Scope Trade-offs", "GTM"],
+    tags: ["0→1", "Monetization", "B2B SaaS", "Forecasting"],
     problem:
       "Stand up a net-new, customer-facing API that monetizes — let users integrate Seamless Contact & Company data directly into their pipelines, no browser, no manual workflows, and prove the revenue model before scaling coverage.",
     role: "Analytics Lead & Product Owner — 0→1",

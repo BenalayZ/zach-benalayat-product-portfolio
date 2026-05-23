@@ -320,7 +320,7 @@ function Index() {
                 I partner with product and engineering to design the analytics framework first — KPI tree, instrumentation, dashboards in Power BI / Looker / Tableau on Snowflake — then use what surfaces to shape PRDs, roadmaps, and launch strategy.
               </p>
               <p>
-                That analytics-first lens has shipped real outcomes: $750k ARR in year one on Seamless API, $1M+ ARR uplift on Inseego Connect (out of a single Power BI funnel), and 20% AWS savings on Data Engine 4.0 — each one driven by SQL, Python, and dashboard work that pointed product decisions in the right direction.
+                That analytics-first lens has shipped real outcomes: a 0→1 customer-facing Seamless API to $1M ARR in year one (SMB and mid-market, with enterprise still ahead), $1M+ ARR uplift on Inseego Connect (out of a single Power BI funnel), and 20% AWS savings on Data Engine 4.0 — each one driven by SQL, Python, and dashboard work that pointed product decisions in the right direction.
               </p>
               <p>
                 I thrive in teams that treat strategy as a continuous, evidence-led process and value tight communication between product, data, engineering, and GTM.

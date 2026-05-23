@@ -294,7 +294,7 @@ function AboutPage() {
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
           Process
         </p>
-        <h2 className="text-2xl font-bold text-foreground">How I Achieve Success</h2>
+        <h2 className="text-2xl font-bold text-foreground">How I work a problem</h2>
       </div>
       <ol className="relative space-y-6 border-l border-border pl-6">
         {steps.map((step, i) => (

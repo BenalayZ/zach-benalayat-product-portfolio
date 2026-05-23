@@ -407,7 +407,7 @@ function Index() {
             </div>
             <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
               <p>
-                I lead with the analysis. KPI tree, instrumentation, dashboards in Power BI, Looker, Tableau and Snowflake — then the PRD, roadmap, and launch fall out of what the data says.
+                Most product calls I&apos;ve shipped started as a dashboard or a SQL query, not a meeting. I build the KPI tree and the instrumentation first; the PRD, the roadmap, and the launch follow what the data shows.
               </p>
             </div>
           </div>

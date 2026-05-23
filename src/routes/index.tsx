@@ -190,12 +190,12 @@ function Index() {
 
           {/* Role-anchored H1 */}
           <h1 className="max-w-4xl font-sans text-4xl font-extrabold leading-[1.05] tracking-tighter text-foreground md:text-6xl lg:text-7xl">
-            <span className="text-primary">Senior Data Analyst</span> &amp;{" "}
-            <span className="text-primary">BI Lead</span>.
+            <span className="text-primary">Product &amp; Monetization</span>{" "}
+            <span className="text-primary">Analyst</span>.
           </h1>
 
           <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
-            SQL · Python · Power BI on Snowflake. I run the analysis, then ship the operating decision that comes out of it.
+            SQL · Python · Power BI on Snowflake. I find where the value lives, then ship the monetization decision that comes out of it.
           </p>
 
 

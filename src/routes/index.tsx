@@ -5,7 +5,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import seamlessLogo from "@/assets/logos/seamless.png";
 import inseegoLogo from "@/assets/logos/inseego.png";
 import caseworthyLogo from "@/assets/logos/caseworthy.png";
-import arcLogo from "@/assets/logos/arc.png";
+import arcLogo from "@/assets/logos/arc.svg";
 import butlerLogo from "@/assets/logos/butler.png";
 
 export const Route = createFileRoute("/")({

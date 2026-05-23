@@ -3,6 +3,23 @@ import { Mail, Linkedin, ArrowUpRight, FileDown, Clock } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
+  head: () => ({
+    meta: [
+      { title: "Contact — Zach Benalayat" },
+      {
+        name: "description",
+        content:
+          "Get in touch with Zach Benalayat. Open to full-time Senior PM, Staff Analyst, or Senior BI roles, plus contract and consulting engagements.",
+      },
+      { property: "og:title", content: "Contact — Zach Benalayat" },
+      {
+        property: "og:description",
+        content: "Reach out by email or LinkedIn. Usually responds within 24 hours.",
+      },
+      { property: "og:url", content: "/contact" },
+    ],
+    links: [{ rel: "canonical", href: "/contact" }],
+  }),
 });
 
 function ContactPage() {

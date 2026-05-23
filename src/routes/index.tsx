@@ -313,7 +313,7 @@ function Index() {
           <dl className="mt-16 grid w-full max-w-4xl grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
             {[
               { track: "Senior BI", value: "$1M+ ARR", label: "Inseego Connect — Power BI funnel" },
-              { track: "Staff Analyst", value: "46%", label: "Faster intake — Arc of Southern Maryland workflow analytics" },
+              { track: "Staff Analyst", value: "46%", label: "Faster intake — Arc of Southern Maryland service operations analytics" },
               { track: "Analytics-Led PM", value: "$1M ARR", label: "Seamless API 0→1" },
             ].map((m) => (
               <div key={m.track} className="bg-background p-6 text-left">

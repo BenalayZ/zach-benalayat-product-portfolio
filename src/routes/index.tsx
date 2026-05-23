@@ -626,8 +626,8 @@ function Index() {
             Ready to ship?
           </h2>
           <p className="mx-auto mb-12 max-w-xl text-lg font-medium text-primary-foreground/80">
-            Open to full-time Senior PM, Staff Analyst, or Senior BI roles — plus contract and
-            consulting engagements. Let&apos;s build something significant.
+            Open to full-time Senior PM, Staff Analyst, or Senior BI roles, plus contract and
+            consulting work. If you&apos;ve got a problem worth solving, send it over.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

@@ -128,13 +128,13 @@ export const projects: Project[] = [
     headline: "$1M+ ARR uplift via GTM re-targeting",
     summary: "Re-targeted GTM toward IoT-heavy state contracts — $1M+ ARR uplift.",
     image: inseegoConnect,
-    tags: ["Customer-Facing", "B2B", "IoT", "SQL", "Python", "Power BI", "Funnel Analysis", "Market Research"],
+    tags: ["Customer-Facing", "B2B", "IoT", "SQL", "Python", "Power BI", "Semantic Modeling", "RLS", "Funnel Analysis", "Market Research"],
     problem: "Inseego IoT products were underperforming within Inseego Connect partner channels.",
     role: "Product Owner & Analyst",
     strategy:
       "Follow the money. Analyzed existing government contracts (Connect's primary customer base) and compared their value, focus, and our market share versus competitors.",
     insights:
-      "Python-based data transformation and PowerBI dashboards revealed that the highest-value Connect contracts were almost entirely phone provisioning, not IoT. Smaller state-level contracts had far more IoT buying power. Funnel analysis showed we were pushing IoT at the wrong segment.",
+      "Python-based data transformation and a Power BI semantic model (contracts → segments → products star schema, with RLS by sales region so each rep only saw their book) revealed that the highest-value Connect contracts were almost entirely phone provisioning, not IoT. Smaller state-level contracts had far more IoT buying power. Funnel analysis showed we were pushing IoT at the wrong segment.",
     outcome:
       "Leadership shifted outreach and sales strategy toward IoT-friendly contracts. Immediate MoM IoT sales growth and stronger California/New York state relationships worth $1M+ ARR.",
     featured: true,

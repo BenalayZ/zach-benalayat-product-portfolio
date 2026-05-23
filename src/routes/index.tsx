@@ -550,7 +550,7 @@ function Index() {
               Three ways to work together
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
-              Full-time is the priority — contract and consulting fill the gap when the seat isn&apos;t open yet.
+              Full-time is the priority. Contract and consulting are how I help while the right seat opens up.
             </p>
           </div>
 

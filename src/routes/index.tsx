@@ -16,13 +16,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Product & Data Analyst. 6+ yrs across B2B SaaS, IoT, and AI. SQL, Python, Power BI and Snowflake. I find where the value lives, then ship the monetization decision that comes out of it.",
+          "Product & Data Analyst. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI on Snowflake. I dig into the data, find what's actually driving revenue, and ship the call that comes out of it.",
       },
       { property: "og:title", content: "Zach Benalayat — Product & Data Analyst" },
       {
         property: "og:description",
         content:
-          "SQL, Python, Power BI and Snowflake. I find where the value lives, then ship the monetization decision that comes out of it.",
+          "SQL, Python, Power BI on Snowflake. I find what's driving revenue and ship the call that comes out of it.",
       },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },

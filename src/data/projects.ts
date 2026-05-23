@@ -95,7 +95,7 @@ export const projects: Project[] = [
     tags: ["Customer-Facing", "Agentic AI", "MCP", "PRD", "Cross-functional"],
     problem: "Integrate existing and future Seamless API functionality with modern AI platforms.",
     role: "Product Manager & Analytics",
-    strategy: "Don't reinvent the wheel — focus on the shortest path to delivering core functionality.",
+    strategy: "Use MCP instead of building custom agent integrations per platform. Same surface area, a fraction of the build cost.",
     insights:
       "Conversations with senior AI engineers identified MCP as the most efficient path versus custom automation. Wrote PRD and functional requirements; engineering implemented.",
     outcome:

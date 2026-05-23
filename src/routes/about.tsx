@@ -87,32 +87,22 @@ const northStars = [
   {
     title: "Agile Leadership",
     quote:
-      "Product strategy must be built on scalability and rapid response. Agile product teams can preempt market shifts and emerge as leaders.",
-  },
-  {
-    title: "Stakeholder Communication",
-    quote:
-      "A bundle of arrows does not break. Ensuring every key department is locked in on product strategy is key to success.",
-  },
-  {
-    title: "Continuous Improvement",
-    quote:
-      "Success and failure are both learning opportunities. I never rest on laurels — MVP is a starting point, not an end goal.",
-  },
-  {
-    title: "80/20 Mindset",
-    quote:
-      "The little things really do matter. What might seem like a small amount of work has a significant impact on user behavior.",
-  },
-  {
-    title: "Technical Skill",
-    quote:
-      "In the modern era, everyone needs to understand the how, not just the what, of product functionality. Understanding is key to growth.",
+      "Ship small, learn fast. A team that can change direction in a sprint beats a team with a perfect annual plan.",
   },
   {
     title: "Data Storytelling",
     quote:
-      "The story of your product is always in the data. A skilled product manager knows how to leverage it, not just find it.",
+      "The story is in the data. My job is to read it out loud — to engineers, to sales, to the CEO — in language each one will actually act on.",
+  },
+  {
+    title: "80/20 Mindset",
+    quote:
+      "The boring 20% — naming a metric correctly, validating a join — moves more revenue than the flashy 80%.",
+  },
+  {
+    title: "Technical Skill",
+    quote:
+      "I write the SQL I'd ask an engineer to write. It keeps the conversations honest.",
   },
 ];
 

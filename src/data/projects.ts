@@ -51,7 +51,7 @@ export const projects: Project[] = [
     slug: "seamless-api",
     title: "Seamless API",
     date: "May 2025",
-    headline: "0→1 monetization launch — $1M ARR in year one, forecast model still drives the next-tier sales plan",
+    headline: "0→1 monetization launch — $1M booked ARR in year one, forecast model still drives the next-tier sales plan",
     summary: "Built and scaled a customer-facing API from zero to $1M ARR. Every scope call was anchored to one revenue metric: async credit consumption. Year-two MoM run-rate forecast informs enterprise expansion planning.",
     image: seamlessApi,
     tags: ["0→1", "Monetization", "B2B SaaS", "Customer-Facing", "Forecasting", "Agentic AI", "SQL", "Power BI", "Scope Trade-offs", "GTM"],

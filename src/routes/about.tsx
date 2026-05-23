@@ -214,9 +214,6 @@ function AboutPage() {
           )}
         </div>
 
-        <blockquote className="border-l-2 border-primary pl-4 text-lg italic text-foreground">
-          &ldquo;Most of my best product calls started as something boring — a SQL query, a dashboard nobody was reading. That&apos;s where the work lives.&rdquo;
-        </blockquote>
         <div className="pt-2">
           <a
             href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/Zach_J_Benalayat.pdf`}

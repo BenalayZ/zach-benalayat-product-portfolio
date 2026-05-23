@@ -31,19 +31,19 @@ export const projects: Project[] = [
     slug: "product-tier-analysis",
     title: "Seamless Tier × CRM-Connect Analysis",
     date: "May 2022",
-    headline: "Reframed the growth bet from 'more Free signups' to 'CRM-connect the Basic base'",
-    summary: "First analysis shipped at Seamless.AI. Segmented ~590K searches by license tier and CRM-connection status to find where product value actually accrued.",
+    headline: "Killed a planned UI investment and reframed the monetization bet from 'more Free signups' to 'CRM-connect the Basic base'",
+    summary: "First analysis shipped at Seamless.AI. Segmented ~590K searches by license tier and CRM-connection status to find where monetizable value actually accrued — and where it didn't.",
     image: productAnalysis,
-    tags: ["Product Analytics", "Segmentation", "Funnel Analysis", "SQL", "Monetization", "Negative Result"],
+    tags: ["Product Analytics", "Monetization", "Segmentation", "Funnel Analysis", "SQL", "Negative Result", "Roadmap Judgment"],
     problem:
-      "Onboarding deliverable at Seamless.AI. Leadership assumed Free-tier acquisition was the growth lever. Test the assumption against actual search and CRM-connection behavior across ~590K searches.",
+      "Onboarding deliverable at Seamless.AI. Leadership assumed Free-tier acquisition was the growth lever. Stress-test that assumption against actual search and CRM-connection behavior across ~590K searches — and decide where the next monetization investment should land.",
     role: "Product Analyst — independent contributor",
     strategy:
-      "Segment every search by license tier (Free / Basic / Premium) crossed with CRM-connection status. CRM-connected searches are the monetizable signal — Free is locked out of CRM by design. Three tiers × two states = one chart that answers 'where does the value actually live?'",
+      "Segment every search by license tier (Free / Basic / Premium) crossed with CRM-connection status — the proxy for monetizable signal, since Free is locked out of CRM by design. Three tiers × two states = one chart that answers 'where does the monetizable value live, and where is it being left on the table?'",
     insights:
-      "Free generated the largest raw volume (~159K searches) but zero CRM signal by definition. Basic was the real conversion battleground — searches split nearly 50/50 connected vs not (~111K / ~102K). Premium was overwhelmingly connected (~65K / ~22K), proving the funnel works once users get there. A separate filter-usage analysis killed a planned advanced-filter UI bet — filter usage was uniform across tiers, no Premium 'power user' pattern existed.",
+      "Free generated the largest raw volume (~159K searches) but zero monetizable signal by definition. Basic was the real conversion battleground — searches split nearly 50/50 connected vs not (~111K / ~102K), meaning half the Basic base was paying without ever wiring up the revenue-driving integration. Premium was overwhelmingly connected (~65K / ~22K), proving the upgrade path monetizes once users get there. A parallel filter-usage analysis killed a planned advanced-filter UI bet outright — filter usage was uniform across tiers, no Premium 'power user' pattern existed to justify the build.",
     outcome:
-      "Killed the planned advanced-filter UI investment outright and redirected the roadmap slot to a CRM-connect funnel for Basic users. Reframed the growth thesis from 'more Free signups' to 'CRM-connect the Basic base.' Became the baseline segmentation the product org referenced through the following planning cycle.",
+      "Killed the planned advanced-filter UI investment and redirected the roadmap slot to a CRM-connect funnel for Basic users — the single highest-leverage monetization lever the data exposed. Reframed the growth thesis from 'more Free signups' to 'CRM-connect the Basic base.' Became the baseline segmentation the product org referenced through the following planning cycle.",
     featured: true,
     signals: ["Staff Analyst", "Senior BI"],
   },
@@ -51,19 +51,19 @@ export const projects: Project[] = [
     slug: "seamless-api",
     title: "Seamless API",
     date: "May 2025",
-    headline: "0→1 launch to $1M ARR — enterprise upside ahead",
-    summary: "Built and scaled a customer-facing API from zero to $1M ARR across SMB and mid-market, with enterprise expansion underway.",
+    headline: "0→1 monetization launch — $1M ARR in year one, forecast model still drives the next-tier sales plan",
+    summary: "Built and scaled a customer-facing API from zero to $1M ARR. Every scope call was anchored to one revenue metric: async credit consumption. Year-two MoM run-rate forecast informs enterprise expansion planning.",
     image: seamlessApi,
-    tags: ["0→1", "B2B SaaS", "Customer-Facing", "Agentic AI", "SQL", "Power BI", "Full PDLC", "Scope Trade-offs", "GTM"],
+    tags: ["0→1", "Monetization", "B2B SaaS", "Customer-Facing", "Forecasting", "Agentic AI", "SQL", "Power BI", "Scope Trade-offs", "GTM"],
     problem:
-      "Stand up a net-new, customer-facing API that lets users integrate Seamless Contact & Company data directly into their pipelines — no browser, no manual workflows.",
+      "Stand up a net-new, customer-facing API that monetizes — let users integrate Seamless Contact & Company data directly into their pipelines, no browser, no manual workflows, and prove the revenue model before scaling coverage.",
     role: "Analytics Lead & Product Owner — 0→1",
     strategy:
-      "Ship a focused MVP that mirrors the core Seamless experience async and browserless, then scale coverage, reliability, and segment fit toward enterprise. Anchored every scope decision to one metric: async credit consumption — because credits are how the API monetizes.",
+      "Ship a focused MVP that mirrors the core Seamless experience async and browserless, then scale coverage, reliability, and segment fit toward enterprise. Anchored every scope decision to one metric: async credit consumption — because credits are how the API monetizes. Stood up a MoM credit-consumption + ARR run-rate forecast in Power BI to size the enterprise wedge and pace the GTM plan.",
     insights:
-      "User interviews guided framing; competitive analysis informed technical docs and architecture; internal developer interviews surfaced reconciliation gaps; and stakeholder scrums highlighted marketing and sales blind spots. Deliberately de-scoped Seamless Connect and email-campaign automation from v1 — neither consumed credits, so neither moved the revenue metric the MVP existed to prove. Both were re-scoped into the MCP launch where the surface area justified the build.",
+      "User interviews guided framing; competitive analysis informed technical docs and architecture; internal developer interviews surfaced reconciliation gaps; stakeholder scrums highlighted marketing and sales blind spots. Deliberately de-scoped Seamless Connect and email-campaign automation from v1 — neither consumed credits, so neither moved the revenue metric the MVP existed to prove. Both were re-scoped into the MCP launch where the surface area justified the build. The forecast model surfaced that mid-market credit velocity was outpacing the SMB curve, redirecting GTM toward mid-market sooner than the original plan.",
     outcome:
-      "Took the product from inception to $1M ARR in year one — primarily SMB and mid-market, where enterprise represents the larger remaining wedge. Integrated with every major AI platform and set up as the scaling lane for the next ARR tier.",
+      "Took the product from inception to $1M ARR in year one — primarily SMB and mid-market, where enterprise represents the larger remaining wedge. Integrated with every major AI platform. Forecast model became the basis of the year-two sales plan and the scaling lane for the next ARR tier.",
     featured: true,
     signals: ["Senior PM"],
   },

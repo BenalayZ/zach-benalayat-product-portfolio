@@ -6,17 +6,17 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About — Zach Benalayat — Senior Data Analyst & BI Lead" },
+      { title: "About — Zach Benalayat — Product & Monetization Analyst" },
       {
         name: "description",
         content:
-          "Zach Benalayat — Senior Data Analyst & BI Lead. SQL, Python, Power BI on Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, and operations.",
+          "Zach Benalayat — Product & Monetization Analyst. SQL, Python, Power BI on Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, consumer marketplaces, and operations.",
       },
-      { property: "og:title", content: "About — Zach Benalayat — Senior Data Analyst & BI Lead" },
+      { property: "og:title", content: "About — Zach Benalayat — Product & Monetization Analyst" },
       {
         property: "og:description",
         content:
-          "6+ years running the analysis loop end-to-end across B2B SaaS, IoT, and AI platforms — then shipping the product bet that comes out of it.",
+          "6+ years finding where the value lives across B2B SaaS, IoT, and AI platforms — then shipping the monetization decision that comes out of it.",
       },
       { property: "og:url", content: "/about" },
     ],
@@ -200,19 +200,19 @@ function AboutPage() {
       <div className="mb-12">
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">About</p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-          About Zach Benalayat — Senior Data Analyst &amp; BI Lead
+          About Zach Benalayat — Product &amp; Monetization Analyst
         </h1>
         <p className="mt-3 text-lg text-muted-foreground">
-          SQL · Python · Power BI on Snowflake · Product Analytics
+          SQL · Python · Power BI on Snowflake · Product Analytics · Forecasting
         </p>
       </div>
 
       <div className="space-y-6 text-base leading-relaxed text-foreground">
         <p>
-          Hi — I&apos;m Zach. I lead with the analysis: SQL on Snowflake, funnels and dashboards in Power BI / Looker / Tableau, A/B tests, Python for heavier transforms and modeling. The PRDs, OKRs, and roadmap bets fall out of what the data says — not the other way around.
+          Hi — I&apos;m Zach. I lead with the analysis: SQL on Snowflake, funnels and dashboards in Power BI / Looker / Tableau, A/B tests, forecasting and Python for heavier transforms. I anchor every scope decision to the metric that actually monetizes — then the PRDs, OKRs, and roadmap bets fall out of what the data says.
         </p>
         <div className="flex flex-wrap gap-2 pt-1">
-          {["B2B SaaS", "IoT / Telecom", "AI Platforms", "E-Commerce", "Non-Profit"].map(
+          {["B2B SaaS", "Consumer Marketplaces", "Advertising / Marketplace Dynamics", "IoT / Telecom", "AI Platforms", "E-Commerce", "Non-Profit"].map(
             (industry) => (
               <span
                 key={industry}

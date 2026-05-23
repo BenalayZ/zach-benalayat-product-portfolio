@@ -200,7 +200,7 @@ function AboutPage() {
       <div className="mb-12">
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">About</p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-          About Zach Benalayat — Data Analyst &amp; Product Manager
+          About Zach Benalayat — Senior Data Analyst &amp; BI Lead
         </h1>
         <p className="mt-3 text-lg text-muted-foreground">
           SQL · Python · Power BI on Snowflake · Product Analytics

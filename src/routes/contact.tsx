@@ -1,8 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Linkedin, ArrowUpRight, FileDown, Calendar, Clock } from "lucide-react";
-
-// TODO Zach: replace with your real Calendly (or Cal.com) link.
-const CALENDLY_URL = "https://calendly.com/zach-benalayat/intro";
+import { Mail, Linkedin, ArrowUpRight, FileDown, Clock } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
@@ -11,17 +8,11 @@ export const Route = createFileRoute("/contact")({
 function ContactPage() {
   const channels = [
     {
-      icon: Calendar,
-      label: "Book a 20-min intro",
-      value: "calendly.com/zach-benalayat",
-      href: CALENDLY_URL,
-      primary: true,
-    },
-    {
       icon: Mail,
       label: "Email",
       value: "zacharia.benalayat@gmail.com",
       href: "mailto:zacharia.benalayat@gmail.com?subject=Hello%20Zach",
+      primary: true,
     },
     {
       icon: Linkedin,
@@ -48,7 +39,7 @@ function ContactPage() {
           Let&apos;s connect
         </h1>
         <p className="mx-auto mt-4 max-w-md text-lg text-muted-foreground">
-          Open to full-time PM &amp; Product Analytics roles, fractional engagements, and defined-scope contract work.
+          Open to Senior Product Manager and Analyst roles, fractional engagements, and defined-scope contract work.
         </p>
         <p className="mx-auto mt-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
           <Clock className="h-3.5 w-3.5" /> Usually responds within 24 hours

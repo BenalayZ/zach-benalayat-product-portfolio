@@ -336,9 +336,8 @@ function AboutPage() {
               <p className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
                 0{i + 1} — {group.label}
               </p>
-              <p className="mb-5 text-xs leading-relaxed text-muted-foreground">
-                {group.subtitle}
-              </p>
+
+
               <ul className="space-y-3">
                 {primaries.map((it) => (
                   <li key={it.name}>

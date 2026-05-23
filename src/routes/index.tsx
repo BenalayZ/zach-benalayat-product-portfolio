@@ -294,6 +294,17 @@ function Index() {
             </div>
           </div>
 
+          {/* Availability badge */}
+          <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-background/60 px-4 py-1.5 backdrop-blur-sm">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+            </span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+              Available — Full-Time or Contract
+            </span>
+          </div>
+
           {/* Role-tagged proof grid */}
           <dl className="mt-16 grid w-full max-w-4xl grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
             {[

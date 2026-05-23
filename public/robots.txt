@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://benalayz.github.io/zach-benalayat-product-portfolio/sitemap.xml

@@ -5,6 +5,7 @@ import seamlessFastData from "@/assets/projects/seamless-fast-data.jpg";
 import inseegoConnect from "@/assets/projects/inseego-connect.jpg";
 import latinHyperTexts from "@/assets/projects/latin-hyper-texts.jpg";
 import theArc from "@/assets/projects/the-arc.png";
+import productAnalysis from "@/assets/projects/seamless-product-analysis.jpg";
 
 export type RoleSignal = "Senior PM" | "Staff Analyst" | "Senior BI";
 

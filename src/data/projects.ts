@@ -7,7 +7,7 @@ import latinHyperTexts from "@/assets/projects/latin-hyper-texts.jpg";
 import theArc from "@/assets/projects/the-arc.png";
 import productAnalysis from "@/assets/projects/seamless-product-analysis.jpg";
 
-export type RoleSignal = "Senior PM" | "Staff Analyst" | "Senior BI";
+export type RoleSignal = "Senior PM" | "Senior BI";
 
 export type Project = {
   slug: string;

@@ -321,30 +321,13 @@ function Index() {
 
 
 
-      <section className="border-y border-border">
-        <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
-          <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-10">
-            {byTheNumbers.map((stat) => (
-              <div key={stat.label} className="flex items-baseline gap-4">
-                <span className="font-sans text-5xl font-light tracking-tighter text-primary">
-                  {stat.value}
-                </span>
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Positioning */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
             <div>
               <p className="mb-6 inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary underline decoration-2 underline-offset-8">
-                Mission Control
+                Approach
               </p>
               <h2 className="font-sans text-4xl font-extrabold leading-[1.1] tracking-tighter text-foreground md:text-5xl">
                 A role where analytics and product management share the wheel.
@@ -352,18 +335,13 @@ function Index() {
             </div>
             <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
               <p>
-                I partner with product and engineering to design the analytics framework first — KPI tree, instrumentation, dashboards in Power BI / Looker / Tableau on Snowflake — then use what surfaces to shape PRDs, roadmaps, and launch strategy.
-              </p>
-              <p>
-                That analytics-first lens has shipped real outcomes: a 0→1 customer-facing Seamless API to $1M ARR in year one (SMB and mid-market, with enterprise still ahead), $1M+ ARR uplift on Inseego Connect (out of a single Power BI funnel), and 20% AWS savings on Data Engine 4.0 — each one driven by SQL, Python, and dashboard work that pointed product decisions in the right direction.
-              </p>
-              <p>
-                I thrive in teams that treat strategy as a continuous, evidence-led process and value tight communication between product, data, engineering, and GTM.
+                I design the analytics framework first — KPI tree, instrumentation, dashboards in Power BI / Looker / Tableau on Snowflake — then use what surfaces to shape PRDs, roadmaps, and launch strategy.
               </p>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Toolkit */}
       <section className="border-b border-border">

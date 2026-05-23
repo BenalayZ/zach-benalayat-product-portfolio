@@ -256,6 +256,10 @@ function Index() {
               <MapPin className="h-3.5 w-3.5 text-primary" />
               Austin, Texas · Remote-first, open to hybrid
             </li>
+            <li className="inline-flex items-center gap-1.5">
+              <span className="h-1 w-1 rounded-full bg-primary" />
+              Most recently: Product Manager II, Seamless.AI
+            </li>
           </ul>
 
           {/* CTAs — tightened to 3 */}
@@ -275,12 +279,12 @@ function Index() {
                 <Download className="h-4 w-4" /> Download resume
               </a>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-muted-foreground">
+            <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-xs font-medium text-muted-foreground">
               <a
                 href="mailto:zacharia.benalayat@gmail.com"
                 className="transition-colors hover:text-primary"
               >
-                Email
+                zacharia.benalayat@gmail.com
               </a>
               <span className="hidden h-1 w-1 rounded-full bg-border md:inline-block" />
               <a
@@ -301,7 +305,7 @@ function Index() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-              Available — Full-Time or Contract
+              Available now — Full-Time or Contract
             </span>
           </div>
 

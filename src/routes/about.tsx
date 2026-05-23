@@ -10,13 +10,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "About Zach Benalayat — Senior Product Analyst, BA, DA, and BI. SQL, Python, Power BI on Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, consumer marketplaces, and operations.",
+          "About Zach Benalayat — Senior Product Analyst, BA, DA, and BI. SQL, Python, Power BI, and Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, consumer marketplaces, and operations.",
       },
       { property: "og:title", content: "About Zach Benalayat" },
       {
         property: "og:description",
         content:
-          "Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI — SQL, Python, Power BI on Snowflake.",
+          "Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI — SQL, Python, Power BI, and Snowflake.",
       },
       { property: "og:url", content: "/about" },
     ],
@@ -190,7 +190,7 @@ function AboutPage() {
           Hi, I&apos;m Zach.
         </h1>
         <p className="mt-3 text-lg text-muted-foreground">
-          SQL · Python · Power BI and Snowflake · Product Analytics · Forecasting
+          SQL · Python · Power BI · Snowflake · Product Analytics · Forecasting
         </p>
       </div>
 

@@ -12,17 +12,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Zach Benalayat — Product & Monetization Analyst" },
+      { title: "Zach Benalayat — Product & Data Analyst" },
       {
         name: "description",
         content:
-          "Product & Monetization Analyst. 6+ yrs across B2B SaaS, IoT, and AI. SQL, Python, Power BI on Snowflake. I find where the value lives, then ship the monetization decision that comes out of it.",
+          "Product & Data Analyst. 6+ yrs across B2B SaaS, IoT, and AI. SQL, Python, Power BI and Snowflake. I find where the value lives, then ship the monetization decision that comes out of it.",
       },
-      { property: "og:title", content: "Zach Benalayat — Product & Monetization Analyst" },
+      { property: "og:title", content: "Zach Benalayat — Product & Data Analyst" },
       {
         property: "og:description",
         content:
-          "SQL, Python, Power BI on Snowflake. I find where the value lives, then ship the monetization decision that comes out of it.",
+          "SQL, Python, Power BI and Snowflake. I find where the value lives, then ship the monetization decision that comes out of it.",
       },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
@@ -59,7 +59,7 @@ const faqs = [
 const skills = [
   {
     title: "BI & Executive Dashboarding",
-    body: "Power BI, Looker, Tableau on Snowflake — with the modeling and ETL underneath.",
+    body: "Power BI, Looker, Tableau and Snowflake — with the modeling and ETL underneath.",
   },
   {
     title: "Product Analytics & Experimentation",
@@ -253,12 +253,12 @@ function Index() {
 
           {/* Role-anchored H1 */}
           <h1 className="max-w-4xl font-sans text-4xl font-extrabold leading-[1.05] tracking-tighter text-foreground md:text-6xl lg:text-7xl">
-            <span className="text-primary">Product &amp; Monetization</span>{" "}
+            <span className="text-primary">Product &amp; Data</span>{" "}
             <span className="text-primary">Analyst</span>.
           </h1>
 
           <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
-            SQL · Python · Power BI on Snowflake. I find where the value lives, then ship the monetization decision that comes out of it.
+            SQL · Python · Power BI and Snowflake. I find where the value lives, then ship the monetization decision that comes out of it.
           </p>
 
 
@@ -407,7 +407,7 @@ function Index() {
             </div>
             <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
               <p>
-                I lead with the analysis. KPI tree, instrumentation, dashboards in Power BI / Looker / Tableau on Snowflake — then the PRD, roadmap, and launch fall out of what the data says.
+                I lead with the analysis. KPI tree, instrumentation, dashboards in Power BI, Looker, Tableau and Snowflake — then the PRD, roadmap, and launch fall out of what the data says.
               </p>
             </div>
           </div>

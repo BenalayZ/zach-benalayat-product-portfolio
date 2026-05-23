@@ -39,8 +39,13 @@ function ContactPage() {
           Let&apos;s connect
         </h1>
         <p className="mx-auto mt-4 max-w-md text-lg text-muted-foreground">
-          Open to Senior Product Manager and Data Analyst roles, fractional engagements, and defined-scope contract work.
+          Open to full-time Senior PM, Staff Analyst, or Senior Data Analyst / BI roles, plus contract and consulting engagements.
         </p>
+        <ul className="mx-auto mt-6 flex max-w-xl flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground">
+          <li className="border border-border px-3 py-1">Hiring for a full-time role</li>
+          <li className="border border-border px-3 py-1">Contract / embedded help</li>
+          <li className="border border-border px-3 py-1">Scoped consulting</li>
+        </ul>
         <p className="mx-auto mt-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
           <Clock className="h-3.5 w-3.5" /> Usually responds within 24 hours
         </p>

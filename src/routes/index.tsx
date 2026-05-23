@@ -331,7 +331,7 @@ function Index() {
             {[
               { role: "Analyst stack", items: ["SQL", "Python", "Snowflake", "dbt", "Fabric", "Holdout / A/B"] },
               { role: "BI stack", items: ["Power BI", "DAX", "Semantic Modeling", "RLS", "Incremental Refresh", "Amplitude", "Looker", "Tableau"] },
-              { role: "PM stack", items: ["Agile Certification", "Full Cycle Documentation", "GTM Strategy", "A/B Testing", "Funnel & Cohort", "Roadmap", "OKRs"] },
+              { role: "PM stack", items: ["Agile", "Jira", "Notion", "Competitive Analysis", "GTM Strategy", "Gap Analysis", "OKRs"] },
             ].map((row) => (
               <div key={row.role} className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <span className="w-28 shrink-0 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">

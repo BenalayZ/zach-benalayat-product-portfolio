@@ -154,8 +154,8 @@ const toolkit: ToolkitGroup[] = [
       { name: "OpenAI Agents", primary: true },
       { name: "GitHub Copilot", primary: true },
       { name: "Lovable" },
-      { name: "Claude Cowork", primary: true },
-      { name: "Cursor", primary: true },
+      { name: "Claude Cowork" },
+      { name: "Cursor" },
     ],
   },
 ];

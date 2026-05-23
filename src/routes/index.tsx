@@ -407,10 +407,10 @@ function Index() {
               <div className="flex flex-col justify-center border-l border-secondary/60 py-2 pl-8 md:col-span-5 md:pl-12">
                 <div className="max-w-sm">
                   <p className="font-sans text-lg font-normal leading-relaxed text-foreground/90 md:text-xl">
-                    Most product calls I&apos;ve shipped started as a dashboard or a SQL query, not a meeting.
+                    I instrument before I argue. Every call I&apos;ve shipped started with a KPI tree, a dashboard, and a SQL query.
                   </p>
                   <p className="mt-6 font-sans text-base leading-relaxed text-foreground/60 md:text-lg">
-                    I build the KPI tree and the instrumentation first; the PRD, the roadmap, and the launch follow what the data shows.
+                    The PRD, the roadmap, and the launch plan follow what the data shows, not what a meeting decided.
                   </p>
                 </div>
               </div>

@@ -199,9 +199,9 @@ function Index() {
           </div>
         </div>
 
-        <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 py-24 text-center md:py-32">
+        <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 py-20 text-center md:py-28">
           {/* Availability badge */}
-          <div className="mb-10 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5">
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
@@ -211,53 +211,52 @@ function Index() {
             </span>
           </div>
 
-          <h1 className="max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tighter text-foreground md:text-7xl">
-            I&apos;m <span className="text-primary">Zach Benalayat</span>. I find the
-            signal in the noise.
-          </h1>
-
-          {/* Functional subhead — what role, what level, what stack */}
-          <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
-            Product Manager &amp; Data Analyst · 6+ yrs across B2B SaaS, IoT, and AI · SQL, Python, Power BI, Snowflake.
+          {/* Eyebrow: demoted tagline */}
+          <p className="mb-5 font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+            I find the signal in the noise
           </p>
 
-          {/* Fit snapshot — the facts a recruiter needs in 5 seconds */}
-          <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium text-muted-foreground md:text-sm">
+          {/* Role-anchored H1 */}
+          <h1 className="max-w-4xl font-sans text-4xl font-extrabold leading-[1.05] tracking-tighter text-foreground md:text-6xl lg:text-7xl">
+            <span className="text-primary">Senior Product Manager</span>,{" "}
+            <span className="text-primary">Staff Analyst</span>, and{" "}
+            <span className="text-primary">Senior BI</span> roles — run by one operator.
+          </h1>
+
+          <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
+            6+ yrs shipping analytics-first product across B2B SaaS, IoT, and AI.
+          </p>
+
+          <ul className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium text-muted-foreground md:text-sm">
             <li className="inline-flex items-center gap-1.5">
               <MapPin className="h-3.5 w-3.5 text-primary" />
               Austin, Texas · Remote-first, open to hybrid
             </li>
-            <li className="hidden h-1 w-1 rounded-full bg-border md:block" />
-            <li>Targeting Senior PM, Staff Analyst, and Senior Data Analyst / BI roles</li>
           </ul>
 
-          <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            I design the analytics frameworks, define the KPIs, and use what I find to drive PRDs and roadmaps end-to-end.
-          </p>
-
-          {/* CTAs */}
-          <div className="mt-10 flex flex-col items-center gap-4">
+          {/* CTAs — tightened to 3 */}
+          <div className="mt-8 flex flex-col items-center gap-4">
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a
                 href="#work"
                 className="group inline-flex items-center gap-2 bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-105 active:scale-95"
               >
-                Explore work <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                See the work <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a
-                href="mailto:zacharia.benalayat@gmail.com"
+                href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/Zach_J_Benalayat.pdf`}
+                download
                 className="inline-flex items-center gap-2 border border-foreground/20 bg-foreground/5 px-6 py-4 text-sm font-bold uppercase tracking-widest text-foreground backdrop-blur-sm transition-all hover:border-primary hover:text-primary"
               >
-                Send an email
+                <Download className="h-4 w-4" /> Download resume
               </a>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-muted-foreground">
               <a
-                href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/Zach_J_Benalayat.pdf`}
-                download
-                className="inline-flex items-center gap-1.5 transition-colors hover:text-primary"
+                href="mailto:zacharia.benalayat@gmail.com"
+                className="transition-colors hover:text-primary"
               >
-                <Download className="h-3.5 w-3.5" /> Download resume (PDF)
+                Email
               </a>
               <span className="hidden h-1 w-1 rounded-full bg-border md:inline-block" />
               <a
@@ -268,30 +267,54 @@ function Index() {
               >
                 <Linkedin className="h-3.5 w-3.5" /> LinkedIn
               </a>
-              <span className="hidden h-1 w-1 rounded-full bg-border md:inline-block" />
-              <Link to="/contact" className="transition-colors hover:text-primary">
-                Or email me
-              </Link>
             </div>
           </div>
 
-          {/* Outcome metrics */}
-          <dl className="mt-20 grid w-full max-w-3xl grid-cols-1 gap-10 border-t border-border pt-12 md:grid-cols-3">
+          {/* Role-tagged proof grid */}
+          <dl className="mt-16 grid w-full max-w-4xl grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
             {[
-              { value: "$1M", label: "Seamless API ARR (0→1)" },
-              { value: "$1M+", label: "Inseego Connect uplift" },
-              { value: "20%", label: "AWS savings on Data Engine 4.0" },
+              { track: "Senior PM", value: "$1M ARR", label: "Seamless API 0→1" },
+              { track: "Staff Analyst", value: "46%", label: "Faster intake — Arc workflow analytics" },
+              { track: "Senior BI", value: "$1M+ ARR", label: "Inseego Connect — Power BI funnel" },
             ].map((m) => (
-              <div key={m.label} className="group">
-                <dt className="text-4xl font-extrabold tracking-tighter text-primary transition-transform group-hover:scale-110 md:text-5xl">
+              <div key={m.track} className="bg-background p-6 text-left">
+                <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                  {m.track}
+                </p>
+                <dt className="font-sans text-3xl font-extrabold tracking-tighter text-foreground md:text-4xl">
                   {m.value}
                 </dt>
-                <dd className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+                <dd className="mt-2 text-xs leading-relaxed text-muted-foreground">
                   {m.label}
                 </dd>
               </div>
             ))}
           </dl>
+
+          {/* Stack by role */}
+          <div className="mt-10 w-full max-w-4xl space-y-3 text-left">
+            {[
+              { role: "PM stack", items: ["PRD", "A/B Testing", "Funnel & Cohort", "Roadmap", "OKRs"] },
+              { role: "Analyst stack", items: ["SQL", "Python", "Snowflake", "dbt", "Amplitude"] },
+              { role: "BI stack", items: ["Power BI", "Microsoft Fabric", "Looker", "Tableau", "DAX"] },
+            ].map((row) => (
+              <div key={row.role} className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                <span className="w-28 shrink-0 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                  {row.role}
+                </span>
+                <ul className="flex flex-wrap gap-2">
+                  {row.items.map((it) => (
+                    <li
+                      key={it}
+                      className="border border-border px-3 py-1 text-xs text-muted-foreground"
+                    >
+                      {it}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -322,6 +345,7 @@ function Index() {
           </ul>
         </div>
       </section>
+
 
 
       <section className="border-y border-border">

@@ -1,112 +1,113 @@
-## Goal
+## The 30-second hiring-manager test
 
-Tune every public-facing surface so a recruiter or hiring manager skimming for any of the three target roles — **Senior PM (Zillow-class)**, **Staff Analyst (Hims & Hers-class)**, or **Senior Data Analyst / BI (Crash Champions-class)** — sees direct evidence in the first 5 seconds. Drop "fractional" everywhere; replace with **Full-Time · Contract · Consultant**.
+Three different people land on the homepage: a **Senior PM hiring manager** (Zillow-baseline), a **Staff Analyst hiring manager** (Hims & Hers-baseline), and a **Senior Data Analyst / BI lead** (Crash Champions-baseline). Each of them is skimming dozens of portfolios. In ~30 seconds they need to answer four questions, in this order:
 
----
+1. **"Is this person targeting MY role?"** — explicit role match, not a generic "PM + Analyst" blur.
+2. **"Have they done MY job at scale, with stakes?"** — one quantified outcome tagged to their track.
+3. **"Do they have MY stack?"** — the 3–5 tools they'd actually use on day one.
+4. **"Where is the proof?"** — a recognizable logo or case-study tile they can click.
 
-## 1. Availability rewrite (site-wide)
+The current hero answers #1 weakly (the headline is poetic, the role line is a single muted sub-bullet), answers #2 generically (three metrics with no role anchor), buries #3 in a comma-separated subhead, and pushes #4 (logos and featured work) below the fold.
 
-Replace "fractional" everywhere — it signals part-time and undersells.
+## What's working — keep it
 
-- **Hero badge** (`index.tsx` line 172): `Available — Full-Time, Contract & Consulting`
-- **Homepage FAQ** (line 18–19): rewrite the engagements answer around full-time PM / Analyst roles + contract and consulting engagements (analytics audits, KPI/instrumentation design, PRD authoring, 0→1 launch leadership, BI/dashboard builds).
-- **Homepage final CTA** (lines 527–528): "Open to full-time PM/Analyst roles, contract engagements, and consulting work."
-- **Contact page** (line 42): same swap.
-- Audit one more pass with `rg -i fractional` to make sure none remain.
+- Availability pill, location line, orbital-ring backdrop, monogram ghost, and Emerald Prestige palette. Don't touch the visual system.
+- The three outcome metrics (`$1M`, `$1M+`, `20%`) — the numbers themselves are right; only their framing needs work.
+- The poetic H1 ("I find the signal in the noise") — keep as a tagline, demote one tier in the hierarchy.
 
-## 2. Hero positioning — broaden the target line
+## Recommended changes (hero only)
 
-Current subhead targets "Senior Product Manager and Data Analyst roles" (line 193). All three JDs use slightly different titles, so widen without diluting:
+### 1. Lead with a role-anchored H1, demote the tagline
 
-- Change to: **"Targeting Senior PM, Staff Analyst, and Senior Data Analyst / BI roles"**
-- Keep the functional subhead (line 183) — already strong, but append **"Power BI · Looker · Tableau"** explicitly since Crash Champions and H&H both name dashboards as table stakes.
-
-## 3. New "Engagement Models" section (homepage)
-
-Add a compact 3-card section between Top Skills and the existing FAQ — directly answers "how can I work with you?" for the three buyer types:
+Replace the current H1 + subhead pair with a functional headline that names the three tracks explicitly, and move the poetic line into a smaller eyebrow above it.
 
 ```text
-┌──────────────────┬──────────────────┬──────────────────┐
-│ FULL-TIME        │ CONTRACT         │ CONSULTING       │
-│ Senior PM /      │ 3–12 month       │ Scoped audits,   │
-│ Staff Analyst /  │ embedded         │ KPI frameworks,  │
-│ Senior BI        │ PM or analyst    │ BI builds,       │
-│                  │ ownership        │ PRD authoring    │
-└──────────────────┴──────────────────┴──────────────────┘
+Eyebrow (small, primary):   I FIND THE SIGNAL IN THE NOISE
+H1 (large, foreground):     Senior Product Manager,
+                            Staff Analyst, and Senior BI roles —
+                            run by one operator.
+Subhead (medium, muted):    6+ yrs shipping analytics-first product
+                            across B2B SaaS, IoT, and AI.
 ```
 
-Uses the existing 3-up hairline-divider grid pattern (same `border-bg` treatment as Top Skills, but 3 cols instead of 4).
+A hiring manager scanning for "Senior PM" or "Senior BI" now sees their title in the H1 itself.
 
-## 4. By the Numbers — tune the stats for all three JDs
+### 2. Replace the generic 3-stat strip with a role-tagged proof grid
 
-Current four (line 40–45) are good but lean PM. Swap one in to surface BI/analyst depth that Crash Champions + H&H care about:
+Today's three stats sit under a `border-t` and don't tell a recruiter *which* role each one proves. Re-tag them so each track gets one signature outcome above the fold:
 
-- Keep: `25%` search-time reduction, `$2M+` ARR influenced, `7` launches
-- Replace `200K+ records modeled` with **`20%` AWS cost cut via Data Engine 4.0** (operational analytics outcome — H&H "operational performance: throughput, cost, quality")
-- Or add a fifth tile and shift to a 5-up: **`46%` faster intake via Arc workflow analytics** — directly maps to H&H's "throughput / SLAs" language.
+```text
+SENIOR PM           STAFF ANALYST       SENIOR BI
+$1M ARR             46% faster intake   $1M+ ARR uplift
+Seamless API 0→1    Arc workflow        Inseego Connect
+                    analytics           Power BI funnel
+```
 
-## 5. Top Skills — re-balance the four tiles
+Same three numbers — but each is now labeled with the track it proves. A BI lead instantly sees "$1M+ ARR uplift / Power BI funnel" and knows this person ships their kind of work.
 
-Current order is Product Analytics → Data & SQL Modeling → BI & Dashboarding → Analytics→Product Strategy. Re-order and tune copy so each tile maps explicitly to a JD signal:
+### 3. Add a 3-row "stack by role" chip block under the CTAs
 
-1. **Product Analytics & Experimentation** — A/B tests, funnel/cohort, KPI design *(Zillow + H&H)*
-2. **BI & Executive Dashboarding** — Power BI / Looker / Tableau on Snowflake; data modeling; warehouse/ETL fluency *(Crash Champions + H&H)* — explicitly mention **Power BI + data modeling + ETL** (Crash Champions calls these out by name).
-3. **Data & SQL Engineering** — SQL stored procedures, ETL, Snowflake, identity resolution *(all three)*
-4. **AI-Assisted Analytics & Product** — MCP integrations on GPT/Claude stores, Claude + N8N agentic workflows, LLM copilots in the analytics loop *(Zillow "AI/LLM fluency" + H&H "preferred: AI-assisted analytics")* — this is the differentiator across all three target JDs and currently buried in FAQ copy.
+One subhead line listing every tool reads as a resume keyword dump. Three short rows, each tagged to a track, reads as deliberate fit. Example:
 
-## 6. Toolkit — surface the JD keywords
+```text
+PM stack          PRD · A/B testing · Funnel & cohort · Roadmap · OKRs
+Analyst stack     SQL · Python · Snowflake · dbt · Amplitude
+BI stack          Power BI · Microsoft Fabric · DAX · Looker · Tableau
+```
 
-Audit the Toolkit section against the three JDs and add anything missing without keyword-stuffing:
+Each row is small chips on one line. Pulls the most relevant 5 tools from each track in the existing toolkit — no new content, just earlier surfacing.
 
-- **Add explicitly named:** Microsoft Fabric (Crash Champions), dbt (H&H preferred), BigQuery (H&H preferred — note as "Snowflake-equivalent" if Zach hasn't shipped on it), Looker (already there, double-check).
-- **Keep prominent:** Power BI (primary for Crash Champions), Snowflake, SQL, Python, A/B testing, MCP / Claude / GPT agents.
-- Do not invent tools — only add ones Zach has real exposure to. Confirm Fabric/dbt/BigQuery before listing.
+### 4. Pull the logo wordmark band into the hero
 
-## 7. Selected Work — re-tag projects for each track
+The "Where I've shipped product" band currently sits below the hero and below the fold on a 954-wide viewport. Move it inside the hero, immediately under the CTAs, as a single thin row (smaller logo height, ~32px). Hiring managers grant ~5 seconds of trust the moment they see Seamless.AI / Inseego / CaseWorthy. Don't make them scroll for it.
 
-Each ProjectCard currently has a single role framing. Add a small **"Strongest signal for:"** chip row under each card with 1–2 of: `Senior PM` · `Staff Analyst` · `Senior BI`. Suggested mapping:
+### 5. Tighten the CTA block
 
-- **Seamless API** → Senior PM (0→1, scaled to $1M ARR, customer-facing, SMB→enterprise)
-- **Inseego Connect** → Staff Analyst + Senior BI (Power BI funnel surfaced $1M+ ARR shift; ops/finance translation)
-- **Data Engine 4.0** → Staff Analyst + Senior BI (ETL, warehouse, 20% cost reduction)
-- **Arc** → Staff Analyst (operational throughput, −1 FTE, 46% faster)
-- **Butler / CaseWorthy** → Senior BI (200K records modeled, reporting reliability)
-- **Fast Data** → Senior PM (customer-facing 0→1)
+Current hero has 5 CTAs (Explore work, Send email, Download resume, LinkedIn, Or email me) — too many choices dilute action. Collapse to:
 
-## 8. About page — tighten the narrative arc
+- **Primary:** `See the work →` (anchors to #work)
+- **Secondary:** `Download resume (PDF)`
+- **Tertiary, text-link row:** `Email · LinkedIn`
 
-Reframe the bullets so each role's accomplishment ends with a measurable business outcome in JD-vocabulary terms (throughput, cost, retention, conversion, ARR, decision speed). Light pass — copy edits only, no structural changes. Confirm "fractional" not present.
+Drops "Or email me" (redundant with the email link) and the duplicate email CTA.
 
-## 9. Contact page — three clear paths
+### 6. (Optional) Add a one-line "what I'd do in your first 30 days" promise
 
-Restructure intent options to mirror the new engagement framing:
+Right below the proof grid, a single italic line tailored to all three audiences:
 
-- "I'm hiring for a full-time role"
-- "I need contract / embedded help"
-- "I want a scoped consulting engagement (audit, KPI framework, dashboard build, PRD)"
+> *Embed week one, ship the KPI tree and first dashboard by week four, and have a PRD-backed roadmap bet ready by day 30.*
 
-Helps the inbound message self-route.
+This is the line a hiring manager forwards to their team. Skip if it feels overpromised — the rest of the changes stand on their own.
 
-## 10. SEO + share metadata
+## What this changes structurally
 
-- Update homepage `<title>` and meta description to include all three target titles: "Senior PM · Staff Analyst · Senior BI" so search/share snippets match what recruiters search.
-- Confirm `og:title` / `og:description` on every route file (`/`, `/about`, `/contact`, `/work/$slug`) — none should reuse the home page's copy.
+```text
+BEFORE (hero, top to bottom)        AFTER (hero, top to bottom)
+─────────────────────────────       ─────────────────────────────
+Availability pill                   Availability pill
+H1 (poetic)                         Eyebrow (poetic tagline)
+Subhead (stack list)                H1 (three role tracks named)
+Location + role bullets             Subhead (years + domains)
+Mission sentence                    Location + availability bullet
+5 CTAs                              3 CTAs (primary/secondary/links)
+3 generic stats                     3 role-tagged proof stats
+                                    Logo wordmark band (moved up)
+                                    Stack-by-role chip rows
+```
 
----
+Net: a PM, Analyst, or BI lead can answer all four "is this for me" questions without scrolling, on a 954-wide viewport.
 
-## Technical / file-level notes
+## Out of scope for this change
 
-- All copy changes land in `src/routes/index.tsx`, `src/routes/about.tsx`, `src/routes/contact.tsx`, and `src/data/projects.ts`. No new dependencies.
-- Engagement Models section uses the existing `border-b border-border` + `gap-px` 3-col grid pattern from Top Skills — no new tokens.
-- Project chip row: tiny `text-[10px] uppercase tracking-[0.2em]` pill, `border border-primary/30 text-primary` — reuses the eyebrow style already on the homepage.
-- After all edits, run a final `rg -i "fractional"` to confirm zero matches, then rebuild.
+- About page, Contact page, Work case studies, and FAQ stay as-is.
+- No new copy beyond what's listed above — every word reuses existing memory content or current page copy.
+- No new components, no new dependencies, no palette changes.
+- The standalone "Where I've shipped product" section below the hero gets removed (it's now in the hero) — or kept as a redundant deeper band; will confirm before implementing.
 
-## Out of scope (intentionally)
+## Technical section (for the implementer)
 
-- No new routes, no new images, no palette changes.
-- No "Case Studies vs. Projects" restructure — current work routes are fine.
-- No blog / writing section — not asked for, and the JDs don't ask for it.
-
----
-
-Want me to ship all 10 in one pass, or do you want to gate any of them (e.g. skip the Engagement Models section or the by-the-numbers swap)?
+- All edits land in `src/routes/index.tsx`, hero section only (lines ~189–296), plus deleting/relocating the wordmark band (lines ~299–324).
+- New stack-by-role chips reuse the same hairline-border chip pattern already used by `frameworks` (line ~423–432) — `border border-border px-3 py-1 text-xs`.
+- Role-tagged proof grid is a small change to the existing `<dl>` (lines ~279–294): add an eyebrow row above each value with `text-[10px] font-bold uppercase tracking-[0.2em] text-primary`.
+- Logo band relocation: move the `<ul>` from `section` at line 300 into the hero `<div className="relative z-10 ...">` block, drop the outer `bg-foreground` band styling, and render logos at `h-8 md:h-10` against the emerald hero background instead of the cream band. If contrast breaks, render them inside a single hairline-bordered strip (`border-y border-border py-6`).
+- No changes to `head()`, route config, fonts, animations, or design tokens.

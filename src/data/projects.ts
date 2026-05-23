@@ -63,7 +63,7 @@ export const projects: Project[] = [
     insights:
       "User interviews guided framing; competitive analysis informed technical docs and architecture; internal developer interviews surfaced reconciliation gaps; stakeholder scrums highlighted marketing and sales blind spots. Deliberately de-scoped Seamless Connect and email-campaign automation from v1 — neither consumed credits, so neither moved the revenue metric the MVP existed to prove. Both were re-scoped into the MCP launch where the surface area justified the build. The forecast model surfaced that mid-market credit velocity was outpacing the SMB curve, redirecting GTM toward mid-market sooner than the original plan.",
     outcome:
-      "Took the product from inception to $1M ARR in year one — primarily SMB and mid-market, where enterprise represents the larger remaining wedge. Integrated with every major AI platform. Forecast model became the basis of the year-two sales plan and the scaling lane for the next ARR tier.",
+      "Took the product from inception to $1M booked ARR in year one — primarily SMB and mid-market, where enterprise represents the larger remaining wedge. Integrated with every major AI platform. Forecast model became the basis of the year-two sales plan and the scaling lane for the next ARR tier.",
     featured: true,
     signals: ["Senior PM"],
   },

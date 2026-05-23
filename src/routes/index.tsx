@@ -79,7 +79,7 @@ const engagementModels = [
   {
     label: "Full-Time",
     title: "Senior Analyst · Staff Analyst · BI Lead · Analytics-Led PM",
-    body: "Embedded ownership of analytics, BI, or analytics-first product. Remote-first, open to hybrid.",
+    body: "Embedded ownership of analytics, BI, or an analytics-led product team. Remote-first, open to hybrid.",
   },
   {
     label: "Contract",

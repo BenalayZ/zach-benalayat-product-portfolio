@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
 const faqs = [
   {
     q: "What kinds of engagements are you open to?",
-    a: "Full-time Senior PM, Staff Analyst, or Senior BI — plus contract and scoped consulting (analytics audits, KPI design, BI builds, PRDs, 0→1 launches).",
+    a: "Full-time Senior Analyst, Staff Analyst, BI Lead, or analytics-led PM — plus contract and scoped consulting (analytics audits, KPI design, BI builds, PRDs, 0→1 launches).",
   },
   {
     q: "What types of products have you shipped?",
@@ -78,7 +78,7 @@ const skills = [
 const engagementModels = [
   {
     label: "Full-Time",
-    title: "Senior Analyst · Staff Analyst · BI Lead · Senior PM",
+    title: "Senior Analyst · Staff Analyst · BI Lead · Analytics-Led PM",
     body: "Embedded ownership of analytics, BI, or analytics-first product. Remote-first, open to hybrid.",
   },
   {
@@ -126,7 +126,7 @@ const toolkit: ToolkitGroup[] = [
   {
     label: "BI & Reporting",
     items: [
-      { name: "Power BI", primary: true, children: ["Microsoft Fabric"] },
+      { name: "Power BI", primary: true, children: ["Microsoft Fabric", "DAX", "Semantic Modeling", "RLS"] },
       { name: "Tableau", primary: true },
       { name: "Amplitude", primary: true },
       { name: "Looker" },
@@ -247,7 +247,7 @@ function Index() {
             {[
               { track: "Senior BI", value: "$1M+ ARR", label: "Inseego Connect — Power BI funnel" },
               { track: "Staff Analyst", value: "46%", label: "Faster intake — Arc workflow analytics" },
-              { track: "Senior PM", value: "$1M ARR", label: "Seamless API 0→1" },
+              { track: "Analytics-Led PM", value: "$1M ARR", label: "Seamless API 0→1" },
             ].map((m) => (
               <div key={m.track} className="bg-background p-6 text-left">
                 <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
@@ -266,8 +266,8 @@ function Index() {
           {/* Stack by role */}
           <div className="mt-10 w-full max-w-4xl space-y-3 text-left">
             {[
-              { role: "Analyst stack", items: ["SQL", "Python", "Snowflake", "dbt", "Fabric"] },
-              { role: "BI stack", items: ["Power BI", "Amplitude", "Looker", "Tableau", "DAX"] },
+              { role: "Analyst stack", items: ["SQL", "Python", "Snowflake", "dbt", "Fabric", "Holdout / A/B"] },
+              { role: "BI stack", items: ["Power BI", "DAX", "Semantic Modeling", "RLS", "Incremental Refresh", "Amplitude", "Looker", "Tableau"] },
               { role: "PM stack", items: ["Agile Certification", "Full Cycle Documentation", "GTM Strategy", "A/B Testing", "Funnel & Cohort", "Roadmap", "OKRs"] },
             ].map((row) => (
               <div key={row.role} className="flex flex-wrap items-center gap-x-3 gap-y-2">

@@ -29,21 +29,21 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "product-tier-analysis",
-    title: "Tier × CRM-Connect Analysis",
+    title: "Seamless Tier × CRM-Connect Analysis",
     date: "May 2022",
     headline: "Reframed the growth bet from 'more Free signups' to 'CRM-connect the Basic base'",
-    summary: "Onboarding analysis at a B2B sales-intelligence platform. Segmented ~590K searches by license tier and CRM-connection status to find where product value actually accrued.",
+    summary: "First analysis shipped at Seamless.AI. Segmented ~590K searches by license tier and CRM-connection status to find where product value actually accrued.",
     image: productAnalysis,
     tags: ["Product Analytics", "Segmentation", "Funnel Analysis", "SQL", "Monetization", "Negative Result"],
     problem:
-      "First analysis shipped after onboarding. Leadership assumed Free-tier acquisition was the growth lever. Test the assumption against actual search and CRM-connection behavior across ~590K searches.",
+      "Onboarding deliverable at Seamless.AI. Leadership assumed Free-tier acquisition was the growth lever. Test the assumption against actual search and CRM-connection behavior across ~590K searches.",
     role: "Product Analyst — independent contributor",
     strategy:
       "Segment every search by license tier (Free / Basic / Premium) crossed with CRM-connection status. CRM-connected searches are the monetizable signal — Free is locked out of CRM by design. Three tiers × two states = one chart that answers 'where does the value actually live?'",
     insights:
       "Free generated the largest raw volume (~159K searches) but zero CRM signal by definition. Basic was the real conversion battleground — searches split nearly 50/50 connected vs not (~111K / ~102K). Premium was overwhelmingly connected (~65K / ~22K), proving the funnel works once users get there. A separate filter-usage analysis killed a planned advanced-filter UI bet — filter usage was uniform across tiers, no Premium 'power user' pattern existed.",
     outcome:
-      "Reframed the growth thesis from 'more Free signups' to 'CRM-connect the Basic base.' Recommended killing the advanced-filter UI investment and redirecting effort to a CRM-connect funnel for Basic. Became the baseline analysis the product org referenced through the following planning cycle.",
+      "Killed the planned advanced-filter UI investment outright and redirected the roadmap slot to a CRM-connect funnel for Basic users. Reframed the growth thesis from 'more Free signups' to 'CRM-connect the Basic base.' Became the baseline segmentation the product org referenced through the following planning cycle.",
     featured: true,
     signals: ["Staff Analyst", "Senior BI"],
   },
@@ -74,13 +74,13 @@ export const projects: Project[] = [
     headline: "20% lower AWS spend, deduped data",
     summary: "Rebuilt the Seamless AI Data Engine — better coverage, deduped data, 20% AWS savings.",
     image: dataEngine,
-    tags: ["ETL", "Snowflake", "Python", "Data Architecture", "A/B Testing", "Statistical Analysis"],
+    tags: ["ETL", "Snowflake", "Python", "Data Architecture", "Semantic Modeling", "Holdout Validation", "Statistical Analysis"],
     problem: "Improve the overall data quality and health of the Seamless AI Data Engine.",
     role: "Product Owner & Analytics Lead",
     strategy:
-      "Perform an end-to-end review of the existing Data Engine architecture and follow up on delivery time, quality, deduplication, and cost.",
+      "End-to-end review of the existing Data Engine: source ingestion, identity resolution, the star-schema semantic layer feeding downstream reporting, and incremental refresh cadence. Optimized for delivery time, quality, deduplication, and unit cost.",
     insights:
-      "Interviews with stakeholders on prior DE releases and discussions with Data Engineering leadership uncovered re-architecture and cost-savings opportunities.",
+      "Interviews with stakeholders on prior DE releases and Data Engineering leadership surfaced re-architecture and cost-savings opportunities. New dedup logic was validated with a champion/challenger holdout — ran the old and new identity-resolution passes against a labeled sample, measured false-merge and miss rates before promoting the challenger to production. The semantic layer was rebuilt around a stable surrogate-key dimension to make incremental refresh safe.",
     outcome:
       "Increased contact data coverage and quality, shipped a unique ID system to handle data updates over time, and reduced AWS costs by 20%.",
     featured: true,
@@ -128,13 +128,13 @@ export const projects: Project[] = [
     headline: "$1M+ ARR uplift via GTM re-targeting",
     summary: "Re-targeted GTM toward IoT-heavy state contracts — $1M+ ARR uplift.",
     image: inseegoConnect,
-    tags: ["Customer-Facing", "B2B", "IoT", "SQL", "Python", "Power BI", "Funnel Analysis", "Market Research"],
+    tags: ["Customer-Facing", "B2B", "IoT", "SQL", "Python", "Power BI", "Semantic Modeling", "RLS", "Funnel Analysis", "Market Research"],
     problem: "Inseego IoT products were underperforming within Inseego Connect partner channels.",
     role: "Product Owner & Analyst",
     strategy:
       "Follow the money. Analyzed existing government contracts (Connect's primary customer base) and compared their value, focus, and our market share versus competitors.",
     insights:
-      "Python-based data transformation and PowerBI dashboards revealed that the highest-value Connect contracts were almost entirely phone provisioning, not IoT. Smaller state-level contracts had far more IoT buying power. Funnel analysis showed we were pushing IoT at the wrong segment.",
+      "Python-based data transformation and a Power BI semantic model (contracts → segments → products star schema, with RLS by sales region so each rep only saw their book) revealed that the highest-value Connect contracts were almost entirely phone provisioning, not IoT. Smaller state-level contracts had far more IoT buying power. Funnel analysis showed we were pushing IoT at the wrong segment.",
     outcome:
       "Leadership shifted outreach and sales strategy toward IoT-friendly contracts. Immediate MoM IoT sales growth and stronger California/New York state relationships worth $1M+ ARR.",
     featured: true,

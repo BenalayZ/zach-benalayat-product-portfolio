@@ -155,7 +155,7 @@ const toolGroups = [
     label: "BI & Reporting",
     subtitle: "How findings get seen and acted on.",
     items: [
-      { name: "Power BI", primary: true },
+      { name: "Power BI", primary: true, children: ["DAX", "Semantic Modeling", "RLS", "Incremental Refresh"] },
       { name: "Looker", primary: true },
       { name: "Tableau" },
       { name: "Google Analytics" },

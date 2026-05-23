@@ -16,13 +16,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Product & Data Analyst. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI on Snowflake. I dig into the data, find what's actually driving revenue, and ship the call that comes out of it.",
+          "Zach Benalayat — Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI on Snowflake. Most recently Product Manager II at Seamless.AI. Available now.",
       },
       { property: "og:title", content: "Zach Benalayat — Product & Data Analyst" },
       {
         property: "og:description",
         content:
-          "SQL, Python, Power BI on Snowflake. I find what's driving revenue and ship the call that comes out of it.",
+          "SQL, Python, Power BI on Snowflake. Most recently Product Manager II at Seamless.AI — shipped a customer-facing API to $1M booked ARR. Available now.",
       },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
@@ -145,7 +145,17 @@ const toolkit: ToolkitGroup[] = [
       { name: "SharePoint" },
       { name: "ServiceNow" },
       { name: "N8N" },
-      { name: "Claude" },
+    ],
+  },
+  {
+    label: "AI & Agentic Tooling",
+    items: [
+      { name: "Claude Code", primary: true },
+      { name: "Claude Cowork", primary: true },
+      { name: "OpenAI Agents", primary: true },
+      { name: "GitHub Copilot", primary: true },
+      { name: "Cursor", primary: true },
+      { name: "Lovable" },
     ],
   },
 ];
@@ -256,6 +266,10 @@ function Index() {
               <MapPin className="h-3.5 w-3.5 text-primary" />
               Austin, Texas · Remote-first, open to hybrid
             </li>
+            <li className="inline-flex items-center gap-1.5">
+              <span className="h-1 w-1 rounded-full bg-primary" />
+              Most recently: Product Manager II, Seamless.AI
+            </li>
           </ul>
 
           {/* CTAs — tightened to 3 */}
@@ -275,12 +289,12 @@ function Index() {
                 <Download className="h-4 w-4" /> Download resume
               </a>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-muted-foreground">
+            <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-xs font-medium text-muted-foreground">
               <a
                 href="mailto:zacharia.benalayat@gmail.com"
                 className="transition-colors hover:text-primary"
               >
-                Email
+                zacharia.benalayat@gmail.com
               </a>
               <span className="hidden h-1 w-1 rounded-full bg-border md:inline-block" />
               <a
@@ -301,7 +315,7 @@ function Index() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-              Available — Full-Time or Contract
+              Available now — Full-Time or Contract
             </span>
           </div>
 
@@ -309,7 +323,7 @@ function Index() {
           <dl className="mt-16 grid w-full max-w-4xl grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
             {[
               { track: "Senior BI", value: "$1M+ ARR", label: "Inseego Connect — Power BI funnel" },
-              { track: "Staff Analyst", value: "46%", label: "Faster intake — Arc of Southern Maryland workflow analytics" },
+              { track: "Staff Analyst", value: "46%", label: "Faster intake — Arc of Southern Maryland service operations analytics" },
               { track: "Analytics-Led PM", value: "$1M ARR", label: "Seamless API 0→1" },
             ].map((m) => (
               <div key={m.track} className="bg-background p-6 text-left">
@@ -427,7 +441,7 @@ function Index() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-5">
+          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
             {toolkit.map((group, i) => {
               const primaries = group.items.filter((it) => it.primary);
               const supporting = group.items.filter((it) => !it.primary);

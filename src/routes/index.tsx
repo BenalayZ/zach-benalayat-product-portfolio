@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "What types of products have you shipped?",
-    a: "B2B SaaS, IoT and telecom hardware, AI platforms (including MCP integrations on the GPT and Claude stores), data infrastructure, and non-profit case-management systems. Recent flagship work includes Seamless API ($750k ARR year one) and Inseego Connect ($1M+ ARR uplift driven by Power BI funnel analysis).",
+    a: "B2B SaaS, IoT and telecom hardware, AI platforms (including MCP integrations on the GPT and Claude stores), data infrastructure, and non-profit case-management systems. Recent flagship work includes a 0→1 customer-facing Seamless API ($1M ARR year one across SMB and mid-market, enterprise underway) and Inseego Connect ($1M+ ARR uplift driven by Power BI funnel analysis).",
   },
   {
     q: "Do you lead analytics or product strategy?",

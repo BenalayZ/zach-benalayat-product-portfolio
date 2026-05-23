@@ -259,9 +259,9 @@ function Index() {
 
 
       {/* Where I've shipped — wordmark band */}
-      <section aria-label="Companies and organizations where I've shipped product" className="border-y border-border bg-foreground/[0.02]">
+      <section aria-label="Companies and organizations where I've shipped product" className="border-y border-border bg-foreground">
         <div className="mx-auto max-w-6xl px-6 py-10 md:py-12">
-          <p className="mb-6 text-center font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-muted-foreground md:text-left">
+          <p className="mb-6 text-center font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-background/60 md:text-left">
             Where I&apos;ve shipped product
           </p>
           <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 md:justify-between md:gap-x-6">
@@ -277,7 +277,7 @@ function Index() {
                   src={src}
                   alt={`${name} logo`}
                   loading="lazy"
-                  className="h-10 w-auto max-w-[140px] object-contain opacity-80 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 md:h-12"
+                  className="h-10 w-auto max-w-[140px] object-contain transition-transform duration-300 hover:scale-105 md:h-12"
                 />
               </li>
             ))}

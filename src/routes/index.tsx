@@ -407,22 +407,47 @@ function Index() {
 
 
 
-      {/* Positioning */}
+      {/* Positioning / Approach */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-          <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
-            <div>
-              <p className="mb-6 inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary underline decoration-2 underline-offset-8">
-                Approach
-              </p>
-              <h2 className="font-sans text-4xl font-extrabold leading-[1.1] tracking-tighter text-foreground md:text-5xl">
-                The analysis comes first. The product bet comes out of it.
-              </h2>
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+          <div className="border-t border-secondary/60 pt-12">
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
+              {/* Left: eyebrow + headline */}
+              <div className="flex flex-col md:col-span-7">
+                <div className="mb-8 flex items-center gap-4">
+                  <span className="whitespace-nowrap font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary md:text-xs">
+                    Approach
+                  </span>
+                  <div className="h-px w-12 bg-primary" />
+                </div>
+                <h2 className="font-sans text-5xl font-extrabold leading-[0.95] tracking-tighter text-foreground md:text-7xl">
+                  The analysis comes first.
+                  <span className="mt-2 block">The product bet comes out of it.</span>
+                </h2>
+              </div>
+
+              {/* Right: body, vertically centered within headline block via self-center */}
+              <div className="flex flex-col justify-center border-l border-secondary/60 py-2 pl-8 md:col-span-5 md:pl-12">
+                <div className="max-w-sm">
+                  <p className="font-sans text-lg font-normal leading-relaxed text-foreground/90 md:text-xl">
+                    Most product calls I&apos;ve shipped started as a dashboard or a SQL query, not a meeting.
+                  </p>
+                  <p className="mt-6 font-sans text-base leading-relaxed text-foreground/60 md:text-lg">
+                    I build the KPI tree and the instrumentation first; the PRD, the roadmap, and the launch follow what the data shows.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
-              <p>
-                Most product calls I&apos;ve shipped started as a dashboard or a SQL query, not a meeting. I build the KPI tree and the instrumentation first; the PRD, the roadmap, and the launch follow what the data shows.
-              </p>
+
+            {/* Bottom accent: hairline + ghost 01 */}
+            <div className="mt-24 flex w-full items-end justify-between">
+              <div className="h-[2px] w-24 bg-secondary/60" />
+              <span
+                aria-hidden="true"
+                className="pointer-events-none translate-y-8 select-none font-sans text-8xl font-extrabold leading-none text-secondary/30"
+              >
+                01
+              </span>
             </div>
           </div>
         </div>

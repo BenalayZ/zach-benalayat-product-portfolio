@@ -16,13 +16,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Zach Benalayat — Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI on Snowflake. Most recently Product Manager II at Seamless.AI. Available now.",
+          "Zach Benalayat — Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI. Available now.",
       },
       { property: "og:title", content: "Zach Benalayat — Product & Data Analyst" },
       {
         property: "og:description",
         content:
-          "SQL, Python, Power BI on Snowflake. Most recently Product Manager II at Seamless.AI — shipped a customer-facing API to $1M booked ARR. Available now.",
+          "SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI — shipped a customer-facing API to $1M booked ARR. Available now.",
       },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
@@ -116,9 +116,10 @@ const toolkit: ToolkitGroup[] = [
     label: "Data Platforms",
     items: [
       { name: "Snowflake", primary: true },
+      { name: "Microsoft Fabric", primary: true },
       { name: "Databricks", primary: true },
       { name: "Redshift", primary: true },
-      { name: "dbt", primary: true },
+      { name: "dbt" },
       { name: "BigQuery" },
       { name: "Amazon S3" },
     ],
@@ -126,7 +127,7 @@ const toolkit: ToolkitGroup[] = [
   {
     label: "BI & Reporting",
     items: [
-      { name: "Power BI", primary: true, children: ["Microsoft Fabric", "DAX", "Semantic Modeling", "RLS"] },
+      { name: "Power BI", primary: true, children: ["DAX", "Semantic Modeling", "RLS"] },
       { name: "Tableau", primary: true },
       { name: "Amplitude", primary: true },
       { name: "Looker" },
@@ -138,10 +139,10 @@ const toolkit: ToolkitGroup[] = [
     label: "Product & Delivery",
     items: [
       { name: "Jira", primary: true },
-      { name: "Confluence", primary: true },
       { name: "GitHub", primary: true },
       { name: "Notion", primary: true },
       { name: "Kanban", primary: true },
+      { name: "Confluence" },
       { name: "SharePoint" },
       { name: "ServiceNow" },
       { name: "N8N" },
@@ -257,7 +258,7 @@ function Index() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
-            SQL, Python, Power BI on Snowflake. I dig into the data, find what&apos;s actually driving revenue, and ship the call that comes out of it.
+            SQL, Python, Power BI, and Snowflake. I dig into the data, find what&apos;s actually driving revenue, and ship the call that comes out of it.
           </p>
 
 
@@ -340,30 +341,6 @@ function Index() {
             ))}
           </dl>
 
-          {/* Stack by role */}
-          <div className="mt-10 w-full max-w-4xl space-y-3 text-left">
-            {[
-              { role: "Analyst stack", items: ["SQL", "Python", "R", "Snowflake", "dbt", "Fabric", "A/B"] },
-              { role: "BI stack", items: ["Power BI", "Tableau", "Looker", "DAX", "Semantic Modeling", "RLS", "Incremental Refresh", "Amplitude"] },
-              { role: "PM stack", items: ["Agile", "Jira", "Notion", "Competitive Analysis", "GTM Strategy", "Gap Analysis", "OKRs"] },
-            ].map((row) => (
-              <div key={row.role} className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                <span className="w-28 shrink-0 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                  {row.role}
-                </span>
-                <ul className="flex flex-wrap gap-2">
-                  {row.items.map((it) => (
-                    <li
-                      key={it}
-                      className="border border-border px-3 py-1 text-xs text-muted-foreground"
-                    >
-                      {it}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Bottom scroll indicator */}
@@ -462,7 +439,7 @@ function Index() {
               Toolkit // 01
             </p>
             <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
-              The stack I actually use
+              Skills and Tools
             </h2>
           </div>
 

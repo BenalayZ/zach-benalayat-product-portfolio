@@ -243,7 +243,7 @@ function Index() {
           {/* Role-anchored H1 */}
           <h1 className="max-w-4xl font-sans text-4xl font-extrabold leading-[1.05] tracking-tighter text-foreground md:text-6xl lg:text-7xl">
             <span className="text-primary">Product &amp; Data</span>{" "}
-            <span className="text-primary">Analyst</span>.
+            <span className="text-primary">Analyst</span>
           </h1>
 
           <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">

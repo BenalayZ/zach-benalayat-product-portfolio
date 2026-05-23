@@ -27,19 +27,19 @@ export const projects: Project[] = [
     slug: "seamless-api",
     title: "Seamless API",
     date: "May 2025",
-    headline: "$750k ARR in year one",
-    summary: "$750k ARR in year one and integrations with every major AI platform.",
+    headline: "0→1 launch to $1M ARR — enterprise upside ahead",
+    summary: "Built and scaled a customer-facing API from zero to $1M ARR across SMB and mid-market, with enterprise expansion underway.",
     image: seamlessApi,
-    tags: ["B2B SaaS", "Agentic AI", "SQL", "Power BI", "Full PDLC", "GTM"],
+    tags: ["0→1", "B2B SaaS", "Customer-Facing", "Agentic AI", "SQL", "Power BI", "Full PDLC", "GTM"],
     problem:
-      "Create a browserless solution to allow custom integrations of Seamless Contact & Company data into customer data pipelines.",
-    role: "Product Manager & Analytics",
+      "Stand up a net-new, customer-facing API that lets users integrate Seamless Contact & Company data directly into their pipelines — no browser, no manual workflows.",
+    role: "Product Manager & Analytics — 0→1 owner",
     strategy:
-      "Keep it simple. Users want to replicate the entire Seamless experience async and browserless — focus on delivering exactly that.",
+      "Ship a focused MVP that mirrors the core Seamless experience async and browserless, then scale coverage, reliability, and segment fit toward enterprise.",
     insights:
       "User interviews guided framing. Competitive analysis informed technical docs and architecture. Internal developer interviews surfaced reconciliation gaps, and stakeholder scrums highlighted marketing and sales blind spots.",
     outcome:
-      "$750k in ARR within the first year from SMB and mid-market alone, with enterprise upsell underway. Integrated with every major AI platform.",
+      "Took the product from inception to $1M ARR in year one — primarily SMB and mid-market, where enterprise represents the larger remaining wedge. Integrated with every major AI platform and set up as the scaling lane for the next ARR tier.",
     featured: true,
   },
   {

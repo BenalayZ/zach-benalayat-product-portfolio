@@ -6,13 +6,13 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About — Zach Benalayat — Data Analyst & Product Manager" },
+      { title: "About — Zach Benalayat — Senior Data Analyst & BI Lead" },
       {
         name: "description",
         content:
-          "Zach Benalayat — Data Analyst & Product Manager. SQL, Python, Power BI on Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, and non-profit.",
+          "Zach Benalayat — Senior Data Analyst & BI Lead. SQL, Python, Power BI on Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, and operations.",
       },
-      { property: "og:title", content: "About — Zach Benalayat — Data Analyst & Product Manager" },
+      { property: "og:title", content: "About — Zach Benalayat — Senior Data Analyst & BI Lead" },
       {
         property: "og:description",
         content:
@@ -200,7 +200,7 @@ function AboutPage() {
       <div className="mb-12">
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">About</p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-          About Zach Benalayat — Data Analyst &amp; Product Manager
+          About Zach Benalayat — Senior Data Analyst &amp; BI Lead
         </h1>
         <p className="mt-3 text-lg text-muted-foreground">
           SQL · Python · Power BI on Snowflake · Product Analytics

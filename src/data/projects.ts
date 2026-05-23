@@ -54,14 +54,14 @@ export const projects: Project[] = [
     headline: "0→1 launch to $1M ARR — enterprise upside ahead",
     summary: "Built and scaled a customer-facing API from zero to $1M ARR across SMB and mid-market, with enterprise expansion underway.",
     image: seamlessApi,
-    tags: ["0→1", "B2B SaaS", "Customer-Facing", "Agentic AI", "SQL", "Power BI", "Full PDLC", "GTM"],
+    tags: ["0→1", "B2B SaaS", "Customer-Facing", "Agentic AI", "SQL", "Power BI", "Full PDLC", "Scope Trade-offs", "GTM"],
     problem:
       "Stand up a net-new, customer-facing API that lets users integrate Seamless Contact & Company data directly into their pipelines — no browser, no manual workflows.",
-    role: "Product Manager & Analytics — 0→1 owner",
+    role: "Analytics Lead & Product Owner — 0→1",
     strategy:
-      "Ship a focused MVP that mirrors the core Seamless experience async and browserless, then scale coverage, reliability, and segment fit toward enterprise.",
+      "Ship a focused MVP that mirrors the core Seamless experience async and browserless, then scale coverage, reliability, and segment fit toward enterprise. Anchored every scope decision to one metric: async credit consumption — because credits are how the API monetizes.",
     insights:
-      "User interviews guided framing. Competitive analysis informed technical docs and architecture. Internal developer interviews surfaced reconciliation gaps, and stakeholder scrums highlighted marketing and sales blind spots.",
+      "User interviews guided framing; competitive analysis informed technical docs and architecture; internal developer interviews surfaced reconciliation gaps; and stakeholder scrums highlighted marketing and sales blind spots. Deliberately de-scoped Seamless Connect and email-campaign automation from v1 — neither consumed credits, so neither moved the revenue metric the MVP existed to prove. Both were re-scoped into the MCP launch where the surface area justified the build.",
     outcome:
       "Took the product from inception to $1M ARR in year one — primarily SMB and mid-market, where enterprise represents the larger remaining wedge. Integrated with every major AI platform and set up as the scaling lane for the next ARR tier.",
     featured: true,
@@ -123,20 +123,20 @@ export const projects: Project[] = [
   },
   {
     slug: "inseego-connect",
-    title: "Inseego Connect",
-    date: "Mar 2022",
-    headline: "$1M+ ARR uplift via GTM re-targeting",
-    summary: "Re-targeted GTM toward IoT-heavy state contracts — $1M+ ARR uplift.",
+    title: "Inseego Connect — Sales BI Model",
+    date: "Mar 2022 (model still in production)",
+    headline: "$1M+ ARR uplift via GTM re-targeting — model still in production",
+    summary: "Power BI semantic model on government contracts. Still in production — sales leadership reviews weekly, drives ongoing IoT targeting decisions.",
     image: inseegoConnect,
-    tags: ["Customer-Facing", "B2B", "IoT", "SQL", "Python", "Power BI", "Semantic Modeling", "RLS", "Funnel Analysis", "Market Research"],
-    problem: "Inseego IoT products were underperforming within Inseego Connect partner channels.",
-    role: "Product Owner & Analyst",
+    tags: ["Power BI", "Semantic Modeling", "Star Schema", "RLS", "DAX", "Incremental Refresh", "SQL", "Python", "Recurring BI Artifact"],
+    problem: "Inseego IoT products were underperforming within Inseego Connect partner channels. Sales needed an always-on view of where IoT actually belonged in the government-contract book — not a one-off slide.",
+    role: "BI Analyst & Owner",
     strategy:
-      "Follow the money. Analyzed existing government contracts (Connect's primary customer base) and compared their value, focus, and our market share versus competitors.",
+      "Build a recurring BI artifact, not a slide deck. Python ETL into a star-schema semantic model (contracts → segments → products), surrogate keys for incremental refresh, RLS by sales region so each rep only sees their book, DAX measures for contract-value share and IoT attach rate. Published to a workspace sales leadership reviews on a weekly cadence.",
     insights:
-      "Python-based data transformation and a Power BI semantic model (contracts → segments → products star schema, with RLS by sales region so each rep only saw their book) revealed that the highest-value Connect contracts were almost entirely phone provisioning, not IoT. Smaller state-level contracts had far more IoT buying power. Funnel analysis showed we were pushing IoT at the wrong segment.",
+      "The model surfaced that the highest-value Connect contracts were almost entirely phone provisioning, not IoT. Smaller state-level contracts had far more IoT buying power. Funnel analysis exposed that we were pushing IoT at the wrong segment. Because the model refreshes incrementally, the same insight kept compounding as new contract data landed — California and New York targeting decisions trace back to a measure on this dashboard.",
     outcome:
-      "Leadership shifted outreach and sales strategy toward IoT-friendly contracts. Immediate MoM IoT sales growth and stronger California/New York state relationships worth $1M+ ARR.",
+      "$1M+ ARR uplift in the first re-targeting cycle. Model is still the system of record for IoT-vs-phone contract mix — referenced in QBRs, used to size new state-contract bids, and the template later teams cloned for adjacent segments.",
     featured: true,
     signals: ["Staff Analyst", "Senior BI"],
   },
@@ -162,21 +162,22 @@ export const projects: Project[] = [
   },
   {
     slug: "the-arc",
-    title: "The Arc Southern Maryland",
+    title: "The Arc — Service Operations Analytics",
     date: "2020",
-    headline: "−1 FTE, 46% faster course turnaround",
-    summary: "CaseWorthy rollout cut billing headcount by 1 FTE and course turnaround by 46%.",
+    headline: "−1 FTE billing headcount, 46% faster service throughput, auto-SLA on every record",
+    summary: "Operations analytics rollout: cohort-tracked service throughput, automated billing-rule validation, and an exec ops dashboard that absorbed one full FTE of manual reconciliation.",
     image: theArc,
-    tags: ["Customer-Facing", "Non-Profit", "Implementation", "ETL", "UX Design"],
+    tags: ["Operations Analytics", "Throughput", "SLA", "Cohort Analysis", "ETL", "Power BI", "Workflow Automation"],
     problem:
-      "Build a custom CaseWorthy implementation to give The Arc a centralized operational hub and learning management system.",
-    role: "Integration Specialist & Owner",
+      "Service-delivery org was running on spreadsheets — billing reconciliation absorbed a full FTE, course-completion turnaround was opaque, and leadership had no recurring view of throughput by program or cohort.",
+    role: "Operations Analyst & Implementation Owner",
     strategy:
-      "Identify key needs. Arc wanted a smooth transition with minimal training — keep it simple.",
+      "Treat it as an ops-analytics build, not a system rollout. Map the service-delivery funnel (intake → enrollment → course completion → billing) end-to-end, instrument each stage, and stand up a recurring dashboard leadership reviews on the same cadence as payroll. Auto-validate every record against billing rules at the point of entry so exceptions surface before they hit the queue, not after.",
     insights:
-      "Regular customer meetings refined project scope; data engineering check-ins kept ETL aligned with input formats. Focused on clean, easy UX.",
+      "Cohort throughput by program revealed which courses bottlenecked turnaround — that's where the 46% gain came from, not from a blanket process change. The billing-rule validation layer turned reconciliation from a downstream cleanup task into an upstream gate, which is what eliminated the FTE. Customer-facing UX kept training cost near zero so the ops gains weren't eaten back by adoption drag.",
     outcome:
-      "Reduced billing staffing needs by one FTE. Records are auto-validated against billing rules before entering the queue. Course turnaround time down 46%.",
-    signals: ["Staff Analyst"],
+      "Eliminated 1 FTE of billing reconciliation. Course turnaround down 46%. Every record auto-validated against billing rules before entering the queue. Ops leadership got a recurring throughput dashboard that replaced the monthly spreadsheet review.",
+    featured: true,
+    signals: ["Staff Analyst", "Senior BI"],
   },
 ];

@@ -35,51 +35,43 @@ export const Route = createFileRoute("/")({
 const faqs = [
   {
     q: "What kinds of engagements are you open to?",
-    a: "Full-time Senior PM, Staff Analyst, or Senior Data Analyst / BI roles, plus contract and consulting work — analytics audits, KPI and instrumentation design, BI and dashboard builds, PRD authoring, 0→1 launch leadership, and end-to-end PDLC ownership for defined-scope engagements.",
+    a: "Full-time Senior PM, Staff Analyst, or Senior BI — plus contract and scoped consulting (analytics audits, KPI design, BI builds, PRDs, 0→1 launches).",
   },
   {
     q: "What types of products have you shipped?",
-    a: "B2B SaaS, IoT and telecom hardware, AI platforms (including MCP integrations on the GPT and Claude stores), data infrastructure, and non-profit case-management systems. Recent flagship work includes a 0→1 customer-facing Seamless API ($1M ARR year one across SMB and mid-market, enterprise underway) and Inseego Connect ($1M+ ARR uplift driven by Power BI funnel analysis).",
+    a: "B2B SaaS, IoT/telecom, AI platforms (MCP on the GPT and Claude stores), data infra, and non-profit case management.",
   },
   {
     q: "Do you lead analytics or product strategy?",
-    a: "Both — that's the point. I write the SQL, build the funnels and dashboards in Power BI / Looker / Tableau against Snowflake, and run the A/B tests myself, then translate findings into PRDs, OKRs, and roadmap bets. Python for heavier transforms and modeling.",
+    a: "Both. I write the SQL, build the dashboards, run the A/B tests — then translate findings into PRDs, OKRs, and roadmap bets.",
   },
   {
     q: "What does your typical process look like from idea to launch?",
-    a: "Identify objectives, research and competitive analysis, design the analytics framework and KPIs, write the PRD, ship with engineering, then run post-launch funnel and cohort analysis to drive the next iteration. MVP is the starting point, not the finish line.",
+    a: "Objectives → research → KPI framework → PRD → ship → post-launch funnel and cohort analysis. MVP is the starting line.",
   },
   {
     q: "How do I get in touch?",
-    a: "Email zacharia.benalayat@gmail.com or message on LinkedIn at linkedin.com/in/zach-benalayat. Resume is downloadable from any page on the site.",
+    a: "Email zacharia.benalayat@gmail.com or LinkedIn at linkedin.com/in/zach-benalayat. Resume downloads from any page.",
   },
 ];
 
-
-const byTheNumbers = [
-  { value: "25%", label: "Search time reduced via funnel analysis" },
-  { value: "$2M+", label: "ARR influenced by analytics work" },
-  { value: "46%", label: "Faster intake via Arc workflow analytics" },
-  { value: "20%", label: "AWS cost cut on Data Engine 4.0" },
-  { value: "7", label: "Launches owned end-to-end" },
-];
 
 const skills = [
   {
     title: "Product Analytics & Experimentation",
-    body: "A/B tests, funnel and cohort analysis, KPI design in SQL and Python — activation and retention frameworks. The 25% search-time reduction on Seamless came out of this work.",
+    body: "A/B tests, funnel and cohort analysis, KPI design in SQL and Python.",
   },
   {
     title: "BI & Executive Dashboarding",
-    body: "Power BI, Looker, and Tableau on Snowflake — with the data modeling, warehousing, and ETL underneath. A single Power BI funnel surfaced the $1M+ ARR microtargeting shift at Inseego.",
+    body: "Power BI, Looker, Tableau on Snowflake — with the modeling and ETL underneath.",
   },
   {
     title: "Data & SQL Engineering",
-    body: "SQL stored procedures, ETL pipelines, Snowflake, identity resolution. Modeled 200K+ records at Butler School of Music; +10% contact coverage and +25% data quality on Seamless.",
+    body: "Stored procedures, ETL pipelines, Snowflake, identity resolution.",
   },
   {
     title: "AI-Assisted Analytics & Product",
-    body: "Shipped MCP integrations on the GPT and Claude stores. Claude + N8N agentic workflows in the analytics loop — −15% idea-to-design cycle time on Seamless.",
+    body: "MCP integrations on the GPT and Claude stores. Claude + N8N agentic workflows in the analytics loop.",
   },
 ];
 
@@ -87,27 +79,26 @@ const engagementModels = [
   {
     label: "Full-Time",
     title: "Senior PM · Staff Analyst · Senior BI",
-    body: "Embedded ownership of analytics-first product or BI for an org that wants both halves of the role in one hire. Remote-first, open to hybrid.",
+    body: "Embedded ownership of analytics-first product or BI. Remote-first, open to hybrid.",
   },
   {
     label: "Contract",
     title: "3–12 month embedded engagement",
-    body: "Drop-in PM or analyst ownership for a launch, replatform, or BI rebuild — PRDs, KPI frameworks, dashboards, and A/B tests through delivery.",
+    body: "Drop-in PM or analyst ownership for a launch, replatform, or BI rebuild.",
   },
   {
     label: "Consulting",
     title: "Scoped audits & deliverables",
-    body: "Analytics audits, KPI tree design, Power BI / Looker dashboard builds, PRD authoring, instrumentation reviews — defined scope, defined outcome.",
+    body: "Analytics audits, KPI trees, dashboards, PRDs, instrumentation reviews.",
   },
 ];
 
 type ToolkitItem = { name: string; primary?: boolean; children?: string[] };
-type ToolkitGroup = { label: string; subtitle: string; items: ToolkitItem[] };
+type ToolkitGroup = { label: string; items: ToolkitItem[] };
 
 const toolkit: ToolkitGroup[] = [
   {
     label: "Certifications",
-    subtitle: "Formal credentials.",
     items: [
       { name: "Agile / Scrum Certified", primary: true, children: ["Atlassian"] },
       { name: "Data Management", primary: true, children: ["UT Austin"] },
@@ -115,7 +106,6 @@ const toolkit: ToolkitGroup[] = [
   },
   {
     label: "Languages & Querying",
-    subtitle: "What I write in.",
     items: [
       { name: "SQL", primary: true, children: ["PostgreSQL", "MySQL", "ELT", "ETL"] },
       { name: "Python", primary: true, children: ["pandas", "NumPy", "matplotlib"] },
@@ -124,7 +114,6 @@ const toolkit: ToolkitGroup[] = [
   },
   {
     label: "Data Platforms",
-    subtitle: "Where data lives and how it moves.",
     items: [
       { name: "Snowflake", primary: true },
       { name: "Databricks", primary: true },
@@ -136,7 +125,6 @@ const toolkit: ToolkitGroup[] = [
   },
   {
     label: "BI & Reporting",
-    subtitle: "How findings get seen and acted on.",
     items: [
       { name: "Power BI", primary: true, children: ["Microsoft Fabric"] },
       { name: "Tableau", primary: true },
@@ -148,7 +136,6 @@ const toolkit: ToolkitGroup[] = [
   },
   {
     label: "Product & Delivery",
-    subtitle: "How work gets shipped.",
     items: [
       { name: "Jira", primary: true },
       { name: "Confluence", primary: true },
@@ -163,23 +150,7 @@ const toolkit: ToolkitGroup[] = [
   },
 ];
 
-const frameworks = [
-  "A/B Testing",
-  "Funnel Analysis",
-  "Cohort Analysis",
-  "Linear Regression",
-  "Cost Modeling",
-  "Identity Resolution",
-  "ETL & ELT",
-  "Data Warehousing",
-  "Database Design",
-  "Data Mining",
-  "Unit Testing",
-  "Time to Value",
-];
 
-
-function Index() {
   const featured = projects.filter((p) => p.featured);
   const more = projects.filter((p) => !p.featured);
 

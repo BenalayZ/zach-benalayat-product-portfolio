@@ -160,15 +160,15 @@ export const projects: Project[] = [
   },
   {
     slug: "the-arc",
-    title: "The Arc — Service Operations Analytics",
-    date: "2020",
+    title: "Arc of Southern Maryland — Service Operations Analytics",
+    date: "2020 · CaseWorthy client engagement",
     headline: "−1 FTE billing headcount, 46% faster service throughput, auto-SLA on every record",
-    summary: "Operations analytics rollout: cohort-tracked service throughput, automated billing-rule validation, and an exec ops dashboard that absorbed one full FTE of manual reconciliation.",
+    summary: "Service Operations Analytics build for Arc of Southern Maryland, delivered as a CaseWorthy client engagement: cohort-tracked throughput, automated billing-rule validation, and an exec ops dashboard that absorbed one full FTE of manual reconciliation.",
     image: theArc,
     tags: ["Operations Analytics", "Throughput", "SLA", "Cohort Analysis", "ETL", "Power BI", "Workflow Automation"],
     problem:
-      "Service-delivery org was running on spreadsheets — billing reconciliation absorbed a full FTE, course-completion turnaround was opaque, and leadership had no recurring view of throughput by program or cohort.",
-    role: "Operations Analyst & Implementation Owner",
+      "Arc of Southern Maryland's service-delivery org was running on spreadsheets — billing reconciliation absorbed a full FTE, course-completion turnaround was opaque, and leadership had no recurring view of throughput by program or cohort. Engaged via CaseWorthy as the analyst owner on the rollout.",
+    role: "Operations Analyst & Implementation Owner — CaseWorthy engagement at Arc of Southern Maryland",
     strategy:
       "Treat it as an ops-analytics build, not a system rollout. Map the service-delivery funnel (intake → enrollment → course completion → billing) end-to-end, instrument each stage, and stand up a recurring dashboard leadership reviews on the same cadence as payroll. Auto-validate every record against billing rules at the point of entry so exceptions surface before they hit the queue, not after.",
     insights:

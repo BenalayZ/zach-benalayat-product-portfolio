@@ -100,7 +100,7 @@ const toolkit: ToolkitGroup[] = [
   {
     label: "Certifications",
     items: [
-      { name: "Agile / Scrum Certified", primary: true, children: ["Atlassian"] },
+      { name: "Agile / Scrum / Project Management", primary: true, children: ["Atlassian"] },
       { name: "Data Management", primary: true, children: ["UT Austin"] },
     ],
   },

@@ -243,7 +243,7 @@ function Index() {
           {/* Role-anchored H1 */}
           <h1 className="max-w-4xl font-sans text-4xl font-extrabold leading-[1.05] tracking-tighter text-foreground md:text-6xl lg:text-7xl">
             <span className="text-primary">Product &amp; Data</span>{" "}
-            <span className="text-primary">Analyst</span>.
+            <span className="text-primary">Analyst</span>
           </h1>
 
           <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
@@ -309,7 +309,7 @@ function Index() {
           <dl className="mt-16 grid w-full max-w-4xl grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
             {[
               { track: "Senior BI", value: "$1M+ ARR", label: "Inseego Connect — Power BI funnel" },
-              { track: "Staff Analyst", value: "46%", label: "Faster intake — Arc workflow analytics" },
+              { track: "Staff Analyst", value: "46%", label: "Faster intake — Arc of Southern Maryland workflow analytics" },
               { track: "Analytics-Led PM", value: "$1M ARR", label: "Seamless API 0→1" },
             ].map((m) => (
               <div key={m.track} className="bg-background p-6 text-left">
@@ -331,7 +331,7 @@ function Index() {
             {[
               { role: "Analyst stack", items: ["SQL", "Python", "Snowflake", "dbt", "Fabric", "Holdout / A/B"] },
               { role: "BI stack", items: ["Power BI", "DAX", "Semantic Modeling", "RLS", "Incremental Refresh", "Amplitude", "Looker", "Tableau"] },
-              { role: "PM stack", items: ["Agile Certification", "Full Cycle Documentation", "GTM Strategy", "A/B Testing", "Funnel & Cohort", "Roadmap", "OKRs"] },
+              { role: "PM stack", items: ["Agile", "Jira", "Notion", "Competitive Analysis", "GTM Strategy", "Gap Analysis", "OKRs"] },
             ].map((row) => (
               <div key={row.role} className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <span className="w-28 shrink-0 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">

@@ -441,7 +441,7 @@ function Index() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-5">
+          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
             {toolkit.map((group, i) => {
               const primaries = group.items.filter((it) => it.primary);
               const supporting = group.items.filter((it) => !it.primary);

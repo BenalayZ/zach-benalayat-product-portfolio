@@ -127,7 +127,7 @@ export const projects: Project[] = [
     headline: "$1M+ ARR uplift via GTM re-targeting — model still in production",
     summary: "Power BI semantic model on government contracts. Still in production — sales leadership reviews weekly, drives ongoing IoT targeting decisions.",
     image: inseegoConnect,
-    tags: ["Power BI", "Semantic Modeling", "Star Schema", "RLS", "DAX", "Incremental Refresh", "SQL", "Python", "Recurring BI Artifact"],
+    tags: ["Power BI", "Semantic Modeling", "DAX", "Recurring BI Artifact"],
     problem: "Inseego IoT products were underperforming within Inseego Connect partner channels. Sales needed an always-on view of where IoT actually belonged in the government-contract book — not a one-off slide.",
     role: "BI Analyst & Owner",
     strategy:
@@ -135,9 +135,9 @@ export const projects: Project[] = [
     insights:
       "The model surfaced that the highest-value Connect contracts were almost entirely phone provisioning, not IoT. Smaller state-level contracts had far more IoT buying power. Funnel analysis exposed that we were pushing IoT at the wrong segment. Because the model refreshes incrementally, the same insight kept compounding as new contract data landed — California and New York targeting decisions trace back to a measure on this dashboard.",
     outcome:
-      "$1M+ ARR uplift in the first re-targeting cycle. Model is still the system of record for IoT-vs-phone contract mix — referenced in QBRs, used to size new state-contract bids, and the template later teams cloned for adjacent segments.",
+      "$1M+ ARR uplift in the first re-targeting cycle. Still the system of record for IoT-vs-phone contract mix — referenced in QBRs, used to size new state-contract bids, and the template later teams cloned for adjacent segments.",
     featured: true,
-    signals: ["Staff Analyst", "Senior BI"],
+    signals: ["Senior BI"],
   },
   {
     slug: "latin-hyper-texts",

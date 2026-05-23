@@ -82,7 +82,7 @@ export const projects: Project[] = [
     insights:
       "Interviews with stakeholders on prior DE releases and Data Engineering leadership surfaced re-architecture and cost-savings opportunities. New dedup logic was validated with a champion/challenger holdout — ran the old and new identity-resolution passes against a labeled sample, measured false-merge and miss rates before promoting the challenger to production. The semantic layer was rebuilt around a stable surrogate-key dimension to make incremental refresh safe.",
     outcome:
-      "Increased contact data coverage and quality, shipped a unique ID system to handle data updates over time, and reduced AWS costs by 20%.",
+      "Increased contact data coverage and quality, shipped a unique ID system to handle data updates over time, and cut AWS spend 20% across the first 3 months in production.",
     signals: ["Staff Analyst", "Senior BI"],
   },
   {

@@ -9,7 +9,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with Zach Benalayat. Open to full-time Senior PM, Staff Analyst, or Senior BI roles, plus contract and consulting engagements.",
+          "Get in touch with Zach Benalayat. Open to full-time Senior PM or Senior BI roles, plus contract and consulting engagements.",
       },
       { property: "og:title", content: "Contact — Zach Benalayat" },
       {
@@ -56,7 +56,7 @@ function ContactPage() {
           Let&apos;s talk.
         </h1>
         <p className="mx-auto mt-4 max-w-md text-lg text-muted-foreground">
-          Open to full-time Senior PM, Staff Analyst, or Senior BI roles. Contract and consulting too.
+          Open to full-time Senior PM or Senior BI roles. Contract and consulting too.
         </p>
         <ul className="mx-auto mt-6 flex max-w-xl flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground">
           <li className="border border-border px-3 py-1">Hiring for a full-time role</li>

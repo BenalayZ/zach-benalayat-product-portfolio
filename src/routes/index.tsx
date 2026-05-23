@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
 const faqs = [
   {
     q: "What kinds of engagements are you open to?",
-    a: "Full-time Senior Analyst, Staff Analyst, BI Lead, or analytics-led PM. Open to contract too — analytics audits, KPI design, BI builds, PRDs, 0→1 launches.",
+    a: "Full-time Senior Analyst, BI Lead, or analytics-led PM. Open to contract too — analytics audits, KPI design, BI builds, PRDs, 0→1 launches.",
   },
   {
     q: "What types of products have you shipped?",
@@ -78,7 +78,7 @@ const skills = [
 const engagementModels = [
   {
     label: "Full-Time",
-    title: "Senior Analyst · Staff Analyst · BI Lead · Analytics-Led PM",
+    title: "Senior Analyst · BI Lead · Analytics-Led PM",
     body: "Embedded ownership of analytics, BI, or an analytics-led product team. Remote-first, open to hybrid.",
   },
   {
@@ -100,7 +100,7 @@ const toolkit: ToolkitGroup[] = [
   {
     label: "Certifications",
     items: [
-      { name: "Agile / Scrum Certified", primary: true, children: ["Atlassian"] },
+      { name: "Agile / Scrum / Project Management", primary: true, children: ["Atlassian"] },
       { name: "Data Management", primary: true, children: ["UT Austin"] },
     ],
   },
@@ -324,7 +324,7 @@ function Index() {
           <dl className="mt-16 grid w-full max-w-4xl grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
             {[
               { track: "Senior BI", value: "$1M+ ARR", label: "Inseego Connect — Power BI funnel" },
-              { track: "Staff Analyst", value: "46%", label: "Faster intake — Arc of Southern Maryland service operations analytics" },
+              { track: "Senior BI", value: "46%", label: "Faster intake — Arc of Southern Maryland service operations analytics" },
               { track: "Analytics-Led PM", value: "$1M ARR", label: "Seamless API 0→1" },
             ].map((m) => (
               <div key={m.track} className="bg-background p-6 text-left">
@@ -642,7 +642,7 @@ function Index() {
             Ready to ship?
           </h2>
           <p className="mx-auto mb-12 max-w-xl text-lg font-medium text-primary-foreground/80">
-            Open to full-time Senior PM, Staff Analyst, or Senior BI roles, plus contract and
+            Open to full-time Senior PM or Senior BI roles, plus contract and
             consulting work. If you&apos;ve got a problem worth solving, send it over.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

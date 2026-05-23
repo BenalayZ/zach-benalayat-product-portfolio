@@ -165,7 +165,7 @@ export const projects: Project[] = [
     headline: "−1 FTE billing headcount, 46% faster service throughput, auto-SLA on every record",
     summary: "Service Operations Analytics build for Arc of Southern Maryland, delivered as a CaseWorthy client engagement: cohort-tracked throughput, automated billing-rule validation, and an exec ops dashboard that absorbed one full FTE of manual reconciliation.",
     image: theArc,
-    tags: ["Operations Analytics", "Throughput", "SLA", "Cohort Analysis", "ETL", "Power BI", "Workflow Automation"],
+    tags: ["Operations Analytics", "Throughput", "Power BI", "Workflow Automation"],
     problem:
       "Arc of Southern Maryland's service-delivery org was running on spreadsheets — billing reconciliation absorbed a full FTE, course-completion turnaround was opaque, and leadership had no recurring view of throughput by program or cohort. Engaged via CaseWorthy as the analyst owner on the rollout.",
     role: "Operations Analyst & Implementation Owner — CaseWorthy engagement at Arc of Southern Maryland",
@@ -174,8 +174,8 @@ export const projects: Project[] = [
     insights:
       "Cohort throughput by program revealed which courses bottlenecked turnaround — that's where the 46% gain came from, not from a blanket process change. The billing-rule validation layer turned reconciliation from a downstream cleanup task into an upstream gate, which is what eliminated the FTE. Customer-facing UX kept training cost near zero so the ops gains weren't eaten back by adoption drag.",
     outcome:
-      "Eliminated 1 FTE of billing reconciliation. Course turnaround down 46%. Every record auto-validated against billing rules before entering the queue. Ops leadership got a recurring throughput dashboard that replaced the monthly spreadsheet review.",
+      "Eliminated 1 FTE of billing reconciliation, cut course turnaround 46%, and auto-validated every record against billing rules before it entered the queue. Ops leadership got a recurring throughput dashboard that replaced the monthly spreadsheet review.",
     featured: true,
-    signals: ["Staff Analyst", "Senior BI"],
+    signals: ["Senior BI"],
   },
 ];

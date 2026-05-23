@@ -247,7 +247,7 @@ function Index() {
             {[
               { track: "Senior BI", value: "$1M+ ARR", label: "Inseego Connect — Power BI funnel" },
               { track: "Staff Analyst", value: "46%", label: "Faster intake — Arc workflow analytics" },
-              { track: "Senior PM", value: "$1M ARR", label: "Seamless API 0→1" },
+              { track: "Analytics-Led PM", value: "$1M ARR", label: "Seamless API 0→1" },
             ].map((m) => (
               <div key={m.track} className="bg-background p-6 text-left">
                 <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">

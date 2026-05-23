@@ -144,9 +144,13 @@ function CaseStudy() {
               <h2 className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
                 {section.label}
               </h2>
-              <p className="text-lg leading-relaxed text-foreground">
-                {section.value}
-              </p>
+              <div className="space-y-4">
+                {section.value.split(/\n\n+/).map((para, i) => (
+                  <p key={i} className="text-lg leading-relaxed text-foreground">
+                    {para}
+                  </p>
+                ))}
+              </div>
             </section>
           ))}
         </div>

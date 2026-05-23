@@ -209,19 +209,7 @@ function AboutPage() {
 
       <div className="space-y-6 text-base leading-relaxed text-foreground">
         <p>
-          Hello — I&apos;m Zach. I partner with product and engineering teams to design
-          analytics frameworks, define the KPIs, and analyze product usage data to guide
-          strategic decisions.
-        </p>
-        <p>
-          Day to day that means writing the SQL, building the funnels and dashboards in
-          Power BI / Looker / Tableau against Snowflake, and running the A/B tests myself —
-          then translating findings into PRDs, OKRs, and the next roadmap bet. Python for
-          heavier transforms and modeling.
-        </p>
-        <p>
-          I&apos;ve launched and improved products across B2B SaaS, IoT/Telecom, AI
-          platforms, E-Commerce, and Non-Profit organizations.
+          Hi — I&apos;m Zach. I write the SQL, build the funnels and dashboards in Power BI / Looker / Tableau on Snowflake, and run the A/B tests myself — then translate the findings into PRDs, OKRs, and the next roadmap bet. Python for heavier transforms and modeling.
         </p>
         <div className="flex flex-wrap gap-2 pt-1">
           {["B2B SaaS", "IoT / Telecom", "AI Platforms", "E-Commerce", "Non-Profit"].map(
@@ -235,6 +223,7 @@ function AboutPage() {
             ),
           )}
         </div>
+
         <blockquote className="border-l-2 border-primary pl-4 text-lg italic text-foreground">
           &ldquo;Success is a <strong>process</strong>, not an end goal.{" "}
           <strong>Continuous Improvement</strong> is my mantra, and data is meaningless
@@ -347,9 +336,8 @@ function AboutPage() {
               <p className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
                 0{i + 1} — {group.label}
               </p>
-              <p className="mb-5 text-xs leading-relaxed text-muted-foreground">
-                {group.subtitle}
-              </p>
+
+
               <ul className="space-y-3">
                 {primaries.map((it) => (
                   <li key={it.name}>

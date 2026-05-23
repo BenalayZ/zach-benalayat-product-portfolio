@@ -35,51 +35,43 @@ export const Route = createFileRoute("/")({
 const faqs = [
   {
     q: "What kinds of engagements are you open to?",
-    a: "Full-time Senior PM, Staff Analyst, or Senior Data Analyst / BI roles, plus contract and consulting work — analytics audits, KPI and instrumentation design, BI and dashboard builds, PRD authoring, 0→1 launch leadership, and end-to-end PDLC ownership for defined-scope engagements.",
+    a: "Full-time Senior PM, Staff Analyst, or Senior BI — plus contract and scoped consulting (analytics audits, KPI design, BI builds, PRDs, 0→1 launches).",
   },
   {
     q: "What types of products have you shipped?",
-    a: "B2B SaaS, IoT and telecom hardware, AI platforms (including MCP integrations on the GPT and Claude stores), data infrastructure, and non-profit case-management systems. Recent flagship work includes a 0→1 customer-facing Seamless API ($1M ARR year one across SMB and mid-market, enterprise underway) and Inseego Connect ($1M+ ARR uplift driven by Power BI funnel analysis).",
+    a: "B2B SaaS, IoT/telecom, AI platforms (MCP on the GPT and Claude stores), data infra, and non-profit case management.",
   },
   {
     q: "Do you lead analytics or product strategy?",
-    a: "Both — that's the point. I write the SQL, build the funnels and dashboards in Power BI / Looker / Tableau against Snowflake, and run the A/B tests myself, then translate findings into PRDs, OKRs, and roadmap bets. Python for heavier transforms and modeling.",
+    a: "Both. I write the SQL, build the dashboards, run the A/B tests — then translate findings into PRDs, OKRs, and roadmap bets.",
   },
   {
     q: "What does your typical process look like from idea to launch?",
-    a: "Identify objectives, research and competitive analysis, design the analytics framework and KPIs, write the PRD, ship with engineering, then run post-launch funnel and cohort analysis to drive the next iteration. MVP is the starting point, not the finish line.",
+    a: "Objectives → research → KPI framework → PRD → ship → post-launch funnel and cohort analysis. MVP is the starting line.",
   },
   {
     q: "How do I get in touch?",
-    a: "Email zacharia.benalayat@gmail.com or message on LinkedIn at linkedin.com/in/zach-benalayat. Resume is downloadable from any page on the site.",
+    a: "Email zacharia.benalayat@gmail.com or LinkedIn at linkedin.com/in/zach-benalayat. Resume downloads from any page.",
   },
 ];
 
-
-const byTheNumbers = [
-  { value: "25%", label: "Search time reduced via funnel analysis" },
-  { value: "$2M+", label: "ARR influenced by analytics work" },
-  { value: "46%", label: "Faster intake via Arc workflow analytics" },
-  { value: "20%", label: "AWS cost cut on Data Engine 4.0" },
-  { value: "7", label: "Launches owned end-to-end" },
-];
 
 const skills = [
   {
     title: "Product Analytics & Experimentation",
-    body: "A/B tests, funnel and cohort analysis, KPI design in SQL and Python — activation and retention frameworks. The 25% search-time reduction on Seamless came out of this work.",
+    body: "A/B tests, funnel and cohort analysis, KPI design in SQL and Python.",
   },
   {
     title: "BI & Executive Dashboarding",
-    body: "Power BI, Looker, and Tableau on Snowflake — with the data modeling, warehousing, and ETL underneath. A single Power BI funnel surfaced the $1M+ ARR microtargeting shift at Inseego.",
+    body: "Power BI, Looker, Tableau on Snowflake — with the modeling and ETL underneath.",
   },
   {
     title: "Data & SQL Engineering",
-    body: "SQL stored procedures, ETL pipelines, Snowflake, identity resolution. Modeled 200K+ records at Butler School of Music; +10% contact coverage and +25% data quality on Seamless.",
+    body: "Stored procedures, ETL pipelines, Snowflake, identity resolution.",
   },
   {
     title: "AI-Assisted Analytics & Product",
-    body: "Shipped MCP integrations on the GPT and Claude stores. Claude + N8N agentic workflows in the analytics loop — −15% idea-to-design cycle time on Seamless.",
+    body: "MCP integrations on the GPT and Claude stores. Claude + N8N agentic workflows in the analytics loop.",
   },
 ];
 
@@ -87,27 +79,26 @@ const engagementModels = [
   {
     label: "Full-Time",
     title: "Senior PM · Staff Analyst · Senior BI",
-    body: "Embedded ownership of analytics-first product or BI for an org that wants both halves of the role in one hire. Remote-first, open to hybrid.",
+    body: "Embedded ownership of analytics-first product or BI. Remote-first, open to hybrid.",
   },
   {
     label: "Contract",
     title: "3–12 month embedded engagement",
-    body: "Drop-in PM or analyst ownership for a launch, replatform, or BI rebuild — PRDs, KPI frameworks, dashboards, and A/B tests through delivery.",
+    body: "Drop-in PM or analyst ownership for a launch, replatform, or BI rebuild.",
   },
   {
     label: "Consulting",
     title: "Scoped audits & deliverables",
-    body: "Analytics audits, KPI tree design, Power BI / Looker dashboard builds, PRD authoring, instrumentation reviews — defined scope, defined outcome.",
+    body: "Analytics audits, KPI trees, dashboards, PRDs, instrumentation reviews.",
   },
 ];
 
 type ToolkitItem = { name: string; primary?: boolean; children?: string[] };
-type ToolkitGroup = { label: string; subtitle: string; items: ToolkitItem[] };
+type ToolkitGroup = { label: string; items: ToolkitItem[] };
 
 const toolkit: ToolkitGroup[] = [
   {
     label: "Certifications",
-    subtitle: "Formal credentials.",
     items: [
       { name: "Agile / Scrum Certified", primary: true, children: ["Atlassian"] },
       { name: "Data Management", primary: true, children: ["UT Austin"] },
@@ -115,7 +106,6 @@ const toolkit: ToolkitGroup[] = [
   },
   {
     label: "Languages & Querying",
-    subtitle: "What I write in.",
     items: [
       { name: "SQL", primary: true, children: ["PostgreSQL", "MySQL", "ELT", "ETL"] },
       { name: "Python", primary: true, children: ["pandas", "NumPy", "matplotlib"] },
@@ -124,7 +114,6 @@ const toolkit: ToolkitGroup[] = [
   },
   {
     label: "Data Platforms",
-    subtitle: "Where data lives and how it moves.",
     items: [
       { name: "Snowflake", primary: true },
       { name: "Databricks", primary: true },
@@ -136,7 +125,6 @@ const toolkit: ToolkitGroup[] = [
   },
   {
     label: "BI & Reporting",
-    subtitle: "How findings get seen and acted on.",
     items: [
       { name: "Power BI", primary: true, children: ["Microsoft Fabric"] },
       { name: "Tableau", primary: true },
@@ -148,7 +136,6 @@ const toolkit: ToolkitGroup[] = [
   },
   {
     label: "Product & Delivery",
-    subtitle: "How work gets shipped.",
     items: [
       { name: "Jira", primary: true },
       { name: "Confluence", primary: true },
@@ -161,21 +148,6 @@ const toolkit: ToolkitGroup[] = [
       { name: "Claude" },
     ],
   },
-];
-
-const frameworks = [
-  "A/B Testing",
-  "Funnel Analysis",
-  "Cohort Analysis",
-  "Linear Regression",
-  "Cost Modeling",
-  "Identity Resolution",
-  "ETL & ELT",
-  "Data Warehousing",
-  "Database Design",
-  "Data Mining",
-  "Unit Testing",
-  "Time to Value",
 ];
 
 
@@ -207,25 +179,26 @@ function Index() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-              Available — Full-Time, Contract &amp; Consulting
+              Available — Full-Time or Contract
             </span>
           </div>
 
-          {/* Eyebrow: demoted tagline */}
+          {/* Eyebrow: stat-anchored */}
           <p className="mb-5 font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
-            I find the signal in the noise
+            6+ yrs · B2B SaaS · IoT · AI
           </p>
 
           {/* Role-anchored H1 */}
           <h1 className="max-w-4xl font-sans text-4xl font-extrabold leading-[1.05] tracking-tighter text-foreground md:text-6xl lg:text-7xl">
-            <span className="text-primary">Senior Product Manager</span>,{" "}
+            <span className="text-primary">Senior PM</span>,{" "}
             <span className="text-primary">Staff Analyst</span>, and{" "}
-            <span className="text-primary">Senior BI</span> roles — run by one operator.
+            <span className="text-primary">Senior BI</span> — one operator.
           </h1>
 
           <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
-            6+ yrs shipping analytics-first product across B2B SaaS, IoT, and AI.
+            Analytics-first product across B2B SaaS, IoT, and AI.
           </p>
+
 
           <ul className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium text-muted-foreground md:text-sm">
             <li className="inline-flex items-center gap-1.5">
@@ -348,30 +321,13 @@ function Index() {
 
 
 
-      <section className="border-y border-border">
-        <div className="mx-auto max-w-5xl px-6 py-16 md:py-20">
-          <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-10">
-            {byTheNumbers.map((stat) => (
-              <div key={stat.label} className="flex items-baseline gap-4">
-                <span className="font-sans text-5xl font-light tracking-tighter text-primary">
-                  {stat.value}
-                </span>
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Positioning */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
             <div>
               <p className="mb-6 inline-block text-xs font-bold uppercase tracking-[0.2em] text-primary underline decoration-2 underline-offset-8">
-                Mission Control
+                Approach
               </p>
               <h2 className="font-sans text-4xl font-extrabold leading-[1.1] tracking-tighter text-foreground md:text-5xl">
                 A role where analytics and product management share the wheel.
@@ -379,18 +335,13 @@ function Index() {
             </div>
             <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
               <p>
-                I partner with product and engineering to design the analytics framework first — KPI tree, instrumentation, dashboards in Power BI / Looker / Tableau on Snowflake — then use what surfaces to shape PRDs, roadmaps, and launch strategy.
-              </p>
-              <p>
-                That analytics-first lens has shipped real outcomes: a 0→1 customer-facing Seamless API to $1M ARR in year one (SMB and mid-market, with enterprise still ahead), $1M+ ARR uplift on Inseego Connect (out of a single Power BI funnel), and 20% AWS savings on Data Engine 4.0 — each one driven by SQL, Python, and dashboard work that pointed product decisions in the right direction.
-              </p>
-              <p>
-                I thrive in teams that treat strategy as a continuous, evidence-led process and value tight communication between product, data, engineering, and GTM.
+                I design the analytics framework first — KPI tree, instrumentation, dashboards in Power BI / Looker / Tableau on Snowflake — then use what surfaces to shape PRDs, roadmaps, and launch strategy.
               </p>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Toolkit */}
       <section className="border-b border-border">
@@ -413,9 +364,8 @@ function Index() {
                   <p className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
                     0{i + 1} — {group.label}
                   </p>
-                  <p className="mb-6 text-xs leading-relaxed text-muted-foreground">
-                    {group.subtitle}
-                  </p>
+
+
                   <ul className="space-y-3">
                     {primaries.map((it) => (
                       <li key={it.name}>
@@ -440,21 +390,8 @@ function Index() {
             })}
           </div>
 
-          <div className="mt-16 border-t border-border pt-12">
-            <p className="mb-6 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-              Frameworks & Methods // 02
-            </p>
-            <ul className="flex flex-wrap gap-2">
-              {frameworks.map((f) => (
-                <li
-                  key={f}
-                  className="border border-border px-3 py-1 text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary"
-                >
-                  {f}
-                </li>
-              ))}
-            </ul>
-          </div>
+
+
 
           {/* ATS-searchable keyword row — hidden visually, present for crawlers */}
           <div className="sr-only">
@@ -635,13 +572,8 @@ function Index() {
             >
               <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
-            <a
-              href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/Zach_J_Benalayat.pdf`}
-              download
-              className="inline-flex items-center gap-2 px-6 py-5 text-sm font-bold uppercase tracking-[0.2em] text-primary-foreground/80 transition-colors hover:text-primary-foreground"
-            >
-              <Download className="h-4 w-4" /> Resume
-            </a>
+
+
           </div>
         </div>
       </section>

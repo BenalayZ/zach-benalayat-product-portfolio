@@ -4,6 +4,24 @@ import { Download } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
+  head: () => ({
+    meta: [
+      { title: "About — Zach Benalayat" },
+      {
+        name: "description",
+        content:
+          "Zach Benalayat — Product Manager and Data Analyst. Experience across B2B SaaS, IoT/Telecom, AI platforms, and non-profit. SQL, Python, Power BI, Snowflake.",
+      },
+      { property: "og:title", content: "About — Zach Benalayat" },
+      {
+        property: "og:description",
+        content:
+          "6+ years shipping analytics-first product across B2B SaaS, IoT, and AI platforms.",
+      },
+      { property: "og:url", content: "/about" },
+    ],
+    links: [{ rel: "canonical", href: "/about" }],
+  }),
 });
 
 const experience = [

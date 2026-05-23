@@ -10,13 +10,32 @@ import butlerLogo from "@/assets/logos/butler.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "Zach Benalayat — Senior PM · Staff Analyst · Senior BI" },
+      {
+        name: "description",
+        content:
+          "Product Manager & Data Analyst. 6+ yrs across B2B SaaS, IoT, and AI. SQL, Python, Power BI, Snowflake. Open to full-time, contract, and consulting engagements.",
+      },
+      { property: "og:title", content: "Zach Benalayat — Senior PM · Staff Analyst · Senior BI" },
+      {
+        property: "og:description",
+        content:
+          "I design the analytics frameworks, define the KPIs, and use what I find to drive PRDs and roadmaps end-to-end.",
+      },
+      { property: "og:url", content: "/" },
+      { property: "og:type", content: "website" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
 });
 
 
 const faqs = [
   {
     q: "What kinds of engagements are you open to?",
-    a: "Full-time Product Manager or Data Analyst roles, plus fractional and contract work — analytics audits, KPI/instrumentation design, PRD authoring, launch support, and end-to-end PDLC ownership for shorter-scope projects.",
+    a: "Full-time Senior PM, Staff Analyst, or Senior Data Analyst / BI roles, plus contract and consulting work — analytics audits, KPI and instrumentation design, BI and dashboard builds, PRD authoring, 0→1 launch leadership, and end-to-end PDLC ownership for defined-scope engagements.",
   },
   {
     q: "What types of products have you shipped?",
@@ -40,26 +59,45 @@ const faqs = [
 const byTheNumbers = [
   { value: "25%", label: "Search time reduced via funnel analysis" },
   { value: "$2M+", label: "ARR influenced by analytics work" },
-  { value: "200K+", label: "Records modeled & maintained" },
+  { value: "46%", label: "Faster intake via Arc workflow analytics" },
+  { value: "20%", label: "AWS cost cut on Data Engine 4.0" },
   { value: "7", label: "Launches owned end-to-end" },
 ];
 
 const skills = [
   {
-    title: "Product Analytics",
-    body: "Behavioral funnel and cohort analysis in SQL and Python — A/B testing, KPI design, activation and retention frameworks. The 25% search-time reduction on Seamless came out of this work.",
+    title: "Product Analytics & Experimentation",
+    body: "A/B tests, funnel and cohort analysis, KPI design in SQL and Python — activation and retention frameworks. The 25% search-time reduction on Seamless came out of this work.",
   },
   {
-    title: "Data & SQL Modeling",
+    title: "BI & Executive Dashboarding",
+    body: "Power BI, Looker, and Tableau on Snowflake — with the data modeling, warehousing, and ETL underneath. A single Power BI funnel surfaced the $1M+ ARR microtargeting shift at Inseego.",
+  },
+  {
+    title: "Data & SQL Engineering",
     body: "SQL stored procedures, ETL pipelines, Snowflake, identity resolution. Modeled 200K+ records at Butler School of Music; +10% contact coverage and +25% data quality on Seamless.",
   },
   {
-    title: "BI & Dashboarding",
-    body: "Executive Power BI, Looker, and Tableau dashboards that drive GTM decisions. A single Power BI funnel surfaced the $1M+ ARR microtargeting shift at Inseego.",
+    title: "AI-Assisted Analytics & Product",
+    body: "Shipped MCP integrations on the GPT and Claude stores. Claude + N8N agentic workflows in the analytics loop — −15% idea-to-design cycle time on Seamless.",
+  },
+];
+
+const engagementModels = [
+  {
+    label: "Full-Time",
+    title: "Senior PM · Staff Analyst · Senior BI",
+    body: "Embedded ownership of analytics-first product or BI for an org that wants both halves of the role in one hire. Remote-first, open to hybrid.",
   },
   {
-    title: "Analytics → Product Strategy",
-    body: "Translates findings into PRDs, OKRs, and roadmap bets. Analytics framework design first, then engineering scope — so KPIs are built into the product, not bolted on.",
+    label: "Contract",
+    title: "3–12 month embedded engagement",
+    body: "Drop-in PM or analyst ownership for a launch, replatform, or BI rebuild — PRDs, KPI frameworks, dashboards, and A/B tests through delivery.",
+  },
+  {
+    label: "Consulting",
+    title: "Scoped audits & deliverables",
+    body: "Analytics audits, KPI tree design, Power BI / Looker dashboard builds, PRD authoring, instrumentation reviews — defined scope, defined outcome.",
   },
 ];
 
@@ -100,7 +138,7 @@ const toolkit: ToolkitGroup[] = [
     label: "BI & Reporting",
     subtitle: "How findings get seen and acted on.",
     items: [
-      { name: "Power BI", primary: true },
+      { name: "Power BI", primary: true, children: ["Microsoft Fabric"] },
       { name: "Tableau", primary: true },
       { name: "Amplitude", primary: true },
       { name: "Looker" },
@@ -169,7 +207,7 @@ function Index() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-              Available — Full-time, fractional &amp; contract
+              Available — Full-Time, Contract &amp; Consulting
             </span>
           </div>
 
@@ -190,7 +228,7 @@ function Index() {
               Austin, Texas · Remote-first, open to hybrid
             </li>
             <li className="hidden h-1 w-1 rounded-full bg-border md:block" />
-            <li>Targeting Senior Product Manager and Data Analyst roles</li>
+            <li>Targeting Senior PM, Staff Analyst, and Senior Data Analyst / BI roles</li>
           </ul>
 
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -468,6 +506,37 @@ function Index() {
         </div>
       </section>
 
+      {/* Engagement Models */}
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
+          <div className="mb-16">
+            <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
+              Engagement Models // 01
+            </p>
+            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
+              Three ways to work together
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+              Full-time is the priority — contract and consulting fill the gap when the seat isn&apos;t open yet.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
+            {engagementModels.map((m, i) => (
+              <div key={m.label} className="flex flex-col bg-background p-8">
+                <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                  0{i + 1} — {m.label}
+                </p>
+                <h3 className="mb-4 font-sans text-xl font-bold text-foreground">
+                  {m.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">{m.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
@@ -524,8 +593,8 @@ function Index() {
             Ready to ship?
           </h2>
           <p className="mx-auto mb-12 max-w-xl text-lg font-medium text-primary-foreground/80">
-            Open to full-time PM/Analyst roles, fractional engagements, and defined-scope
-            contract work. Let&apos;s build something significant.
+            Open to full-time Senior PM, Staff Analyst, or Senior BI roles — plus contract and
+            consulting engagements. Let&apos;s build something significant.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

@@ -6,6 +6,8 @@ import inseegoConnect from "@/assets/projects/inseego-connect.jpg";
 import latinHyperTexts from "@/assets/projects/latin-hyper-texts.jpg";
 import theArc from "@/assets/projects/the-arc.png";
 
+export type RoleSignal = "Senior PM" | "Staff Analyst" | "Senior BI";
+
 export type Project = {
   slug: string;
   title: string;
@@ -20,6 +22,7 @@ export type Project = {
   insights: string;
   outcome: string;
   featured?: boolean;
+  signals?: RoleSignal[];
 };
 
 export const projects: Project[] = [
@@ -41,6 +44,7 @@ export const projects: Project[] = [
     outcome:
       "Took the product from inception to $1M ARR in year one — primarily SMB and mid-market, where enterprise represents the larger remaining wedge. Integrated with every major AI platform and set up as the scaling lane for the next ARR tier.",
     featured: true,
+    signals: ["Senior PM"],
   },
   {
     slug: "data-engine-4",
@@ -59,6 +63,7 @@ export const projects: Project[] = [
     outcome:
       "Increased contact data coverage and quality, shipped a unique ID system to handle data updates over time, and reduced AWS costs by 20%.",
     featured: true,
+    signals: ["Staff Analyst", "Senior BI"],
   },
   {
     slug: "seamless-mcp",
@@ -75,6 +80,7 @@ export const projects: Project[] = [
       "Conversations with senior AI engineers identified MCP as the most efficient path versus custom automation. Wrote PRD and functional requirements; engineering implemented.",
     outcome:
       "Simultaneous launch of API 2.0 and MCP on the GPT and Claude stores, covering the full Seamless feature set — inception to release in one quarter.",
+    signals: ["Senior PM"],
   },
   {
     slug: "seamless-fast-data",
@@ -92,6 +98,7 @@ export const projects: Project[] = [
       "Mapped the change-data flow across event broker, real-time processing, cloud storage, and the data warehouse to identify the highest-leverage transformations.",
     outcome:
       "Went from a twice-monthly update cycle to weekly to every two hours with zero platform downtime. Execution time down 15x; resource usage down 30%.",
+    signals: ["Senior PM"],
   },
   {
     slug: "inseego-connect",
@@ -110,6 +117,7 @@ export const projects: Project[] = [
     outcome:
       "Leadership shifted outreach and sales strategy toward IoT-friendly contracts. Immediate MoM IoT sales growth and stronger California/New York state relationships worth $1M+ ARR.",
     featured: true,
+    signals: ["Staff Analyst", "Senior BI"],
   },
   {
     slug: "latin-hyper-texts",
@@ -129,6 +137,7 @@ export const projects: Project[] = [
     outcome:
       "Launched with a student-managed database and Digital Mappa annotation tool. Cited in dozens of musicology journals.",
     featured: true,
+    signals: ["Senior BI"],
   },
   {
     slug: "the-arc",
@@ -147,5 +156,6 @@ export const projects: Project[] = [
       "Regular customer meetings refined project scope; data engineering check-ins kept ETL aligned with input formats. Focused on clean, easy UX.",
     outcome:
       "Reduced billing staffing needs by one FTE. Records are auto-validated against billing rules before entering the queue. Course turnaround time down 46%.",
+    signals: ["Staff Analyst"],
   },
 ];

@@ -12,13 +12,13 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Zach Benalayat — Data Analyst & Product Manager" },
+      { title: "Zach Benalayat — Senior Data Analyst & BI Lead" },
       {
         name: "description",
         content:
-          "Data Analyst & Product Manager. 6+ yrs across B2B SaaS, IoT, and AI. SQL, Python, Power BI on Snowflake. I run the analysis, then ship the product bet that comes out of it.",
+          "Senior Data Analyst & BI Lead. 6+ yrs across B2B SaaS, IoT, and AI. SQL, Python, Power BI on Snowflake. I run the analysis, then ship the operating decision that comes out of it.",
       },
-      { property: "og:title", content: "Zach Benalayat — Data Analyst & Product Manager" },
+      { property: "og:title", content: "Zach Benalayat — Senior Data Analyst & BI Lead" },
       {
         property: "og:description",
         content:

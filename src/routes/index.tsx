@@ -138,7 +138,7 @@ const toolkit: ToolkitGroup[] = [
     label: "BI & Reporting",
     subtitle: "How findings get seen and acted on.",
     items: [
-      { name: "Power BI", primary: true },
+      { name: "Power BI", primary: true, children: ["Microsoft Fabric"] },
       { name: "Tableau", primary: true },
       { name: "Amplitude", primary: true },
       { name: "Looker" },
@@ -207,7 +207,7 @@ function Index() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-              Available — Full-time, fractional &amp; contract
+              Available — Full-Time, Contract &amp; Consulting
             </span>
           </div>
 
@@ -228,7 +228,7 @@ function Index() {
               Austin, Texas · Remote-first, open to hybrid
             </li>
             <li className="hidden h-1 w-1 rounded-full bg-border md:block" />
-            <li>Targeting Senior Product Manager and Data Analyst roles</li>
+            <li>Targeting Senior PM, Staff Analyst, and Senior Data Analyst / BI roles</li>
           </ul>
 
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -562,8 +562,8 @@ function Index() {
             Ready to ship?
           </h2>
           <p className="mx-auto mb-12 max-w-xl text-lg font-medium text-primary-foreground/80">
-            Open to full-time PM/Analyst roles, fractional engagements, and defined-scope
-            contract work. Let&apos;s build something significant.
+            Open to full-time Senior PM, Staff Analyst, or Senior BI roles — plus contract and
+            consulting engagements. Let&apos;s build something significant.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

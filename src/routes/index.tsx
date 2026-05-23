@@ -59,26 +59,45 @@ const faqs = [
 const byTheNumbers = [
   { value: "25%", label: "Search time reduced via funnel analysis" },
   { value: "$2M+", label: "ARR influenced by analytics work" },
-  { value: "200K+", label: "Records modeled & maintained" },
+  { value: "46%", label: "Faster intake via Arc workflow analytics" },
+  { value: "20%", label: "AWS cost cut on Data Engine 4.0" },
   { value: "7", label: "Launches owned end-to-end" },
 ];
 
 const skills = [
   {
-    title: "Product Analytics",
-    body: "Behavioral funnel and cohort analysis in SQL and Python — A/B testing, KPI design, activation and retention frameworks. The 25% search-time reduction on Seamless came out of this work.",
+    title: "Product Analytics & Experimentation",
+    body: "A/B tests, funnel and cohort analysis, KPI design in SQL and Python — activation and retention frameworks. The 25% search-time reduction on Seamless came out of this work.",
   },
   {
-    title: "Data & SQL Modeling",
+    title: "BI & Executive Dashboarding",
+    body: "Power BI, Looker, and Tableau on Snowflake — with the data modeling, warehousing, and ETL underneath. A single Power BI funnel surfaced the $1M+ ARR microtargeting shift at Inseego.",
+  },
+  {
+    title: "Data & SQL Engineering",
     body: "SQL stored procedures, ETL pipelines, Snowflake, identity resolution. Modeled 200K+ records at Butler School of Music; +10% contact coverage and +25% data quality on Seamless.",
   },
   {
-    title: "BI & Dashboarding",
-    body: "Executive Power BI, Looker, and Tableau dashboards that drive GTM decisions. A single Power BI funnel surfaced the $1M+ ARR microtargeting shift at Inseego.",
+    title: "AI-Assisted Analytics & Product",
+    body: "Shipped MCP integrations on the GPT and Claude stores. Claude + N8N agentic workflows in the analytics loop — −15% idea-to-design cycle time on Seamless.",
+  },
+];
+
+const engagementModels = [
+  {
+    label: "Full-Time",
+    title: "Senior PM · Staff Analyst · Senior BI",
+    body: "Embedded ownership of analytics-first product or BI for an org that wants both halves of the role in one hire. Remote-first, open to hybrid.",
   },
   {
-    title: "Analytics → Product Strategy",
-    body: "Translates findings into PRDs, OKRs, and roadmap bets. Analytics framework design first, then engineering scope — so KPIs are built into the product, not bolted on.",
+    label: "Contract",
+    title: "3–12 month embedded engagement",
+    body: "Drop-in PM or analyst ownership for a launch, replatform, or BI rebuild — PRDs, KPI frameworks, dashboards, and A/B tests through delivery.",
+  },
+  {
+    label: "Consulting",
+    title: "Scoped audits & deliverables",
+    body: "Analytics audits, KPI tree design, Power BI / Looker dashboard builds, PRD authoring, instrumentation reviews — defined scope, defined outcome.",
   },
 ];
 

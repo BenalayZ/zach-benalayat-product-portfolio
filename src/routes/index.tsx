@@ -266,8 +266,8 @@ function Index() {
           {/* Stack by role */}
           <div className="mt-10 w-full max-w-4xl space-y-3 text-left">
             {[
-              { role: "Analyst stack", items: ["SQL", "Python", "Snowflake", "dbt", "Fabric"] },
-              { role: "BI stack", items: ["Power BI", "Amplitude", "Looker", "Tableau", "DAX"] },
+              { role: "Analyst stack", items: ["SQL", "Python", "Snowflake", "dbt", "Fabric", "Holdout / A/B"] },
+              { role: "BI stack", items: ["Power BI", "DAX", "Semantic Modeling", "RLS", "Incremental Refresh", "Amplitude", "Looker", "Tableau"] },
               { role: "PM stack", items: ["Agile Certification", "Full Cycle Documentation", "GTM Strategy", "A/B Testing", "Funnel & Cohort", "Roadmap", "OKRs"] },
             ].map((row) => (
               <div key={row.role} className="flex flex-wrap items-center gap-x-3 gap-y-2">

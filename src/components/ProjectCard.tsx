@@ -40,26 +40,9 @@ export function ProjectCard({ project }: { project: Project }) {
         <p className="text-sm leading-relaxed text-muted-foreground">
           {project.summary}
         </p>
-        {project.signals && project.signals.length > 0 && (
-          <div className="mt-5 border-t border-border pt-4">
-            <p className="mb-2 font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-muted-foreground">
-              Strongest signal for
-            </p>
-            <div className="flex flex-wrap gap-1.5">
-              {project.signals.map((s) => (
-                <span
-                  key={s}
-                  className="border border-primary/40 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.15em] text-primary"
-                >
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-        <div className="mt-5 flex items-center justify-between">
+        <div className="mt-5 flex items-end justify-between gap-3">
           <div className="flex flex-wrap gap-1.5">
-            {project.tags.slice(0, 3).map((tag) => (
+            {project.tags.map((tag) => (
               <span
                 key={tag}
                 className="rounded-full border border-border px-2.5 py-0.5 text-[11px] font-medium text-muted-foreground"
@@ -68,7 +51,7 @@ export function ProjectCard({ project }: { project: Project }) {
               </span>
             ))}
           </div>
-          <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary transition-transform group-hover:translate-x-0.5">
+          <span className="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary transition-transform group-hover:translate-x-0.5">
             Read case study <ArrowRight className="h-4 w-4" />
           </span>
         </div>

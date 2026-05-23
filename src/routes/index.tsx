@@ -378,11 +378,11 @@ function Index() {
       </section>
 
 
-      {/* Where I've shipped — wordmark band */}
-      <section aria-label="Companies and organizations where I've shipped product" className="border-y border-border bg-foreground">
+      {/* Organizations I've worked with — wordmark band */}
+      <section aria-label="Companies and organizations I've worked with" className="border-y border-border bg-foreground">
         <div className="mx-auto max-w-6xl px-6 py-10 md:py-12">
           <p className="mb-6 text-center font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-background/60 md:text-left">
-            Where I&apos;ve shipped product
+            Organizations I&apos;ve worked with
           </p>
           <ul className="grid grid-cols-2 items-center gap-x-8 gap-y-8 sm:grid-cols-3 md:grid-cols-5 md:gap-x-6">
             {[

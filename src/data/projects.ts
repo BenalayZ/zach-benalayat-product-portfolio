@@ -5,6 +5,7 @@ import seamlessFastData from "@/assets/projects/seamless-fast-data.jpg";
 import inseegoConnect from "@/assets/projects/inseego-connect.jpg";
 import latinHyperTexts from "@/assets/projects/latin-hyper-texts.jpg";
 import theArc from "@/assets/projects/the-arc.png";
+import productAnalysis from "@/assets/projects/seamless-product-analysis.jpg";
 
 export type RoleSignal = "Senior PM" | "Staff Analyst" | "Senior BI";
 
@@ -26,6 +27,26 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "product-tier-analysis",
+    title: "Tier × CRM-Connect Analysis",
+    date: "May 2022",
+    headline: "Reframed the growth bet from 'more Free signups' to 'CRM-connect the Basic base'",
+    summary: "Onboarding analysis at a B2B sales-intelligence platform. Segmented ~590K searches by license tier and CRM-connection status to find where product value actually accrued.",
+    image: productAnalysis,
+    tags: ["Product Analytics", "Segmentation", "Funnel Analysis", "SQL", "Monetization", "Negative Result"],
+    problem:
+      "First analysis shipped after onboarding. Leadership assumed Free-tier acquisition was the growth lever. Test the assumption against actual search and CRM-connection behavior across ~590K searches.",
+    role: "Product Analyst — independent contributor",
+    strategy:
+      "Segment every search by license tier (Free / Basic / Premium) crossed with CRM-connection status. CRM-connected searches are the monetizable signal — Free is locked out of CRM by design. Three tiers × two states = one chart that answers 'where does the value actually live?'",
+    insights:
+      "Free generated the largest raw volume (~159K searches) but zero CRM signal by definition. Basic was the real conversion battleground — searches split nearly 50/50 connected vs not (~111K / ~102K). Premium was overwhelmingly connected (~65K / ~22K), proving the funnel works once users get there. A separate filter-usage analysis killed a planned advanced-filter UI bet — filter usage was uniform across tiers, no Premium 'power user' pattern existed.",
+    outcome:
+      "Reframed the growth thesis from 'more Free signups' to 'CRM-connect the Basic base.' Recommended killing the advanced-filter UI investment and redirecting effort to a CRM-connect funnel for Basic. Became the baseline analysis the product org referenced through the following planning cycle.",
+    featured: true,
+    signals: ["Staff Analyst", "Senior BI"],
+  },
   {
     slug: "seamless-api",
     title: "Seamless API",

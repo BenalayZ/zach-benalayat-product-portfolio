@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
 const faqs = [
   {
     q: "What kinds of engagements are you open to?",
-    a: "Full-time Product Manager or Product Analyst roles, plus fractional and contract work — analytics audits, KPI/instrumentation design, PRD authoring, launch support, and end-to-end PDLC ownership for shorter-scope projects.",
+    a: "Full-time Product Manager or Data Analyst roles, plus fractional and contract work — analytics audits, KPI/instrumentation design, PRD authoring, launch support, and end-to-end PDLC ownership for shorter-scope projects.",
   },
   {
     q: "What types of products have you shipped?",
@@ -175,7 +175,7 @@ function Index() {
 
           {/* Functional subhead — what role, what level, what stack */}
           <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
-            Product Manager &amp; Product Analyst · 6+ yrs across B2B SaaS, IoT, and AI · SQL, Python, Power BI, Snowflake.
+            Product Manager &amp; Data Analyst · 6+ yrs across B2B SaaS, IoT, and AI · SQL, Python, Power BI, Snowflake.
           </p>
 
           {/* Fit snapshot — the facts a recruiter needs in 5 seconds */}
@@ -185,7 +185,7 @@ function Index() {
               Austin, Texas · Remote-first, open to hybrid
             </li>
             <li className="hidden h-1 w-1 rounded-full bg-border md:block" />
-            <li>Targeting Senior Product Manager and Analyst roles</li>
+            <li>Targeting Senior Product Manager and Data Analyst roles</li>
           </ul>
 
           <p className="mt-8 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -393,7 +393,7 @@ function Index() {
               Keywords // ATS-searchable
             </p>
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Product Manager, Senior Product Manager, Product Analyst, Product Analytics, Data Analyst, Business Analyst,
+              Product Manager, Senior Product Manager, Data Analyst, Product Analytics, Business Analyst,
               SQL, Python, R, pandas, NumPy, Snowflake, Databricks, Redshift, BigQuery, dbt, ETL, ELT, Data Warehousing,
               Power BI, Tableau, Looker, Amplitude, Google Analytics, A/B Testing, Funnel Analysis, Cohort Analysis,
               KPI Design, OKRs, PRD, Roadmap, Agile, Scrum, Kanban, Jira, Confluence, GitHub, B2B SaaS, IoT, Telecom,

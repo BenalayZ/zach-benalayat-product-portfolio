@@ -39,7 +39,7 @@ function ContactPage() {
           Let&apos;s connect
         </h1>
         <p className="mx-auto mt-4 max-w-md text-lg text-muted-foreground">
-          Open to Senior Product Manager and Analyst roles, fractional engagements, and defined-scope contract work.
+          Open to Senior Product Manager and Data Analyst roles, fractional engagements, and defined-scope contract work.
         </p>
         <p className="mx-auto mt-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
           <Clock className="h-3.5 w-3.5" /> Usually responds within 24 hours

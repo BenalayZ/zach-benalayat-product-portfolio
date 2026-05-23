@@ -240,7 +240,7 @@ function Index() {
           {/* Outcome metrics */}
           <dl className="mt-20 grid w-full max-w-3xl grid-cols-1 gap-10 border-t border-border pt-12 md:grid-cols-3">
             {[
-              { value: "$750k", label: "Seamless API ARR" },
+              { value: "$1M", label: "Seamless API ARR (0→1)" },
               { value: "$1M+", label: "Inseego Connect uplift" },
               { value: "20%", label: "AWS savings on Data Engine 4.0" },
             ].map((m) => (

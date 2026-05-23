@@ -162,21 +162,22 @@ export const projects: Project[] = [
   },
   {
     slug: "the-arc",
-    title: "The Arc Southern Maryland",
+    title: "The Arc — Service Operations Analytics",
     date: "2020",
-    headline: "−1 FTE, 46% faster course turnaround",
-    summary: "CaseWorthy rollout cut billing headcount by 1 FTE and course turnaround by 46%.",
+    headline: "−1 FTE billing headcount, 46% faster service throughput, auto-SLA on every record",
+    summary: "Operations analytics rollout: cohort-tracked service throughput, automated billing-rule validation, and an exec ops dashboard that absorbed one full FTE of manual reconciliation.",
     image: theArc,
-    tags: ["Customer-Facing", "Non-Profit", "Implementation", "ETL", "UX Design"],
+    tags: ["Operations Analytics", "Throughput", "SLA", "Cohort Analysis", "ETL", "Power BI", "Workflow Automation"],
     problem:
-      "Build a custom CaseWorthy implementation to give The Arc a centralized operational hub and learning management system.",
-    role: "Integration Specialist & Owner",
+      "Service-delivery org was running on spreadsheets — billing reconciliation absorbed a full FTE, course-completion turnaround was opaque, and leadership had no recurring view of throughput by program or cohort.",
+    role: "Operations Analyst & Implementation Owner",
     strategy:
-      "Identify key needs. Arc wanted a smooth transition with minimal training — keep it simple.",
+      "Treat it as an ops-analytics build, not a system rollout. Map the service-delivery funnel (intake → enrollment → course completion → billing) end-to-end, instrument each stage, and stand up a recurring dashboard leadership reviews on the same cadence as payroll. Auto-validate every record against billing rules at the point of entry so exceptions surface before they hit the queue, not after.",
     insights:
-      "Regular customer meetings refined project scope; data engineering check-ins kept ETL aligned with input formats. Focused on clean, easy UX.",
+      "Cohort throughput by program revealed which courses bottlenecked turnaround — that's where the 46% gain came from, not from a blanket process change. The billing-rule validation layer turned reconciliation from a downstream cleanup task into an upstream gate, which is what eliminated the FTE. Customer-facing UX kept training cost near zero so the ops gains weren't eaten back by adoption drag.",
     outcome:
-      "Reduced billing staffing needs by one FTE. Records are auto-validated against billing rules before entering the queue. Course turnaround time down 46%.",
-    signals: ["Staff Analyst"],
+      "Eliminated 1 FTE of billing reconciliation. Course turnaround down 46%. Every record auto-validated against billing rules before entering the queue. Ops leadership got a recurring throughput dashboard that replaced the monthly spreadsheet review.",
+    featured: true,
+    signals: ["Staff Analyst", "Senior BI"],
   },
 ];

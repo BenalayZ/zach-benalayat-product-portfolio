@@ -78,7 +78,7 @@ const skills = [
 const engagementModels = [
   {
     label: "Full-Time",
-    title: "Senior Analyst · Staff Analyst · BI Lead · Senior PM",
+    title: "Senior Analyst · Staff Analyst · BI Lead · Analytics-Led PM",
     body: "Embedded ownership of analytics, BI, or analytics-first product. Remote-first, open to hybrid.",
   },
   {

@@ -53,10 +53,10 @@ function ContactPage() {
           Contact
         </p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-          Let&apos;s connect
+          Let&apos;s talk.
         </h1>
         <p className="mx-auto mt-4 max-w-md text-lg text-muted-foreground">
-          Open to full-time Senior PM, Staff Analyst, or Senior Data Analyst / BI roles, plus contract and consulting engagements.
+          Open to full-time Senior PM, Staff Analyst, or Senior BI roles. Contract and consulting too.
         </p>
         <ul className="mx-auto mt-6 flex max-w-xl flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground">
           <li className="border border-border px-3 py-1">Hiring for a full-time role</li>

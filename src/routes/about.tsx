@@ -6,17 +6,17 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
   head: () => ({
     meta: [
-      { title: "About — Zach Benalayat" },
+      { title: "About — Zach Benalayat — Data Analyst & Product Manager" },
       {
         name: "description",
         content:
-          "Zach Benalayat — Product Manager and Data Analyst. Experience across B2B SaaS, IoT/Telecom, AI platforms, and non-profit. SQL, Python, Power BI, Snowflake.",
+          "Zach Benalayat — Data Analyst & Product Manager. SQL, Python, Power BI on Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, and non-profit.",
       },
-      { property: "og:title", content: "About — Zach Benalayat" },
+      { property: "og:title", content: "About — Zach Benalayat — Data Analyst & Product Manager" },
       {
         property: "og:description",
         content:
-          "6+ years shipping analytics-first product across B2B SaaS, IoT, and AI platforms.",
+          "6+ years running the analysis loop end-to-end across B2B SaaS, IoT, and AI platforms — then shipping the product bet that comes out of it.",
       },
       { property: "og:url", content: "/about" },
     ],
@@ -200,16 +200,16 @@ function AboutPage() {
       <div className="mb-12">
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">About</p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-          About Zach Benalayat — Product Manager &amp; Data Analyst
+          About Zach Benalayat — Data Analyst &amp; Product Manager
         </h1>
         <p className="mt-3 text-lg text-muted-foreground">
-          Product &amp; Business Analytics PM · SQL · Python · Power BI
+          SQL · Python · Power BI on Snowflake · Product Analytics
         </p>
       </div>
 
       <div className="space-y-6 text-base leading-relaxed text-foreground">
         <p>
-          Hi — I&apos;m Zach. I write the SQL, build the funnels and dashboards in Power BI / Looker / Tableau on Snowflake, and run the A/B tests myself — then translate the findings into PRDs, OKRs, and the next roadmap bet. Python for heavier transforms and modeling.
+          Hi — I&apos;m Zach. I lead with the analysis: SQL on Snowflake, funnels and dashboards in Power BI / Looker / Tableau, A/B tests, Python for heavier transforms and modeling. The PRDs, OKRs, and roadmap bets fall out of what the data says — not the other way around.
         </p>
         <div className="flex flex-wrap gap-2 pt-1">
           {["B2B SaaS", "IoT / Telecom", "AI Platforms", "E-Commerce", "Non-Profit"].map(

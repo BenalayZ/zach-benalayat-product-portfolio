@@ -12,17 +12,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Zach Benalayat — Senior PM · Staff Analyst · Senior BI" },
+      { title: "Zach Benalayat — Data Analyst & Product Manager" },
       {
         name: "description",
         content:
-          "Product Manager & Data Analyst. 6+ yrs across B2B SaaS, IoT, and AI. SQL, Python, Power BI, Snowflake. Open to full-time, contract, and consulting engagements.",
+          "Data Analyst & Product Manager. 6+ yrs across B2B SaaS, IoT, and AI. SQL, Python, Power BI on Snowflake. I run the analysis, then ship the product bet that comes out of it.",
       },
-      { property: "og:title", content: "Zach Benalayat — Senior PM · Staff Analyst · Senior BI" },
+      { property: "og:title", content: "Zach Benalayat — Data Analyst & Product Manager" },
       {
         property: "og:description",
         content:
-          "I design the analytics frameworks, define the KPIs, and use what I find to drive PRDs and roadmaps end-to-end.",
+          "SQL, Python, Power BI on Snowflake. I run the analysis, then ship the product bet that comes out of it.",
       },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
@@ -58,38 +58,38 @@ const faqs = [
 
 const skills = [
   {
-    title: "Product Analytics & Experimentation",
-    body: "A/B tests, funnel and cohort analysis, KPI design in SQL and Python.",
-  },
-  {
     title: "BI & Executive Dashboarding",
     body: "Power BI, Looker, Tableau on Snowflake — with the modeling and ETL underneath.",
+  },
+  {
+    title: "Product Analytics & Experimentation",
+    body: "A/B tests, funnel and cohort analysis, KPI design in SQL and Python.",
   },
   {
     title: "Data & SQL Engineering",
     body: "Stored procedures, ETL pipelines, Snowflake, identity resolution.",
   },
   {
-    title: "AI-Assisted Analytics & Product",
-    body: "MCP integrations on the GPT and Claude stores. Claude + N8N agentic workflows in the analytics loop.",
+    title: "Analytics-Led Product Delivery",
+    body: "PRDs, OKRs, and roadmap bets that come out of the analysis — not the other way around.",
   },
 ];
 
 const engagementModels = [
   {
     label: "Full-Time",
-    title: "Senior PM · Staff Analyst · Senior BI",
-    body: "Embedded ownership of analytics-first product or BI. Remote-first, open to hybrid.",
+    title: "Senior Analyst · Staff Analyst · BI Lead · Senior PM",
+    body: "Embedded ownership of analytics, BI, or analytics-first product. Remote-first, open to hybrid.",
   },
   {
     label: "Contract",
     title: "3–12 month embedded engagement",
-    body: "Drop-in PM or analyst ownership for a launch, replatform, or BI rebuild.",
+    body: "Drop-in analyst, BI, or PM ownership for a launch, replatform, or BI rebuild.",
   },
   {
     label: "Consulting",
     title: "Scoped audits & deliverables",
-    body: "Analytics audits, KPI trees, dashboards, PRDs, instrumentation reviews.",
+    body: "Analytics audits, KPI trees, dashboards, instrumentation reviews, PRDs.",
   },
 ];
 
@@ -190,13 +190,12 @@ function Index() {
 
           {/* Role-anchored H1 */}
           <h1 className="max-w-4xl font-sans text-4xl font-extrabold leading-[1.05] tracking-tighter text-foreground md:text-6xl lg:text-7xl">
-            <span className="text-primary">Senior PM</span>,{" "}
-            <span className="text-primary">Staff Analyst</span>, and{" "}
-            <span className="text-primary">Senior BI</span> — one operator.
+            <span className="text-primary">Data Analyst</span> &amp;{" "}
+            <span className="text-primary">Product Manager</span> — one operator.
           </h1>
 
           <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
-            Analytics-first product across B2B SaaS, IoT, and AI.
+            SQL · Python · Power BI on Snowflake. I run the analysis, then ship the product bet that comes out of it.
           </p>
 
 
@@ -246,9 +245,9 @@ function Index() {
           {/* Role-tagged proof grid */}
           <dl className="mt-16 grid w-full max-w-4xl grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
             {[
-              { track: "Senior PM", value: "$1M ARR", label: "Seamless API 0→1" },
-              { track: "Staff Analyst", value: "46%", label: "Faster intake — Arc workflow analytics" },
               { track: "Senior BI", value: "$1M+ ARR", label: "Inseego Connect — Power BI funnel" },
+              { track: "Staff Analyst", value: "46%", label: "Faster intake — Arc workflow analytics" },
+              { track: "Senior PM", value: "$1M ARR", label: "Seamless API 0→1" },
             ].map((m) => (
               <div key={m.track} className="bg-background p-6 text-left">
                 <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
@@ -267,9 +266,9 @@ function Index() {
           {/* Stack by role */}
           <div className="mt-10 w-full max-w-4xl space-y-3 text-left">
             {[
-              { role: "PM stack", items: ["Agile Certification", "Full Cycle Documentation", "GTM Strategy", "A/B Testing", "Funnel & Cohort", "Roadmap", "OKRs"] },
               { role: "Analyst stack", items: ["SQL", "Python", "Snowflake", "dbt", "Fabric"] },
               { role: "BI stack", items: ["Power BI", "Amplitude", "Looker", "Tableau", "DAX"] },
+              { role: "PM stack", items: ["Agile Certification", "Full Cycle Documentation", "GTM Strategy", "A/B Testing", "Funnel & Cohort", "Roadmap", "OKRs"] },
             ].map((row) => (
               <div key={row.role} className="flex flex-wrap items-center gap-x-3 gap-y-2">
                 <span className="w-28 shrink-0 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
@@ -330,12 +329,12 @@ function Index() {
                 Approach
               </p>
               <h2 className="font-sans text-4xl font-extrabold leading-[1.1] tracking-tighter text-foreground md:text-5xl">
-                A role where analytics and product management share the wheel.
+                The analysis comes first. The product bet comes out of it.
               </h2>
             </div>
             <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
               <p>
-                I design the analytics framework first — KPI tree, instrumentation, dashboards in Power BI / Looker / Tableau on Snowflake — then use what surfaces to shape PRDs, roadmaps, and launch strategy.
+                I lead with the analysis. KPI tree, instrumentation, dashboards in Power BI / Looker / Tableau on Snowflake — then the PRD, roadmap, and launch fall out of what the data says.
               </p>
             </div>
           </div>

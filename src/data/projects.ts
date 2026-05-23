@@ -54,14 +54,14 @@ export const projects: Project[] = [
     headline: "0→1 launch to $1M ARR — enterprise upside ahead",
     summary: "Built and scaled a customer-facing API from zero to $1M ARR across SMB and mid-market, with enterprise expansion underway.",
     image: seamlessApi,
-    tags: ["0→1", "B2B SaaS", "Customer-Facing", "Agentic AI", "SQL", "Power BI", "Full PDLC", "GTM"],
+    tags: ["0→1", "B2B SaaS", "Customer-Facing", "Agentic AI", "SQL", "Power BI", "Full PDLC", "Scope Trade-offs", "GTM"],
     problem:
       "Stand up a net-new, customer-facing API that lets users integrate Seamless Contact & Company data directly into their pipelines — no browser, no manual workflows.",
-    role: "Product Manager & Analytics — 0→1 owner",
+    role: "Analytics Lead & Product Owner — 0→1",
     strategy:
-      "Ship a focused MVP that mirrors the core Seamless experience async and browserless, then scale coverage, reliability, and segment fit toward enterprise.",
+      "Ship a focused MVP that mirrors the core Seamless experience async and browserless, then scale coverage, reliability, and segment fit toward enterprise. Anchored every scope decision to one metric: async credit consumption — because credits are how the API monetizes.",
     insights:
-      "User interviews guided framing. Competitive analysis informed technical docs and architecture. Internal developer interviews surfaced reconciliation gaps, and stakeholder scrums highlighted marketing and sales blind spots.",
+      "User interviews guided framing; competitive analysis informed technical docs and architecture; internal developer interviews surfaced reconciliation gaps; and stakeholder scrums highlighted marketing and sales blind spots. Deliberately de-scoped Seamless Connect and email-campaign automation from v1 — neither consumed credits, so neither moved the revenue metric the MVP existed to prove. Both were re-scoped into the MCP launch where the surface area justified the build.",
     outcome:
       "Took the product from inception to $1M ARR in year one — primarily SMB and mid-market, where enterprise represents the larger remaining wedge. Integrated with every major AI platform and set up as the scaling lane for the next ARR tier.",
     featured: true,

@@ -612,7 +612,7 @@ function Index() {
               <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
             <a
-              href="/Zach_J_Benalayat.pdf"
+              href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/Zach_J_Benalayat.pdf`}
               download
               className="inline-flex items-center gap-2 px-6 py-5 text-sm font-bold uppercase tracking-[0.2em] text-primary-foreground/80 transition-colors hover:text-primary-foreground"
             >

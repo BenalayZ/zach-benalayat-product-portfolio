@@ -2,6 +2,11 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Download, Linkedin, MapPin } from "lucide-react";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
+import seamlessLogo from "@/assets/logos/seamless.jpg";
+import inseegoLogo from "@/assets/logos/inseego.jpg";
+import caseworthyLogo from "@/assets/logos/caseworthy.jpg";
+import arcLogo from "@/assets/logos/arc.jpg";
+import butlerLogo from "@/assets/logos/butler.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -259,19 +264,21 @@ function Index() {
           <p className="mb-6 text-center font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-muted-foreground md:text-left">
             Where I&apos;ve shipped product
           </p>
-          <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 md:justify-between md:gap-x-6">
+          <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 md:justify-between md:gap-x-6">
             {[
-              "Seamless.AI",
-              "Inseego",
-              "CaseWorthy",
-              "The Arc",
-              "Butler School of Music",
-            ].map((name) => (
-              <li
-                key={name}
-                className="font-sans text-base font-extrabold tracking-tight text-foreground/70 transition-colors hover:text-primary md:text-lg"
-              >
-                {name}
+              { name: "Seamless.AI", src: seamlessLogo },
+              { name: "Inseego", src: inseegoLogo },
+              { name: "CaseWorthy", src: caseworthyLogo },
+              { name: "The Arc Southern Maryland", src: arcLogo },
+              { name: "Butler School of Music", src: butlerLogo },
+            ].map(({ name, src }) => (
+              <li key={name} className="flex items-center">
+                <img
+                  src={src}
+                  alt={`${name} logo`}
+                  loading="lazy"
+                  className="h-10 w-auto max-w-[140px] object-contain opacity-80 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 md:h-12"
+                />
               </li>
             ))}
           </ul>

@@ -37,7 +37,7 @@ export const projects: Project[] = [
     tags: ["Product Analytics", "Monetization", "SQL", "Roadmap Judgment"],
     problem:
       "Onboarding deliverable at Seamless.AI. Leadership believed Free-tier acquisition was the growth lever. My job: test that against actual search and CRM-connect behavior across ~590K searches.",
-    role: "Product Manager — independent contributor",
+    role: "Product Manager",
     strategy:
       "Segment every search by license tier (Free / Basic / Premium) crossed with CRM-connection status — the proxy for monetizable signal, since Free is locked out of CRM by design. One chart, one question: where does the value live, and where is it being left on the table?",
     insights:

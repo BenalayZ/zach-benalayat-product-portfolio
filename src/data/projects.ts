@@ -143,8 +143,8 @@ export const projects: Project[] = [
     slug: "latin-hyper-texts",
     title: "Latin Hyper-Texts",
     date: "Apr 2022",
-    headline: "Cited in dozens of musicology journals",
-    summary: "A student-managed platform for annotating digitized Latin manuscripts.",
+    headline: "Shipped a student-run research platform that's still in active scholarly use",
+    summary: "A student-managed platform for annotating digitized Latin manuscripts — built to be maintained by the researchers using it.",
     image: latinHyperTexts,
     tags: ["Customer-Facing", "Digital Scholarship", "Full PDLC", "UX Design", "Survey Metrics"],
     problem:
@@ -155,7 +155,7 @@ export const projects: Project[] = [
     insights:
       "Qualtrics surveys after every training session shaped UX. Competitive analysis informed hosting and database tooling choices.",
     outcome:
-      "Launched with a student-managed database and Digital Mappa annotation tool. Cited in dozens of musicology journals.",
+      "Launched a student-managed manuscript database integrated with the Digital Mappa annotation tool. Adopted by the Butler School of Music research program and used as primary-source infrastructure in subsequent musicology research.",
     signals: ["Senior BI"],
   },
   {

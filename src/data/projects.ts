@@ -67,7 +67,7 @@ export const projects: Project[] = [
     headline: "Launched on GPT + Claude in one quarter",
     summary: "Launched API 2.0 alongside MCP on the GPT and Claude stores in a single quarter.",
     image: seamlessMcp,
-    tags: ["Agentic AI", "MCP", "PRD", "Cross-functional"],
+    tags: ["Customer-Facing", "Agentic AI", "MCP", "PRD", "Cross-functional"],
     problem: "Integrate existing and future Seamless API functionality with modern AI platforms.",
     role: "Product Manager & Analytics",
     strategy: "Don't reinvent the wheel — focus on the shortest path to delivering core functionality.",
@@ -100,7 +100,7 @@ export const projects: Project[] = [
     headline: "$1M+ ARR uplift via GTM re-targeting",
     summary: "Re-targeted GTM toward IoT-heavy state contracts — $1M+ ARR uplift.",
     image: inseegoConnect,
-    tags: ["B2B", "IoT", "SQL", "Python", "Power BI", "Funnel Analysis", "Market Research"],
+    tags: ["Customer-Facing", "B2B", "IoT", "SQL", "Python", "Power BI", "Funnel Analysis", "Market Research"],
     problem: "Inseego IoT products were underperforming within Inseego Connect partner channels.",
     role: "Product Owner & Analyst",
     strategy:
@@ -118,7 +118,7 @@ export const projects: Project[] = [
     headline: "Cited in dozens of musicology journals",
     summary: "A student-managed platform for annotating digitized Latin manuscripts.",
     image: latinHyperTexts,
-    tags: ["Digital Scholarship", "Full PDLC", "UX Design", "Survey Metrics"],
+    tags: ["Customer-Facing", "Digital Scholarship", "Full PDLC", "UX Design", "Survey Metrics"],
     problem:
       "Create a platform for students to research, annotate, and collaborate on archives of digitized Latin manuscripts.",
     role: "Product Owner & Lead Developer",
@@ -137,7 +137,7 @@ export const projects: Project[] = [
     headline: "−1 FTE, 46% faster course turnaround",
     summary: "CaseWorthy rollout cut billing headcount by 1 FTE and course turnaround by 46%.",
     image: theArc,
-    tags: ["Non-Profit", "Implementation", "ETL", "UX Design"],
+    tags: ["Customer-Facing", "Non-Profit", "Implementation", "ETL", "UX Design"],
     problem:
       "Build a custom CaseWorthy implementation to give The Arc a centralized operational hub and learning management system.",
     role: "Integration Specialist & Owner",

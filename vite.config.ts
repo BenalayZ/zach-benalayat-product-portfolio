@@ -9,6 +9,11 @@ import tsconfigPaths from "vite-tsconfig-paths";
 // set base to "/" instead.
 export default defineConfig({
   base: "/zach-benalayat-product-portfolio/",
+  build: {
+    // GitHub Pages "Deploy from a branch" serves /docs on main
+    outDir: "docs",
+    emptyOutDir: true,
+  },
   plugins: [
     TanStackRouterVite({
       target: "react",

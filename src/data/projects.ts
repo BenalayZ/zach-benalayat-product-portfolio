@@ -89,11 +89,11 @@ export const projects: Project[] = [
     headline: "15x faster execution, 30% less compute",
     summary: "Cut data lag from twice-monthly to every two hours, 15x faster execution.",
     image: seamlessFastData,
-    tags: ["Real-Time", "Event Streaming", "Data Pipelines"],
+    tags: ["Real-Time", "Event Streaming", "Data Pipelines", "Scope Trade-offs"],
     problem: "Decrease the lag between updated data hitting the data lake and being live in the app.",
     role: "Product Owner",
     strategy:
-      "Focus on the most important and relevant data attributes first, then scale outward.",
+      "Focus on the highest-demand attributes first — job changes and individual contact name updates. De-scoped real-time ingest of corporate structure and acquisitions from the pipeline; demand signal was weak and the pipeline cost didn't justify it.",
     insights:
       "Mapped the change-data flow across event broker, real-time processing, cloud storage, and the data warehouse to identify the highest-leverage transformations.",
     outcome:

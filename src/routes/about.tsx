@@ -200,16 +200,16 @@ function AboutPage() {
       <div className="mb-12">
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">About</p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-          About Zach Benalayat — Product Manager &amp; Data Analyst
+          About Zach Benalayat — Data Analyst &amp; Product Manager
         </h1>
         <p className="mt-3 text-lg text-muted-foreground">
-          Product &amp; Business Analytics PM · SQL · Python · Power BI
+          SQL · Python · Power BI on Snowflake · Product Analytics
         </p>
       </div>
 
       <div className="space-y-6 text-base leading-relaxed text-foreground">
         <p>
-          Hi — I&apos;m Zach. I write the SQL, build the funnels and dashboards in Power BI / Looker / Tableau on Snowflake, and run the A/B tests myself — then translate the findings into PRDs, OKRs, and the next roadmap bet. Python for heavier transforms and modeling.
+          Hi — I&apos;m Zach. I lead with the analysis: SQL on Snowflake, funnels and dashboards in Power BI / Looker / Tableau, A/B tests, Python for heavier transforms and modeling. The PRDs, OKRs, and roadmap bets fall out of what the data says — not the other way around.
         </p>
         <div className="flex flex-wrap gap-2 pt-1">
           {["B2B SaaS", "IoT / Telecom", "AI Platforms", "E-Commerce", "Non-Profit"].map(

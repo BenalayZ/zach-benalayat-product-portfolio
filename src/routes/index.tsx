@@ -407,9 +407,10 @@ function Index() {
               KPI Design, OKRs, PRD, Roadmap, Agile, Scrum, Kanban, Jira, Confluence, GitHub, B2B SaaS, IoT, Telecom,
               Agentic AI, MCP, GTM Strategy, Identity Resolution, Cost Modeling, Time to Value.
             </p>
-
+          </div>
         </div>
       </section>
+
 
 
       {/* Featured Projects */}

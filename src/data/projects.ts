@@ -83,7 +83,6 @@ export const projects: Project[] = [
       "Interviews with stakeholders on prior DE releases and Data Engineering leadership surfaced re-architecture and cost-savings opportunities. New dedup logic was validated with a champion/challenger holdout — ran the old and new identity-resolution passes against a labeled sample, measured false-merge and miss rates before promoting the challenger to production. The semantic layer was rebuilt around a stable surrogate-key dimension to make incremental refresh safe.",
     outcome:
       "Increased contact data coverage and quality, shipped a unique ID system to handle data updates over time, and reduced AWS costs by 20%.",
-    featured: true,
     signals: ["Staff Analyst", "Senior BI"],
   },
   {
@@ -157,7 +156,6 @@ export const projects: Project[] = [
       "Qualtrics surveys after every training session shaped UX. Competitive analysis informed hosting and database tooling choices.",
     outcome:
       "Launched with a student-managed database and Digital Mappa annotation tool. Cited in dozens of musicology journals.",
-    featured: true,
     signals: ["Senior BI"],
   },
   {

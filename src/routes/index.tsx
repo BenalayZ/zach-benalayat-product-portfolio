@@ -5,7 +5,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import seamlessLogo from "@/assets/logos/seamless.png";
 import inseegoLogo from "@/assets/logos/inseego.png";
 import caseworthyLogo from "@/assets/logos/caseworthy.png";
-import arcLogo from "@/assets/logos/arc.png";
+import arcLogo from "@/assets/logos/arc.svg";
 import butlerLogo from "@/assets/logos/butler.png";
 
 export const Route = createFileRoute("/")({
@@ -329,8 +329,8 @@ function Index() {
           {/* Stack by role */}
           <div className="mt-10 w-full max-w-4xl space-y-3 text-left">
             {[
-              { role: "Analyst stack", items: ["SQL", "Python", "Snowflake", "dbt", "Fabric", "Holdout / A/B"] },
-              { role: "BI stack", items: ["Power BI", "DAX", "Semantic Modeling", "RLS", "Incremental Refresh", "Amplitude", "Looker", "Tableau"] },
+              { role: "Analyst stack", items: ["SQL", "Python", "R", "Snowflake", "dbt", "Fabric", "A/B"] },
+              { role: "BI stack", items: ["Power BI", "Tableau", "Looker", "DAX", "Semantic Modeling", "RLS", "Incremental Refresh", "Amplitude"] },
               { role: "PM stack", items: ["Agile", "Jira", "Notion", "Competitive Analysis", "GTM Strategy", "Gap Analysis", "OKRs"] },
             ].map((row) => (
               <div key={row.role} className="flex flex-wrap items-center gap-x-3 gap-y-2">
@@ -370,7 +370,7 @@ function Index() {
           <p className="mb-6 text-center font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-background/60 md:text-left">
             Where I&apos;ve shipped product
           </p>
-          <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 md:justify-between md:gap-x-6">
+          <ul className="grid grid-cols-2 items-center gap-x-8 gap-y-8 sm:grid-cols-3 md:grid-cols-5 md:gap-x-6">
             {[
               { name: "Seamless.AI", src: seamlessLogo },
               { name: "Inseego", src: inseegoLogo },
@@ -378,12 +378,12 @@ function Index() {
               { name: "The Arc Southern Maryland", src: arcLogo },
               { name: "Butler School of Music", src: butlerLogo },
             ].map(({ name, src }) => (
-              <li key={name} className="flex items-center">
+              <li key={name} className="flex h-16 items-center justify-center md:h-20">
                 <img
                   src={src}
                   alt={`${name} logo`}
                   loading="lazy"
-                  className="h-14 w-auto max-w-[180px] object-contain transition-transform duration-300 hover:scale-105 md:h-16"
+                  className="max-h-full max-w-[160px] object-contain transition-transform duration-300 hover:scale-105"
                 />
               </li>
             ))}

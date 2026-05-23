@@ -258,7 +258,7 @@ function Index() {
           </h1>
 
           <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
-            SQL, Python, Power BI, and Snowflake. I dig into the data, find what&apos;s actually driving revenue, and ship the call that comes out of it.
+            SQL, Python, Power BI, and Snowflake. I dig into the data, find what&apos;s actually driving revenue, and turn it into the decision.
           </p>
 
 

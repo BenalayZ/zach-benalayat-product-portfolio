@@ -32,18 +32,18 @@ export const projects: Project[] = [
     title: "Seamless Tier × CRM-Connect Analysis",
     date: "May 2022",
     headline: "Killed a planned UI investment and reframed the monetization bet from 'more Free signups' to 'CRM-connect the Basic base'",
-    summary: "First analysis shipped at Seamless.AI. Segmented ~590K searches by license tier and CRM-connection status to find where monetizable value actually accrued — and where it didn't.",
+    summary: "First analysis shipped at Seamless.AI. Segmented ~590K searches by license tier and CRM-connection status to find where monetizable value actually accrued, and where it didn't.",
     image: productAnalysis,
     tags: ["Product Analytics", "Monetization", "SQL", "Roadmap Judgment"],
     problem:
       "Leadership believed Free-tier acquisition was the growth lever. My job: test that against ~590K real searches.",
     role: "Product Manager",
     strategy:
-      "Segment every search by license tier (Free / Basic / Premium), crossed with CRM-connection status — the proxy for monetizable signal, since Free is locked out of CRM by design.\n\nOne chart, one question: where does the value live, and where is it being left on the table?",
+      "Segment every search by license tier (Free / Basic / Premium), crossed with CRM-connection status. CRM-connection is the proxy for monetizable signal, since Free is locked out of CRM by design.\n\nOne chart, one question: where does the value live, and where is it being left on the table?",
     insights:
-      "Free drove the most volume (~159K searches) but zero monetizable signal by definition.\n\nBasic was the real battleground — searches split ~50/50 connected vs not (~111K / ~102K). Half the paying Basic base never wired up the revenue-driving integration.\n\nPremium was overwhelmingly connected (~65K / ~22K), proving the upgrade path monetizes. A parallel filter-usage cut killed the planned advanced-filter UI — usage was flat across tiers, no Premium 'power user' pattern existed.",
+      "Free drove the most volume (~159K searches) but zero monetizable signal by definition.\n\nBasic was the real battleground. Searches split ~50/50 connected vs not (~111K / ~102K). Half the paying Basic base never wired up the revenue-driving integration.\n\nPremium was overwhelmingly connected (~65K / ~22K), proving the upgrade path monetizes. A parallel filter-usage cut killed the planned advanced-filter UI. Usage was flat across tiers; no Premium 'power user' pattern existed.",
     outcome:
-      "Killed the planned advanced-filter UI. Reframed growth from 'more Free signups' to 'CRM-connect the Basic base' — the baseline used through the next planning cycle.",
+      "Killed the planned advanced-filter UI. Reframed growth from 'more Free signups' to 'CRM-connect the Basic base'. That became the baseline through the next planning cycle.",
 
     featured: true,
     signals: ["Senior BI"],
@@ -52,17 +52,17 @@ export const projects: Project[] = [
     slug: "seamless-api",
     title: "Seamless API",
     date: "May 2025",
-    headline: "0→1 monetization launch — $1M booked ARR in year one, forecast model still drives the next-tier sales plan",
+    headline: "0→1 monetization launch. $1M booked ARR in year one; forecast still drives the next-tier sales plan",
     summary: "Built and scaled a customer-facing API from zero to $1M ARR. Every scope call was anchored to one revenue metric: async credit consumption. Year-two MoM run-rate forecast informs enterprise expansion planning.",
     image: seamlessApi,
     tags: ["0→1", "Monetization", "B2B SaaS", "Forecasting"],
     problem:
       "Stand up a net-new, customer-facing API and prove the revenue model before scaling coverage.",
-    role: "Analytics Lead & Product Owner — 0→1",
+    role: "Analytics Lead & Product Owner · 0→1",
     strategy:
-      "Ship a focused MVP that mirrors the core Seamless experience — async and browserless — then scale coverage, reliability, and segment fit toward enterprise.\n\nAnchor every scope call to one metric: async credit consumption, because credits are how the API monetizes.\n\nStood up a MoM credit-consumption + ARR run-rate forecast in Power BI to size the enterprise wedge and pace the GTM plan.",
+      "Ship a focused MVP that mirrors the core Seamless experience (async and browserless), then scale coverage, reliability, and segment fit toward enterprise.\n\nAnchor every scope call to one metric: async credit consumption, because credits are how the API monetizes.\n\nStood up a MoM credit-consumption and ARR run-rate forecast in Power BI to size the enterprise wedge and pace the GTM plan.",
     insights:
-      "User interviews shaped framing. Competitive analysis informed docs and architecture. Internal developer interviews surfaced reconciliation gaps. Sales scrums exposed GTM blind spots.\n\nDeliberately de-scoped Seamless Connect and email-campaign automation from v1 — neither consumed credits, so neither moved the revenue metric the MVP existed to prove.\n\nThe forecast model surfaced that mid-market credit velocity was outpacing the SMB curve, redirecting GTM toward mid-market sooner than the original plan.",
+      "User interviews shaped framing. Competitive analysis informed docs and architecture. Internal developer interviews surfaced reconciliation gaps. Sales scrums exposed GTM blind spots.\n\nDeliberately de-scoped Seamless Connect and email-campaign automation from v1. Neither consumed credits, so neither moved the revenue metric the MVP existed to prove.\n\nThe forecast model surfaced that mid-market credit velocity was outpacing the SMB curve, redirecting GTM toward mid-market sooner than the original plan.",
     outcome:
       "$1M booked ARR in year one. Forecast model became the basis of the year-two sales plan.",
 
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     title: "Data Engine 4.0",
     date: "Dec 2024",
     headline: "20% lower AWS spend, deduped data",
-    summary: "Rebuilt the Seamless AI Data Engine — better coverage, deduped data, 20% AWS savings.",
+    summary: "Rebuilt the Seamless AI Data Engine. Better coverage, deduped data, 20% AWS savings.",
     image: dataEngine,
     tags: ["ETL", "Snowflake", "Data Architecture", "Semantic Modeling"],
     problem: "Improve the data quality and unit cost of the Seamless AI Data Engine.",
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     strategy:
       "End-to-end review of ingestion, identity resolution, the star-schema semantic layer, and refresh cadence.\n\nOptimized for delivery time, quality, dedup, and unit cost.",
     insights:
-      "Stakeholder interviews on prior DE releases and Data Engineering leadership surfaced re-architecture and cost-saving opportunities.\n\nNew dedup logic was validated via champion/challenger — old and new identity-resolution passes ran against a labeled sample, with false-merge and miss rates measured before promotion.\n\nThe semantic layer was rebuilt around a stable surrogate-key dimension to make incremental refresh safe.",
+      "Stakeholder interviews on prior DE releases and Data Engineering leadership surfaced re-architecture and cost-saving opportunities.\n\nNew dedup logic was validated via champion/challenger: old and new identity-resolution passes ran against a labeled sample, with false-merge and miss rates measured before promotion.\n\nThe semantic layer was rebuilt around a stable surrogate-key dimension to make incremental refresh safe.",
     outcome:
       "Higher contact coverage, a unique-ID system for updates over time, and 20% lower AWS spend in the first 3 months.",
 
@@ -96,13 +96,13 @@ export const projects: Project[] = [
     summary: "Launched API 2.0 alongside MCP on the GPT and Claude stores in a single quarter.",
     image: seamlessMcp,
     tags: ["Agentic AI", "MCP", "PRD", "Cross-functional"],
-    problem: "Integrate Seamless API functionality with modern AI platforms — without building a custom integration per platform.",
+    problem: "Integrate Seamless API functionality with modern AI platforms, without building a custom integration per platform.",
     role: "Product Manager & Analytics",
     strategy: "Use MCP instead of building custom agent integrations per platform.\n\nSame surface area, a fraction of the build cost.",
     insights:
       "Conversations with senior AI engineers identified MCP as the most efficient path versus custom automation.\n\nWrote PRD and functional requirements; engineering implemented.",
     outcome:
-      "Simultaneous launch of API 2.0 and MCP on the GPT and Claude stores — full Seamless feature set.",
+      "Simultaneous launch of API 2.0 and MCP on the GPT and Claude stores, full Seamless feature set.",
 
     signals: ["Senior PM"],
   },
@@ -117,30 +117,30 @@ export const projects: Project[] = [
     problem: "Shrink the lag between updated data hitting the lake and going live in-app.",
     role: "Product Owner",
     strategy:
-      "Focus on the highest-demand attributes first — job changes and individual contact name updates.\n\nDe-scoped real-time ingest of corporate structure and acquisitions: demand signal was weak and pipeline cost didn't justify it.",
+      "Focus on the highest-demand attributes first: job changes and individual contact name updates.\n\nDe-scoped real-time ingest of corporate structure and acquisitions. Demand signal was weak and pipeline cost didn't justify it.",
 
     insights:
       "Mapped the change-data flow across event broker, real-time processing, cloud storage, and the data warehouse to identify the highest-leverage transformations.",
     outcome:
-      "Twice-monthly → every two hours, zero downtime. 15x faster execution, 30% less compute.",
+      "Twice-monthly to every two hours, zero downtime. 15x faster execution, 30% less compute.",
     signals: ["Senior PM"],
   },
   {
     slug: "inseego-connect",
     title: "Inseego Connect — Sales BI Model",
     date: "Mar 2022 (model still in production)",
-    headline: "$1M+ ARR uplift via GTM re-targeting — model still in production",
-    summary: "Power BI semantic model on government contracts. Still in production — sales leadership reviews weekly, drives ongoing IoT targeting decisions.",
+    headline: "$1M+ ARR uplift via GTM re-targeting. Model still in production",
+    summary: "Power BI semantic model on government contracts. Still in production; sales leadership reviews it weekly, and it drives ongoing IoT targeting decisions.",
     image: inseegoConnect,
     tags: ["Power BI", "Semantic Modeling", "DAX", "Recurring BI Artifact"],
-    problem: "Inseego IoT was underperforming in the Connect partner channel. Sales needed an always-on view of where IoT actually belonged — not a one-off slide.",
+    problem: "Inseego IoT was underperforming in the Connect partner channel. Sales needed an always-on view of where IoT actually belonged, not a one-off slide.",
     role: "BI Analyst & Owner",
     strategy:
       "Build a recurring BI artifact, not a slide deck.\n\nPython ETL into a star-schema semantic model (contracts → segments → products), with surrogate keys for incremental refresh. RLS by sales region so each rep only sees their book.\n\nDAX measures for contract-value share and IoT attach rate, published to a workspace sales leadership reviews weekly.",
     insights:
-      "The model surfaced that the highest-value Connect contracts were almost entirely phone provisioning, not IoT.\n\nSmaller state-level contracts had far more IoT buying power — we'd been pushing IoT at the wrong segment.\n\nBecause the model refreshes incrementally, the same insight kept compounding as new contract data landed, driving state-level targeting decisions across California and New York.",
+      "The model surfaced that the highest-value Connect contracts were almost entirely phone provisioning, not IoT.\n\nSmaller state-level contracts had far more IoT buying power. We'd been pushing IoT at the wrong segment.\n\nBecause the model refreshes incrementally, the same insight kept compounding as new contract data landed, driving state-level targeting decisions across California and New York.",
     outcome:
-      "$1M+ ARR uplift in the first re-targeting cycle. Still the system of record for IoT-vs-phone contract mix — referenced in QBRs and cloned by adjacent teams.",
+      "$1M+ ARR uplift in the first re-targeting cycle. Still the system of record for IoT-vs-phone contract mix. Referenced in QBRs and cloned by adjacent teams.",
 
     featured: true,
     signals: ["Senior BI"],
@@ -150,14 +150,14 @@ export const projects: Project[] = [
     title: "Latin Hyper-Texts",
     date: "Apr 2022",
     headline: "Shipped a student-run research platform that's still in active scholarly use",
-    summary: "A student-managed platform for annotating digitized Latin manuscripts — built to be maintained by the researchers using it.",
+    summary: "A student-managed platform for annotating digitized Latin manuscripts, built to be maintained by the researchers using it.",
     image: latinHyperTexts,
     tags: ["Customer-Facing", "Digital Scholarship", "Full PDLC", "UX Design", "Survey Metrics"],
     problem:
-      "Give students a platform to research, annotate, and collaborate on digitized Latin manuscripts — maintainable by non-technical users.",
+      "Give students a platform to research, annotate, and collaborate on digitized Latin manuscripts, maintainable by non-technical users.",
     role: "Product Owner & Lead Developer",
     strategy:
-      "Divide and conquer.\n\nBuild a full-service database with image hosting and integrate an existing digital annotation tool — all maintainable by low-tech students.",
+      "Divide and conquer.\n\nBuild a full-service database with image hosting and integrate an existing digital annotation tool, all maintainable by low-tech students.",
     insights:
       "Qualtrics surveys after every training session shaped UX.\n\nCompetitive analysis informed hosting and database tooling choices.",
     outcome:
@@ -173,12 +173,12 @@ export const projects: Project[] = [
     image: theArc,
     tags: ["Operations Analytics", "Throughput", "Power BI", "Workflow Automation"],
     problem:
-      "Arc's service-delivery org ran on spreadsheets — billing reconciliation ate a full FTE, course turnaround was opaque, and leadership had no recurring throughput view.",
-    role: "Operations Analyst & Implementation Owner — CaseWorthy engagement at Arc of Southern Maryland",
+      "Arc's service-delivery org ran on spreadsheets. Billing reconciliation ate a full FTE, course turnaround was opaque, and leadership had no recurring throughput view.",
+    role: "Operations Analyst & Implementation Owner · CaseWorthy engagement at Arc of Southern Maryland",
     strategy:
-      "Treat it as an ops-analytics build, not a system rollout.\n\nMap the service-delivery funnel (intake → enrollment → course completion → billing) end-to-end and instrument each stage.\n\nStand up a recurring dashboard leadership reviews on the same cadence as payroll, and auto-validate every record against billing rules at point of entry — exceptions surface before they hit the queue, not after.",
+      "Treat it as an ops-analytics build, not a system rollout.\n\nMap the service-delivery funnel (intake → enrollment → course completion → billing) end-to-end and instrument each stage.\n\nStand up a recurring dashboard leadership reviews on the same cadence as payroll, and auto-validate every record against billing rules at point of entry. Exceptions surface before they hit the queue, not after.",
     insights:
-      "Cohort throughput by program revealed which courses bottlenecked turnaround — the 46% gain came from targeting those, not a blanket process change.\n\nThe billing-rule validation layer turned reconciliation from a downstream cleanup task into an upstream gate, which is what eliminated the FTE.\n\nLow-friction UX kept training cost near zero, so ops gains weren't eaten back by adoption drag.",
+      "Cohort throughput by program revealed which courses bottlenecked turnaround. The 46% gain came from targeting those, not a blanket process change.\n\nThe billing-rule validation layer turned reconciliation from a downstream cleanup task into an upstream gate, which is what eliminated the FTE.\n\nLow-friction UX kept training cost near zero, so ops gains weren't eaten back by adoption drag.",
     outcome:
       "−1 FTE of billing reconciliation. 46% faster course turnaround. Every record auto-validated against billing rules before it hits the queue.",
 

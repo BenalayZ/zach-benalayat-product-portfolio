@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI — shipped a customer-facing API to $1M booked ARR. Available now.",
+          "SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI. Shipped a customer-facing API to $1M booked ARR. Available now.",
       },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
 const faqs = [
   {
     q: "What kinds of engagements are you open to?",
-    a: "Full-time Senior Analyst, BI Lead, or analytics-led PM. Open to contract too — analytics audits, KPI design, BI builds, PRDs, 0→1 launches.",
+    a: "Full-time Senior Analyst, BI Lead, or analytics-led PM. Open to contract too: analytics audits, KPI design, BI builds, PRDs, 0→1 launches.",
   },
   {
     q: "What types of products have you shipped?",
@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: "Do you lead analytics or product strategy?",
-    a: "Both. I write the SQL, build the dashboards, run the A/B tests — then translate findings into PRDs, OKRs, and roadmap bets.",
+    a: "Both. I write the SQL, build the dashboards, run the A/B tests, then turn what they say into PRDs, OKRs, and roadmap bets.",
   },
   {
     q: "What does your typical process look like from idea to launch?",
@@ -59,7 +59,7 @@ const faqs = [
 const skills = [
   {
     title: "BI & Executive Dashboarding",
-    body: "Power BI, Looker, Tableau on Snowflake — and the semantic modeling and ETL that make them trustworthy.",
+    body: "Power BI, Looker, Tableau on Snowflake, plus the semantic modeling and ETL that make them trustworthy.",
   },
   {
     title: "Product Analytics & Experimentation",
@@ -71,7 +71,7 @@ const skills = [
   },
   {
     title: "Analytics-Led Product Delivery",
-    body: "PRDs, OKRs, and roadmap bets that come from the analysis — not the other way around.",
+    body: "PRDs, OKRs, and roadmap bets that come from the analysis, not the other way around.",
   },
 ];
 
@@ -316,15 +316,15 @@ function Index() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-              Available now — Full-Time or Contract
+              Available now · Full-Time or Contract
             </span>
           </div>
 
           {/* Role-tagged proof grid */}
           <dl className="mt-16 grid w-full max-w-4xl grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
             {[
-              { track: "Senior BI", value: "$1M+ ARR", label: "Inseego Connect — Power BI funnel" },
-              { track: "Senior BI", value: "46%", label: "Faster intake — Arc of Southern Maryland service operations analytics" },
+              { track: "Senior BI", value: "$1M+ ARR", label: "Inseego Connect · Power BI funnel" },
+              { track: "Senior BI", value: "46%", label: "Faster intake · Arc of Southern Maryland service operations analytics" },
               { track: "Analytics-Led PM", value: "$1M ARR", label: "Seamless API 0→1" },
             ].map((m) => (
               <div key={m.track} className="bg-background p-6 text-left">

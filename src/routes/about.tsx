@@ -16,7 +16,7 @@ export const Route = createFileRoute("/about")({
       {
         property: "og:description",
         content:
-          "Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI — SQL, Python, Power BI, and Snowflake.",
+          "Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI, and Snowflake.",
       },
       { property: "og:url", content: "/about" },
     ],
@@ -31,10 +31,10 @@ const experience = [
     role: "Product Manager II — Data Operations & Tech Projects",
     points: [
       "Defined product OKRs and analytics frameworks measuring API adoption, engagement, and conversion across customer touchpoints.",
-      "Behavioral funnel analysis across search, discovery, and purchase — surfaced UX changes that reduced search time by 25%.",
+      "Behavioral funnel analysis across search, discovery, and purchase. Surfaced UX changes that reduced search time by 25%.",
       "Designed internal Power BI / Looker dashboards for exec leadership, Sales, and RevOps to monitor product performance and customer behavior.",
-      "Spearheaded identity resolution overhaul — +10% contact coverage vs LinkedIn company-contact baseline, +25% confidence in email and phone records, delivered in 3 months.",
-      "Owned the 0→1 launch of the customer-facing B2B Public API to $1M booked ARR in year one — SMB and mid-market first, enterprise expansion underway. Automated analytics workflows with Claude + N8N, cutting idea-to-design cycle time by 15%.",
+      "Spearheaded identity resolution overhaul: +10% contact coverage vs LinkedIn company-contact baseline, +25% confidence in email and phone records, delivered in 3 months.",
+      "Owned the 0→1 launch of the customer-facing B2B Public API to $1M booked ARR in year one. SMB and mid-market first; enterprise expansion underway. Automated analytics workflows with Claude + N8N, cutting idea-to-design cycle time by 15%.",
     ],
   },
   {
@@ -42,7 +42,7 @@ const experience = [
     company: "Inseego",
     role: "Business Systems Analyst — Sales Analytics",
     points: [
-      "SQL + Python analysis of customer, sales, and federal contracting datasets — recommended a microtargeting shift that sales leadership adopted, driving $1M+ in enterprise contract uplift in the first re-targeting cycle.",
+      "SQL + Python analysis of customer, sales, and federal contracting datasets. Recommended a microtargeting shift that sales leadership adopted, driving $1M+ in enterprise contract uplift in the first re-targeting cycle.",
       "Built Power BI analytics frameworks tracking adoption, engagement, and bundling performance on US Navy contracts.",
       "Ran market and competitive data analysis to support product positioning and carrier partnerships.",
       "Translated business + data insights into technical product requirements (DCMA 14-Point compliant).",
@@ -65,7 +65,7 @@ const experience = [
     points: [
       "Designed and implemented the relational database architecture supporting 200K+ digitized manuscripts and large-scale research datasets.",
       "Structured metadata frameworks enabling efficient data retrieval, analysis, and digital archiving.",
-      "Analyzed Qualtrics training and user data to improve docs and onboarding — reduced required training sessions by 33%.",
+      "Analyzed Qualtrics training and user data to improve docs and onboarding. Reduced required training sessions by 33%.",
     ],
   },
 ];
@@ -85,24 +85,24 @@ const education = [
 
 const northStars = [
   {
-    title: "Agile Leadership",
+    title: "A moment that stuck",
     quote:
-      "Ship small, learn fast. A team that can change direction in a sprint beats a team with a perfect annual plan.",
+      "The first time a Power BI dashboard talked a sales VP out of a roadmap ask, I stopped writing decks for that kind of meeting. The dashboard does the arguing now.",
   },
   {
-    title: "Data Storytelling",
+    title: "Unpopular opinion",
     quote:
-      "The story is in the data. My job is to read it out loud — to engineers, to sales, to the CEO — in language each one will actually act on.",
+      "Most annual roadmaps are a confidence ritual. A team that can change direction inside a sprint beats one with a beautifully prioritized 12-month plan, every time.",
   },
   {
-    title: "80/20 Mindset",
+    title: "Rule of thumb",
     quote:
-      "The boring 20% — naming a metric correctly, validating a join — moves more revenue than the flashy 80%.",
+      "Name the metric. Ship the smallest thing that moves it. Look at it on Monday.",
   },
   {
-    title: "Technical Skill",
+    title: "A question I ask early",
     quote:
-      "I write the SQL I'd ask an engineer to write. It keeps the conversations honest.",
+      "If nobody can tell me what decision changes when this number moves, why are we building the dashboard?",
   },
 ];
 
@@ -199,7 +199,7 @@ function AboutPage() {
           I lead with the analysis. SQL on Snowflake, funnels and dashboards in Power BI / Looker / Tableau, A/B tests, forecasting, and Python when the transforms get heavy.
         </p>
         <p>
-          I anchor every scope call to the metric that actually monetizes — the PRDs, OKRs, and roadmap bets fall out of what the data says.
+          I anchor every scope call to the metric that actually monetizes. The PRDs, OKRs, and roadmap bets fall out of what the data says.
         </p>
         <div className="flex flex-wrap gap-2 pt-1">
           {["B2B SaaS", "Consumer Marketplaces", "Advertising / Marketplace Dynamics", "IoT / Telecom", "AI Platforms", "E-Commerce", "Non-Profit"].map(

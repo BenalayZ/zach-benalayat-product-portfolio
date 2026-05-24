@@ -106,7 +106,7 @@ function ContactPage() {
       </div>
 
       <p className="mt-8 text-center text-xs text-muted-foreground">
-        Prefer a form? Email is fastest — I check it every weekday.
+        Prefer a form? Email is fastest. I check it every weekday.
       </p>
     </div>
   );

@@ -450,7 +450,7 @@ function Index() {
               return (
                 <div key={group.label} className="flex flex-col bg-background p-8">
                   <p className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                    0{i + 1} — {group.label}
+                    0{i + 1} · {group.label}
                   </p>
 
 

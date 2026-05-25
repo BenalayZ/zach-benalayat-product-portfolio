@@ -497,24 +497,18 @@ function Index() {
 
 
 
-      {/* Featured Projects */}
+      {/* Featured Projects — inline masthead scaffold */}
       <section id="work" className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-          <div className="mb-16 flex items-end justify-between gap-6">
-            <div>
-              <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
-                Selected Work // 01
-              </p>
-              <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
-                Featured Projects
-              </h2>
+          <div className="mb-12 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-4 border-b border-secondary/40 pb-6">
+            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-6xl">
+              Featured projects
+            </h2>
+            <div className="flex items-baseline gap-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+              <span>Selected Work</span>
+              <span className="h-px w-8 translate-y-[-3px] bg-primary/60" />
+              <span>01 / 02</span>
             </div>
-            <Link
-              to="/about"
-              className="hidden items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/80 md:inline-flex"
-            >
-              Full experience <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -522,8 +516,18 @@ function Index() {
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
+
+          <div className="mt-10 hidden justify-end md:flex">
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/80"
+            >
+              Full experience <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
+
 
       {/* Top Skills — grid with hairline dividers */}
       <section className="border-b border-border">

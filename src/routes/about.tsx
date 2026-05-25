@@ -10,7 +10,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "About Zach Benalayat — Senior Product Analyst, BA, DA, and BI. SQL, Python, Power BI, and Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, consumer marketplaces, and operations.",
+          "About Zach Benalayat. Senior Product Analyst, BA, DA, and BI. SQL, Python, Power BI, and Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, consumer marketplaces, and operations.",
       },
       { property: "og:title", content: "About Zach Benalayat" },
       {

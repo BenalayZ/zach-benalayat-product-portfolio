@@ -153,6 +153,24 @@ function CaseStudy() {
               </div>
             </section>
           ))}
+
+          {project.tradeOff && (
+            <section className="rounded-2xl border-l-2 border-primary bg-card/50 p-6 md:p-8">
+              <h2 className="mb-1 text-xs font-semibold uppercase tracking-widest text-primary">
+                Trade-off
+              </h2>
+              <p className="mb-4 text-xs italic text-muted-foreground">
+                What the scoping call cost us downstream.
+              </p>
+              <div className="space-y-4">
+                {project.tradeOff.split(/\n\n+/).map((para, i) => (
+                  <p key={i} className="text-lg leading-relaxed text-foreground">
+                    {para}
+                  </p>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </div>
 

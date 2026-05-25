@@ -22,6 +22,7 @@ export type Project = {
   strategy: string;
   insights: string;
   outcome: string;
+  tradeOff?: string;
   featured?: boolean;
   signals?: RoleSignal[];
 };
@@ -65,7 +66,8 @@ export const projects: Project[] = [
       "User interviews shaped framing. Competitive analysis informed docs and architecture. Internal developer interviews surfaced reconciliation gaps. Sales scrums exposed GTM blind spots.\n\nDeliberately de-scoped Seamless Connect and email-campaign automation from v1. Neither consumed credits, so neither moved the revenue metric the MVP existed to prove.\n\nThe forecast model surfaced that mid-market credit velocity was outpacing the SMB curve, redirecting GTM toward mid-market sooner than the original plan.",
     outcome:
       "$1M booked ARR in year one. Forecast model became the basis of the year-two sales plan.",
-
+    tradeOff:
+      "Scoping v1 around research and search (and explicitly excluding Email Campaign and Connect integration) was the right call to prove the revenue model fast. The side effect: Connect started reading as a non-core feature, both internally and to early API customers.\n\nThe bill came due at MCP. We had to work double-time to retrofit Connect into the MCP surface, and testing got materially more involved because the Connect paths hadn't been exercised through the API contract from day one. Right call at the time. More work down the line.",
     featured: true,
     signals: ["Senior PM"],
   },

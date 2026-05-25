@@ -431,55 +431,57 @@ function Index() {
       </section>
 
 
-      {/* Toolkit */}
+      {/* Toolkit — two-column with sticky title rail */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-          <div className="mb-16">
-            <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              Toolkit // 01
-            </p>
-            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
-              Skills and Tools
-            </h2>
-          </div>
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+          <div className="grid gap-12 md:grid-cols-[16rem_1fr] md:gap-16">
+            <aside className="md:sticky md:top-24 md:self-start">
+              <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+                Toolkit
+              </p>
+              <h2 className="font-sans text-3xl font-extrabold leading-[1] tracking-tighter text-foreground md:text-5xl">
+                What I reach
+                <br />
+                for.
+              </h2>
+              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+                Primary tools in bold. Supporting kit underneath.
+              </p>
+            </aside>
 
-          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-            {toolkit.map((group, i) => {
-              const primaries = group.items.filter((it) => it.primary);
-              const supporting = group.items.filter((it) => !it.primary);
-              return (
-                <div key={group.label} className="flex flex-col bg-background p-8">
-                  <p className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                    0{i + 1} · {group.label}
-                  </p>
-
-
-                  <ul className="space-y-3">
-                    {primaries.map((it) => (
-                      <li key={it.name}>
-                        <p className="font-sans text-base font-bold text-foreground">{it.name}</p>
-                        {it.children && (
-                          <p className="mt-1 font-mono text-[11px] tracking-wide text-muted-foreground">
-                            {it.children.join(" · ")}
-                          </p>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                  {supporting.length > 0 && (
-                    <ul className="mt-6 space-y-1.5 border-t border-border pt-5 text-sm text-muted-foreground">
-                      {supporting.map((it) => (
-                        <li key={it.name}>{it.name}</li>
+            <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+              {toolkit.map((group, i) => {
+                const primaries = group.items.filter((it) => it.primary);
+                const supporting = group.items.filter((it) => !it.primary);
+                return (
+                  <div key={group.label} className="flex flex-col bg-background p-7">
+                    <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                      0{i + 1} · {group.label}
+                    </p>
+                    <ul className="space-y-3">
+                      {primaries.map((it) => (
+                        <li key={it.name}>
+                          <p className="font-sans text-base font-bold text-foreground">{it.name}</p>
+                          {it.children && (
+                            <p className="mt-1 font-mono text-[11px] tracking-wide text-muted-foreground">
+                              {it.children.join(" · ")}
+                            </p>
+                          )}
+                        </li>
                       ))}
                     </ul>
-                  )}
-                </div>
-              );
-            })}
+                    {supporting.length > 0 && (
+                      <ul className="mt-6 space-y-1.5 border-t border-border pt-5 text-sm text-muted-foreground">
+                        {supporting.map((it) => (
+                          <li key={it.name}>{it.name}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
-
-
-
 
           {/* ATS-searchable keyword row — hidden visually, present for crawlers */}
           <div className="sr-only">
@@ -494,6 +496,7 @@ function Index() {
           </div>
         </div>
       </section>
+
 
 
 

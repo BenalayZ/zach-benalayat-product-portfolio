@@ -40,7 +40,7 @@ const experience = [
   {
     period: "2022–2024",
     company: "Inseego",
-    role: "Business Systems Analyst — Sales Analytics",
+    role: "Business Systems Analyst · Sales Analytics",
     points: [
       "SQL + Python analysis of customer, sales, and federal contracting datasets. Recommended a microtargeting shift that sales leadership adopted, driving $1M+ in enterprise contract uplift in the first re-targeting cycle.",
       "Built Power BI analytics frameworks tracking adoption, engagement, and bundling performance on US Navy contracts.",

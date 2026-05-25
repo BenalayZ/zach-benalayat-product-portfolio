@@ -28,7 +28,7 @@ const experience = [
   {
     period: "2024–2026",
     company: "Seamless.AI",
-    role: "Product Manager II — Data Operations & Tech Projects",
+    role: "Product Manager II · Data Operations & Tech Projects",
     points: [
       "Defined product OKRs and analytics frameworks measuring API adoption, engagement, and conversion across customer touchpoints.",
       "Behavioral funnel analysis across search, discovery, and purchase. Surfaced UX changes that reduced search time by 25%.",

@@ -26,7 +26,7 @@ export const Route = createFileRoute("/about")({
 
 const experience = [
   {
-    period: "2024 — 2026",
+    period: "2024–2026",
     company: "Seamless.AI",
     role: "Product Manager II — Data Operations & Tech Projects",
     points: [
@@ -38,7 +38,7 @@ const experience = [
     ],
   },
   {
-    period: "2022 — 2024",
+    period: "2022–2024",
     company: "Inseego",
     role: "Business Systems Analyst — Sales Analytics",
     points: [
@@ -49,7 +49,7 @@ const experience = [
     ],
   },
   {
-    period: "2019 — 2022",
+    period: "2019–2022",
     company: "CaseWorthy",
     role: "Systems Analyst",
     points: [
@@ -59,7 +59,7 @@ const experience = [
     ],
   },
   {
-    period: "2018 — 2023",
+    period: "2018–2023",
     company: "Latin Hyper-Texts, Butler School of Music",
     role: "Data Architect",
     points: [
@@ -72,12 +72,12 @@ const experience = [
 
 const education = [
   {
-    period: "2017 — 2019",
+    period: "2017–2019",
     school: "University of Texas at Austin",
     focus: "Information Science · Database Administration · Data Analysis",
   },
   {
-    period: "2013 — 2017",
+    period: "2013–2017",
     school: "Dickinson College",
     focus: "Data Science · Forensics · Anthropology",
   },

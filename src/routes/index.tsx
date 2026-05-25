@@ -637,16 +637,13 @@ function Index() {
       </section>
 
 
-      {/* More Work */}
+      {/* More Work — minimal ribbon, no big heading, grid does the talking */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-          <div className="mb-16">
-            <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              Selected Work // 02
-            </p>
-            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
-              The rest of the portfolio
-            </h2>
+        <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
+          <div className="mb-10 flex items-baseline gap-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+            <span>02 / 02</span>
+            <span className="h-px flex-1 bg-secondary/40" />
+            <span className="text-muted-foreground">More from the portfolio</span>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -656,6 +653,7 @@ function Index() {
           </div>
         </div>
       </section>
+
 
 
       {/* CTA */}

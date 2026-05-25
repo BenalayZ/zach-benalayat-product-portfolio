@@ -265,8 +265,8 @@ function AboutPage() {
 
       <hr className="my-12 border-border" />
 
-      <div className="mb-8">
-        <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+      <div className="mb-8 border-l-2 border-primary pl-5">
+        <p className="mb-2 text-xs font-medium uppercase tracking-[0.25em] text-primary">
           Principles
         </p>
         <h2 className="text-2xl font-bold text-foreground">Product Strategy North Stars</h2>
@@ -287,11 +287,11 @@ function AboutPage() {
 
       <hr className="my-12 border-border" />
 
-      <div className="mb-8">
-        <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
-          Process
-        </p>
+      <div className="mb-8 flex flex-wrap items-baseline justify-between gap-3 border-b border-border pb-3">
         <h2 className="text-2xl font-bold text-foreground">How I work a problem</h2>
+        <p className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+          Process / 05 steps
+        </p>
       </div>
       <ol className="relative space-y-6 border-l border-border pl-6">
         {steps.map((step, i) => (
@@ -306,12 +306,12 @@ function AboutPage() {
 
       <hr className="my-12 border-border" />
 
-      <div className="mb-8">
-        <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
-          Toolkit
-        </p>
-        <h2 className="text-2xl font-bold text-foreground">Tools &amp; Methods</h2>
-      </div>
+      <h2 className="mb-8 text-2xl font-bold text-foreground">
+        Tools &amp; Methods
+        <span className="ml-3 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary align-middle">
+          / Toolkit
+        </span>
+      </h2>
       <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
         {toolGroups.map((group, i) => {
           const primaries = group.items.filter((it) => it.primary);

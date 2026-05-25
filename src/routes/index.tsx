@@ -431,55 +431,57 @@ function Index() {
       </section>
 
 
-      {/* Toolkit */}
+      {/* Toolkit — two-column with sticky title rail */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-          <div className="mb-16">
-            <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              Toolkit // 01
-            </p>
-            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
-              Skills and Tools
-            </h2>
-          </div>
+        <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
+          <div className="grid gap-12 md:grid-cols-[16rem_1fr] md:gap-16">
+            <aside className="md:sticky md:top-24 md:self-start">
+              <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+                Toolkit
+              </p>
+              <h2 className="font-sans text-3xl font-extrabold leading-[1] tracking-tighter text-foreground md:text-5xl">
+                What I reach
+                <br />
+                for.
+              </h2>
+              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+                Primary tools in bold. Supporting kit underneath.
+              </p>
+            </aside>
 
-          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-            {toolkit.map((group, i) => {
-              const primaries = group.items.filter((it) => it.primary);
-              const supporting = group.items.filter((it) => !it.primary);
-              return (
-                <div key={group.label} className="flex flex-col bg-background p-8">
-                  <p className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                    0{i + 1} · {group.label}
-                  </p>
-
-
-                  <ul className="space-y-3">
-                    {primaries.map((it) => (
-                      <li key={it.name}>
-                        <p className="font-sans text-base font-bold text-foreground">{it.name}</p>
-                        {it.children && (
-                          <p className="mt-1 font-mono text-[11px] tracking-wide text-muted-foreground">
-                            {it.children.join(" · ")}
-                          </p>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                  {supporting.length > 0 && (
-                    <ul className="mt-6 space-y-1.5 border-t border-border pt-5 text-sm text-muted-foreground">
-                      {supporting.map((it) => (
-                        <li key={it.name}>{it.name}</li>
+            <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
+              {toolkit.map((group, i) => {
+                const primaries = group.items.filter((it) => it.primary);
+                const supporting = group.items.filter((it) => !it.primary);
+                return (
+                  <div key={group.label} className="flex flex-col bg-background p-7">
+                    <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+                      0{i + 1} · {group.label}
+                    </p>
+                    <ul className="space-y-3">
+                      {primaries.map((it) => (
+                        <li key={it.name}>
+                          <p className="font-sans text-base font-bold text-foreground">{it.name}</p>
+                          {it.children && (
+                            <p className="mt-1 font-mono text-[11px] tracking-wide text-muted-foreground">
+                              {it.children.join(" · ")}
+                            </p>
+                          )}
+                        </li>
                       ))}
                     </ul>
-                  )}
-                </div>
-              );
-            })}
+                    {supporting.length > 0 && (
+                      <ul className="mt-6 space-y-1.5 border-t border-border pt-5 text-sm text-muted-foreground">
+                        {supporting.map((it) => (
+                          <li key={it.name}>{it.name}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
-
-
-
 
           {/* ATS-searchable keyword row — hidden visually, present for crawlers */}
           <div className="sr-only">
@@ -497,24 +499,19 @@ function Index() {
 
 
 
-      {/* Featured Projects */}
+
+      {/* Featured Projects — inline masthead scaffold */}
       <section id="work" className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-          <div className="mb-16 flex items-end justify-between gap-6">
-            <div>
-              <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
-                Selected Work // 01
-              </p>
-              <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
-                Featured Projects
-              </h2>
+          <div className="mb-12 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-4 border-b border-secondary/40 pb-6">
+            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-6xl">
+              Featured projects
+            </h2>
+            <div className="flex items-baseline gap-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+              <span>Selected Work</span>
+              <span className="h-px w-8 translate-y-[-3px] bg-primary/60" />
+              <span>01 / 02</span>
             </div>
-            <Link
-              to="/about"
-              className="hidden items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/80 md:inline-flex"
-            >
-              Full experience <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -522,31 +519,42 @@ function Index() {
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
+
+          <div className="mt-10 hidden justify-end md:flex">
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/80"
+            >
+              Full experience <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Top Skills — grid with hairline dividers */}
+
+      {/* Top Skills — full-width numbered editorial rows, no grid */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-          <div className="mb-16">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              How I work
-            </p>
-            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
-              Top Skills
-            </h2>
-          </div>
+          <p className="mb-2 font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+            How I work
+          </p>
+          <h2 className="mb-16 max-w-3xl font-sans text-4xl font-extrabold leading-[1] tracking-tighter text-foreground md:text-6xl">
+            Four things I do well, repeatedly.
+          </h2>
 
-          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
+          <div className="divide-y divide-border border-y border-border">
             {skills.map((skill, i) => (
-              <div key={skill.title} className="bg-background p-8">
-                <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+              <div
+                key={skill.title}
+                className="grid grid-cols-[3rem_1fr] gap-6 py-8 md:grid-cols-[5rem_minmax(0,18rem)_1fr] md:gap-10 md:py-10"
+              >
+                <span className="font-sans text-3xl font-extrabold leading-none tracking-tighter text-primary md:text-5xl">
                   0{i + 1}
-                </p>
-                <h3 className="mb-4 font-sans text-xl font-bold text-foreground">
+                </span>
+                <h3 className="font-sans text-xl font-bold leading-tight text-foreground md:text-2xl">
                   {skill.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
+                <p className="col-span-2 text-base leading-relaxed text-muted-foreground md:col-span-1 md:max-w-md">
                   {skill.body}
                 </p>
               </div>
@@ -555,75 +563,90 @@ function Index() {
         </div>
       </section>
 
-      {/* Engagement Models */}
+
+      {/* Engagement Models — right-aligned header + asymmetric featured-first row */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-          <div className="mb-16">
-            <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              Engagement Models // 01
-            </p>
-            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
-              Three ways to work together
+          <div className="mb-16 md:ml-auto md:max-w-xl md:text-right">
+            <h2 className="font-sans text-4xl font-extrabold leading-[1] tracking-tighter text-foreground md:text-5xl">
+              Three ways to work together.
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground">
               Full-time is the priority. Contract and consulting are how I help while the right seat opens up.
             </p>
+            <p className="mt-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+              Engagement Models
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
-            {engagementModels.map((m, i) => (
-              <div key={m.label} className="flex flex-col bg-background p-8">
-                <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                  0{i + 1} · {m.label}
-                </p>
-                <h3 className="mb-4 font-sans text-xl font-bold text-foreground">
-                  {m.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{m.body}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-12">
+            {engagementModels.map((m, i) => {
+              const featured = i === 0;
+              return (
+                <div
+                  key={m.label}
+                  className={`${featured ? "md:col-span-6" : "md:col-span-3"} flex flex-col justify-between bg-background p-8`}
+                >
+                  <div>
+                    <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+                      {m.label}
+                    </p>
+                    <h3
+                      className={`mb-4 font-sans font-bold text-foreground ${
+                        featured ? "text-2xl md:text-3xl tracking-tighter" : "text-lg"
+                      }`}
+                    >
+                      {m.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{m.body}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
+
+      {/* FAQ — header lives inline with the first question column */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-          <div className="mb-16">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              FAQ
-            </p>
-            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
-              Common questions
-            </h2>
+          <div className="grid gap-10 md:grid-cols-[14rem_1fr] md:gap-16">
+            <div className="md:sticky md:top-24 md:self-start">
+              <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+                FAQ
+              </p>
+              <h2 className="font-sans text-3xl font-extrabold leading-[1] tracking-tighter text-foreground md:text-4xl">
+                Common
+                <br />
+                questions.
+              </h2>
+            </div>
+            <dl className="divide-y divide-border border-y border-border">
+              {faqs.map((f, i) => (
+                <div key={f.q} className="grid gap-3 py-7 md:grid-cols-[auto_1fr] md:gap-6">
+                  <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                    Q_{String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <dt className="font-sans text-lg font-bold text-foreground">{f.q}</dt>
+                    <dd className="mt-2 text-base leading-relaxed text-muted-foreground">{f.a}</dd>
+                  </div>
+                </div>
+              ))}
+            </dl>
           </div>
-          <dl className="divide-y divide-border border-y border-border">
-            {faqs.map((f, i) => (
-              <div
-                key={f.q}
-                className="grid gap-4 py-8 md:grid-cols-[auto_1fr_2fr] md:gap-8"
-              >
-                <span className="hidden font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary md:block">
-                  Q_{String(i + 1).padStart(2, "0")}
-                </span>
-                <dt className="font-sans text-lg font-bold text-foreground">{f.q}</dt>
-                <dd className="text-base leading-relaxed text-muted-foreground">{f.a}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </section>
 
-      {/* More Work */}
+
+      {/* More Work — minimal ribbon, no big heading, grid does the talking */}
       <section className="border-b border-border">
-        <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-          <div className="mb-16">
-            <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              Selected Work // 02
-            </p>
-            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
-              The rest of the portfolio
-            </h2>
+        <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
+          <div className="mb-10 flex items-baseline gap-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+            <span>02 / 02</span>
+            <span className="h-px flex-1 bg-secondary/40" />
+            <span className="text-muted-foreground">More from the portfolio</span>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -633,6 +656,7 @@ function Index() {
           </div>
         </div>
       </section>
+
 
 
       {/* CTA */}

@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Zach Benalayat — Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI. Available now.",
+          "Zach Benalayat. Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI. Available now.",
       },
       { property: "og:title", content: "Zach Benalayat — Product & Data Analyst" },
       {
@@ -450,7 +450,7 @@ function Index() {
               return (
                 <div key={group.label} className="flex flex-col bg-background p-8">
                   <p className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                    0{i + 1} — {group.label}
+                    0{i + 1} · {group.label}
                   </p>
 
 
@@ -574,7 +574,7 @@ function Index() {
             {engagementModels.map((m, i) => (
               <div key={m.label} className="flex flex-col bg-background p-8">
                 <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                  0{i + 1} — {m.label}
+                  0{i + 1} · {m.label}
                 </p>
                 <h3 className="mb-4 font-sans text-xl font-bold text-foreground">
                   {m.title}

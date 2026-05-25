@@ -10,7 +10,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "About Zach Benalayat — Senior Product Analyst, BA, DA, and BI. SQL, Python, Power BI, and Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, consumer marketplaces, and operations.",
+          "About Zach Benalayat. Senior Product Analyst, BA, DA, and BI. SQL, Python, Power BI, and Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, consumer marketplaces, and operations.",
       },
       { property: "og:title", content: "About Zach Benalayat" },
       {
@@ -26,9 +26,9 @@ export const Route = createFileRoute("/about")({
 
 const experience = [
   {
-    period: "2024 — 2026",
+    period: "2024–2026",
     company: "Seamless.AI",
-    role: "Product Manager II — Data Operations & Tech Projects",
+    role: "Product Manager II · Data Operations & Tech Projects",
     points: [
       "Defined product OKRs and analytics frameworks measuring API adoption, engagement, and conversion across customer touchpoints.",
       "Behavioral funnel analysis across search, discovery, and purchase. Surfaced UX changes that reduced search time by 25%.",
@@ -38,9 +38,9 @@ const experience = [
     ],
   },
   {
-    period: "2022 — 2024",
+    period: "2022–2024",
     company: "Inseego",
-    role: "Business Systems Analyst — Sales Analytics",
+    role: "Business Systems Analyst · Sales Analytics",
     points: [
       "SQL + Python analysis of customer, sales, and federal contracting datasets. Recommended a microtargeting shift that sales leadership adopted, driving $1M+ in enterprise contract uplift in the first re-targeting cycle.",
       "Built Power BI analytics frameworks tracking adoption, engagement, and bundling performance on US Navy contracts.",
@@ -49,7 +49,7 @@ const experience = [
     ],
   },
   {
-    period: "2019 — 2022",
+    period: "2019–2022",
     company: "CaseWorthy",
     role: "Systems Analyst",
     points: [
@@ -59,7 +59,7 @@ const experience = [
     ],
   },
   {
-    period: "2018 — 2023",
+    period: "2018–2023",
     company: "Latin Hyper-Texts, Butler School of Music",
     role: "Data Architect",
     points: [
@@ -72,12 +72,12 @@ const experience = [
 
 const education = [
   {
-    period: "2017 — 2019",
+    period: "2017–2019",
     school: "University of Texas at Austin",
     focus: "Information Science · Database Administration · Data Analysis",
   },
   {
-    period: "2013 — 2017",
+    period: "2013–2017",
     school: "Dickinson College",
     focus: "Data Science · Forensics · Anthropology",
   },
@@ -319,7 +319,7 @@ function AboutPage() {
           return (
             <div key={group.label} className="flex flex-col bg-background p-6">
               <p className="mb-2 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                0{i + 1} — {group.label}
+                0{i + 1} · {group.label}
               </p>
 
 

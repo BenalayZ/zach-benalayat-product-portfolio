@@ -265,8 +265,8 @@ function AboutPage() {
 
       <hr className="my-12 border-border" />
 
-      <div className="mb-8">
-        <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
+      <div className="mb-8 border-l-2 border-primary pl-5">
+        <p className="mb-2 text-xs font-medium uppercase tracking-[0.25em] text-primary">
           Principles
         </p>
         <h2 className="text-2xl font-bold text-foreground">Product Strategy North Stars</h2>

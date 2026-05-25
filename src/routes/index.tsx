@@ -561,36 +561,49 @@ function Index() {
       </section>
 
 
-      {/* Engagement Models */}
+      {/* Engagement Models — right-aligned header + asymmetric featured-first row */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-          <div className="mb-16">
-            <p className="mb-3 font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              Engagement Models // 01
-            </p>
-            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
-              Three ways to work together
+          <div className="mb-16 md:ml-auto md:max-w-xl md:text-right">
+            <h2 className="font-sans text-4xl font-extrabold leading-[1] tracking-tighter text-foreground md:text-5xl">
+              Three ways to work together.
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+            <p className="mt-5 text-base leading-relaxed text-muted-foreground">
               Full-time is the priority. Contract and consulting are how I help while the right seat opens up.
+            </p>
+            <p className="mt-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+              Engagement Models
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
-            {engagementModels.map((m, i) => (
-              <div key={m.label} className="flex flex-col bg-background p-8">
-                <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                  0{i + 1} · {m.label}
-                </p>
-                <h3 className="mb-4 font-sans text-xl font-bold text-foreground">
-                  {m.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">{m.body}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-12">
+            {engagementModels.map((m, i) => {
+              const featured = i === 0;
+              return (
+                <div
+                  key={m.label}
+                  className={`${featured ? "md:col-span-6" : "md:col-span-3"} flex flex-col justify-between bg-background p-8`}
+                >
+                  <div>
+                    <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+                      {m.label}
+                    </p>
+                    <h3
+                      className={`mb-4 font-sans font-bold text-foreground ${
+                        featured ? "text-2xl md:text-3xl tracking-tighter" : "text-lg"
+                      }`}
+                    >
+                      {m.title}
+                    </h3>
+                  </div>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{m.body}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
+
 
       {/* FAQ */}
       <section className="border-b border-border">

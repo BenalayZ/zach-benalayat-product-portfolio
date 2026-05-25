@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Zach Benalayat — Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI. Available now.",
+          "Zach Benalayat. Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI. Available now.",
       },
       { property: "og:title", content: "Zach Benalayat — Product & Data Analyst" },
       {

@@ -574,7 +574,7 @@ function Index() {
             {engagementModels.map((m, i) => (
               <div key={m.label} className="flex flex-col bg-background p-8">
                 <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-                  0{i + 1} — {m.label}
+                  0{i + 1} · {m.label}
                 </p>
                 <h3 className="mb-4 font-sans text-xl font-bold text-foreground">
                   {m.title}

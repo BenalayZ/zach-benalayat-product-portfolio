@@ -529,28 +529,29 @@ function Index() {
       </section>
 
 
-      {/* Top Skills — grid with hairline dividers */}
+      {/* Top Skills — full-width numbered editorial rows, no grid */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-          <div className="mb-16">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              How I work
-            </p>
-            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
-              Top Skills
-            </h2>
-          </div>
+          <p className="mb-2 font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
+            How I work
+          </p>
+          <h2 className="mb-16 max-w-3xl font-sans text-4xl font-extrabold leading-[1] tracking-tighter text-foreground md:text-6xl">
+            Four things I do well, repeatedly.
+          </h2>
 
-          <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-4">
+          <div className="divide-y divide-border border-y border-border">
             {skills.map((skill, i) => (
-              <div key={skill.title} className="bg-background p-8">
-                <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
+              <div
+                key={skill.title}
+                className="grid grid-cols-[3rem_1fr] gap-6 py-8 md:grid-cols-[5rem_minmax(0,18rem)_1fr] md:gap-10 md:py-10"
+              >
+                <span className="font-sans text-3xl font-extrabold leading-none tracking-tighter text-primary md:text-5xl">
                   0{i + 1}
-                </p>
-                <h3 className="mb-4 font-sans text-xl font-bold text-foreground">
+                </span>
+                <h3 className="font-sans text-xl font-bold leading-tight text-foreground md:text-2xl">
                   {skill.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
+                <p className="col-span-2 text-base leading-relaxed text-muted-foreground md:col-span-1 md:max-w-md">
                   {skill.body}
                 </p>
               </div>
@@ -558,6 +559,7 @@ function Index() {
           </div>
         </div>
       </section>
+
 
       {/* Engagement Models */}
       <section className="border-b border-border">

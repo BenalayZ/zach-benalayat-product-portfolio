@@ -605,33 +605,37 @@ function Index() {
       </section>
 
 
-      {/* FAQ */}
+      {/* FAQ — header lives inline with the first question column */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
-          <div className="mb-16">
-            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-primary">
-              FAQ
-            </p>
-            <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-5xl">
-              Common questions
-            </h2>
+          <div className="grid gap-10 md:grid-cols-[14rem_1fr] md:gap-16">
+            <div className="md:sticky md:top-24 md:self-start">
+              <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+                FAQ
+              </p>
+              <h2 className="font-sans text-3xl font-extrabold leading-[1] tracking-tighter text-foreground md:text-4xl">
+                Common
+                <br />
+                questions.
+              </h2>
+            </div>
+            <dl className="divide-y divide-border border-y border-border">
+              {faqs.map((f, i) => (
+                <div key={f.q} className="grid gap-3 py-7 md:grid-cols-[auto_1fr] md:gap-6">
+                  <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
+                    Q_{String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <dt className="font-sans text-lg font-bold text-foreground">{f.q}</dt>
+                    <dd className="mt-2 text-base leading-relaxed text-muted-foreground">{f.a}</dd>
+                  </div>
+                </div>
+              ))}
+            </dl>
           </div>
-          <dl className="divide-y divide-border border-y border-border">
-            {faqs.map((f, i) => (
-              <div
-                key={f.q}
-                className="grid gap-4 py-8 md:grid-cols-[auto_1fr_2fr] md:gap-8"
-              >
-                <span className="hidden font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary md:block">
-                  Q_{String(i + 1).padStart(2, "0")}
-                </span>
-                <dt className="font-sans text-lg font-bold text-foreground">{f.q}</dt>
-                <dd className="text-base leading-relaxed text-muted-foreground">{f.a}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </section>
+
 
       {/* More Work */}
       <section className="border-b border-border">

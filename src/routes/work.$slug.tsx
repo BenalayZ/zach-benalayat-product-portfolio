@@ -30,7 +30,7 @@ export const Route = createFileRoute("/work/$slug")({
     <div className="mx-auto max-w-2xl px-6 py-24 text-center">
       <h1 className="text-3xl font-bold text-foreground">Case study not found</h1>
       <p className="mt-3 text-muted-foreground">
-        That project doesn&apos;t exist — it may have been moved.
+        That project doesn&apos;t exist. It may have been moved.
       </p>
       <Link
         to="/"

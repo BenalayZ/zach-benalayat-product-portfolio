@@ -287,11 +287,11 @@ function AboutPage() {
 
       <hr className="my-12 border-border" />
 
-      <div className="mb-8">
-        <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
-          Process
-        </p>
+      <div className="mb-8 flex flex-wrap items-baseline justify-between gap-3 border-b border-border pb-3">
         <h2 className="text-2xl font-bold text-foreground">How I work a problem</h2>
+        <p className="font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+          Process / 05 steps
+        </p>
       </div>
       <ol className="relative space-y-6 border-l border-border pl-6">
         {steps.map((step, i) => (

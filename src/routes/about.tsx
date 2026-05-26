@@ -87,22 +87,21 @@ const northStars = [
   {
     title: "A moment that stuck",
     quote:
-      "The first time a Power BI dashboard talked a sales VP out of a roadmap ask, I stopped writing decks for that kind of meeting. The dashboard does the arguing now.",
+      "The first time a dashboard I built talked a sales VP out of a bad roadmap ask, I realized I didn't need to write another strategy deck for that kind of meeting. He looked at the funnel for thirty seconds and killed the idea himself. The numbers do the arguing now.",
   },
   {
     title: "Unpopular opinion",
     quote:
-      "Most annual roadmaps are a confidence ritual. A team that can change direction inside a sprint beats one with a beautifully prioritized 12-month plan, every time.",
+      "Most annual roadmaps are confidence rituals. I'd rather ship something small on Tuesday and have real usage data by Friday than spend three quarters debating priorities in a spreadsheet.",
   },
   {
     title: "Rule of thumb",
-    quote:
-      "Name the metric. Ship the smallest thing that moves it. Look at it on Monday.",
+    quote: "Name the metric. Ship small. Check Monday.",
   },
   {
     title: "A question I ask early",
     quote:
-      "If nobody can tell me what decision changes when this number moves, why are we building the dashboard?",
+      "If nobody can tell me what decision changes when this number moves, we're not building a dashboard. We're building decoration.",
   },
 ];
 

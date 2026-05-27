@@ -1,0 +1,17 @@
+{
+  "name": "Zach Benalayat",
+  "ownerEmail": "zacharia.benalayat@gmail.com",
+  "linkedinUrl": "https://www.linkedin.com/in/zach-benalayat/",
+  "resumeFile": "Zach_J_Benalayat.pdf",
+  "nav": [
+    { "label": "Work", "to": "/" },
+    { "label": "About", "to": "/about" },
+    { "label": "Contact", "to": "/contact" }
+  ],
+  "footer": {
+    "links": [
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/zach-benalayat" },
+      { "label": "Email", "href": "mailto:zacharia.benalayat@gmail.com" }
+    ]
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "seo": {
+    "title": "Zach Benalayat — Product & Data Analyst",
+    "description": "Zach Benalayat. Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI. Available now.",
+    "ogDescription": "SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI. Shipped a customer-facing API to $1M booked ARR. Available now."
+  },
+  "hero": {
+    "monogram": "BENALAYAT",
+    "nameLabel": "Zach Benalayat",
+    "eyebrow": "6+ years · B2B SaaS · IoT · AI",
+    "headlineLine1": "Product & Data",
+    "headlineLine2": "Analyst",
+    "tagline": "SQL, Python, Power BI, and Snowflake. I dig into the data, find what's actually driving revenue, and turn it into the decision.",
+    "metaPoints": [
+      "Austin, Texas · Remote-first, open to hybrid",
+      "Most recently: Product Manager II, Seamless.AI"
+    ],
+    "ctaPrimary": "See the work",
+    "ctaResume": "Download resume",
+    "availability": "Available now · Full-Time or Contract",
+    "proofStats": [
+      { "track": "Senior BI", "value": "$1M+ ARR", "label": "Inseego Connect · Power BI funnel" },
+      { "track": "Senior BI", "value": "46%", "label": "Faster intake · Arc of Southern Maryland service operations analytics" },
+      { "track": "Analytics-Led PM", "value": "$1M ARR", "label": "Seamless API 0→1" }
+    ]
+  },
+  "logosBand": {
+    "label": "Organizations I've worked with",
+    "logos": [
+      { "name": "Seamless.AI", "key": "seamless" },
+      { "name": "Inseego", "key": "inseego" },
+      { "name": "CaseWorthy", "key": "caseworthy" },
+      { "name": "The Arc Southern Maryland", "key": "arc" },
+      { "name": "Butler School of Music", "key": "butler" }
+    ]
+  },
+  "approach": {
+    "eyebrow": "Approach",
+    "headlineLine1": "The analysis comes first.",
+    "headlineLine2": "The product bet comes out of it.",
+    "body1": "I instrument before I argue. Every call I've shipped started with a KPI tree, a dashboard, and a SQL query.",
+    "body2": "The PRD, the roadmap, and the launch plan follow what the data shows, not what a meeting decided.",
+    "sectionNumber": "01"
+  },
+  "toolkit": {
+    "eyebrow": "Toolkit",
+    "headlineLine1": "What I reach",
+    "headlineLine2": "for.",
+    "subtitle": "Primary tools in bold. Supporting kit underneath.",
+    "groups": [
+      {
+        "label": "Certifications",
+        "items": [
+          { "name": "Agile / Scrum / Project Management", "primary": true, "children": ["Atlassian"] },
+          { "name": "Data Management", "primary": true, "children": ["UT Austin"] }
+        ]
+      },
+      {
+        "label": "Languages & Querying",
+        "items": [
+          { "name": "SQL", "primary": true, "children": ["PostgreSQL", "MySQL", "ELT", "ETL"] },
+          { "name": "Python", "primary": true, "children": ["pandas", "NumPy", "matplotlib"] },
+          { "name": "R" }
+        ]
+      },
+      {
+        "label": "Data Platforms",
+        "items": [
+          { "name": "Snowflake", "primary": true },
+          { "name": "Microsoft Fabric", "primary": true },
+          { "name": "Databricks", "primary": true },
+          { "name": "Redshift", "primary": true },
+          { "name": "dbt" },
+          { "name": "BigQuery" },
+          { "name": "Amazon S3" }
+        ]
+      },
+      {
+        "label": "BI & Reporting",
+        "items": [
+          { "name": "Power BI", "primary": true, "children": ["DAX", "Semantic Modeling", "RLS"] },
+          { "name": "Tableau", "primary": true },
+          { "name": "Amplitude", "primary": true },
+          { "name": "Looker" },
+          { "name": "Google Analytics" },
+          { "name": "Excel / Sheets" }
+        ]
+      },
+      {
+        "label": "Product & Delivery",
+        "items": [
+          { "name": "Jira", "primary": true },
+          { "name": "GitHub", "primary": true },
+          { "name": "Notion", "primary": true },
+          { "name": "Kanban", "primary": true },
+          { "name": "Confluence" },
+          { "name": "SharePoint" },
+          { "name": "ServiceNow" },
+          { "name": "N8N" }
+        ]
+      },
+      {
+        "label": "AI & Agentic Tooling",
+        "items": [
+          { "name": "Claude Code", "primary": true },
+          { "name": "OpenAI Agents", "primary": true },
+          { "name": "GitHub Copilot", "primary": true },
+          { "name": "Lovable" },
+          { "name": "Claude Cowork" },
+          { "name": "Cursor" }
+        ]
+      }
+    ],
+    "atsKeywords": "Product Manager, Senior Product Manager, Data Analyst, Product Analytics, Business Analyst, SQL, Python, R, pandas, NumPy, Snowflake, Databricks, Redshift, BigQuery, dbt, ETL, ELT, Data Warehousing, Power BI, Tableau, Looker, Amplitude, Google Analytics, A/B Testing, Funnel Analysis, Cohort Analysis, KPI Design, OKRs, PRD, Roadmap, Agile, Scrum, Kanban, Jira, Confluence, GitHub, B2B SaaS, IoT, Telecom, Agentic AI, MCP, GTM Strategy, Identity Resolution, Cost Modeling, Time to Value."
+  },
+  "featuredHeading": "Featured projects",
+  "featuredEyebrow": "Selected Work",
+  "moreEyebrow": "More from the portfolio",
+  "skills": {
+    "eyebrow": "How I work",
+    "headline": "Four things I do well, repeatedly.",
+    "items": [
+      {
+        "title": "BI & Executive Dashboarding",
+        "body": "Power BI, Looker, Tableau on Snowflake, plus the semantic modeling and ETL that make them trustworthy."
+      },
+      {
+        "title": "Product Analytics & Experimentation",
+        "body": "A/B tests, funnels, and cohorts in SQL and Python. I design the KPI before I touch the dashboard."
+      },
+      {
+        "title": "Data & SQL Engineering",
+        "body": "Stored procedures, ETL pipelines, identity resolution. The plumbing nobody notices until it breaks."
+      },
+      {
+        "title": "Analytics-Led Product Delivery",
+        "body": "PRDs, OKRs, and roadmap bets that come from the analysis, not the other way around."
+      }
+    ]
+  },
+  "engagement": {
+    "eyebrow": "Engagement Models",
+    "headline": "Three ways to work together.",
+    "subtitle": "Full-time is the priority. Contract and consulting are how I help while the right seat opens up.",
+    "models": [
+      {
+        "label": "Full-Time",
+        "title": "Senior Analyst · BI Lead · Analytics-Led PM",
+        "body": "Embedded ownership of analytics, BI, or an analytics-led product team. Remote-first, open to hybrid."
+      },
+      {
+        "label": "Contract",
+        "title": "3–12 month embedded engagement",
+        "body": "Drop-in analyst, BI, or PM ownership for a launch, replatform, or BI rebuild."
+      },
+      {
+        "label": "Consulting",
+        "title": "Scoped audits & deliverables",
+        "body": "Analytics audits, KPI trees, dashboards, instrumentation reviews, PRDs."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "headlineLine1": "Common",
+    "headlineLine2": "questions.",
+    "items": [
+      {
+        "q": "What kinds of engagements are you open to?",
+        "a": "Full-time Senior Analyst, BI Lead, or analytics-led PM. Open to contract too: analytics audits, KPI design, BI builds, PRDs, 0→1 launches."
+      },
+      {
+        "q": "What types of products have you shipped?",
+        "a": "B2B SaaS, IoT and telecom, AI platforms (MCP shipped on the GPT and Claude stores), data infrastructure, and nonprofit case management."
+      },
+      {
+        "q": "Do you lead analytics or product strategy?",
+        "a": "Both. I write the SQL, build the dashboards, run the A/B tests, then turn what they say into PRDs, OKRs, and roadmap bets."
+      },
+      {
+        "q": "What does your typical process look like from idea to launch?",
+        "a": "Objectives, then research, then the KPI framework, then the PRD, then ship, then watch the funnels and cohorts. The launch is the start of the work, not the end."
+      },
+      {
+        "q": "How do I get in touch?",
+        "a": "Email zacharia.benalayat@gmail.com or LinkedIn at linkedin.com/in/zach-benalayat. Resume downloads from any page."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Ready to ship?",
+    "body": "Open to full-time Senior PM or Senior BI roles, plus contract and consulting work. If you've got a problem worth solving, send it over.",
+    "emailLabel": "Send an email",
+    "linkedinLabel": "LinkedIn"
+  }
+}

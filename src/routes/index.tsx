@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Download, Linkedin, MapPin } from "lucide-react";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
+import { home, site, withBase } from "@/content";
 import seamlessLogo from "@/assets/logos/seamless.png";
 import inseegoLogo from "@/assets/logos/inseego.png";
 import caseworthyLogo from "@/assets/logos/caseworthy.png";
@@ -12,18 +13,10 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Zach Benalayat — Product & Data Analyst" },
-      {
-        name: "description",
-        content:
-          "Zach Benalayat. Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI. Available now.",
-      },
-      { property: "og:title", content: "Zach Benalayat — Product & Data Analyst" },
-      {
-        property: "og:description",
-        content:
-          "SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI. Shipped a customer-facing API to $1M booked ARR. Available now.",
-      },
+      { title: home.seo.title },
+      { name: "description", content: home.seo.description },
+      { property: "og:title", content: home.seo.title },
+      { property: "og:description", content: home.seo.ogDescription },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
     ],
@@ -31,136 +24,15 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-
-const faqs = [
-  {
-    q: "What kinds of engagements are you open to?",
-    a: "Full-time Senior Analyst, BI Lead, or analytics-led PM. Open to contract too: analytics audits, KPI design, BI builds, PRDs, 0→1 launches.",
-  },
-  {
-    q: "What types of products have you shipped?",
-    a: "B2B SaaS, IoT and telecom, AI platforms (MCP shipped on the GPT and Claude stores), data infrastructure, and nonprofit case management.",
-  },
-  {
-    q: "Do you lead analytics or product strategy?",
-    a: "Both. I write the SQL, build the dashboards, run the A/B tests, then turn what they say into PRDs, OKRs, and roadmap bets.",
-  },
-  {
-    q: "What does your typical process look like from idea to launch?",
-    a: "Objectives, then research, then the KPI framework, then the PRD, then ship, then watch the funnels and cohorts. The launch is the start of the work, not the end.",
-  },
-  {
-    q: "How do I get in touch?",
-    a: "Email zacharia.benalayat@gmail.com or LinkedIn at linkedin.com/in/zach-benalayat. Resume downloads from any page.",
-  },
-];
-
-
-const skills = [
-  {
-    title: "BI & Executive Dashboarding",
-    body: "Power BI, Looker, Tableau on Snowflake, plus the semantic modeling and ETL that make them trustworthy.",
-  },
-  {
-    title: "Product Analytics & Experimentation",
-    body: "A/B tests, funnels, and cohorts in SQL and Python. I design the KPI before I touch the dashboard.",
-  },
-  {
-    title: "Data & SQL Engineering",
-    body: "Stored procedures, ETL pipelines, identity resolution. The plumbing nobody notices until it breaks.",
-  },
-  {
-    title: "Analytics-Led Product Delivery",
-    body: "PRDs, OKRs, and roadmap bets that come from the analysis, not the other way around.",
-  },
-];
-
-const engagementModels = [
-  {
-    label: "Full-Time",
-    title: "Senior Analyst · BI Lead · Analytics-Led PM",
-    body: "Embedded ownership of analytics, BI, or an analytics-led product team. Remote-first, open to hybrid.",
-  },
-  {
-    label: "Contract",
-    title: "3–12 month embedded engagement",
-    body: "Drop-in analyst, BI, or PM ownership for a launch, replatform, or BI rebuild.",
-  },
-  {
-    label: "Consulting",
-    title: "Scoped audits & deliverables",
-    body: "Analytics audits, KPI trees, dashboards, instrumentation reviews, PRDs.",
-  },
-];
-
-type ToolkitItem = { name: string; primary?: boolean; children?: string[] };
-type ToolkitGroup = { label: string; items: ToolkitItem[] };
-
-const toolkit: ToolkitGroup[] = [
-  {
-    label: "Certifications",
-    items: [
-      { name: "Agile / Scrum / Project Management", primary: true, children: ["Atlassian"] },
-      { name: "Data Management", primary: true, children: ["UT Austin"] },
-    ],
-  },
-  {
-    label: "Languages & Querying",
-    items: [
-      { name: "SQL", primary: true, children: ["PostgreSQL", "MySQL", "ELT", "ETL"] },
-      { name: "Python", primary: true, children: ["pandas", "NumPy", "matplotlib"] },
-      { name: "R" },
-    ],
-  },
-  {
-    label: "Data Platforms",
-    items: [
-      { name: "Snowflake", primary: true },
-      { name: "Microsoft Fabric", primary: true },
-      { name: "Databricks", primary: true },
-      { name: "Redshift", primary: true },
-      { name: "dbt" },
-      { name: "BigQuery" },
-      { name: "Amazon S3" },
-    ],
-  },
-  {
-    label: "BI & Reporting",
-    items: [
-      { name: "Power BI", primary: true, children: ["DAX", "Semantic Modeling", "RLS"] },
-      { name: "Tableau", primary: true },
-      { name: "Amplitude", primary: true },
-      { name: "Looker" },
-      { name: "Google Analytics" },
-      { name: "Excel / Sheets" },
-    ],
-  },
-  {
-    label: "Product & Delivery",
-    items: [
-      { name: "Jira", primary: true },
-      { name: "GitHub", primary: true },
-      { name: "Notion", primary: true },
-      { name: "Kanban", primary: true },
-      { name: "Confluence" },
-      { name: "SharePoint" },
-      { name: "ServiceNow" },
-      { name: "N8N" },
-    ],
-  },
-  {
-    label: "AI & Agentic Tooling",
-    items: [
-      { name: "Claude Code", primary: true },
-      { name: "OpenAI Agents", primary: true },
-      { name: "GitHub Copilot", primary: true },
-      { name: "Lovable" },
-      { name: "Claude Cowork" },
-      { name: "Cursor" },
-    ],
-  },
-];
-
+// To add a new logo: drop the file in src/assets/logos/, import it above,
+// and add it here keyed by the `"key"` value used in content/home.json.
+const logoMap: Record<string, string> = {
+  seamless: seamlessLogo,
+  inseego: inseegoLogo,
+  caseworthy: caseworthyLogo,
+  arc: arcLogo,
+  butler: butlerLogo,
+};
 
 function Index() {
   const featured = projects.filter((p) => p.featured);
@@ -177,7 +49,7 @@ function Index() {
             aria-hidden
             className="absolute select-none font-sans text-[28vw] font-extrabold uppercase leading-none tracking-tighter text-secondary opacity-[0.07] lg:text-[22vw]"
           >
-            BENALAYAT
+            {home.hero.monogram}
           </div>
 
           {/* Orbital rings — 3 weights, one dashed */}
@@ -241,65 +113,63 @@ function Index() {
         </div>
 
         <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center px-6 py-20 text-center md:py-28">
-          {/* Name micro-label */}
           <p className="mb-4 font-sans text-xs font-extrabold uppercase tracking-[0.35em] text-foreground/80">
-            Zach Benalayat
+            {home.hero.nameLabel}
           </p>
 
-          {/* Eyebrow: stat-anchored */}
           <p className="mb-5 font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
-            6+ years · B2B SaaS · IoT · AI
+            {home.hero.eyebrow}
           </p>
 
-          {/* Role-anchored H1 */}
           <h1 className="max-w-4xl font-sans text-4xl font-extrabold leading-[1.05] tracking-tighter text-foreground md:text-6xl lg:text-7xl">
-            <span className="text-primary">Product &amp; Data</span>{" "}
-            <span className="text-primary">Analyst</span>
+            <span className="text-primary">{home.hero.headlineLine1}</span>{" "}
+            <span className="text-primary">{home.hero.headlineLine2}</span>
           </h1>
 
           <p className="mt-6 max-w-3xl text-base font-medium text-foreground/90 md:text-xl">
-            SQL, Python, Power BI, and Snowflake. I dig into the data, find what&apos;s actually driving revenue, and turn it into the decision.
+            {home.hero.tagline}
           </p>
 
 
           <ul className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium text-muted-foreground md:text-sm">
-            <li className="inline-flex items-center gap-1.5">
-              <MapPin className="h-3.5 w-3.5 text-primary" />
-              Austin, Texas · Remote-first, open to hybrid
-            </li>
-            <li className="inline-flex items-center gap-1.5">
-              <span className="h-1 w-1 rounded-full bg-primary" />
-              Most recently: Product Manager II, Seamless.AI
-            </li>
+            {home.hero.metaPoints.map((mp, i) => (
+              <li key={mp} className="inline-flex items-center gap-1.5">
+                {i === 0 ? (
+                  <MapPin className="h-3.5 w-3.5 text-primary" />
+                ) : (
+                  <span className="h-1 w-1 rounded-full bg-primary" />
+                )}
+                {mp}
+              </li>
+            ))}
           </ul>
 
-          {/* CTAs — tightened to 3 */}
           <div className="mt-8 flex flex-col items-center gap-4">
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a
                 href="#work"
                 className="group inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-[1.03] hover:shadow-[0_0_28px_rgba(201,168,76,0.45)] active:scale-95"
               >
-                See the work <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                {home.hero.ctaPrimary} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a
-                href={`${import.meta.env.BASE_URL.replace(/\/$/, "")}/Zach_J_Benalayat.pdf`}
+                href={withBase(site.resumeFile)}
                 download
                 className="inline-flex items-center gap-2 rounded-md border border-primary/30 bg-foreground/5 px-6 py-4 text-sm font-bold uppercase tracking-widest text-foreground backdrop-blur-sm transition-all hover:border-primary hover:text-primary"
               >
-                <Download className="h-4 w-4" /> Download resume
+                <Download className="h-4 w-4" /> {home.hero.ctaResume}
               </a>
             </div>
             <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-xs font-medium text-muted-foreground">
               <a
-                href="mailto:zacharia.benalayat@gmail.com"
+                href={`mailto:${site.ownerEmail}`}
                 className="transition-colors hover:text-primary"
               >
-                zacharia.benalayat@gmail.com
+                {site.ownerEmail}
               </a>
               <span className="hidden h-1 w-1 rounded-full bg-border md:inline-block" />
               <a
-                href="https://www.linkedin.com/in/zach-benalayat/"
+                href={site.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 transition-colors hover:text-primary"
@@ -309,25 +179,19 @@ function Index() {
             </div>
           </div>
 
-          {/* Availability badge */}
           <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-background/60 px-4 py-1.5 backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
             </span>
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-              Available now · Full-Time or Contract
+              {home.hero.availability}
             </span>
           </div>
 
-          {/* Role-tagged proof grid */}
           <dl className="mt-16 grid w-full max-w-4xl grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-3">
-            {[
-              { track: "Senior BI", value: "$1M+ ARR", label: "Inseego Connect · Power BI funnel" },
-              { track: "Senior BI", value: "46%", label: "Faster intake · Arc of Southern Maryland service operations analytics" },
-              { track: "Analytics-Led PM", value: "$1M ARR", label: "Seamless API 0→1" },
-            ].map((m) => (
-              <div key={m.track} className="bg-background p-6 text-left">
+            {home.hero.proofStats.map((m) => (
+              <div key={m.label} className="bg-background p-6 text-left">
                 <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
                   {m.track}
                 </p>
@@ -343,7 +207,6 @@ function Index() {
 
         </div>
 
-        {/* Bottom scroll indicator */}
         <div
           aria-hidden
           className="pointer-events-none absolute bottom-6 left-1/2 hidden -translate-x-1/2 opacity-40 md:block"
@@ -356,22 +219,16 @@ function Index() {
 
 
       {/* Organizations I've worked with — wordmark band */}
-      <section aria-label="Companies and organizations I've worked with" className="border-y border-border bg-foreground">
+      <section aria-label={home.logosBand.label} className="border-y border-border bg-foreground">
         <div className="mx-auto max-w-6xl px-6 py-10 md:py-12">
           <p className="mb-6 text-center font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-background/60 md:text-left">
-            Organizations I&apos;ve worked with
+            {home.logosBand.label}
           </p>
           <ul className="grid grid-cols-2 items-center gap-x-8 gap-y-8 sm:grid-cols-3 md:grid-cols-5 md:gap-x-6">
-            {[
-              { name: "Seamless.AI", src: seamlessLogo },
-              { name: "Inseego", src: inseegoLogo },
-              { name: "CaseWorthy", src: caseworthyLogo },
-              { name: "The Arc Southern Maryland", src: arcLogo },
-              { name: "Butler School of Music", src: butlerLogo },
-            ].map(({ name, src }) => (
+            {home.logosBand.logos.map(({ name, key }) => (
               <li key={name} className="flex h-16 items-center justify-center md:h-20">
                 <img
-                  src={src}
+                  src={logoMap[key]}
                   alt={`${name} logo`}
                   loading="lazy"
                   className="max-h-full max-w-[160px] object-contain transition-transform duration-300 hover:scale-105"
@@ -389,41 +246,38 @@ function Index() {
         <div className="mx-auto max-w-6xl px-6 py-24 md:py-32">
           <div className="border-t border-secondary/60 pt-12">
             <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-16">
-              {/* Left: eyebrow + headline */}
               <div className="flex flex-col md:col-span-7">
                 <div className="mb-8 flex items-center gap-4">
                   <span className="whitespace-nowrap font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary md:text-xs">
-                    Approach
+                    {home.approach.eyebrow}
                   </span>
                   <div className="h-px w-12 bg-primary" />
                 </div>
                 <h2 className="font-sans text-5xl font-extrabold leading-[0.95] tracking-tighter text-foreground md:text-7xl">
-                  The analysis comes first.
-                  <span className="mt-2 block">The product bet comes out of it.</span>
+                  {home.approach.headlineLine1}
+                  <span className="mt-2 block">{home.approach.headlineLine2}</span>
                 </h2>
               </div>
 
-              {/* Right: body, vertically centered within headline block via self-center */}
               <div className="flex flex-col justify-center border-l border-secondary/60 py-2 pl-8 md:col-span-5 md:pl-12">
                 <div className="max-w-sm">
                   <p className="font-sans text-lg font-normal leading-relaxed text-foreground/90 md:text-xl">
-                    I instrument before I argue. Every call I&apos;ve shipped started with a KPI tree, a dashboard, and a SQL query.
+                    {home.approach.body1}
                   </p>
                   <p className="mt-6 font-sans text-base leading-relaxed text-foreground/60 md:text-lg">
-                    The PRD, the roadmap, and the launch plan follow what the data shows, not what a meeting decided.
+                    {home.approach.body2}
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Bottom accent: hairline + ghost 01 */}
             <div className="mt-24 flex w-full items-end justify-between">
               <div className="h-[2px] w-24 bg-secondary/60" />
               <span
                 aria-hidden="true"
                 className="pointer-events-none translate-y-8 select-none font-sans text-8xl font-extrabold leading-none text-secondary/30"
               >
-                01
+                {home.approach.sectionNumber}
               </span>
             </div>
           </div>
@@ -437,22 +291,22 @@ function Index() {
           <div className="grid gap-12 md:grid-cols-[16rem_1fr] md:gap-16">
             <aside className="md:sticky md:top-24 md:self-start">
               <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
-                Toolkit
+                {home.toolkit.eyebrow}
               </p>
               <h2 className="font-sans text-3xl font-extrabold leading-[1] tracking-tighter text-foreground md:text-5xl">
-                What I reach
+                {home.toolkit.headlineLine1}
                 <br />
-                for.
+                {home.toolkit.headlineLine2}
               </h2>
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-                Primary tools in bold. Supporting kit underneath.
+                {home.toolkit.subtitle}
               </p>
             </aside>
 
             <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-2 lg:grid-cols-3">
-              {toolkit.map((group, i) => {
-                const primaries = group.items.filter((it) => it.primary);
-                const supporting = group.items.filter((it) => !it.primary);
+              {home.toolkit.groups.map((group, i) => {
+                const primaries = group.items.filter((it) => "primary" in it && it.primary);
+                const supporting = group.items.filter((it) => !("primary" in it) || !it.primary);
                 return (
                   <div key={group.label} className="flex flex-col bg-background p-7">
                     <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
@@ -462,7 +316,7 @@ function Index() {
                       {primaries.map((it) => (
                         <li key={it.name}>
                           <p className="font-sans text-base font-bold text-foreground">{it.name}</p>
-                          {it.children && (
+                          {"children" in it && it.children && (
                             <p className="mt-1 font-mono text-[11px] tracking-wide text-muted-foreground">
                               {it.children.join(" · ")}
                             </p>
@@ -483,16 +337,9 @@ function Index() {
             </div>
           </div>
 
-          {/* ATS-searchable keyword row — hidden visually, present for crawlers */}
           <div className="sr-only">
             <p>Keywords // ATS-searchable</p>
-            <p>
-              Product Manager, Senior Product Manager, Data Analyst, Product Analytics, Business Analyst,
-              SQL, Python, R, pandas, NumPy, Snowflake, Databricks, Redshift, BigQuery, dbt, ETL, ELT, Data Warehousing,
-              Power BI, Tableau, Looker, Amplitude, Google Analytics, A/B Testing, Funnel Analysis, Cohort Analysis,
-              KPI Design, OKRs, PRD, Roadmap, Agile, Scrum, Kanban, Jira, Confluence, GitHub, B2B SaaS, IoT, Telecom,
-              Agentic AI, MCP, GTM Strategy, Identity Resolution, Cost Modeling, Time to Value.
-            </p>
+            <p>{home.toolkit.atsKeywords}</p>
           </div>
         </div>
       </section>
@@ -500,15 +347,15 @@ function Index() {
 
 
 
-      {/* Featured Projects — inline masthead scaffold */}
+      {/* Featured Projects */}
       <section id="work" className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
           <div className="mb-12 flex flex-wrap items-baseline justify-between gap-x-8 gap-y-4 border-b border-secondary/40 pb-6">
             <h2 className="font-sans text-4xl font-extrabold tracking-tighter text-foreground md:text-6xl">
-              Featured projects
+              {home.featuredHeading}
             </h2>
             <div className="flex items-baseline gap-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-              <span>Selected Work</span>
+              <span>{home.featuredEyebrow}</span>
               <span className="h-px w-8 translate-y-[-3px] bg-primary/60" />
               <span>01 / 02</span>
             </div>
@@ -532,18 +379,18 @@ function Index() {
       </section>
 
 
-      {/* Top Skills — full-width numbered editorial rows, no grid */}
+      {/* Top Skills */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
           <p className="mb-2 font-mono text-[11px] font-bold uppercase tracking-[0.3em] text-primary">
-            How I work
+            {home.skills.eyebrow}
           </p>
           <h2 className="mb-16 max-w-3xl font-sans text-4xl font-extrabold leading-[1] tracking-tighter text-foreground md:text-6xl">
-            Four things I do well, repeatedly.
+            {home.skills.headline}
           </h2>
 
           <div className="divide-y divide-border border-y border-border">
-            {skills.map((skill, i) => (
+            {home.skills.items.map((skill, i) => (
               <div
                 key={skill.title}
                 className="grid grid-cols-[3rem_1fr] gap-6 py-8 md:grid-cols-[5rem_minmax(0,18rem)_1fr] md:gap-10 md:py-10"
@@ -564,28 +411,28 @@ function Index() {
       </section>
 
 
-      {/* Engagement Models — right-aligned header + asymmetric featured-first row */}
+      {/* Engagement Models */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
           <div className="mb-16 md:ml-auto md:max-w-xl md:text-right">
             <h2 className="font-sans text-4xl font-extrabold leading-[1] tracking-tighter text-foreground md:text-5xl">
-              Three ways to work together.
+              {home.engagement.headline}
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-              Full-time is the priority. Contract and consulting are how I help while the right seat opens up.
+              {home.engagement.subtitle}
             </p>
             <p className="mt-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
-              Engagement Models
+              {home.engagement.eyebrow}
             </p>
           </div>
 
           <div className="grid grid-cols-1 gap-px overflow-hidden border border-border bg-border md:grid-cols-12">
-            {engagementModels.map((m, i) => {
-              const featured = i === 0;
+            {home.engagement.models.map((m, i) => {
+              const featuredCard = i === 0;
               return (
                 <div
                   key={m.label}
-                  className={`${featured ? "md:col-span-6" : "md:col-span-3"} flex flex-col justify-between bg-background p-8`}
+                  className={`${featuredCard ? "md:col-span-6" : "md:col-span-3"} flex flex-col justify-between bg-background p-8`}
                 >
                   <div>
                     <p className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
@@ -593,7 +440,7 @@ function Index() {
                     </p>
                     <h3
                       className={`mb-4 font-sans font-bold text-foreground ${
-                        featured ? "text-2xl md:text-3xl tracking-tighter" : "text-lg"
+                        featuredCard ? "text-2xl md:text-3xl tracking-tighter" : "text-lg"
                       }`}
                     >
                       {m.title}
@@ -608,22 +455,22 @@ function Index() {
       </section>
 
 
-      {/* FAQ — header lives inline with the first question column */}
+      {/* FAQ */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-24 md:py-32">
           <div className="grid gap-10 md:grid-cols-[14rem_1fr] md:gap-16">
             <div className="md:sticky md:top-24 md:self-start">
               <p className="mb-3 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
-                FAQ
+                {home.faq.eyebrow}
               </p>
               <h2 className="font-sans text-3xl font-extrabold leading-[1] tracking-tighter text-foreground md:text-4xl">
-                Common
+                {home.faq.headlineLine1}
                 <br />
-                questions.
+                {home.faq.headlineLine2}
               </h2>
             </div>
             <dl className="divide-y divide-border border-y border-border">
-              {faqs.map((f, i) => (
+              {home.faq.items.map((f, i) => (
                 <div key={f.q} className="grid gap-3 py-7 md:grid-cols-[auto_1fr] md:gap-6">
                   <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-primary">
                     Q_{String(i + 1).padStart(2, "0")}
@@ -640,13 +487,13 @@ function Index() {
       </section>
 
 
-      {/* More Work — minimal ribbon, no big heading, grid does the talking */}
+      {/* More Work */}
       <section className="border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
           <div className="mb-10 flex items-baseline gap-4 font-mono text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
             <span>02 / 02</span>
             <span className="h-px flex-1 bg-secondary/40" />
-            <span className="text-muted-foreground">More from the portfolio</span>
+            <span className="text-muted-foreground">{home.moreEyebrow}</span>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -663,26 +510,25 @@ function Index() {
       <section className="bg-primary py-24 text-primary-foreground md:py-32">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h2 className="mb-6 font-sans text-5xl font-extrabold tracking-tighter md:text-7xl">
-            Ready to ship?
+            {home.cta.heading}
           </h2>
           <p className="mx-auto mb-12 max-w-xl text-lg font-medium text-primary-foreground/80">
-            Open to full-time Senior PM or Senior BI roles, plus contract and
-            consulting work. If you&apos;ve got a problem worth solving, send it over.
+            {home.cta.body}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="mailto:zacharia.benalayat@gmail.com"
+              href={`mailto:${site.ownerEmail}`}
               className="inline-flex items-center gap-2 bg-background px-10 py-5 text-sm font-bold uppercase tracking-[0.2em] text-foreground transition-transform hover:scale-105"
             >
-              Send an email <ArrowRight className="h-4 w-4" />
+              {home.cta.emailLabel} <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="https://www.linkedin.com/in/zach-benalayat/"
+              href={site.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border-2 border-primary-foreground px-10 py-5 text-sm font-bold uppercase tracking-[0.2em] text-primary-foreground transition-all hover:bg-primary-foreground hover:text-primary"
             >
-              <Linkedin className="h-4 w-4" /> LinkedIn
+              <Linkedin className="h-4 w-4" /> {home.cta.linkedinLabel}
             </a>
 
 

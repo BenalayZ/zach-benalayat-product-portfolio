@@ -6,10 +6,7 @@ import {
   useRouter,
 } from "@tanstack/react-router";
 import { Linkedin } from "lucide-react";
-
-// Resolve absolute paths under the GitHub Pages subpath (e.g. PDFs in /public)
-const withBase = (p: string) =>
-  `${import.meta.env.BASE_URL.replace(/\/$/, "")}/${p.replace(/^\//, "")}`;
+import { site, withBase } from "@/content";
 
 function NotFoundComponent() {
   return (
@@ -78,21 +75,22 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link to="/" className="text-sm font-semibold tracking-tight text-foreground" aria-label="Zach Benalayat — home">
-          Zach Benalayat
+        <Link to="/" className="text-sm font-semibold tracking-tight text-foreground" aria-label={`${site.name} — home`}>
+          {site.name}
         </Link>
         <nav className="flex items-center gap-2 text-sm font-medium md:gap-6">
-          <Link to="/" className="text-muted-foreground transition-colors hover:text-foreground" activeProps={{ className: "text-foreground" }}>
-            Work
-          </Link>
-          <Link to="/about" className="text-muted-foreground transition-colors hover:text-foreground" activeProps={{ className: "text-foreground" }}>
-            About
-          </Link>
-          <Link to="/contact" className="text-muted-foreground transition-colors hover:text-foreground" activeProps={{ className: "text-foreground" }}>
-            Contact
-          </Link>
+          {site.nav.map((item) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              className="text-muted-foreground transition-colors hover:text-foreground"
+              activeProps={{ className: "text-foreground" }}
+            >
+              {item.label}
+            </Link>
+          ))}
           <a
-            href="https://www.linkedin.com/in/zach-benalayat/"
+            href={site.linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn profile"
@@ -101,7 +99,7 @@ function Header() {
             <Linkedin className="h-4 w-4" />
           </a>
           <a
-            href={withBase("/Zach_J_Benalayat.pdf")}
+            href={withBase(site.resumeFile)}
             download
             className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-medium text-primary-foreground transition-all hover:bg-primary/90 md:px-4 md:text-sm"
           >
@@ -118,15 +116,23 @@ function Footer() {
     <footer className="border-t border-border bg-background">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-8">
         <p className="text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} Zach Benalayat
+          &copy; {new Date().getFullYear()} {site.name}
         </p>
         <div className="flex gap-4 text-sm text-muted-foreground">
-          <a href="https://www.linkedin.com/in/zach-benalayat" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-foreground">
-            LinkedIn
-          </a>
-          <a href="mailto:zacharia.benalayat@gmail.com" className="transition-colors hover:text-foreground">
-            Email
-          </a>
+          {site.footer.links.map((link) => {
+            const external = link.href.startsWith("http");
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
+                className="transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </div>
       </div>
     </footer>

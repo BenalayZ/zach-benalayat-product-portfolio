@@ -1,0 +1,188 @@
+{
+  "seo": {
+    "title": "About Zach Benalayat",
+    "description": "About Zach Benalayat. Senior Product Analyst, BA, DA, and BI. SQL, Python, Power BI, and Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, consumer marketplaces, and operations.",
+    "ogDescription": "Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI, and Snowflake."
+  },
+  "header": {
+    "eyebrow": "About",
+    "heading": "Hi, I'm Zach.",
+    "subtitle": "SQL · Python · Power BI · Snowflake · Product Analytics · Forecasting"
+  },
+  "bio": [
+    "I lead with the analysis. SQL on Snowflake, funnels and dashboards in Power BI / Looker / Tableau, A/B tests, forecasting, and Python when the transforms get heavy.",
+    "I anchor every scope call to the metric that actually monetizes. The PRDs, OKRs, and roadmap bets fall out of what the data says."
+  ],
+  "industries": [
+    "B2B SaaS",
+    "Consumer Marketplaces",
+    "Advertising / Marketplace Dynamics",
+    "IoT / Telecom",
+    "AI Platforms",
+    "E-Commerce",
+    "Non-Profit"
+  ],
+  "resumeButtonLabel": "Download resume",
+  "experienceHeading": "Experience",
+  "experience": [
+    {
+      "period": "2024–2026",
+      "company": "Seamless.AI",
+      "role": "Product Manager II · Data Operations & Tech Projects",
+      "points": [
+        "Defined product OKRs and analytics frameworks measuring API adoption, engagement, and conversion across customer touchpoints.",
+        "Behavioral funnel analysis across search, discovery, and purchase. Surfaced UX changes that reduced search time by 25%.",
+        "Designed internal Power BI / Looker dashboards for exec leadership, Sales, and RevOps to monitor product performance and customer behavior.",
+        "Spearheaded identity resolution overhaul: +10% contact coverage vs LinkedIn company-contact baseline, +25% confidence in email and phone records, delivered in 3 months.",
+        "Owned the 0→1 launch of the customer-facing B2B Public API to $1M booked ARR in year one. SMB and mid-market first; enterprise expansion underway. Automated analytics workflows with Claude + N8N, cutting idea-to-design cycle time by 15%."
+      ]
+    },
+    {
+      "period": "2022–2024",
+      "company": "Inseego",
+      "role": "Business Systems Analyst · Sales Analytics",
+      "points": [
+        "SQL + Python analysis of customer, sales, and federal contracting datasets. Recommended a microtargeting shift that sales leadership adopted, driving $1M+ in enterprise contract uplift in the first re-targeting cycle.",
+        "Built Power BI analytics frameworks tracking adoption, engagement, and bundling performance on US Navy contracts.",
+        "Ran market and competitive data analysis to support product positioning and carrier partnerships.",
+        "Translated business + data insights into technical product requirements (DCMA 14-Point compliant)."
+      ]
+    },
+    {
+      "period": "2019–2022",
+      "company": "CaseWorthy",
+      "role": "Systems Analyst",
+      "points": [
+        "Built SQL stored procedures, database tables, and ETL pipelines supporting analytics and reporting workflows for nonprofit and government clients.",
+        "Developed scalable software configurations that accelerated implementation timelines.",
+        "Partnered with customer success teams to define functional and analytics requirements."
+      ]
+    },
+    {
+      "period": "2018–2023",
+      "company": "Latin Hyper-Texts, Butler School of Music",
+      "role": "Data Architect",
+      "points": [
+        "Designed and implemented the relational database architecture supporting 200K+ digitized manuscripts and large-scale research datasets.",
+        "Structured metadata frameworks enabling efficient data retrieval, analysis, and digital archiving.",
+        "Analyzed Qualtrics training and user data to improve docs and onboarding. Reduced required training sessions by 33%."
+      ]
+    }
+  ],
+  "educationHeading": "Education",
+  "education": [
+    {
+      "period": "2017–2019",
+      "school": "University of Texas at Austin",
+      "focus": "Information Science · Database Administration · Data Analysis"
+    },
+    {
+      "period": "2013–2017",
+      "school": "Dickinson College",
+      "focus": "Data Science · Forensics · Anthropology"
+    }
+  ],
+  "principles": {
+    "eyebrow": "Principles",
+    "heading": "Product Strategy North Stars",
+    "items": [
+      {
+        "title": "A moment that stuck",
+        "quote": "The first time a dashboard I built talked a sales VP out of a bad roadmap ask, I realized I didn't need to write another strategy deck for that kind of meeting. He looked at the funnel for thirty seconds and killed the idea himself. The numbers do the arguing now."
+      },
+      {
+        "title": "Unpopular opinion",
+        "quote": "Most annual roadmaps are confidence rituals. I'd rather ship something small on Tuesday and have real usage data by Friday than spend three quarters debating priorities in a spreadsheet."
+      },
+      {
+        "title": "Rule of thumb",
+        "quote": "Name the metric. Ship small. Check Monday."
+      },
+      {
+        "title": "A question I ask early",
+        "quote": "If nobody can tell me what decision changes when this number moves, we're not building a dashboard. We're building decoration."
+      }
+    ]
+  },
+  "process": {
+    "heading": "How I work a problem",
+    "stepsLabel": "Process / 05 steps",
+    "steps": [
+      "Pin down what we're actually trying to move.",
+      "Get the data, get the context, talk to whoever's closest to the problem.",
+      "Frame the KPI tree and instrument it.",
+      "Ship the smallest thing that proves or kills the bet.",
+      "Measure honestly. Roll forward or roll back."
+    ]
+  },
+  "toolkit": {
+    "heading": "Tools & Methods",
+    "suffixLabel": "/ Toolkit",
+    "groups": [
+      {
+        "label": "Languages & Querying",
+        "subtitle": "What I write in.",
+        "items": [
+          { "name": "SQL", "primary": true },
+          { "name": "Python", "primary": true, "children": ["pandas", "NumPy", "matplotlib"] },
+          { "name": "R" }
+        ]
+      },
+      {
+        "label": "Data Platforms",
+        "subtitle": "Where data lives and how it moves.",
+        "items": [
+          { "name": "Snowflake", "primary": true },
+          { "name": "dbt", "primary": true },
+          { "name": "BigQuery" },
+          { "name": "Amazon S3" },
+          { "name": "ETL & ELT" },
+          { "name": "Data Warehousing" },
+          { "name": "Database Design" },
+          { "name": "Data Mining" }
+        ]
+      },
+      {
+        "label": "BI & Reporting",
+        "subtitle": "How findings get seen and acted on.",
+        "items": [
+          { "name": "Power BI", "primary": true, "children": ["DAX", "Semantic Modeling", "RLS", "Incremental Refresh"] },
+          { "name": "Looker", "primary": true },
+          { "name": "Tableau" },
+          { "name": "Google Analytics" },
+          { "name": "Excel / Sheets" }
+        ]
+      },
+      {
+        "label": "Product & Delivery",
+        "subtitle": "How work gets shipped.",
+        "items": [
+          { "name": "Jira", "primary": true },
+          { "name": "Agile", "primary": true },
+          { "name": "Scrum" },
+          { "name": "Kanban" },
+          { "name": "Confluence" },
+          { "name": "GitHub" },
+          { "name": "SharePoint" },
+          { "name": "ServiceNow" },
+          { "name": "N8N" },
+          { "name": "Claude" }
+        ]
+      },
+      {
+        "label": "Methods & Frameworks",
+        "subtitle": "The analyses behind the decisions.",
+        "items": [
+          { "name": "A/B Testing", "primary": true },
+          { "name": "Funnel Analysis", "primary": true },
+          { "name": "Cohort Analysis", "primary": true },
+          { "name": "Linear Regression" },
+          { "name": "Cost Modeling" },
+          { "name": "Identity Resolution" },
+          { "name": "Unit Testing" },
+          { "name": "Time to Value" }
+        ]
+      }
+    ]
+  }
+}

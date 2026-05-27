@@ -1,0 +1,41 @@
+{
+  "seo": {
+    "title": "Contact — Zach Benalayat",
+    "description": "Get in touch with Zach Benalayat. Open to full-time Senior PM or Senior BI roles, plus contract and consulting engagements.",
+    "ogDescription": "Reach out by email or LinkedIn. Usually responds within 24 hours."
+  },
+  "header": {
+    "eyebrow": "Contact",
+    "heading": "Let's talk.",
+    "subtitle": "Open to full-time Senior PM or Senior BI roles. Contract and consulting too."
+  },
+  "badges": [
+    "Hiring for a full-time role",
+    "Contract / embedded help",
+    "Scoped consulting"
+  ],
+  "responseNote": "Usually responds within 24 hours",
+  "channels": [
+    {
+      "icon": "mail",
+      "label": "Email",
+      "value": "zacharia.benalayat@gmail.com",
+      "href": "mailto:zacharia.benalayat@gmail.com?subject=Hello%20Zach",
+      "primary": true
+    },
+    {
+      "icon": "linkedin",
+      "label": "LinkedIn",
+      "value": "linkedin.com/in/zach-benalayat",
+      "href": "https://www.linkedin.com/in/zach-benalayat"
+    },
+    {
+      "icon": "resume",
+      "label": "Resume",
+      "value": "Zach_J_Benalayat.pdf",
+      "isResume": true,
+      "download": true
+    }
+  ],
+  "footerNote": "Prefer a form? Email is fastest. I check it every weekday."
+}

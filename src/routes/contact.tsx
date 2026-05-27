@@ -1,83 +1,58 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, Linkedin, ArrowUpRight, FileDown, Clock } from "lucide-react";
+import { contact, site, withBase } from "@/content";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
   head: () => ({
     meta: [
-      { title: "Contact — Zach Benalayat" },
-      {
-        name: "description",
-        content:
-          "Get in touch with Zach Benalayat. Open to full-time Senior PM or Senior BI roles, plus contract and consulting engagements.",
-      },
-      { property: "og:title", content: "Contact — Zach Benalayat" },
-      {
-        property: "og:description",
-        content: "Reach out by email or LinkedIn. Usually responds within 24 hours.",
-      },
+      { title: contact.seo.title },
+      { name: "description", content: contact.seo.description },
+      { property: "og:title", content: contact.seo.title },
+      { property: "og:description", content: contact.seo.ogDescription },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),
 });
 
-function ContactPage() {
-  const channels = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "zacharia.benalayat@gmail.com",
-      href: "mailto:zacharia.benalayat@gmail.com?subject=Hello%20Zach",
-      primary: true,
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      value: "linkedin.com/in/zach-benalayat",
-      href: "https://www.linkedin.com/in/zach-benalayat",
-    },
-    {
-      icon: FileDown,
-      label: "Resume",
-      value: "Zach_J_Benalayat.pdf",
-      href: `${import.meta.env.BASE_URL.replace(/\/$/, "")}/Zach_J_Benalayat.pdf`,
-      download: true,
-    },
-  ];
+const iconMap = { mail: Mail, linkedin: Linkedin, resume: FileDown } as const;
 
+function ContactPage() {
   return (
     <div className="mx-auto max-w-2xl px-6 py-16 md:py-24">
       <div className="mb-10 text-center">
         <p className="mb-2 text-sm font-medium uppercase tracking-widest text-primary">
-          Contact
+          {contact.header.eyebrow}
         </p>
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-          Let&apos;s talk.
+          {contact.header.heading}
         </h1>
         <p className="mx-auto mt-4 max-w-md text-lg text-muted-foreground">
-          Open to full-time Senior PM or Senior BI roles. Contract and consulting too.
+          {contact.header.subtitle}
         </p>
         <ul className="mx-auto mt-6 flex max-w-xl flex-wrap items-center justify-center gap-x-3 gap-y-2 text-xs font-medium uppercase tracking-[0.15em] text-muted-foreground">
-          <li className="border border-border px-3 py-1">Hiring for a full-time role</li>
-          <li className="border border-border px-3 py-1">Contract / embedded help</li>
-          <li className="border border-border px-3 py-1">Scoped consulting</li>
+          {contact.badges.map((b) => (
+            <li key={b} className="border border-border px-3 py-1">{b}</li>
+          ))}
         </ul>
         <p className="mx-auto mt-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
-          <Clock className="h-3.5 w-3.5" /> Usually responds within 24 hours
+          <Clock className="h-3.5 w-3.5" /> {contact.responseNote}
         </p>
       </div>
 
       <div className="space-y-3">
-        {channels.map((channel) => {
+        {contact.channels.map((channel) => {
+          const Icon = iconMap[channel.icon as keyof typeof iconMap];
           const isPrimary = "primary" in channel && channel.primary;
+          const href = "isResume" in channel && channel.isResume ? withBase(site.resumeFile) : channel.href!;
           return (
             <a
               key={channel.label}
-              href={channel.href}
-              target={channel.href.startsWith("http") ? "_blank" : undefined}
-              rel={channel.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              download={(channel as { download?: boolean }).download ? "" : undefined}
+              href={href}
+              target={href.startsWith("http") ? "_blank" : undefined}
+              rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+              download={"download" in channel && channel.download ? "" : undefined}
               className={
                 isPrimary
                   ? "flex items-center gap-4 rounded-2xl border-2 border-primary bg-primary/10 p-5 shadow-lg shadow-primary/10 transition-all hover:bg-primary/15"
@@ -91,7 +66,7 @@ function ContactPage() {
                     : "flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary"
                 }
               >
-                <channel.icon className="h-5 w-5" />
+                <Icon className="h-5 w-5" />
               </div>
               <div className="min-w-0 flex-1">
                 <p className={isPrimary ? "text-sm font-bold uppercase tracking-widest text-primary" : "text-sm font-medium text-muted-foreground"}>
@@ -106,7 +81,7 @@ function ContactPage() {
       </div>
 
       <p className="mt-8 text-center text-xs text-muted-foreground">
-        Prefer a form? Email is fastest. I check it every weekday.
+        {contact.footerNote}
       </p>
     </div>
   );

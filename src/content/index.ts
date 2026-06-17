@@ -18,6 +18,9 @@ export const withBase = (p: string) =>
 // URLs that social crawlers can resolve.
 export const SITE_URL = "https://benalayz.github.io/zach-benalayat-product-portfolio";
 
+// Origin only (no subpath) — for prefixing already-base-prefixed asset URLs.
+export const SITE_ORIGIN = "https://benalayz.github.io";
+
 // Absolute URL for an asset, anchored to the live origin (for social cards).
 export const absUrl = (p: string) => `${SITE_URL}/${p.replace(/^\//, "")}`;
 

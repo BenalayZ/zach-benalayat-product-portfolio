@@ -20,8 +20,8 @@
     "availability": "Available now · Full-Time or Contract",
     "proofStats": [
       { "track": "Senior BI", "value": "$1M+ ARR", "label": "Inseego Connect · Power BI funnel" },
-      { "track": "Senior BI", "value": "46%", "label": "Faster intake · Arc of Southern Maryland service operations analytics" },
-      { "track": "Analytics-Led PM", "value": "$1M ARR", "label": "Seamless API 0→1" }
+      { "track": "Staff Analyst", "value": "46%", "label": "Faster intake · Arc of Southern Maryland service operations analytics" },
+      { "track": "Senior PM", "value": "$1M ARR", "label": "Seamless API 0→1" }
     ]
   },
   "logosBand": {
@@ -145,7 +145,7 @@
     "models": [
       {
         "label": "Full-Time",
-        "title": "Senior Analyst · BI Lead · Analytics-Led PM",
+        "title": "Staff/Senior Analyst · BI Lead · Analytics-Led PM",
         "body": "Embedded ownership of analytics, BI, or an analytics-led product team. Remote-first, open to hybrid."
       },
       {
@@ -167,7 +167,7 @@
     "items": [
       {
         "q": "What kinds of engagements are you open to?",
-        "a": "Full-time Senior Analyst, BI Lead, or analytics-led PM. Open to contract too: analytics audits, KPI design, BI builds, PRDs, 0→1 launches."
+        "a": "Full-time Staff or Senior Analyst, BI Lead, or analytics-led PM. Open to contract too: analytics audits, KPI design, BI builds, PRDs, 0→1 launches."
       },
       {
         "q": "What types of products have you shipped?",
@@ -189,7 +189,7 @@
   },
   "cta": {
     "heading": "Ready to ship?",
-    "body": "Open to full-time Senior PM or Senior BI roles, plus contract and consulting work. If you've got a problem worth solving, send it over.",
+    "body": "Open to full-time Senior PM, Staff Analyst, or Senior BI roles, plus contract and consulting work. If you've got a problem worth solving, send it over.",
     "emailLabel": "Send an email",
     "linkedinLabel": "LinkedIn"
   }

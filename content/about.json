@@ -123,64 +123,170 @@
         "label": "Languages & Querying",
         "subtitle": "What I write in.",
         "items": [
-          { "name": "SQL", "primary": true },
-          { "name": "Python", "primary": true, "children": ["pandas", "NumPy", "matplotlib"] },
-          { "name": "R" }
+          {
+            "name": "SQL",
+            "primary": true
+          },
+          {
+            "name": "Python",
+            "primary": true,
+            "children": [
+              "pandas",
+              "NumPy",
+              "matplotlib"
+            ]
+          },
+          {
+            "name": "R"
+          }
         ]
       },
       {
         "label": "Data Platforms",
         "subtitle": "Where data lives and how it moves.",
         "items": [
-          { "name": "Snowflake", "primary": true },
-          { "name": "dbt", "primary": true },
-          { "name": "BigQuery" },
-          { "name": "Amazon S3" },
-          { "name": "ETL & ELT" },
-          { "name": "Data Warehousing" },
-          { "name": "Database Design" },
-          { "name": "Data Mining" }
+          {
+            "name": "Snowflake",
+            "primary": true
+          },
+          {
+            "name": "Microsoft Fabric",
+            "primary": true
+          },
+          {
+            "name": "Databricks",
+            "primary": true
+          },
+          {
+            "name": "Redshift",
+            "primary": true
+          },
+          {
+            "name": "dbt",
+            "primary": true
+          },
+          {
+            "name": "BigQuery"
+          },
+          {
+            "name": "Amazon S3"
+          },
+          {
+            "name": "ETL & ELT"
+          },
+          {
+            "name": "Data Warehousing"
+          },
+          {
+            "name": "Database Design"
+          },
+          {
+            "name": "Data Mining"
+          }
         ]
       },
       {
         "label": "BI & Reporting",
         "subtitle": "How findings get seen and acted on.",
         "items": [
-          { "name": "Power BI", "primary": true, "children": ["DAX", "Semantic Modeling", "RLS", "Incremental Refresh"] },
-          { "name": "Looker", "primary": true },
-          { "name": "Tableau" },
-          { "name": "Google Analytics" },
-          { "name": "Excel / Sheets" }
+          {
+            "name": "Power BI",
+            "primary": true,
+            "children": [
+              "DAX",
+              "Semantic Modeling",
+              "RLS",
+              "Incremental Refresh"
+            ]
+          },
+          {
+            "name": "Looker",
+            "primary": true
+          },
+          {
+            "name": "Tableau"
+          },
+          {
+            "name": "Amplitude",
+            "primary": true
+          },
+          {
+            "name": "Google Analytics"
+          },
+          {
+            "name": "Excel / Sheets"
+          }
         ]
       },
       {
         "label": "Product & Delivery",
         "subtitle": "How work gets shipped.",
         "items": [
-          { "name": "Jira", "primary": true },
-          { "name": "Agile", "primary": true },
-          { "name": "Scrum" },
-          { "name": "Kanban" },
-          { "name": "Confluence" },
-          { "name": "GitHub" },
-          { "name": "SharePoint" },
-          { "name": "ServiceNow" },
-          { "name": "N8N" },
-          { "name": "Claude" }
+          {
+            "name": "Jira",
+            "primary": true
+          },
+          {
+            "name": "Agile",
+            "primary": true
+          },
+          {
+            "name": "Scrum"
+          },
+          {
+            "name": "Kanban"
+          },
+          {
+            "name": "Confluence"
+          },
+          {
+            "name": "GitHub"
+          },
+          {
+            "name": "SharePoint"
+          },
+          {
+            "name": "ServiceNow"
+          },
+          {
+            "name": "N8N"
+          },
+          {
+            "name": "Claude"
+          }
         ]
       },
       {
         "label": "Methods & Frameworks",
         "subtitle": "The analyses behind the decisions.",
         "items": [
-          { "name": "A/B Testing", "primary": true },
-          { "name": "Funnel Analysis", "primary": true },
-          { "name": "Cohort Analysis", "primary": true },
-          { "name": "Linear Regression" },
-          { "name": "Cost Modeling" },
-          { "name": "Identity Resolution" },
-          { "name": "Unit Testing" },
-          { "name": "Time to Value" }
+          {
+            "name": "A/B Testing",
+            "primary": true
+          },
+          {
+            "name": "Funnel Analysis",
+            "primary": true
+          },
+          {
+            "name": "Cohort Analysis",
+            "primary": true
+          },
+          {
+            "name": "Linear Regression"
+          },
+          {
+            "name": "Cost Modeling"
+          },
+          {
+            "name": "Identity Resolution"
+          },
+          {
+            "name": "Unit Testing"
+          },
+          {
+            "name": "Time to Value"
+          }
         ]
       }
     ]

@@ -8,7 +8,7 @@ import theArc from "@/assets/projects/the-arc.png";
 import productAnalysis from "@/assets/projects/seamless-product-analysis.jpg";
 import { projectsContent } from "@/content";
 
-export type RoleSignal = "Senior PM" | "Senior BI";
+export type RoleSignal = "Senior PM" | "Senior BI" | "Staff Analyst";
 
 export type Project = {
   slug: string;

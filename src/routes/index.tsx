@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Download, Linkedin, MapPin } from "lucide-react";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
-import { home, site, withBase } from "@/content";
+import { home, site, withBase, OG_IMAGE } from "@/content";
 import seamlessLogo from "@/assets/logos/seamless.png";
 import inseegoLogo from "@/assets/logos/inseego.png";
 import caseworthyLogo from "@/assets/logos/caseworthy.png";
@@ -19,6 +19,11 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: home.seo.ogDescription },
       { property: "og:url", content: "/" },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: OG_IMAGE },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: home.seo.title },
+      { name: "twitter:description", content: home.seo.ogDescription },
+      { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),

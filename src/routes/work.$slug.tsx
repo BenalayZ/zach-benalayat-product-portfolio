@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { projects } from "@/data/projects";
+import { OG_IMAGE, SITE_ORIGIN } from "@/content";
 
 
 export const Route = createFileRoute("/work/$slug")({
@@ -13,6 +14,8 @@ export const Route = createFileRoute("/work/$slug")({
     const p = loaderData?.project;
     const title = p ? `${p.title} — Zach Benalayat` : "Case Study — Zach Benalayat";
     const description = p?.summary ?? "Case study by Zach Benalayat.";
+    // Project hero is a base-prefixed asset path; anchor it to the live origin.
+    const image = p?.image ? `${SITE_ORIGIN}${p.image}` : OG_IMAGE;
     return {
       meta: [
         { title },
@@ -21,7 +24,11 @@ export const Route = createFileRoute("/work/$slug")({
         { property: "og:description", content: description },
         { property: "og:url", content: `/work/${params.slug}` },
         { property: "og:type", content: "article" },
-        ...(p?.image ? [{ property: "og:image", content: p.image }] : []),
+        { property: "og:image", content: image },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
+        { name: "twitter:image", content: image },
       ],
       links: [{ rel: "canonical", href: `/work/${params.slug}` }],
     };

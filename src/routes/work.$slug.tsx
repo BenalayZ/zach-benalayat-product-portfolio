@@ -1,7 +1,43 @@
+import { useEffect } from "react";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { projects } from "@/data/projects";
-import { OG_IMAGE, SITE_ORIGIN } from "@/content";
+import { projects, type Project } from "@/data/projects";
+import { OG_IMAGE, SITE_ORIGIN, SITE_URL } from "@/content";
+
+// Inject a per-project CreativeWork JSON-LD node into <head> for richer
+// search results. Client-side so JS-executing crawlers (Googlebot) read it;
+// removed on unmount so navigating between case studies doesn't stack nodes.
+function useCreativeWorkJsonLd(project: Project) {
+  useEffect(() => {
+    const data = {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      name: project.title,
+      headline: project.headline ?? project.title,
+      description: project.summary,
+      url: `${SITE_URL}/work/${project.slug}`,
+      image: project.image?.startsWith("http")
+        ? project.image
+        : `${SITE_ORIGIN}${project.image}`,
+      keywords: project.tags.join(", "),
+      about: project.tags,
+      dateCreated: project.date,
+      author: {
+        "@type": "Person",
+        name: "Zach Benalayat",
+        url: `${SITE_URL}/`,
+      },
+    };
+    const el = document.createElement("script");
+    el.type = "application/ld+json";
+    el.setAttribute("data-jsonld", "creative-work");
+    el.textContent = JSON.stringify(data);
+    document.head.appendChild(el);
+    return () => {
+      el.remove();
+    };
+  }, [project]);
+}
 
 
 export const Route = createFileRoute("/work/$slug")({

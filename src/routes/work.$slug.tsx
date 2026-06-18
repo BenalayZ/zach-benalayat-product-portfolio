@@ -88,6 +88,8 @@ export const Route = createFileRoute("/work/$slug")({
 
 function CaseStudy() {
   const { project } = Route.useLoaderData();
+  useCreativeWorkJsonLd(project);
+
 
   const currentIndex = projects.findIndex((p) => p.slug === project.slug);
   const nextProject = projects[(currentIndex + 1) % projects.length];

@@ -11,7 +11,7 @@
 ## Case Studies
 
 - [Seamless API](/work/seamless-api): API product strategy and rollout.
-- [Data Engine 4.0](/work/data-engine-4): Data infrastructure for product analytics.
+- [Data Engine 4.0](/work/data-engine): Data infrastructure for product analytics.
 - [Seamless MCP](/work/seamless-mcp): Model Context Protocol integration.
 - [Seamless Fast Data](/work/seamless-fast-data): Real-time data delivery.
 - [Inseego Connect](/work/inseego-connect): IoT device management platform.

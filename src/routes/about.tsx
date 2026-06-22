@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Download } from "lucide-react";
-import { about, withBase, site, OG_IMAGE } from "@/content";
+import { about, withBase, site, OG_IMAGE, SITE_URL } from "@/content";
 
 export const Route = createFileRoute("/about")({
   component: AboutPage,
@@ -10,14 +10,15 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: about.seo.description },
       { property: "og:title", content: about.seo.title },
       { property: "og:description", content: about.seo.ogDescription },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: `${SITE_URL}/about` },
+      { property: "og:type", content: "profile" },
       { property: "og:image", content: OG_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: about.seo.title },
       { name: "twitter:description", content: about.seo.ogDescription },
       { name: "twitter:image", content: OG_IMAGE },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/about` }],
   }),
 });
 

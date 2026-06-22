@@ -16,6 +16,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://benalayz.github.io/zach-benalayat-product-portfolio/work/product-tier-analysis</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://benalayz.github.io/zach-benalayat-product-portfolio/work/seamless-api</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

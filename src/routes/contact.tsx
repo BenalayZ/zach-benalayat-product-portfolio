@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, Linkedin, ArrowUpRight, FileDown, Clock } from "lucide-react";
-import { contact, site, withBase, OG_IMAGE } from "@/content";
+import { contact, site, withBase, OG_IMAGE, SITE_URL } from "@/content";
 
 export const Route = createFileRoute("/contact")({
   component: ContactPage,
@@ -10,14 +10,15 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: contact.seo.description },
       { property: "og:title", content: contact.seo.title },
       { property: "og:description", content: contact.seo.ogDescription },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: `${SITE_URL}/contact` },
+      { property: "og:type", content: "website" },
       { property: "og:image", content: OG_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: contact.seo.title },
       { name: "twitter:description", content: contact.seo.ogDescription },
       { name: "twitter:image", content: OG_IMAGE },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: `${SITE_URL}/contact` }],
   }),
 });
 

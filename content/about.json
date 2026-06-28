@@ -1,17 +1,17 @@
 {
   "seo": {
     "title": "About Zach Benalayat",
-    "description": "About Zach Benalayat. Senior Product Analyst, BA, DA, and BI. SQL, Python, Power BI, and Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, consumer marketplaces, and operations.",
-    "ogDescription": "Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI, and Snowflake."
+    "description": "About Zach Benalayat. Data Analyst, BI Developer, and Data Engineer. SQL, Python, dbt, Power BI, and Snowflake. Experience across B2B SaaS, IoT/Telecom, AI platforms, and operations.",
+    "ogDescription": "Data Analyst, BI Developer, and Data Engineer. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, dbt, Power BI, and Snowflake."
   },
   "header": {
     "eyebrow": "About",
     "heading": "Hi, I'm Zach.",
-    "subtitle": "SQL · Python · Power BI · Snowflake · Product Analytics · Forecasting"
+    "subtitle": "SQL · Python · dbt · Power BI · Snowflake · Data Modeling · Forecasting"
   },
   "bio": [
-    "I lead with the analysis. SQL on Snowflake, funnels and dashboards in Power BI / Looker / Tableau, A/B tests, forecasting, and Python when the transforms get heavy.",
-    "I anchor every scope call to the metric that actually monetizes. The PRDs, OKRs, and roadmap bets fall out of what the data says."
+    "I lead with the data. SQL on Snowflake, ETL/ELT and dbt models when the transforms get heavy, funnels and dashboards in Power BI / Looker / Tableau, plus A/B tests and forecasting.",
+    "I anchor every analysis to the metric that actually matters. The pipelines, semantic models, and recommendations fall out of what the data says."
   ],
   "industries": [
     "B2B SaaS",
@@ -28,13 +28,13 @@
     {
       "period": "2024–2026",
       "company": "Seamless.AI",
-      "role": "Product Manager II · Data Operations & Tech Projects",
+      "role": "Data Operations & Analytics · Tech Projects",
       "points": [
-        "Defined product OKRs and analytics frameworks measuring API adoption, engagement, and conversion across customer touchpoints.",
+        "Defined analytics frameworks and KPIs measuring API adoption, engagement, and conversion across customer touchpoints.",
         "Behavioral funnel analysis across search, discovery, and purchase. Surfaced UX changes that reduced search time by 25%.",
-        "Designed internal Power BI / Looker dashboards for exec leadership, Sales, and RevOps to monitor product performance and customer behavior.",
+        "Designed Power BI / Looker semantic models and dashboards for exec leadership, Sales, and RevOps to monitor product performance and customer behavior.",
         "Spearheaded identity resolution overhaul: +10% contact coverage vs LinkedIn company-contact baseline, +25% confidence in email and phone records, delivered in 3 months.",
-        "Owned the 0→1 launch of the customer-facing B2B Public API to $1M booked ARR in year one. SMB and mid-market first; enterprise expansion underway. Automated analytics workflows with Claude + N8N, cutting idea-to-design cycle time by 15%."
+        "Owned the data and analytics behind the 0→1 customer-facing B2B Public API ($1M booked ARR year one), including the credit-consumption and ARR run-rate forecast. Automated analytics workflows with Claude + N8N, cutting cycle time by 15%."
       ]
     },
     {
@@ -43,9 +43,9 @@
       "role": "Business Systems Analyst · Sales Analytics",
       "points": [
         "SQL + Python analysis of customer, sales, and federal contracting datasets. Recommended a microtargeting shift that sales leadership adopted, driving $1M+ in enterprise contract uplift in the first re-targeting cycle.",
-        "Built Power BI analytics frameworks tracking adoption, engagement, and bundling performance on US Navy contracts.",
-        "Ran market and competitive data analysis to support product positioning and carrier partnerships.",
-        "Translated business + data insights into technical product requirements (DCMA 14-Point compliant)."
+        "Built Power BI semantic models tracking adoption, engagement, and bundling performance on US Navy contracts.",
+        "Ran market and competitive data analysis to support positioning and carrier partnerships.",
+        "Translated business and data insights into technical data requirements (DCMA 14-Point compliant)."
       ]
     },
     {
@@ -84,23 +84,23 @@
   ],
   "principles": {
     "eyebrow": "Principles",
-    "heading": "Product Strategy North Stars",
+    "heading": "Analytics North Stars",
     "items": [
       {
         "title": "A moment that stuck",
-        "quote": "The first time a dashboard I built talked a sales VP out of a bad roadmap ask, I realized I didn't need to write another strategy deck for that kind of meeting. He looked at the funnel for thirty seconds and killed the idea himself. The numbers do the arguing now."
+        "quote": "The first time a dashboard I built talked a sales VP out of a bad call, I realized I didn't need to write another deck for that kind of meeting. He looked at the funnel for thirty seconds and changed his mind himself. The numbers do the arguing now."
       },
       {
         "title": "Unpopular opinion",
-        "quote": "Most annual roadmaps are confidence rituals. I'd rather ship something small on Tuesday and have real usage data by Friday than spend three quarters debating priorities in a spreadsheet."
+        "quote": "Most dashboards are decoration. If nobody can name the decision that changes when a number moves, you've built a wall poster, not an analytics product."
       },
       {
         "title": "Rule of thumb",
-        "quote": "Name the metric. Ship small. Check Monday."
+        "quote": "Name the metric. Model it cleanly. Check Monday."
       },
       {
         "title": "A question I ask early",
-        "quote": "If nobody can tell me what decision changes when this number moves, we're not building a dashboard. We're building decoration."
+        "quote": "What decision changes when this number moves? If there isn't one, we're not building a dashboard — we're building decoration."
       }
     ]
   },
@@ -110,8 +110,8 @@
     "steps": [
       "Pin down what we're actually trying to move.",
       "Get the data, get the context, talk to whoever's closest to the problem.",
-      "Frame the KPI tree and instrument it.",
-      "Ship the smallest thing that proves or kills the bet.",
+      "Frame the KPI tree, model the data, and instrument it.",
+      "Ship the smallest thing that proves or kills the answer.",
       "Measure honestly. Roll forward or roll back."
     ]
   },
@@ -150,6 +150,10 @@
             "primary": true
           },
           {
+            "name": "dbt",
+            "primary": true
+          },
+          {
             "name": "Microsoft Fabric",
             "primary": true
           },
@@ -159,10 +163,6 @@
           },
           {
             "name": "Redshift",
-            "primary": true
-          },
-          {
-            "name": "dbt",
             "primary": true
           },
           {
@@ -219,16 +219,19 @@
         ]
       },
       {
-        "label": "Product & Delivery",
+        "label": "Engineering & Delivery",
         "subtitle": "How work gets shipped.",
         "items": [
+          {
+            "name": "Git / GitHub",
+            "primary": true
+          },
           {
             "name": "Jira",
             "primary": true
           },
           {
-            "name": "Agile",
-            "primary": true
+            "name": "Agile"
           },
           {
             "name": "Scrum"
@@ -238,12 +241,6 @@
           },
           {
             "name": "Confluence"
-          },
-          {
-            "name": "GitHub"
-          },
-          {
-            "name": "SharePoint"
           },
           {
             "name": "ServiceNow"
@@ -273,6 +270,9 @@
             "primary": true
           },
           {
+            "name": "Forecasting"
+          },
+          {
             "name": "Linear Regression"
           },
           {
@@ -283,9 +283,6 @@
           },
           {
             "name": "Unit Testing"
-          },
-          {
-            "name": "Time to Value"
           }
         ]
       }

@@ -1,6 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { ArrowRight, Download, Linkedin, MapPin } from "lucide-react";
-import { projects } from "@/data/projects";
+import { projects, type RoleSignal } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 import { home, site, withBase, OG_IMAGE, SITE_URL } from "@/content";
 import seamlessLogo from "@/assets/logos/seamless.png";
@@ -9,8 +9,23 @@ import caseworthyLogo from "@/assets/logos/caseworthy.png";
 import arcLogo from "@/assets/logos/arc.svg";
 import butlerLogo from "@/assets/logos/butler.png";
 
+// Reviewer-lens tracks. `?track=` makes a chosen lens shareable in an
+// application link, and re-leads the work grid for that reviewer.
+const TRACK_KEYS = ["all", "analytics", "data"] as const;
+type TrackKey = (typeof TRACK_KEYS)[number];
+const trackToSignal: Record<Exclude<TrackKey, "all">, RoleSignal> = {
+  analytics: "Analytics/BI",
+  data: "Data Engineering",
+};
+
 export const Route = createFileRoute("/")({
   component: Index,
+  validateSearch: (search: Record<string, unknown>): { track?: TrackKey } => {
+    const t = search.track;
+    return TRACK_KEYS.includes(t as TrackKey) && t !== "all"
+      ? { track: t as TrackKey }
+      : {};
+  },
   head: () => ({
     meta: [
       { title: home.seo.title },
@@ -40,8 +55,24 @@ const logoMap: Record<string, string> = {
 };
 
 function Index() {
-  const featured = projects.filter((p) => p.featured);
-  const more = projects.filter((p) => !p.featured);
+  const { track } = Route.useSearch();
+  const navigate = useNavigate({ from: Route.fullPath });
+  const activeTrack: TrackKey = track ?? "all";
+  const activeSignal = activeTrack === "all" ? null : trackToSignal[activeTrack];
+
+  const matches = (signals?: RoleSignal[]) =>
+    !activeSignal || (signals?.includes(activeSignal) ?? false);
+  // Matches first, non-matches dimmed below — never hide work entirely.
+  const orderByMatch = <T extends { signals?: RoleSignal[] }>(list: T[]) =>
+    [...list].sort((a, b) => Number(matches(b.signals)) - Number(matches(a.signals)));
+
+  const featured = orderByMatch(projects.filter((p) => p.featured));
+  const more = orderByMatch(projects.filter((p) => !p.featured));
+
+  const setTrack = (t: TrackKey) =>
+    navigate({ search: t === "all" ? {} : { track: t }, replace: true });
+
+
 
   return (
     <div>
@@ -366,11 +397,51 @@ function Index() {
             </div>
           </div>
 
+          {/* Reviewer-lens track toggle */}
+          <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div
+              role="tablist"
+              aria-label="Filter work by track"
+              className="inline-flex flex-wrap gap-1 rounded-full border border-border bg-card p-1"
+            >
+              {TRACK_KEYS.map((key) => {
+                const isActive = activeTrack === key;
+                return (
+                  <button
+                    key={key}
+                    type="button"
+                    role="tab"
+                    aria-selected={isActive}
+                    onClick={() => setTrack(key)}
+                    className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-[0.15em] transition-all ${
+                      isActive
+                        ? "bg-primary text-primary-foreground shadow-sm"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {home.tracks[key].label}
+                  </button>
+                );
+              })}
+            </div>
+            <p className="text-sm leading-relaxed text-muted-foreground sm:max-w-md sm:text-right">
+              {home.tracks[activeTrack].blurb}
+            </p>
+          </div>
+
           <div className="grid gap-6 md:grid-cols-2">
             {featured.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
+              <div
+                key={project.slug}
+                className={`transition-all duration-300 ${
+                  matches(project.signals) ? "" : "opacity-40 saturate-50 hover:opacity-100"
+                }`}
+              >
+                <ProjectCard project={project} />
+              </div>
             ))}
           </div>
+
 
           <div className="mt-10 hidden justify-end md:flex">
             <Link
@@ -503,9 +574,17 @@ function Index() {
 
           <div className="grid gap-6 md:grid-cols-2">
             {more.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
+              <div
+                key={project.slug}
+                className={`transition-all duration-300 ${
+                  matches(project.signals) ? "" : "opacity-40 saturate-50 hover:opacity-100"
+                }`}
+              >
+                <ProjectCard project={project} />
+              </div>
             ))}
           </div>
+
         </div>
       </section>
 

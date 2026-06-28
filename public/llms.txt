@@ -1,20 +1,20 @@
 # Zach Benalayat
 
-> Portfolio of Zach Benalayat — Product Manager and Data Analyst working across B2B SaaS, IoT, and digital scholarship.
+> Portfolio of Zach Benalayat — Data Analyst, BI Developer, and Data Engineer working across B2B SaaS, IoT, and operations.
 
 ## Pages
 
-- [Home](/): Featured case studies, skills, and an overview of Zach's product work.
-- [About](/about): Background, approach, and a toolkit of product, data, engineering, and research methods.
+- [Home](/): Featured case studies, data/BI/engineering skills, and an overview of Zach's work.
+- [About](/about): Background, approach, and a toolkit of analytics, BI, data-engineering, and methods.
 - [Contact](/contact): Ways to get in touch.
 
 ## Case Studies
 
-- [Seamless Tier × CRM-Connect Analysis](/work/product-tier-analysis): Pricing tier and CRM integration analysis.
-- [Seamless API](/work/seamless-api): API product strategy and rollout.
-- [Data Engine 4.0](/work/data-engine): Data infrastructure for product analytics.
-- [Seamless MCP](/work/seamless-mcp): Model Context Protocol integration.
-- [Seamless Fast Data](/work/seamless-fast-data): Real-time data delivery.
-- [Inseego Connect](/work/inseego-connect): IoT device management platform.
-- [Latin Hyper-Texts](/work/latin-hyper-texts): Digital scholarship project.
-- [The Arc](/work/the-arc): Product case study.
+- [Seamless Tier × CRM-Connect Analysis](/work/product-tier-analysis): Tier and CRM-connection segmentation analysis in SQL.
+- [Seamless API — Consumption Forecast](/work/seamless-api): Credit-consumption and ARR run-rate forecasting in Power BI.
+- [Data Engine 4.0](/work/data-engine): Pipeline rebuild on Snowflake/dbt — dedupe, surrogate keys, 20% AWS savings.
+- [Seamless MCP](/work/seamless-mcp): Model Context Protocol data integration.
+- [Seamless Fast Data](/work/seamless-fast-data): Real-time change-data pipeline, 15x faster delivery.
+- [Inseego Connect](/work/inseego-connect): Power BI semantic model for IoT sales targeting.
+- [Latin Hyper-Texts](/work/latin-hyper-texts): Relational data architecture for digital scholarship.
+- [The Arc](/work/the-arc): Service operations analytics and billing automation.

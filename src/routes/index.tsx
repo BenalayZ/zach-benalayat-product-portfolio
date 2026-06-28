@@ -1,6 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { ArrowRight, Download, Linkedin, MapPin } from "lucide-react";
-import { projects } from "@/data/projects";
+import { projects, type RoleSignal } from "@/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 import { home, site, withBase, OG_IMAGE, SITE_URL } from "@/content";
 import seamlessLogo from "@/assets/logos/seamless.png";
@@ -9,8 +9,21 @@ import caseworthyLogo from "@/assets/logos/caseworthy.png";
 import arcLogo from "@/assets/logos/arc.svg";
 import butlerLogo from "@/assets/logos/butler.png";
 
+// Reviewer-lens tracks. `?track=` makes a chosen lens shareable in an
+// application link, and re-leads the work grid for that reviewer.
+const TRACK_KEYS = ["all", "analytics", "data"] as const;
+type TrackKey = (typeof TRACK_KEYS)[number];
+const trackToSignal: Record<Exclude<TrackKey, "all">, RoleSignal> = {
+  analytics: "Analytics/BI",
+  data: "Data Engineering",
+};
+
 export const Route = createFileRoute("/")({
   component: Index,
+  validateSearch: (search: Record<string, unknown>): { track: TrackKey } => {
+    const t = search.track;
+    return { track: TRACK_KEYS.includes(t as TrackKey) ? (t as TrackKey) : "all" };
+  },
   head: () => ({
     meta: [
       { title: home.seo.title },

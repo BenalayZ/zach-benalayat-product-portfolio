@@ -397,11 +397,51 @@ function Index() {
             </div>
           </div>
 
+          {/* Reviewer-lens track toggle */}
+          <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div
+              role="tablist"
+              aria-label="Filter work by track"
+              className="inline-flex flex-wrap gap-1 rounded-full border border-border bg-card p-1"
+            >
+              {TRACK_KEYS.map((key) => {
+                const isActive = activeTrack === key;
+                return (
+                  <button
+                    key={key}
+                    type="button"
+                    role="tab"
+                    aria-selected={isActive}
+                    onClick={() => setTrack(key)}
+                    className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-[0.15em] transition-all ${
+                      isActive
+                        ? "bg-primary text-primary-foreground shadow-sm"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    {home.tracks[key].label}
+                  </button>
+                );
+              })}
+            </div>
+            <p className="text-sm leading-relaxed text-muted-foreground sm:max-w-md sm:text-right">
+              {home.tracks[activeTrack].blurb}
+            </p>
+          </div>
+
           <div className="grid gap-6 md:grid-cols-2">
             {featured.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
+              <div
+                key={project.slug}
+                className={`transition-all duration-300 ${
+                  matches(project.signals) ? "" : "opacity-40 saturate-50 hover:opacity-100"
+                }`}
+              >
+                <ProjectCard project={project} />
+              </div>
             ))}
           </div>
+
 
           <div className="mt-10 hidden justify-end md:flex">
             <Link

@@ -1,5 +1,6 @@
 import seamlessApi from "@/assets/projects/seamless-api.jpg";
 import dataEngine from "@/assets/projects/data-engine.jpg";
+import dataEngineArch from "@/assets/projects/data-engine-arch.jpg";
 import seamlessMcp from "@/assets/projects/seamless-mcp.jpg";
 import seamlessFastData from "@/assets/projects/seamless-fast-data.jpg";
 import inseegoConnect from "@/assets/projects/inseego-connect.jpg";
@@ -8,7 +9,7 @@ import theArc from "@/assets/projects/the-arc.png";
 import productAnalysis from "@/assets/projects/seamless-product-analysis.jpg";
 import { projectsContent } from "@/content";
 
-export type RoleSignal = "Senior PM" | "Senior BI" | "Staff Analyst";
+export type RoleSignal = "Analytics/BI" | "Data Engineering";
 
 export type Project = {
   slug: string;
@@ -24,6 +25,7 @@ export type Project = {
   insights: string;
   outcome: string;
   tradeOff?: string;
+  codeSnippet?: string;
   featured?: boolean;
   signals?: RoleSignal[];
 };
@@ -34,6 +36,7 @@ export type Project = {
 const imageMap: Record<string, string> = {
   "seamless-api": seamlessApi,
   "data-engine": dataEngine,
+  "data-engine-arch": dataEngineArch,
   "seamless-mcp": seamlessMcp,
   "seamless-fast-data": seamlessFastData,
   "inseego-connect": inseegoConnect,

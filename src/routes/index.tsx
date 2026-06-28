@@ -20,9 +20,11 @@ const trackToSignal: Record<Exclude<TrackKey, "all">, RoleSignal> = {
 
 export const Route = createFileRoute("/")({
   component: Index,
-  validateSearch: (search: Record<string, unknown>): { track: TrackKey } => {
+  validateSearch: (search: Record<string, unknown>): { track?: TrackKey } => {
     const t = search.track;
-    return { track: TRACK_KEYS.includes(t as TrackKey) ? (t as TrackKey) : "all" };
+    return TRACK_KEYS.includes(t as TrackKey) && t !== "all"
+      ? { track: t as TrackKey }
+      : {};
   },
   head: () => ({
     meta: [

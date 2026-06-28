@@ -55,8 +55,24 @@ const logoMap: Record<string, string> = {
 };
 
 function Index() {
-  const featured = projects.filter((p) => p.featured);
-  const more = projects.filter((p) => !p.featured);
+  const { track } = Route.useSearch();
+  const navigate = useNavigate({ from: Route.fullPath });
+  const activeTrack: TrackKey = track ?? "all";
+  const activeSignal = activeTrack === "all" ? null : trackToSignal[activeTrack];
+
+  const matches = (signals?: RoleSignal[]) =>
+    !activeSignal || (signals?.includes(activeSignal) ?? false);
+  // Matches first, non-matches dimmed below — never hide work entirely.
+  const orderByMatch = <T extends { signals?: RoleSignal[] }>(list: T[]) =>
+    [...list].sort((a, b) => Number(matches(b.signals)) - Number(matches(a.signals)));
+
+  const featured = orderByMatch(projects.filter((p) => p.featured));
+  const more = orderByMatch(projects.filter((p) => !p.featured));
+
+  const setTrack = (t: TrackKey) =>
+    navigate({ search: t === "all" ? {} : { track: t }, replace: true });
+
+
 
   return (
     <div>

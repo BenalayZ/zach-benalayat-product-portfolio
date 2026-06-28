@@ -574,9 +574,17 @@ function Index() {
 
           <div className="grid gap-6 md:grid-cols-2">
             {more.map((project) => (
-              <ProjectCard key={project.slug} project={project} />
+              <div
+                key={project.slug}
+                className={`transition-all duration-300 ${
+                  matches(project.signals) ? "" : "opacity-40 saturate-50 hover:opacity-100"
+                }`}
+              >
+                <ProjectCard project={project} />
+              </div>
             ))}
           </div>
+
         </div>
       </section>
 

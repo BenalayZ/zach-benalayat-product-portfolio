@@ -1,28 +1,42 @@
 {
   "seo": {
-    "title": "Zach Benalayat — Product & Data Analyst",
-    "description": "Zach Benalayat. Senior Product Analyst, BA, DA, and BI. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI. Available now.",
-    "ogDescription": "SQL, Python, Power BI, and Snowflake. Most recently Product Manager II at Seamless.AI. Shipped a customer-facing API to $1M booked ARR. Available now."
+    "title": "Zach Benalayat — Data Analyst, BI Developer & Data Engineer",
+    "description": "Zach Benalayat. Data Analyst, BI Developer, and Data Engineer. 6+ years across B2B SaaS, IoT, and AI. SQL, Python, dbt, Snowflake, and Power BI. Pipelines, semantic models, and analysis that drive decisions. Available now.",
+    "ogDescription": "SQL, Python, dbt, Snowflake, and Power BI. Pipelines and BI models that hold up in production — one still drove $1M+ ARR in re-targeting. Available now."
   },
   "hero": {
     "monogram": "BENALAYAT",
     "nameLabel": "Zach Benalayat",
-    "eyebrow": "6+ years · B2B SaaS · IoT · AI",
-    "headlineLine1": "Product & Data",
-    "headlineLine2": "Analyst",
-    "tagline": "SQL, Python, Power BI, and Snowflake. I dig into the data, find what's actually driving revenue, and turn it into the decision.",
+    "eyebrow": "6+ years · Analytics · BI · Data Engineering",
+    "headlineLine1": "Data Analyst &",
+    "headlineLine2": "BI Developer",
+    "tagline": "SQL, Python, dbt, Snowflake, and Power BI. I build the pipelines and semantic models, then turn the data into the decision — and the dashboards that keep it honest.",
     "metaPoints": [
       "Austin, Texas · Remote-first, open to hybrid",
-      "Most recently: Product Manager II, Seamless.AI"
+      "Most recently: Data Operations, Seamless.AI"
     ],
     "ctaPrimary": "See the work",
     "ctaResume": "Download resume",
     "availability": "Available now · Full-Time or Contract",
     "proofStats": [
-      { "track": "Senior BI", "value": "$1M+ ARR", "label": "Inseego Connect · Power BI funnel" },
-      { "track": "Staff Analyst", "value": "46%", "label": "Faster intake · Arc of Southern Maryland service operations analytics" },
-      { "track": "Senior PM", "value": "$1M ARR", "label": "Seamless API 0→1" }
+      { "track": "BI Developer", "value": "$1M+ ARR", "label": "Inseego Connect · Power BI semantic model" },
+      { "track": "Analytics", "value": "46%", "label": "Faster intake · Arc service operations analytics" },
+      { "track": "Data Engineering", "value": "20%", "label": "Lower AWS spend · Data Engine 4.0 rebuild" }
     ]
+  },
+  "tracks": {
+    "all": {
+      "label": "All work",
+      "blurb": "Analytics, BI, and data engineering across B2B SaaS, IoT, and operations."
+    },
+    "analytics": {
+      "label": "Analytics / BI",
+      "blurb": "Dashboards, semantic models, experimentation, and forecasting that leadership acts on."
+    },
+    "data": {
+      "label": "Data Engineering",
+      "blurb": "Pipelines, warehouse modeling, identity resolution, and cost/performance tuning."
+    }
   },
   "logosBand": {
     "label": "Organizations I've worked with",
@@ -36,10 +50,10 @@
   },
   "approach": {
     "eyebrow": "Approach",
-    "headlineLine1": "The analysis comes first.",
-    "headlineLine2": "The product bet comes out of it.",
-    "body1": "I instrument before I argue. Every call I've shipped started with a KPI tree, a dashboard, and a SQL query.",
-    "body2": "The PRD, the roadmap, and the launch plan follow what the data shows, not what a meeting decided.",
+    "headlineLine1": "The data comes first.",
+    "headlineLine2": "Everything else follows it.",
+    "body1": "I instrument before I argue. Every decision I've shipped started with a KPI tree, a SQL query, and a dashboard.",
+    "body2": "The model, the pipeline, and the recommendation follow what the data shows, not what a meeting decided.",
     "sectionNumber": "01"
   },
   "toolkit": {
@@ -48,13 +62,6 @@
     "headlineLine2": "for.",
     "subtitle": "Primary tools in bold. Supporting kit underneath.",
     "groups": [
-      {
-        "label": "Certifications",
-        "items": [
-          { "name": "Agile / Scrum / Project Management", "primary": true, "children": ["Atlassian"] },
-          { "name": "Data Management", "primary": true, "children": ["UT Austin"] }
-        ]
-      },
       {
         "label": "Languages & Querying",
         "items": [
@@ -67,10 +74,10 @@
         "label": "Data Platforms",
         "items": [
           { "name": "Snowflake", "primary": true },
+          { "name": "dbt", "primary": true },
           { "name": "Microsoft Fabric", "primary": true },
           { "name": "Databricks", "primary": true },
           { "name": "Redshift", "primary": true },
-          { "name": "dbt" },
           { "name": "BigQuery" },
           { "name": "Amazon S3" }
         ]
@@ -87,31 +94,39 @@
         ]
       },
       {
-        "label": "Product & Delivery",
+        "label": "Engineering & Delivery",
         "items": [
+          { "name": "Git / GitHub", "primary": true },
           { "name": "Jira", "primary": true },
-          { "name": "GitHub", "primary": true },
-          { "name": "Notion", "primary": true },
           { "name": "Kanban", "primary": true },
           { "name": "Confluence" },
-          { "name": "SharePoint" },
           { "name": "ServiceNow" },
           { "name": "N8N" }
+        ]
+      },
+      {
+        "label": "Methods & Frameworks",
+        "items": [
+          { "name": "A/B Testing", "primary": true },
+          { "name": "Funnel Analysis", "primary": true },
+          { "name": "Cohort Analysis", "primary": true },
+          { "name": "Forecasting" },
+          { "name": "Identity Resolution" },
+          { "name": "Cost Modeling" }
         ]
       },
       {
         "label": "AI & Agentic Tooling",
         "items": [
           { "name": "Claude Code", "primary": true },
-          { "name": "OpenAI Agents", "primary": true },
           { "name": "GitHub Copilot", "primary": true },
-          { "name": "Lovable" },
-          { "name": "Claude Cowork" },
-          { "name": "Cursor" }
+          { "name": "OpenAI Agents", "primary": true },
+          { "name": "Cursor" },
+          { "name": "Lovable" }
         ]
       }
     ],
-    "atsKeywords": "Product Manager, Senior Product Manager, Data Analyst, Product Analytics, Business Analyst, SQL, Python, R, pandas, NumPy, Snowflake, Databricks, Redshift, BigQuery, dbt, ETL, ELT, Data Warehousing, Power BI, Tableau, Looker, Amplitude, Google Analytics, A/B Testing, Funnel Analysis, Cohort Analysis, KPI Design, OKRs, PRD, Roadmap, Agile, Scrum, Kanban, Jira, Confluence, GitHub, B2B SaaS, IoT, Telecom, Agentic AI, MCP, GTM Strategy, Identity Resolution, Cost Modeling, Time to Value."
+    "atsKeywords": "Data Analyst, Senior Data Analyst, BI Developer, BI Analyst, Business Intelligence, Analytics Engineer, Data Engineer, Product Analytics, SQL, Python, R, pandas, NumPy, Snowflake, Databricks, Redshift, BigQuery, dbt, ETL, ELT, Data Warehousing, Data Modeling, Star Schema, Semantic Modeling, Power BI, DAX, RLS, Tableau, Looker, Amplitude, Google Analytics, A/B Testing, Funnel Analysis, Cohort Analysis, KPI Design, Forecasting, Data Pipelines, Identity Resolution, Cost Modeling, B2B SaaS, IoT, Telecom."
   },
   "featuredHeading": "Featured projects",
   "featuredEyebrow": "Selected Work",
@@ -121,20 +136,20 @@
     "headline": "Four things I do well, repeatedly.",
     "items": [
       {
-        "title": "BI & Executive Dashboarding",
-        "body": "Power BI, Looker, Tableau on Snowflake, plus the semantic modeling and ETL that make them trustworthy."
+        "title": "Data & SQL Engineering",
+        "body": "ETL/ELT pipelines, stored procedures, identity resolution, and warehouse modeling. The plumbing nobody notices until it breaks."
       },
       {
-        "title": "Product Analytics & Experimentation",
+        "title": "BI & Executive Dashboarding",
+        "body": "Power BI, Looker, and Tableau on Snowflake, plus the semantic modeling and DAX that make them trustworthy."
+      },
+      {
+        "title": "Analytics & Experimentation",
         "body": "A/B tests, funnels, and cohorts in SQL and Python. I design the KPI before I touch the dashboard."
       },
       {
-        "title": "Data & SQL Engineering",
-        "body": "Stored procedures, ETL pipelines, identity resolution. The plumbing nobody notices until it breaks."
-      },
-      {
-        "title": "Analytics-Led Product Delivery",
-        "body": "PRDs, OKRs, and roadmap bets that come from the analysis, not the other way around."
+        "title": "Analytics Engineering",
+        "body": "dbt models, star schemas, and incremental refresh that turn raw tables into a layer the whole org can query."
       }
     ]
   },
@@ -145,18 +160,18 @@
     "models": [
       {
         "label": "Full-Time",
-        "title": "Staff/Senior Analyst · BI Lead · Analytics-Led PM",
-        "body": "Embedded ownership of analytics, BI, or an analytics-led product team. Remote-first, open to hybrid."
+        "title": "Senior Data Analyst · BI Developer · Data / Analytics Engineer",
+        "body": "Embedded ownership of analytics, BI, or the data platform underneath them. Remote-first, open to hybrid."
       },
       {
         "label": "Contract",
         "title": "3–12 month embedded engagement",
-        "body": "Drop-in analyst, BI, or PM ownership for a launch, replatform, or BI rebuild."
+        "body": "Drop-in analyst, BI developer, or data-engineering ownership for a launch, replatform, or BI rebuild."
       },
       {
         "label": "Consulting",
         "title": "Scoped audits & deliverables",
-        "body": "Analytics audits, KPI trees, dashboards, instrumentation reviews, PRDs."
+        "body": "Analytics audits, KPI trees, dashboards, semantic models, instrumentation reviews, pipeline reviews."
       }
     ]
   },
@@ -167,19 +182,19 @@
     "items": [
       {
         "q": "What kinds of engagements are you open to?",
-        "a": "Full-time Staff or Senior Analyst, BI Lead, or analytics-led PM. Open to contract too: analytics audits, KPI design, BI builds, PRDs, 0→1 launches."
+        "a": "Full-time Senior Data Analyst, BI Developer, or Data / Analytics Engineer. Open to contract too: analytics audits, KPI design, BI builds, pipeline and warehouse work."
       },
       {
-        "q": "What types of products have you shipped?",
-        "a": "B2B SaaS, IoT and telecom, AI platforms (MCP shipped on the GPT and Claude stores), data infrastructure, and nonprofit case management."
+        "q": "What have you built?",
+        "a": "Production BI semantic models, ETL/ELT pipelines on Snowflake and Redshift, identity-resolution systems, real-time data delivery, and exec dashboards across B2B SaaS, IoT/telecom, and nonprofit operations."
       },
       {
-        "q": "Do you lead analytics or product strategy?",
-        "a": "Both. I write the SQL, build the dashboards, run the A/B tests, then turn what they say into PRDs, OKRs, and roadmap bets."
+        "q": "Do you do analysis, BI, or engineering?",
+        "a": "All three. I write the SQL, model the warehouse, build the dashboards, run the A/B tests, then turn what they say into a clear recommendation."
       },
       {
-        "q": "What does your typical process look like from idea to launch?",
-        "a": "Objectives, then research, then the KPI framework, then the PRD, then ship, then watch the funnels and cohorts. The launch is the start of the work, not the end."
+        "q": "What does your typical process look like?",
+        "a": "Pin the metric, get the data and context, frame the KPI tree, instrument it, ship the smallest thing that proves the answer, then measure honestly and roll forward or back."
       },
       {
         "q": "How do I get in touch?",
@@ -189,7 +204,7 @@
   },
   "cta": {
     "heading": "Ready to ship?",
-    "body": "Open to full-time Senior PM, Staff Analyst, or Senior BI roles, plus contract and consulting work. If you've got a problem worth solving, send it over.",
+    "body": "Open to full-time Senior Data Analyst, BI Developer, or Data / Analytics Engineer roles, plus contract and consulting work. If you've got data worth digging into, send it over.",
     "emailLabel": "Send an email",
     "linkedinLabel": "LinkedIn"
   }

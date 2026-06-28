@@ -199,6 +199,20 @@ function CaseStudy() {
             </section>
           ))}
 
+          {project.codeSnippet && (
+            <section>
+              <h2 className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
+                From the build
+              </h2>
+              <p className="mb-4 text-xs italic text-muted-foreground">
+                A representative slice of the pipeline.
+              </p>
+              <pre className="overflow-x-auto rounded-2xl border border-border bg-card p-5 text-[13px] leading-relaxed text-card-foreground">
+                <code className="font-mono">{project.codeSnippet}</code>
+              </pre>
+            </section>
+          )}
+
           {project.tradeOff && (
             <section className="rounded-2xl border-l-2 border-primary bg-card/50 p-6 md:p-8">
               <h2 className="mb-1 text-xs font-semibold uppercase tracking-widest text-primary">
@@ -218,6 +232,7 @@ function CaseStudy() {
           )}
         </div>
       </div>
+
 
       <section className="border-t border-border bg-muted/30">
         <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-4 px-6 py-10">

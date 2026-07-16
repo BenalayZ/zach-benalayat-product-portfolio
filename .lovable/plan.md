@@ -1,54 +1,45 @@
 ## Goal
 
-Reposition the entire portfolio around **Data Analyst / BI Developer** and **Data Engineering** only. Cut the Product Management framing everywhere — hero, copy, tracks, case-study emphasis, SEO — so a DA/BI/DE reviewer sees a focused specialist, not a PM who also analyzes.
+Redesign the homepage to look like a **2018 full-bleed parallax agency site**, keeping the current Emerald Prestige palette (deep emerald canvas, cream type, gold accent). Deliver as a **rendered preview** first. No project files change until you pick a direction.
 
-## 1. Strip PM positioning sitewide
+## What "2018 parallax agency" means here
 
-- **Hero (`content/home.json`)**
-  - Headline: drop "Product & Data Analyst" → lead with a data title, e.g. "Data Analyst & BI Developer" / "Analytics & Data Engineering".
-  - Tagline: remove product-bet language; lead with SQL, Snowflake, dbt, Power BI, pipelines, and analysis.
-  - `eyebrow`: drop the PM-flavored phrasing.
-  - `proofStats`: replace the three tracks (`Senior BI / Staff Analyst / Senior PM`) with data-only framing. Keep the strong numbers ($1M+ ARR Power BI funnel, 46% faster intake, 20% AWS savings) but re-attribute them to BI/analytics/engineering outcomes, not PM.
-  - `availability` / `engagement` / `cta`: change "Senior PM" and "analytics-led PM" mentions to Data Analyst, BI Developer, Analytics Engineer, Data Engineer.
-- **About (`content/about.json`)**: rewrite bio + subtitle to remove "PRDs, OKRs, roadmap bets" as the headline; keep them only as a minor "also can" line if useful. Lead with analysis, modeling, pipelines.
-- **FAQ + skills + engagement models**: remove "analytics-led PM" / "Senior PM" options; reframe around DA, BI Developer, Analytics Engineer, Data Engineer.
-- **SEO (`home.json`, `about.json`, `contact.json`)**: titles/descriptions/og drop "Product Manager / Product Analyst / Senior PM"; lead with "Data Analyst · BI Developer · Data Engineer". Update `toolkit.atsKeywords` to remove PM-centric terms (Product Manager, PRD, Roadmap, GTM) and emphasize DE/DA/BI (dbt, ELT/ETL, data warehousing, semantic modeling, DAX, orchestration, pipeline).
-- **`content/site.json`**: any PM-leaning nav/footer copy → data framing.
+Concrete era signals baked into every direction:
 
-## 2. Two tracks instead of three (Analytics/BI vs. Data Engineering)
+- **Full-bleed hero** with a giant name/title, thin-weight sans (Montserrat / Raleway / Playfair Display era), all-caps eyebrow, blinking cursor or scroll-down chevron.
+- **Section-snap parallax bands** — each band is 100vh, background image or gradient locks while foreground scrolls.
+- **Animated stat counters** (0 → $1M+, 0 → 46%, 0 → 20%) on scroll-in.
+- **Full-width horizontal rule dividers** with a small centered glyph (◆ / —).
+- **Case studies as full-bleed alternating left/right image + text slabs**, not cards.
+- **Uppercase letter-spaced nav** with a hamburger on desktop (very 2018).
+- **Big circular portrait / avatar** somewhere in the About strip.
+- **CTA band** = full-bleed emerald with centered gold outline button, `LET'S TALK →`.
+- Subtle grain/noise overlay, faint fixed-position social icons on the left edge.
 
-Projects already carry `signals`. Remap to two reviewer lenses and retire `Senior PM`:
+Palette stays: `#064e3b` bg, `#f5f0e0` type, `#c9a84c` gold, `#0d7a5f` mid-emerald accents.
 
-- **Analytics / BI** ← `Senior BI` + `Staff Analyst` (dashboards, semantic models, A/B tests, cohort/funnel, forecasting).
-- **Data Engineering** ← pipeline/infra work (Data Engine 4.0, Fast Data, identity resolution, ELT).
-- Update the `RoleSignal` type in `src/data/projects.ts` to the new set (e.g. `"Analytics/BI" | "Data Engineering"`) and update `content/projects.json` signals accordingly.
-- Add a **track toggle** in the work section: `All · Analytics / BI · Data Engineering`. Filtering reorders the grid (matches first, others below a divider). Persist as `?track=` for shareable recruiter links.
+## Approach
 
-## 3. Recast projects for the data lens
+1. **Capture current homepage** via a headless screenshot of `localhost:8080` for the design-directions call to anchor against.
+2. **Generate 3 rendered directions** — all 2018 parallax-agency, all Emerald Prestige, differing in:
+   - **A. Cinematic** — huge hero portrait, heavy parallax, Playfair Display headlines, gold hairline frames, feels like a 2018 director's reel.
+   - **B. Editorial Agency** — Montserrat all-caps, thin gold rules, numbered sections (`01 / WORK`), horizontal case-study slabs, feels like a 2018 branding studio.
+   - **C. Startup Landing** — Raleway light, big stat band, three-column "services" row, testimonial slab, feels like a 2018 SaaS/consultant landing page.
+3. **Present the 3 rendered previews** side-by-side via a prototype question. You pick one.
+4. **Only after you pick**, I switch to build mode and implement the chosen direction across the homepage (hero, approach, featured work, skills, engagement, FAQ, CTA), keeping content JSON unchanged.
 
-- **Seamless API** currently reads as a PM/monetization 0→1 story. Reframe its case study (`content/projects.json`) to lead with the **data/forecasting/analytics** angle (async credit-consumption metric, run-rate forecast model) rather than product ownership; soften "Product Owner" role wording to "Analytics Lead".
-- **Seamless MCP / Fast Data**: reframe outcomes around data delivery/latency/pipeline rather than product launches; retag to Data Engineering where appropriate.
-- Make the strongest **engineering** case study (Data Engine 4.0) a true pipeline story: source → ingestion → dbt transforms → Snowflake/Redshift model → consumption, with volumes, run cadence/SLA, dedupe/identity resolution, failure handling, and the cost/perf work behind 20% AWS savings. Add an architecture diagram image (generated) and an optional on-page SQL/dbt snippet to make the engineering claim verifiable.
+## What is NOT in this plan
 
-## 4. Engineering-depth touches
-
-- Reframe homepage skill cards so **Data & SQL Engineering** and **BI / Semantic Modeling** lead; remove "Analytics-Led Product Delivery" as a headline card.
-- **GitHub link** in nav/footer + contact channels so SQL/Python/dbt is verifiable (needs URL — see question).
-- Keep the AI/agentic toolkit group but below the core data stack.
-
-## Out of scope
-
-- No backend/CMS — content stays in `content/*.json` + `src/data`.
-- No change to the Emerald Prestige visual system.
-- Any new/removed route is reflected in `public/` sitemap + `llms.txt` and regenerated into `docs/` via the build so dist-check stays green.
+- No changes to `/about`, `/contact`, or case study pages in this pass — homepage only, per your answer.
+- No content rewrites — same copy from `content/home.json`.
+- No palette change.
+- No file edits during the preview step.
 
 ## Technical notes
 
-- `RoleSignal` union + `signals` values updated together; `proofStats` and any `track` references in `index.tsx` updated to the two-track model.
-- Per-track hero copy: extend `home.json` with a `tracks` map (`{ all, analytics, data }` → `{ tagline, leadStat }`), default `all` = new data-forward copy.
-- Toggle: client component reading/writing a `track` search param via TanStack Router; filtering in `Index()` over `projects.signals`. No new deps.
-- New architecture image: add to `src/assets/projects/`, register in `imageMap` in `src/data/projects.ts`; add optional `codeSnippet` to the `Project` type, render in `work.$slug.tsx` as a monospace block.
+- Preview generation uses the design-directions tool with a Playwright screenshot of the current homepage as visual anchor.
+- Directions render as standalone HTML/CSS prototypes (Tailwind + inline styles), not committed to the repo.
+- Implementation phase (after your pick) will touch only `src/routes/index.tsx` and possibly add a small parallax hook; `content/*.json`, routing, and other pages stay untouched.
+- Parallax will use CSS `background-attachment: fixed` + light IntersectionObserver counters — no heavy library added.
 
-## Open question
-
-GitHub: do you have a public repo/profile URL to link, or leave it out for now and focus on the repositioning + DE case study?
+Approve this and I'll generate the three previews.

@@ -7,7 +7,7 @@ import seamlessLogo from "@/assets/logos/seamless.png";
 import inseegoLogo from "@/assets/logos/inseego.png";
 import caseworthyLogo from "@/assets/logos/caseworthy.png";
 import arcLogo from "@/assets/logos/arc.svg";
-import butlerLogo from "@/assets/logos/butler.png";
+import butlerLogo from "@/assets/logos/butler.svg";
 
 // Reviewer-lens tracks. `?track=` makes a chosen lens shareable in an
 // application link, and re-leads the work grid for that reviewer.

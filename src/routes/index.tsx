@@ -98,7 +98,7 @@ function Index() {
 
           {/* Orbiting data points on the rings */}
           <div className="absolute aspect-square w-[80vw] animate-orbit-slow lg:w-[52vw]">
-            <span className="absolute top-1/2 -left-1 h-2 w-2 -translate-y-1/2 rounded-full bg-primary shadow-[0_0_12px_rgba(201,168,76,0.7)]" />
+            <span className="absolute top-1/2 -left-1 h-2 w-2 -translate-y-1/2 rounded-full bg-primary shadow-[0_0_12px_rgba(125,155,118,0.55)]" />
             <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-1.5 w-1.5 rounded-full bg-foreground/50" />
             <span className="absolute bottom-0 left-1/3 h-1 w-1 rounded-full bg-secondary" />
           </div>
@@ -116,9 +116,9 @@ function Index() {
           >
             <defs>
               <linearGradient id="dataLine" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stopColor="oklch(0.74 0.13 85)" stopOpacity="0" />
-                <stop offset="50%" stopColor="oklch(0.74 0.13 85)" stopOpacity="1" />
-                <stop offset="100%" stopColor="oklch(0.74 0.13 85)" stopOpacity="0" />
+                <stop offset="0%" stopColor="oklch(0.60 0.05 145)" stopOpacity="0" />
+                <stop offset="50%" stopColor="oklch(0.60 0.05 145)" stopOpacity="1" />
+                <stop offset="100%" stopColor="oklch(0.60 0.05 145)" stopOpacity="0" />
               </linearGradient>
             </defs>
             <g stroke="url(#dataLine)" strokeWidth="0.75">
@@ -132,7 +132,7 @@ function Index() {
               <line x1="520" y1="180" x2="460" y2="320" />
               <line x1="720" y1="90" x2="660" y2="260" />
             </g>
-            <g fill="oklch(0.74 0.13 85)">
+            <g fill="oklch(0.60 0.05 145)">
               <circle cx="80" cy="120" r="3" />
               <circle cx="280" cy="60" r="4" />
               <circle cx="520" cy="180" r="3.5" />
@@ -141,7 +141,7 @@ function Index() {
               <circle cx="460" cy="320" r="4" />
               <circle cx="660" cy="260" r="3" />
             </g>
-            <g stroke="oklch(0.50 0.10 162)" strokeWidth="0.5" opacity="0.6">
+            <g stroke="oklch(0.78 0.04 145)" strokeWidth="0.5" opacity="0.6">
               <line x1="0" y1="200" x2="800" y2="200" strokeDasharray="2 6" />
               <line x1="400" y1="0" x2="400" y2="400" strokeDasharray="2 6" />
             </g>
@@ -184,7 +184,7 @@ function Index() {
             <div className="flex flex-wrap items-center justify-center gap-3">
               <a
                 href="#work"
-                className="group inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-[1.03] hover:shadow-[0_0_28px_rgba(201,168,76,0.45)] active:scale-95"
+                className="group inline-flex items-center gap-2 rounded-md bg-primary px-8 py-4 text-sm font-bold uppercase tracking-widest text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:scale-[1.03] hover:shadow-[0_0_28px_rgba(125,155,118,0.35)] active:scale-95"
               >
                 {home.hero.ctaPrimary} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
